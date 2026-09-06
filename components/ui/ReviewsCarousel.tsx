@@ -1,114 +1,163 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
-import { CheckCircle2, Star } from 'lucide-react'
+import { Star, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react'
 
-const photoReviews = [
-  { image: '/images/review1.png',              name: 'Valentina M.', city: 'Milano',  rating: 5, months: '6 settimane', text: 'Non ci credevo, ma i risultati parlano da soli! La cellulite è quasi sparita.' },
-  { image: '/images/review2.png',              name: 'Chiara B.',    city: 'Roma',    rating: 5, months: '2 mesi',      text: 'Finalmente un prodotto che funziona davvero! La pelle è tornata tonica e compatta.' },
-  { image: '/images/gallery-4-primaedopo.png', name: 'Alessia C.',   city: 'Firenze', rating: 5, months: '4 settimane', text: 'Risultati impressionanti in sole 4 settimane. La coscia non era mai stata così liscia!' },
-  { image: '/images/review5.png',              name: 'Martina R.',   city: 'Bologna', rating: 5, months: '6 settimane', text: 'Ho perso centimetri sui glutei e sulle cosce senza cambiare la dieta. Una svolta!' },
-  { image: '/images/review6.png',              name: 'Elena P.',     city: 'Venezia', rating: 5, months: '5 settimane', text: 'La differenza sulla coscia è enorme. Pelle liscia e levigata, zero cellulite visibile.' },
-  { image: '/images/review3.png',              name: 'Sara T.',      city: 'Torino',  rating: 5, months: '5 settimane', text: 'Visibile già dopo 2 settimane! Le gambe sono molto più lisce.' },
-  { image: '/images/gallery-9-primaedopo2.jpg',name: 'Laura F.',     city: 'Napoli',  rating: 5, months: '7 settimane', text: 'Sono rimasta senza parole! Pelle più tonica, meno cellulite e più energia.' },
-  { image: '/images/review4.png',              name: 'Monica D.',    city: 'Bologna', rating: 5, months: '3 settimane', text: 'In 3 settimane ho visto miglioramenti concreti. Nessuna crema aveva mai funzionato così!' },
+type Review =
+  | { type: 'photo'; image: string; name: string; city: string; rating: number; months: string; text: string; verified: boolean }
+  | { type: 'text'; name: string; city: string; rating: number; text: string; verified: boolean }
+
+const allReviews: Review[] = [
+  { type: 'photo', image: '/images/review1.png', name: 'Valentina M.', city: 'Milano', rating: 5, months: '6 settimane', text: 'Non ci credevo, ma i risultati parlano da soli! La cellulite è quasi sparita e mi sento molto più sicura di me.', verified: true },
+  { type: 'photo', image: '/images/review2.png', name: 'Chiara B.', city: 'Roma', rating: 5, months: '2 mesi', text: 'Finalmente un prodotto che funziona davvero! La pelle è tornata tonica e compatta. Super consigliato!', verified: true },
+  { type: 'photo', image: '/images/review5.png', name: 'Alessia C.', city: 'Firenze', rating: 5, months: '4 settimane', text: 'Risultati impressionanti in sole 4 settimane. La mia coscia non si era mai sentita così liscia!', verified: true },
+  { type: 'photo', image: '/images/review6.png', name: 'Martina R.', city: 'Bologna', rating: 5, months: '6 settimane', text: 'Ho perso centimetri sui glutei e sulle cosce senza cambiare la dieta. BellaCura è una svolta!', verified: true },
+  { type: 'photo', image: '/images/review7.png', name: 'Elena P.', city: 'Venezia', rating: 5, months: '5 settimane', text: 'La differenza sulla coscia è enorme. Pelle liscia e levigata, zero cellulite visibile. Incredibile!', verified: true },
+  { type: 'text', name: 'Alessia R.', city: 'Firenze', rating: 5, text: 'Lo uso ogni mattina sulle cosce e sui glutei. Dopo un mese la cellulite a buccia d\'arancia è quasi sparita. Non tornerei mai indietro!', verified: true },
+  { type: 'text', name: 'Monica D.', city: 'Bologna', rating: 5, text: 'Con questo massaggiatore in 3 settimane ho visto miglioramenti concreti. Nessuna crema aveva mai funzionato così!', verified: true },
+  { type: 'text', name: 'Federica L.', city: 'Venezia', rating: 5, text: 'La funzione di calore è una meraviglia. Le mie gambe sono molto meno pesanti e gonfie rispetto a prima.', verified: true },
+  { type: 'photo', image: '/images/review3.png', name: 'Sara T.', city: 'Torino', rating: 5, months: '5 settimane', text: 'Risultati visibili già dopo 2 settimane! Le gambe sono molto più lisce e la ritenzione idrica è diminuita tantissimo.', verified: true },
+  { type: 'text', name: 'Giovanna P.', city: 'Palermo', rating: 5, text: 'Dopo due gravidanze la mia pelle era completamente ceduta. In 6 settimane ho recuperato una tonicità che non avevo più. Miracoloso!', verified: true },
+  { type: 'text', name: 'Martina C.', city: 'Genova', rating: 5, text: '15 minuti al giorno e la differenza è evidente. La cellulite sulle cosce si è ridotta visibilmente in sole 4 settimane.', verified: true },
+  { type: 'text', name: 'Simona V.', city: 'Bari', rating: 5, text: 'Avevo provato tutto. Questo è l\'unico che ha davvero funzionato sulla mia cellulite fibro. Consigliato assolutamente.', verified: true },
+  { type: 'photo', image: '/images/review4.png', name: 'Laura F.', city: 'Napoli', rating: 5, months: '7 settimane', text: 'Sono rimasta senza parole! Pelle più tonica, meno cellulite e più energia. I miglioramenti sono stati incredibili.', verified: true },
+  { type: 'text', name: 'Irene G.', city: 'Catania', rating: 5, text: 'Le gambe gonfie dopo una giornata in piedi sono diventate un ricordo. Il massaggio drenante funziona benissimo.', verified: true },
+  { type: 'text', name: 'Roberta M.', city: 'Verona', rating: 5, text: 'Ho speso centinaia di euro in trattamenti estetici e questo massaggiatore ha fatto più di tutti loro messi insieme.', verified: true },
+  { type: 'text', name: 'Serena A.', city: 'Perugia', rating: 5, text: '"Cosa hai fatto?" mi ha chiesto la mia estetista. Solo BellaCura, ogni sera!', verified: true },
+  { type: 'text', name: 'Paola N.', city: 'Ancona', rating: 5, text: 'Uso la testina a ventosa per il massaggio cupping sulle cosce: la circolazione migliora tantissimo. Risultati in 2 settimane!', verified: true },
+  { type: 'text', name: 'Raffaella S.', city: 'Reggio Calabria', rating: 5, text: 'La funzione ventosa è quello che mi ha convinto. Faccio il cupping 3 volte a settimana e la pelle a buccia d\'arancia è molto diminuita.', verified: true },
+  { type: 'text', name: 'Antonella C.', city: 'Brescia', rating: 5, text: 'Uso la ventosa per il cupping sulle gambe e la pelle è liscia come non lo era dai miei vent\'anni. Incredibile a 43 anni!', verified: true },
+  { type: 'text', name: 'Luisa T.', city: 'Modena', rating: 5, text: 'Il massaggio a pressione negativa con la testina ventosa è fantastico per drenare i liquidi. Le gambe pesanti sono sparite.', verified: true },
+  { type: 'text', name: 'Carla M.', city: 'Padova', rating: 5, text: 'Ho scoperto il cupping grazie a BellaCura! La testina a ventosa lavora in profondità sulla cellulite come nessun altro strumento.', verified: true },
+  { type: 'text', name: 'Daniela F.', city: 'Livorno', rating: 5, text: 'La cellulite sulle cosce si è attenuata molto in 5 settimane. Lo uso ogni sera prima di dormire, 10 minuti bastano.', verified: true },
+  { type: 'text', name: 'Angela P.', city: 'Salerno', rating: 5, text: 'Finalmente impermeabile! Con l\'acqua calda sotto la doccia i risultati sono ancora più veloci. Skin molto più liscia.', verified: true },
+  { type: 'text', name: 'Rosa B.', city: 'Messina', rating: 5, text: 'Mia sorella lo ha comprato per prima e quando ho visto la sua pelle ho ordinato subito anche io. Differenza visibile in 3 settimane.', verified: true },
+  { type: 'text', name: 'Teresa L.', city: 'Como', rating: 5, text: 'Ho 52 anni e pensavo fosse troppo tardi. Invece in 8 settimane la cellulite si è ridotta di tanto. Non mollate mai!', verified: true },
+  { type: 'text', name: 'Nadia R.', city: 'Taranto', rating: 5, text: 'Lo uso anche sull\'addome dopo il parto e la pancia si è molto rassodatta. Risultati sorprendenti!', verified: true },
+  { type: 'text', name: 'Concetta V.', city: 'Caserta', rating: 5, text: 'Il pagamento alla consegna mi ha convinto. È arrivato in 2 giorni e da allora non l\'ho più posato.', verified: true },
+  { type: 'text', name: 'Graziella M.', city: 'Foggia', rating: 5, text: 'Uso calore e vibrazione alta insieme: è un massaggio professionale a casa mia. La cellulite si è attenuata visibilmente.', verified: true },
+  { type: 'text', name: 'Silvia T.', city: 'Pisa', rating: 5, text: 'Avevo la cellulite edematosa molto accentuata. Dopo 7 settimane la pelle è molto più uniforme. Il gonfiore è quasi sparito.', verified: true },
+  { type: 'text', name: 'Ornella C.', city: 'Udine', rating: 5, text: 'Ne ho già comprati 3 come regalo per le amiche. I risultati parlano da soli — il prodotto è robusto e duraturo.', verified: true },
+  { type: 'text', name: 'Beatrice R.', city: 'Bergamo', rating: 5, text: 'Dopo l\'allenamento faccio 10 minuti di massaggio sulle cosce e i muscoli si recuperano più in fretta. Doppio beneficio!', verified: true },
+  { type: 'text', name: 'Patrizia M.', city: 'Cagliari', rating: 5, text: 'Cupping con la testina ventosa: risultati straordinari sulla cellulite! La pelle è tornata compatta in 3 settimane.', verified: true },
+  { type: 'text', name: 'Claudia B.', city: 'Rimini', rating: 5, text: 'La batteria dura tantissimo e la ricarica USB-C è comodissima. La cellulite sta migliorando settimana dopo settimana.', verified: true },
+  { type: 'text', name: 'Tiziana L.', city: 'Latina', rating: 5, text: 'Uso la ventosa ogni 2 giorni e le altre testine ogni giorno. Il mix di tecniche fa la differenza — pelle mai così tonica!', verified: true },
+  { type: 'text', name: 'Elena B.', city: 'Trieste', rating: 5, text: 'Le 5 intensità di vibrazione sono perfette. Uso la 3 la mattina e la 5 la sera. Risultati in 3 settimane.', verified: true },
 ]
 
-const textReviews = [
-  { name: 'Federica L.',  city: 'Venezia',         text: 'La funzione di calore è una meraviglia. Le mie gambe sono molto meno pesanti e gonfie rispetto a prima.' },
-  { name: 'Giovanna P.',  city: 'Palermo',          text: 'Dopo due gravidanze la mia pelle era completamente ceduta. In 6 settimane ho recuperato una tonicità che non avevo più.' },
-  { name: 'Martina C.',   city: 'Genova',           text: '15 minuti al giorno e la differenza è evidente. La cellulite sulle cosce si è ridotta in sole 4 settimane.' },
-  { name: 'Irene G.',     city: 'Catania',          text: 'Le gambe gonfie dopo una giornata in piedi sono diventate un ricordo. Il massaggio drenante funziona benissimo.' },
-  { name: 'Roberta M.',   city: 'Verona',           text: 'Ho speso centinaia di euro in trattamenti estetici e questo ha fatto più di tutti loro messi insieme.' },
-  { name: 'Serena A.',    city: 'Perugia',          text: '"Cosa hai fatto?" mi ha chiesto la mia estetista. Solo BellaCura, ogni sera!' },
-  { name: 'Teresa L.',    city: 'Como',             text: 'Ho 52 anni e pensavo fosse troppo tardi. Invece in 8 settimane la cellulite si è ridotta di tanto. Non mollate mai!' },
-  { name: 'Ornella C.',   city: 'Udine',            text: 'Ne ho già comprati 3 come regalo per le amiche. I risultati parlano da soli.' },
-  { name: 'Claudia B.',   city: 'Rimini',           text: 'La batteria dura tantissimo e la ricarica USB-C è comodissima. La cellulite sta migliorando settimana dopo settimana.' },
-  { name: 'Elena B.',     city: 'Trieste',          text: 'Le 5 intensità di vibrazione sono perfette. Risultati visibili in 3 settimane.' },
-  { name: 'Rosa B.',      city: 'Messina',          text: 'Mia sorella lo ha comprato per prima e quando ho visto la sua pelle ho ordinato subito anche io.' },
-  { name: 'Concetta V.',  city: 'Caserta',          text: 'Il pagamento alla consegna mi ha convinto. È arrivato in 2 giorni e da allora non l\'ho più posato.' },
-]
+const VISIBLE = 3 // cards visible at once on desktop
 
-function Stars({ n = 5 }: { n?: number }) {
+export default function ReviewsCarousel() {
+  const [start, setStart] = useState(0)
+  const total = allReviews.length
+
+  const prev = () => setStart((s) => (s - 1 + total) % total)
+  const next = () => setStart((s) => (s + 1) % total)
+
+  const visibleItems = Array.from({ length: VISIBLE }, (_, i) => allReviews[(start + i) % total])
+
   return (
-    <div className="flex gap-0.5">
-      {Array.from({ length: n }).map((_, i) => (
-        <Star key={i} size={14} className="text-amber-400 fill-amber-400" />
-      ))}
-    </div>
+    <section className="py-14 bg-white" id="recensioni">
+      <div className="container-tight">
+        <div className="text-center mb-10">
+          <span className="badge mb-3">⭐ Recensioni Verificate</span>
+          <h2 className="font-serif text-gray-900 mb-3">Cosa dicono le nostre clienti</h2>
+          <p className="text-gray-500 text-sm">Oltre 2.400 donne soddisfatte · Foto e recensioni reali</p>
+        </div>
+
+        {/* Carousel */}
+        <div className="relative">
+          {/* Desktop: 3 cards */}
+          <div className="hidden md:grid grid-cols-3 gap-5">
+            {visibleItems.map((r, i) => (
+              <ReviewCard key={`${start}-${i}`} review={r} />
+            ))}
+          </div>
+
+          {/* Mobile: 1 card */}
+          <div className="md:hidden">
+            <ReviewCard review={allReviews[start]} />
+          </div>
+
+          {/* Arrows */}
+          <button
+            onClick={prev}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white border border-rose-100 shadow-md rounded-full p-2 text-gray-400 hover:text-rose-600 transition-colors z-10"
+            aria-label="Precedente"
+          >
+            <ChevronLeft size={20} />
+          </button>
+          <button
+            onClick={next}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white border border-rose-100 shadow-md rounded-full p-2 text-gray-400 hover:text-rose-600 transition-colors z-10"
+            aria-label="Successiva"
+          >
+            <ChevronRight size={20} />
+          </button>
+        </div>
+
+        {/* Progress dots */}
+        <div className="flex justify-center gap-1.5 mt-7">
+          {allReviews.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setStart(i)}
+              className={`rounded-full transition-all ${i === start ? 'w-5 h-2 bg-rose-500' : 'w-2 h-2 bg-rose-200'}`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 
-export default function ReviewsCarousel() {
+function ReviewCard({ review }: { review: Review }) {
   return (
-    <section className="py-14 bg-white" id="recensioni">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-
-        {/* Header */}
-        <div className="text-center mb-8">
-          <p className="text-xs font-bold uppercase tracking-widest text-rose-500 mb-2">⭐ Recensioni Verificate</p>
-          <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Cosa dicono le nostre clienti</h2>
-          <p className="text-gray-400 text-sm">Oltre 2.400 donne soddisfatte · Foto e risultati reali</p>
+    <article className="rounded-2xl overflow-hidden border border-rose-100 bg-white shadow-sm flex flex-col">
+      {review.type === 'photo' && (
+        <div className="relative w-full aspect-[16/9] overflow-hidden shrink-0">
+          <Image
+            src={review.image}
+            alt={`Risultati di ${review.name}`}
+            fill
+            className="object-cover object-top"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
+          <div className="absolute bottom-0 left-0 right-0 flex">
+            <div className="flex-1 bg-black/40 text-white text-[10px] font-bold text-center py-1">PRIMA</div>
+            <div className="flex-1 bg-rose-600/80 text-white text-[10px] font-bold text-center py-1">DOPO</div>
+          </div>
         </div>
+      )}
 
-        {/* PHOTO REVIEWS — swipeable horizontal carousel */}
-        <div className="overflow-x-auto snap-x snap-mandatory flex gap-4 pb-4 -mx-4 px-4 scrollbar-none">
-          {photoReviews.map((r) => (
-            <div
-              key={r.name + r.image}
-              className="snap-start flex-shrink-0 w-[72vw] sm:w-64 bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col"
-            >
-              {/* Photo */}
-              <div className="relative w-full aspect-[3/4] overflow-hidden bg-rose-50">
-                <Image
-                  src={r.image}
-                  alt={`Risultati di ${r.name}`}
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 640px) 72vw, 256px"
-                />
-                {/* Weeks badge */}
-                <div className="absolute top-2 left-2 bg-rose-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
-                  ⏱ {r.months}
-                </div>
-              </div>
-
-              {/* Text */}
-              <div className="p-3 flex flex-col gap-1.5 flex-1">
-                <Stars />
-                <div className="flex items-center gap-1.5">
-                  <span className="font-bold text-gray-900 text-sm">{r.name}</span>
-                  <CheckCircle2 size={13} className="text-blue-500 fill-blue-500" />
-                </div>
-                <p className="text-gray-500 text-xs leading-relaxed line-clamp-3">"{r.text}"</p>
-              </div>
-            </div>
+      <div className="p-4 flex flex-col flex-1">
+        <div className="flex gap-0.5 mb-2">
+          {[...Array(review.rating)].map((_, i) => (
+            <Star key={i} size={12} className="text-amber-400 fill-amber-400" />
           ))}
         </div>
 
-        {/* Scroll hint dots */}
-        <div className="flex justify-center gap-1.5 mt-4 mb-10">
-          {photoReviews.map((_, i) => (
-            <div key={i} className={`rounded-full transition-all ${i === 0 ? 'w-4 h-1.5 bg-rose-500' : 'w-1.5 h-1.5 bg-rose-200'}`} />
-          ))}
-        </div>
+        <p className="text-gray-700 text-sm leading-relaxed mb-3 flex-1">"{review.text}"</p>
 
-        {/* TEXT REVIEWS — 2-col grid mobile, 3-col desktop */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {textReviews.map((r) => (
-            <div key={r.name} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
-              <Stars />
-              <div className="flex items-center gap-1 mt-2 mb-1">
-                <span className="font-bold text-gray-900 text-xs">{r.name}</span>
-                <CheckCircle2 size={11} className="text-blue-500 fill-blue-500" />
-              </div>
-              <p className="text-gray-500 text-xs leading-relaxed line-clamp-4">"{r.text}"</p>
-              <p className="text-gray-300 text-[10px] mt-2">{r.city}</p>
-            </div>
-          ))}
-        </div>
+        {'months' in review && (
+          <span className="inline-block bg-rose-50 text-rose-700 text-xs font-semibold px-2 py-0.5 rounded-full mb-2 w-fit">
+            ⏱ {review.months}
+          </span>
+        )}
 
+        <div className="flex items-center justify-between pt-2 border-t border-rose-50">
+          <div>
+            <p className="font-semibold text-gray-900 text-sm">{review.name}</p>
+            <p className="text-gray-400 text-xs">{review.city}</p>
+          </div>
+          {review.verified && (
+            <span className="flex items-center gap-1 text-xs text-green-600 font-medium">
+              <CheckCircle2 size={11} /> Verificata
+            </span>
+          )}
+        </div>
       </div>
-    </section>
+    </article>
   )
 }
