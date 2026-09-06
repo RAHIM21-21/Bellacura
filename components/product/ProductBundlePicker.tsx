@@ -9,7 +9,7 @@ const bundles = [
     label: 'BellaCura Massaggiatore',
     subtitle: 'Vibrazione + calore 45°C + 4 testine',
     tag: 'PIÙ VENDUTO',
-    tagColor: 'bg-rose-600',
+    tagColor: 'bg-red-600',
     price: 59.90,
     originalPrice: 119.00,
     savings: 'Risparmi €59,10',
@@ -110,7 +110,7 @@ export default function ProductBundlePicker() {
       <div className="pt-1">
         <a
           href={`/checkout-scelta/?bundle=${selected}`}
-          className="flex items-center justify-center gap-2 w-full bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white font-bold text-base py-4 rounded-2xl transition-all shadow-lg shadow-rose-200"
+          className="flex items-center justify-center gap-2 w-full bg-red-600 hover:bg-red-700 active:bg-rose-800 text-white font-bold text-base py-4 rounded-2xl transition-all shadow-lg shadow-rose-200"
         >
           Ordina Ora →
         </a>

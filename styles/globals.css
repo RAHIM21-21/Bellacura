@@ -59,9 +59,9 @@
 
   /* ── Buttons ── */
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-rose-500 text-white rounded-full
-           hover:bg-rose-600 active:scale-95 transition-all duration-200 shadow-lg shadow-rose-200
-           focus:outline-none focus:ring-4 focus:ring-rose-300;
+    @apply inline-flex items-center justify-center px-8 py-4 bg-red-600 text-white rounded-full
+           hover:bg-red-700 active:scale-95 transition-all duration-200 shadow-lg shadow-red-200
+           focus:outline-none focus:ring-4 focus:ring-red-300;
     font-family: var(--font-raleway), sans-serif;
     font-weight: 600;
     letter-spacing: 0.08em;
