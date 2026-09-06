@@ -69,25 +69,6 @@ export default function ProductImageGallery() {
           />
         )}
 
-        {/* Left / Right arrow buttons (visible on desktop hover, always on mobile) */}
-        {active > 0 && (
-          <button
-            onClick={goPrev}
-            aria-label="Precedente"
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-gray-700 hover:bg-white transition z-10"
-          >
-            ‹
-          </button>
-        )}
-        {active < total - 1 && (
-          <button
-            onClick={goNext}
-            aria-label="Successiva"
-            className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-gray-700 hover:bg-white transition z-10"
-          >
-            ›
-          </button>
-        )}
 
         {/* Dot indicators */}
         <div className="absolute bottom-14 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
