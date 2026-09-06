@@ -47,10 +47,20 @@ export default function ExitIntentPopup() {
       lastScrollTime.current = currentTime
     }
 
+    // Time on site: trigger after 40 seconds if not yet shown
+    const timeoutId = setTimeout(() => {
+      if (!triggered.current) {
+        triggered.current = true
+        setVisible(true)
+        sessionStorage.setItem('exit_popup_seen', '1')
+      }
+    }, 40000)
+
     document.addEventListener('mouseleave', onMouseLeave)
     window.addEventListener('scroll', onScroll, { passive: true })
 
     return () => {
+      clearTimeout(timeoutId)
       document.removeEventListener('mouseleave', onMouseLeave)
       window.removeEventListener('scroll', onScroll)
     }
