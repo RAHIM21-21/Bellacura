@@ -93,13 +93,13 @@ export default function ProductPage() {
  */}
  <section className="bg-white py-8 md:py-12">
  <div className="max-w-6xl mx-auto px-4 sm:px-6">
- <div className="grid md:grid-cols-[1fr_420px] gap-10 items-start flex flex-col md:flex-none">
+ <div className="grid md:grid-cols-[1fr_420px] gap-10 items-start">
 
- {/* LEFT: image gallery — order-2 on mobile so title/CTA shows first */}
- <div className="order-2 md:order-1"><ProductImageGallery /></div>
+ {/* LEFT: image gallery */}
+ <ProductImageGallery />
 
- {/* RIGHT: sticky purchase panel — order-1 on mobile so it shows above gallery */}
- <div className="order-1 md:order-2 md:sticky md:top-24 space-y-5">
+ {/* RIGHT: sticky purchase panel */}
+ <div className="md:sticky md:top-24 space-y-5">
 
  {/* Title */}
  <div>
