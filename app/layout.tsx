@@ -66,7 +66,7 @@ export default function RootLayout({
         {/* Crisp live chat */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.$crisp=[];window.CRISP_WEBSITE_ID="cbd677a8-aa17-4506-8794-ca6af0cc8e7c";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`
+            __html: `window.$crisp=[];window.CRISP_WEBSITE_ID="cbd677a8-aa17-4506-8794-ca6af0cc8e7c";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();(function(){var obs=new MutationObserver(function(){var box=document.getElementById("crisp-chatbox");if(box&&window.innerWidth<=768){box.style.setProperty("bottom","90px","important");obs.disconnect();}});obs.observe(document.body,{childList:true,subtree:true});})();`
           }}
         />
       </head>
