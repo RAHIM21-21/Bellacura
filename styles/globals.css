@@ -164,31 +164,35 @@
 
 /* ── Countdown timer ── */
 .countdown-box {
-  @apply flex items-center justify-center gap-3 py-3 px-6 rounded-2xl;
-  background: linear-gradient(135deg, #FDF4F6 0%, #FAE6EE 100%);
-  border: 1px solid #F5C8DA;
+  @apply flex items-center justify-center gap-1.5;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  padding: 4px 10px;
 }
 
 .countdown-unit { @apply text-center; }
 
 .countdown-num {
-  font-family: var(--font-cormorant), Georgia, serif;
-  font-size: 1.6rem;
-  font-weight: 700;
-  font-style: italic;
-  color: #CF6685;
+  font-family: var(--font-raleway), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
   line-height: 1;
 }
 
 .countdown-label {
   font-family: var(--font-raleway), sans-serif;
-  font-size: 0.6rem;
-  color: #ECA8BE;
+  font-size: 0.5rem;
+  color: rgba(255,255,255,0.7);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-top: 4px;
+  letter-spacing: 0.08em;
+  margin-top: 2px;
 }
 
 .countdown-sep {
-  @apply text-rose-300 font-bold text-xl;
+  color: rgba(255,255,255,0.6);
+  font-weight: 800;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
 }
