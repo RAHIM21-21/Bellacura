@@ -130,7 +130,7 @@ export default function HomePage() {
  </div>
 
  <Link
- href="/prodotti/massaggio-anticellulite-4in1/"
+ href="/checkout-scelta/?bundle=single"
  className="btn-primary w-full sm:w-auto justify-center text-base py-4 px-10"
  >
  Ordina Ora – Spedizione in 24-48h
@@ -144,8 +144,8 @@ export default function HomePage() {
 
  {/* RIGHT – product visual */}
  <div className="relative flex items-center justify-center">
- <div className="w-full max-w-sm aspect-square rounded-3xl bg-gradient-to-br from-rose-100 to-pink-100 shadow-2xl shadow-rose-100 flex items-center justify-center text-9xl">
- ‍
+ <div className="w-full max-w-sm aspect-square rounded-3xl bg-gradient-to-br from-rose-100 to-pink-100 shadow-2xl shadow-rose-100 overflow-hidden">
+ <img src="/images/massaggiatore-bellacura.jpg" alt="BellaCura Massaggiatore Anticellulite 4 in 1" className="w-full h-full object-cover" />
  </div>
 
  {/* Floating badge – delivery */}
@@ -178,7 +178,7 @@ export default function HomePage() {
  <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
  {[
  { icon: <Truck size={20} className="text-rose-500" />, text: 'Spedizione 24–48h Gratis' },
- { icon: <RotateCcw size={20} className="text-rose-500" />, text: 'Reso 30 Giorni' },
+ { icon: <RotateCcw size={20} className="text-rose-500" />, text: 'Reso 14 Giorni' },
  { icon: <Shield size={20} className="text-rose-500" />, text: 'Pagamento Sicuro' },
  { icon: <span className="text-lg"></span>, text: 'Contrassegno Disponibile' },
  ].map((item, i) => (
@@ -266,7 +266,7 @@ export default function HomePage() {
  ))}
  </ul>
 
- <Link href="/prodotti/massaggio-anticellulite-4in1/" className="btn-primary w-full justify-center text-base py-4">
+ <Link href="/checkout-scelta/?bundle=single" className="btn-primary w-full justify-center text-base py-4">
  Vedi Dettagli & Ordina Ora
  <ChevronRight size={18} className="ml-2" />
  </Link>
@@ -351,7 +351,7 @@ export default function HomePage() {
  Solo 7 pezzi rimasti a questo prezzo
  </div>
  <Link
- href="/prodotti/massaggio-anticellulite-4in1/"
+ href="/checkout-scelta/?bundle=single"
  className="inline-flex items-center justify-center px-10 py-4 bg-white text-rose-600 font-bold rounded-full hover:bg-rose-50 transition-colors shadow-xl text-lg"
  >
  Ordina Ora – Solo €59,90
