@@ -136,12 +136,6 @@ export default function ProductImageGallery() {
         ))}
       </div>
 
-      {/* Social proof bar */}
-      <div className="flex flex-wrap items-center justify-between gap-2 bg-gray-50 rounded-2xl px-4 py-3 text-sm text-gray-600 mt-2">
-        <span>⭐ 4.9/5 · 2.847 recensioni</span>
-        <span>🚚 Spedizione gratuita</span>
-        <span>💵 Paga alla consegna</span>
-      </div>
     </div>
   )
 }

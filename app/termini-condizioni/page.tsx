@@ -68,7 +68,7 @@ export default function TerminiCondizioniPage() {
  <section>
  <h2 className="text-xl font-semibold text-gray-900 mb-3">5. Diritto di recesso</h2>
  <p className="text-gray-700 leading-relaxed">
- Hai diritto di recedere dal contratto entro <strong>30 giorni</strong> dalla ricezione del prodotto, senza dover fornire alcuna motivazione. Per esercitare il diritto di recesso, consulta la nostra pagina dedicata:{' '}
+ Hai diritto di recedere dal contratto entro <strong>14 giorni</strong> dalla ricezione del prodotto, senza dover fornire alcuna motivazione. Per esercitare il diritto di recesso, consulta la nostra pagina dedicata:{' '}
  <Link href="/diritto-recesso/" className="text-rose-600 hover:underline">Diritto di Recesso</Link>.
  </p>
  </section>
@@ -76,7 +76,7 @@ export default function TerminiCondizioniPage() {
  <section>
  <h2 className="text-xl font-semibold text-gray-900 mb-3">6. Garanzia legale</h2>
  <p className="text-gray-700 leading-relaxed">
- Tutti i prodotti BellaCura sono coperti dalla garanzia legale di conformità di 2 anni prevista dal Codice del Consumo (D.Lgs. 206/2005). In aggiunta, offriamo la nostra <Link href="/garanzia/" className="text-rose-600 hover:underline">Garanzia Soddisfatti o Rimborsati 30 giorni</Link>.
+ Tutti i prodotti BellaCura sono coperti dalla garanzia legale di conformità di 2 anni prevista dal Codice del Consumo (D.Lgs. 206/2005). In aggiunta, offriamo la nostra <Link href="/garanzia/" className="text-rose-600 hover:underline">Garanzia Soddisfatti o Rimborsati 14 giorni</Link>.
  </p>
  </section>
 
@@ -106,7 +106,7 @@ export default function TerminiCondizioniPage() {
  <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
  <Link href="/garanzia/" className="block p-4 bg-white rounded-xl border border-gray-200 hover:border-rose-300 transition-colors text-center">
  <div className="text-2xl mb-2"></div>
- <div className="font-semibold text-gray-900 text-sm">Garanzia 30 giorni</div>
+ <div className="font-semibold text-gray-900 text-sm">Garanzia 14 giorni</div>
  </Link>
  <Link href="/diritto-recesso/" className="block p-4 bg-white rounded-xl border border-gray-200 hover:border-rose-300 transition-colors text-center">
  <div className="text-2xl mb-2">↩</div>

@@ -243,7 +243,7 @@ function CheckoutContent() {
  {[
  { icon: <Shield size={14} />, text: 'Pagamento 100% sicuro' },
  { icon: <Truck size={14} />, text: 'Consegna in 2-4 giorni lavorativi' },
- { icon: <RotateCcw size={14} />, text: 'Reso gratuito entro 30 giorni' },
+ { icon: <RotateCcw size={14} />, text: 'Reso gratuito entro 14 giorni' },
  ].map((item) => (
  <div key={item.text} className="flex items-center gap-2 text-gray-600 text-xs">
  <span className="text-rose-500">{item.icon}</span>{item.text}

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
  title: 'Diritto di Recesso | BellaCura',
- description: 'Come esercitare il diritto di recesso e richiedere un reso o rimborso su BellaCura. Procedura semplice entro 30 giorni.',
+ description: 'Come esercitare il diritto di recesso e richiedere un reso o rimborso su BellaCura. Procedura semplice entro 14 giorni.',
  robots: { index: false, follow: false },
 }
 
@@ -23,9 +23,9 @@ export default function DirittoRecessoPage() {
  {/* Hero box */}
  <div className="bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-200 rounded-2xl p-6 mb-10 text-center">
  <div className="text-5xl mb-3"></div>
- <h2 className="text-2xl font-bold text-gray-900 mb-2">30 giorni per ripensarci</h2>
+ <h2 className="text-2xl font-bold text-gray-900 mb-2">14 giorni per ripensarci</h2>
  <p className="text-gray-600 max-w-lg mx-auto">
- Puoi restituire qualsiasi prodotto entro 30 giorni dalla consegna, senza dover fornire alcuna spiegazione. Rimborso completo garantito.
+ Puoi restituire qualsiasi prodotto entro 14 giorni dalla consegna, senza dover fornire alcuna spiegazione. Rimborso completo garantito.
  </p>
  </div>
 
@@ -37,7 +37,7 @@ export default function DirittoRecessoPage() {
  Ai sensi dell&apos;art. 52 del Codice del Consumo, hai il diritto di recedere dal contratto di acquisto entro <strong>14 giorni</strong> dalla ricezione del prodotto, senza necessità di fornire alcuna motivazione e senza penali.
  </p>
  <p className="text-gray-700 leading-relaxed mt-3">
- <strong>BellaCura amplia questo diritto a 30 giorni</strong>, offrendoti il doppio del tempo previsto dalla legge per valutare il prodotto con calma.
+ <strong>BellaCura amplia questo diritto a 14 giorni</strong>, offrendoti il doppio del tempo previsto dalla legge per valutare il prodotto con calma.
  </p>
  </section>
 

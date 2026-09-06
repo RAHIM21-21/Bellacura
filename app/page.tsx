@@ -137,7 +137,7 @@ export default function HomePage() {
  <ChevronRight size={18} className="ml-2" />
  </Link>
  <p className="text-sm text-gray-500 mt-3 flex items-center gap-2">
- Paga alla consegna · 30 giorni soddisfatti o rimborsati
+ Paga alla consegna · 14 giorni soddisfatti o rimborsati
  </p>
  </div>
  </div>
@@ -271,7 +271,7 @@ export default function HomePage() {
  <ChevronRight size={18} className="ml-2" />
  </Link>
  <p className="text-center text-sm text-gray-500 mt-3">
- Spedizione in 24–48h · Pagamento alla consegna · Reso 30 giorni
+ Spedizione in 24–48h · Pagamento alla consegna · Reso 14 giorni
  </p>
  </div>
  </div>
@@ -357,7 +357,7 @@ export default function HomePage() {
  Ordina Ora – Solo €59,90
  <ChevronRight size={20} className="ml-2" />
  </Link>
- <p className="text-rose-200 text-sm mt-4"> Spedizione in 24–48h · Paga alla consegna · 30 giorni reso gratis</p>
+ <p className="text-rose-200 text-sm mt-4"> Spedizione in 24–48h · Paga alla consegna · 14 giorni reso gratis</p>
  </div>
  </section>
  </>

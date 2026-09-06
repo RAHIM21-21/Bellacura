@@ -124,7 +124,7 @@ export default function ProductBundlePicker() {
       {/* Trust bar */}
       <div className="grid grid-cols-3 gap-2 pt-2 border-t border-gray-100">
         {[
-          { emoji: '🛡️', label: 'Garanzia 30 giorni' },
+          { emoji: '🛡️', label: 'Garanzia 14 giorni' },
           { emoji: '🚚', label: 'Spedizione Gratis' },
           { emoji: '🔒', label: 'Pagamento Sicuro' },
         ].map(({ emoji, label }) => (

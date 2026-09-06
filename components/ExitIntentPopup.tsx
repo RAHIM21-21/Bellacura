@@ -152,7 +152,7 @@ export default function ExitIntentPopup() {
         <div className="border-t border-gray-100 px-8 py-3 flex justify-center gap-6 text-xs text-gray-400">
           <span>🔒 Dati sicuri</span>
           <span>📦 Spedizione gratis</span>
-          <span>↩️ Reso 30 giorni</span>
+          <span>↩️ Reso 14 giorni</span>
         </div>
       </div>
     </div>

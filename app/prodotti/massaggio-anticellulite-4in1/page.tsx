@@ -34,14 +34,14 @@ const faqs = [
  { question: 'In quanto tempo si vedono i risultati?', answer: 'La maggior parte delle clienti nota miglioramenti già dopo 7-10 giorni di utilizzo regolare (15 minuti al giorno). Risultati significativi dopo 4-6 settimane.' },
  { question: 'Posso usarlo anche sotto la doccia?', answer: 'Sì! Il massaggiatore è certificato IPX7 waterproof. Puoi usarlo tranquillamente sotto la doccia, aumentando l\'efficacia grazie al calore dell\'acqua.' },
  { question: 'Come funziona il pagamento alla consegna?', answer: 'Scegli "Pagamento alla consegna" al checkout. Il corriere consegna il prodotto a casa tua in 24-48 ore e paghi direttamente a lui in contanti al momento della ricezione.' },
- { question: 'Posso restituire il prodotto se non sono soddisfatta?', answer: 'Assolutamente sì. Hai 30 giorni dalla ricezione per restituire il prodotto per qualsiasi motivo. Il reso è completamente gratuito e rimborsiamo il 100% dell\'importo pagato.' },
+ { question: 'Posso restituire il prodotto se non sono soddisfatta?', answer: 'Assolutamente sì. Hai 14 giorni dalla ricezione per restituire il prodotto per qualsiasi motivo. Il reso è completamente gratuito e rimborsiamo il 100% dell\'importo pagato.' },
 ]
 
 const steps = [
  { n: '01', title: 'Applica il gel o l\'olio', body: 'Stendi il tuo olio massaggiante preferito sull\'area da trattare. Il gel aumenta la conduzione del calore e massimizza i risultati.' },
  { n: '02', title: 'Seleziona la testina', body: 'Scegli tra le 4 testine intercambiabili in base all\'area: grande per cosce, media per glutei, piccola per addome, dentellata per gambe.' },
  { n: '03', title: 'Massaggia 10–15 minuti', body: 'Usa movimenti circolari ascendenti. Inizia con intensità bassa e aumenta gradualmente fino al livello che preferisci.' },
- { n: '04', title: 'Ripeti ogni giorno', body: 'Per risultati visibili in 14 giorni, massaggia ogni sera. Dopo 30 giorni la differenza sarà evidente anche agli altri.' },
+ { n: '04', title: 'Ripeti ogni giorno', body: 'Per risultati visibili in 14 giorni, massaggia ogni sera. Dopo 14 giorni la differenza sarà evidente anche agli altri.' },
 ]
 
 const features = [
@@ -93,13 +93,13 @@ export default function ProductPage() {
  */}
  <section className="bg-white py-8 md:py-12">
  <div className="max-w-6xl mx-auto px-4 sm:px-6">
- <div className="grid md:grid-cols-[1fr_420px] gap-10 items-start">
+ <div className="grid md:grid-cols-[1fr_420px] gap-10 items-start flex flex-col md:flex-none">
 
- {/* LEFT: image gallery */}
- <ProductImageGallery />
+ {/* LEFT: image gallery — order-2 on mobile so title/CTA shows first */}
+ <div className="order-2 md:order-1"><ProductImageGallery /></div>
 
- {/* RIGHT: sticky purchase panel */}
- <div className="md:sticky md:top-24 space-y-5">
+ {/* RIGHT: sticky purchase panel — order-1 on mobile so it shows above gallery */}
+ <div className="order-1 md:order-2 md:sticky md:top-24 space-y-5">
 
  {/* Title */}
  <div>
@@ -251,7 +251,7 @@ export default function ProductPage() {
  beforeSrc="/images/prima-cellulite.jpg"
  afterSrc="/images/dopo-bellacura.jpg"
  beforeLabel="Prima"
- afterLabel="Dopo 30 giorni"
+ afterLabel="Dopo 14 giorni"
  alt="Risultati anticellulite BellaCura"
  aspectRatio="120%"
  />
@@ -425,7 +425,7 @@ export default function ProductPage() {
  </div>
  <h2 className="text-3xl font-extrabold mb-4" style={{color: '#5A1830'}}>Prova BellaCura senza rischi</h2>
  <p className="mb-8 text-lg" style={{color: '#7A2040'}}>
- Se non vedi risultati entro 30 giorni, ti rimborsiamo il 100%. Zero domande. Zero burocrazia.
+ Se non vedi risultati entro 14 giorni, ti rimborsiamo il 100%. Zero domande. Zero burocrazia.
  </p>
  <div className="flex flex-col sm:flex-row gap-4 justify-center">
  <a
@@ -435,7 +435,7 @@ export default function ProductPage() {
  Ordina ora — Paga alla consegna
  </a>
  </div>
- <p className="text-sm mt-4" style={{color: '#9B4060'}}> Spedizione gratuita · Garanzia 30 giorni · 2.847+ clienti soddisfatte</p>
+ <p className="text-sm mt-4" style={{color: '#9B4060'}}> Spedizione gratuita · Garanzia 14 giorni · 2.847+ clienti soddisfatte</p>
  </div>
  </section>
 

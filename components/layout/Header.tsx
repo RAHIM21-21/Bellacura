@@ -15,7 +15,7 @@ const tickerMessages = [
  ' Consegna in 24–48 ore in tutta Italia',
  ' Pagamento alla consegna disponibile',
  ' Oltre 2.400 clienti soddisfatte',
- 'Garanzia soddisfatti o rimborsati 30 giorni',
+ 'Garanzia soddisfatti o rimborsati 14 giorni',
  'Spedizione GRATUITA su tutti gli ordini',
  'Offerta a tempo limitato – Solo oggi al 50%',
 ]

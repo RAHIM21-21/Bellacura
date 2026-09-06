@@ -43,7 +43,7 @@ export default function ChiSiamoPage() {
  {[
  { icon: 'Italia', title: '100% Italiano', desc: 'Spedizioni da magazzini italiani. Supporto clienti in italiano, 7 giorni su 7.' },
  { icon: '', title: 'Testato sul Campo', desc: 'Ogni prodotto viene testato per settimane prima di essere messo in vendita.' },
- { icon: '', title: 'Clienti Prima di Tutto', desc: 'Reso gratuito 30 giorni, garanzia 12 mesi, supporto dedicato per ogni ordine.' },
+ { icon: '', title: 'Clienti Prima di Tutto', desc: 'Reso gratuito 14 giorni, garanzia 12 mesi, supporto dedicato per ogni ordine.' },
  ].map((v) => (
  <div key={v.title} className="card text-center">
  <div className="text-4xl mb-3">{v.icon}</div>

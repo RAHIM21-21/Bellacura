@@ -83,7 +83,7 @@ export default function PrivacyPolicyPage() {
               <li>Revocare il consenso in qualsiasi momento</li>
             </ul>
             <p className="text-gray-700 leading-relaxed mt-3">
-              Per esercitare i tuoi diritti, scrivi a <a href="mailto:privacy@bellacura.it" className="text-rose-600 hover:underline">privacy@bellacura.it</a>. Risponderemo entro 30 giorni.
+              Per esercitare i tuoi diritti, scrivi a <a href="mailto:privacy@bellacura.it" className="text-rose-600 hover:underline">privacy@bellacura.it</a>. Risponderemo entro 14 giorni.
             </p>
           </section>
 

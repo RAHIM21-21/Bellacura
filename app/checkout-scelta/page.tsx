@@ -57,7 +57,7 @@ function CheckoutSceltaInner() {
 
       {/* Top trust bar */}
       <div className="text-center py-2 text-xs font-semibold" style={{ background: '#1A0F14', color: '#F2A7BB' }}>
-        Spedizione Express 24–48h Gratis · Paga solo alla consegna · Reso 30 giorni
+        Spedizione Express 24–48h Gratis · Paga solo alla consegna · Reso 14 giorni
       </div>
 
       {/* Header */}
