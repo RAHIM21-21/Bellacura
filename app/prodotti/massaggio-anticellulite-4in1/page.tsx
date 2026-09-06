@@ -74,8 +74,11 @@ export default function ProductPage() {
  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema_faq) }} />
 
  {/* OFFERTA A TEMPO */}
- <div className="text-center py-2 text-sm font-semibold tracking-wide" style={{background: 'linear-gradient(90deg, #F2C2CE 0%, #E8ADBE 50%, #F2C2CE 100%)', color: '#6B1E3A'}}>
- OFFERTA LIMITATA — Solo 7 pezzi disponibili a questo prezzo
+ <div className="py-3 px-4 bg-red-600">
+   <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
+     <span className="text-white text-sm font-bold uppercase tracking-wide">⚡ Offerta limitata — Solo 7 pezzi a questo prezzo</span>
+     <CountdownTimer />
+   </div>
  </div>
 
  {/* BREADCRUMB */}
