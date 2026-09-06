@@ -8,11 +8,11 @@ type MediaItem =
   | { type: 'video'; src: string; alt: string }
 
 const media: MediaItem[] = [
-  { type: 'image', src: '/images/g1-logo.png',      alt: 'BellaCura — dispositivo' },
+  { type: 'image', src: '/images/g1-logo.jpg',      alt: 'BellaCura — dispositivo' },
   { type: 'image', src: '/images/g2-thigh.jpg',     alt: 'Riduce la cellulite · Migliora la circolazione · Terapia con luce rossa' },
-  { type: 'image', src: '/images/g3-stat.png',      alt: '94% — pelle visibilmente più compatta dopo 3 settimane' },
+  { type: 'image', src: '/images/g3-stat.jpg',      alt: '94% — pelle visibilmente più compatta dopo 3 settimane' },
   { type: 'image', src: '/images/g4-martina.jpg',   alt: 'Prima e dopo — Martina C.' },
-  { type: 'image', src: '/images/g5-francesca.png', alt: 'Prima e dopo — Francesca M.' },
+  { type: 'image', src: '/images/g5-francesca.jpg', alt: 'Prima e dopo — Francesca M.' },
   { type: 'image', src: '/images/garanzia-pink-bg.jpg', alt: 'Garanzia rimborso 14 giorni — zero domande, zero burocrazia' },
   { type: 'video', src: '/video/promo.mp4', alt: 'BellaCura in azione' },
 ]
