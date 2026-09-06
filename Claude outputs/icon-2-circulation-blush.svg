@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Clean blood drop — pointed top, round bottom -->
+  <path d="M50 10
+           C50 10 22 48 22 65
+           C22 82 34.5 92 50 92
+           C65.5 92 78 82 78 65
+           C78 48 50 10 50 10 Z"
+        stroke="#F2C4CC" stroke-width="6" fill="none"
+        stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Glossy highlight -->
+  <path d="M38 50 C38 42 44 36 50 34"
+        stroke="#F2C4CC" stroke-width="4.5" fill="none"
+        stroke-linecap="round"/>
+</svg>

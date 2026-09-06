@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Device body — horizontal box -->
+  <rect x="18" y="22" width="64" height="30" rx="8" ry="8" stroke="#F2C4CC" stroke-width="6" fill="none"/>
+  <!-- Small button detail on right side of device -->
+  <rect x="69" y="30" width="6" height="14" rx="3" ry="3" fill="#F2C4CC"/>
+  <!-- Emitter dot on bottom center of device -->
+  <circle cx="50" cy="52" r="4" fill="#F2C4CC"/>
+  <!-- Half-circle light arcs below -->
+  <path d="M34 64 A18 18 0 0 0 66 64" stroke="#F2C4CC" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M24 72 A28 28 0 0 0 76 72" stroke="#F2C4CC" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M14 80 A38 38 0 0 0 86 80" stroke="#F2C4CC" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>

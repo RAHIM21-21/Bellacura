@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-raleway: 'Raleway', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-cream text-gray-800 antialiased;
+    font-family: var(--font-raleway), system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+
+  /* Cormorant Garamond headings — reads larger optically, looks immaculate */
+  h1, h2, h3, h4 {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    color: #1a1a1a;
+  }
+
+  h1 { font-size: 3rem; font-weight: 600; line-height: 1.1; }
+  h2 { font-size: 2.4rem; font-weight: 600; line-height: 1.2; }
+  h3 { font-size: 1.6rem; font-weight: 500; line-height: 1.3; }
+
+  p  { @apply leading-relaxed; }
+  a  { @apply transition-colors duration-200; }
+}
+
+@layer components {
+  /* ── Logo wordmark ── */
+  .logo-wordmark {
+    font-family: var(--font-pinyon), cursive;
+    font-size: 2.4rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: #A8355A;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+  }
+  .logo-bella {
+    font-weight: 400;
+    font-style: normal;
+  }
+  .logo-cura {
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-rose-500 text-white rounded-full
+           hover:bg-rose-600 active:scale-95 transition-all duration-200 shadow-lg shadow-rose-200
+           focus:outline-none focus:ring-4 focus:ring-rose-300;
+    font-family: var(--font-raleway), sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 border border-rose-300 text-rose-600 rounded-full
+           hover:bg-blush active:scale-95 transition-all duration-200
+           focus:outline-none focus:ring-4 focus:ring-rose-200;
+    font-family: var(--font-raleway), sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+
+  .container-tight {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-16 sm:py-24;
+  }
+
+  /* ── Badge / pill labels ── */
+  .badge {
+    @apply inline-flex items-center px-4 py-1.5 rounded-full text-xs bg-rose-100 text-rose-600;
+    font-family: var(--font-raleway), sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-200 p-6;
+  }
+}
+
+/* ── Urgency ticker ── */
+.ticker-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 32s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  white-space: nowrap;
+  padding: 0 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-family: var(--font-raleway), sans-serif;
+}
+
+.ticker-sep {
+  margin-left: 1.25rem;
+  opacity: 0.4;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Stock urgency badge ── */
+.stock-badge {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold;
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1.5px solid #fed7aa;
+  font-family: var(--font-raleway), sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.stock-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ea580c;
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(1.4); }
+}
+
+/* ── Countdown timer ── */
+.countdown-box {
+  @apply flex items-center justify-center gap-3 py-3 px-6 rounded-2xl;
+  background: linear-gradient(135deg, #FDF4F6 0%, #FAE6EE 100%);
+  border: 1px solid #F5C8DA;
+}
+
+.countdown-unit { @apply text-center; }
+
+.countdown-num {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #CF6685;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-family: var(--font-raleway), sans-serif;
+  font-size: 0.6rem;
+  color: #ECA8BE;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+.countdown-sep {
+  @apply text-rose-300 font-bold text-xl;
+}

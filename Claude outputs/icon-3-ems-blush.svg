@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Lightning bolt center -->
+  <polygon points="55,12 35,54 50,54 45,88 65,46 50,46" fill="#F2C4CC"/>
+  <!-- Wave arcs left side -->
+  <path d="M28 30 C22 36 22 44 28 50" stroke="#F2C4CC" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M18 24 C9 34 9 46 18 56" stroke="#F2C4CC" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- Wave arcs right side -->
+  <path d="M72 30 C78 36 78 44 72 50" stroke="#F2C4CC" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M82 24 C91 34 91 46 82 56" stroke="#F2C4CC" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- Squiggly wave line at bottom -->
+  <path d="M15 78 C20 72 25 84 30 78 C35 72 40 84 45 78 C50 72 55 84 60 78 C65 72 70 84 75 78 C80 72 85 84 88 78" stroke="#F2C4CC" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

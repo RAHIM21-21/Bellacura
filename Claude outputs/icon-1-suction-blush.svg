@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Rounded square border -->
+  <rect x="8" y="8" width="84" height="84" rx="16" ry="16" stroke="#F2C4CC" stroke-width="6" fill="none"/>
+  <!-- 3x3 dot grid, skip center -->
+  <!-- Row 1 -->
+  <circle cx="31" cy="31" r="5" fill="#F2C4CC"/>
+  <circle cx="50" cy="31" r="5" fill="#F2C4CC"/>
+  <circle cx="69" cy="31" r="5" fill="#F2C4CC"/>
+  <!-- Row 2 -->
+  <circle cx="31" cy="50" r="5" fill="#F2C4CC"/>
+  <!-- Center: 4-pointed sparkle -->
+  <path d="M50 38 L52.5 47.5 L62 50 L52.5 52.5 L50 62 L47.5 52.5 L38 50 L47.5 47.5 Z" fill="#F2C4CC"/>
+  <circle cx="69" cy="50" r="5" fill="#F2C4CC"/>
+  <!-- Row 3 -->
+  <circle cx="31" cy="69" r="5" fill="#F2C4CC"/>
+  <circle cx="50" cy="69" r="5" fill="#F2C4CC"/>
+  <circle cx="69" cy="69" r="5" fill="#F2C4CC"/>
+</svg>
