@@ -26,7 +26,7 @@ export default function StickyOrderButton({ desktop = false }: { desktop?: boole
       {/* Right: CTA button */}
       <a
         href="/checkout-scelta/"
-        className="shrink-0 flex items-center justify-center bg-red-600 active:bg-red-700 text-white font-bold text-sm px-5 py-3.5 rounded-2xl shadow-lg whitespace-nowrap"
+        className="shrink-0 flex items-center justify-center bg-red-600 active:bg-red-700 text-white font-bold text-sm px-6 py-4 rounded-2xl shadow-lg whitespace-nowrap min-w-[130px]"
       >
         Ordina Ora →
       </a>
