@@ -53,7 +53,7 @@ export default function ProductImageGallery() {
           <video
             ref={videoRef}
             src={current.src}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
             controls
             autoPlay
             loop
