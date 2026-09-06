@@ -45,7 +45,7 @@ export default function ProductImageGallery() {
     <div className="space-y-3">
       {/* Main viewer */}
       <div
-        className={`relative rounded-3xl overflow-hidden bg-rose-50 shadow-xl select-none ${current.type === "video" ? "" : "aspect-square"}`}
+        className="relative rounded-3xl overflow-hidden bg-gray-900 aspect-square shadow-xl select-none"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
@@ -53,7 +53,7 @@ export default function ProductImageGallery() {
           <video
             ref={videoRef}
             src={current.src}
-            className="w-full h-auto"
+            className="w-full h-full object-contain"
             controls
             autoPlay
             loop
