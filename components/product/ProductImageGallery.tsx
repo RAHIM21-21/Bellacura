@@ -13,6 +13,7 @@ const media: MediaItem[] = [
   { type: 'image', src: '/images/g3-stat.png',      alt: '94% — pelle visibilmente più compatta dopo 3 settimane' },
   { type: 'image', src: '/images/g4-martina.jpg',   alt: 'Prima e dopo — Martina C.' },
   { type: 'image', src: '/images/g5-francesca.png', alt: 'Prima e dopo — Francesca M.' },
+  { type: 'image', src: '/images/garanzia-pink-bg.jpg', alt: 'Garanzia rimborso 14 giorni — zero domande, zero burocrazia' },
   { type: 'video', src: '/video/promo.mp4', alt: 'BellaCura in azione' },
 ]
 
@@ -102,13 +103,6 @@ export default function ProductImageGallery() {
           ))}
         </div>
 
-        {/* Money-back badge */}
-        <div className="absolute top-4 right-4 w-24 h-24 rounded-full border-4 border-white bg-rose-600 flex flex-col items-center justify-center text-white shadow-lg">
-          <span className="text-[10px] font-semibold">reso</span>
-          <span className="text-2xl font-black leading-none">30</span>
-          <span className="text-[10px] font-semibold">giorni</span>
-          <span className="text-[9px] font-medium opacity-90">garantito</span>
-        </div>
 
       </div>
 
