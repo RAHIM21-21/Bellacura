@@ -75,9 +75,15 @@ export default function ProductPage() {
 
  {/* OFFERTA A TEMPO */}
  <div className="py-3 px-4 bg-red-600">
-   <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
+   <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-5 gap-y-1">
      <span className="text-white text-sm font-bold uppercase tracking-wide">⚡ Offerta limitata — Solo 7 pezzi a questo prezzo</span>
-     <CountdownTimer />
+     <div className="flex items-center gap-3">
+       <CountdownTimer />
+       <span className="text-white/80 text-xs font-semibold hidden sm:inline">|</span>
+       <span className="inline-flex items-center gap-1 bg-white/20 border border-white/30 text-white text-xs font-bold px-2.5 py-1 rounded-md">
+         💳 Paga alla consegna disponibile
+       </span>
+     </div>
    </div>
  </div>
 
