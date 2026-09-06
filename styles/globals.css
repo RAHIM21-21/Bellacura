@@ -203,3 +203,11 @@
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
+
+/* Push Crisp chat widget above sticky mobile bar */
+@media (max-width: 768px) {
+  .crisp-client .cc-tlyw[data-full-view=true] .cc-kxkl,
+  .crisp-client #crisp-chatbox {
+    bottom: 90px !important;
+  }
+}

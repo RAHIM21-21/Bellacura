@@ -10,7 +10,7 @@ export default function WhatsAppButton() {
   const [hovered, setHovered] = useState(false)
 
   return (
-    <div className="fixed bottom-6 left-6 z-[998] flex flex-col items-start gap-2">
+    <div className="fixed bottom-24 md:bottom-6 left-6 z-[998] flex flex-col items-start gap-2">
       {/* Tooltip bubble */}
       <div
         className={`transition-all duration-200 origin-bottom-right ${
