@@ -5,44 +5,44 @@ import Image from 'next/image'
 import { Star, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react'
 
 type Review =
-  | { type: 'photo'; image: string; name: string; city: string; rating: number; months: string; text: string; verified: boolean }
+  | { type: 'photo'; image: string; name: string; city: string; rating: number; months: string; text: string; verified: boolean; objectPosition?: string }
   | { type: 'text'; name: string; city: string; rating: number; text: string; verified: boolean }
 
 const allReviews: Review[] = [
-  { type: 'photo', image: '/images/review1.jpg', name: 'Valentina M.', city: 'Milano', rating: 5, months: '6 settimane', text: 'Non ci credevo, ma i risultati parlano da soli! La cellulite è quasi sparita e mi sento molto più sicura di me.', verified: true },
-  { type: 'photo', image: '/images/review2.jpg', name: 'Chiara B.', city: 'Roma', rating: 5, months: '2 mesi', text: 'Finalmente un prodotto che funziona davvero! La pelle è tornata tonica e compatta. Super consigliato!', verified: true },
-  { type: 'photo', image: '/images/review5.jpg', name: 'Alessia C.', city: 'Firenze', rating: 5, months: '4 settimane', text: 'Risultati impressionanti in sole 4 settimane. La mia coscia non si era mai sentita così liscia!', verified: true },
-  { type: 'photo', image: '/images/review6.jpg', name: 'Martina R.', city: 'Bologna', rating: 5, months: '6 settimane', text: 'Ho perso centimetri sui glutei e sulle cosce senza cambiare la dieta. BellaCura è una svolta!', verified: true },
-  { type: 'photo', image: '/images/review7.jpg', name: 'Elena P.', city: 'Venezia', rating: 5, months: '5 settimane', text: 'La differenza sulla coscia è enorme. Pelle liscia e levigata, zero cellulite visibile. Incredibile!', verified: true },
-  { type: 'text', name: 'Alessia R.', city: 'Firenze', rating: 5, text: 'Lo uso ogni mattina sulle cosce e sui glutei. Dopo un mese la cellulite a buccia d\'arancia è quasi sparita. Non tornerei mai indietro!', verified: true },
-  { type: 'text', name: 'Monica D.', city: 'Bologna', rating: 5, text: 'Con questo massaggiatore in 3 settimane ho visto miglioramenti concreti. Nessuna crema aveva mai funzionato così!', verified: true },
+  { type: 'photo', image: '/images/review1.jpg', name: 'Valentina M.', city: 'Milano', rating: 5, months: '6 settimane', text: 'Onestamente non ci credevo. La cellulite è quasi sparita e ora mi sento molto più sicura di me.', verified: true },
+  { type: 'photo', image: '/images/review2.jpg', name: 'Chiara B.', city: 'Roma', rating: 5, months: '2 mesi', text: 'Finalmente qualcosa che funziona davvero. La pelle è tornata tonica e compatta, lo consiglio a tutte.', verified: true },
+  { type: 'photo', image: '/images/review5.jpg', name: 'Alessia C.', city: 'Firenze', rating: 5, months: '4 settimane', text: 'Risultati impressionanti in 4 settimane. La mia coscia non si era mai sentita così liscia.', verified: true },
+  { type: 'photo', image: '/images/review6.jpg', name: 'Martina R.', city: 'Bologna', rating: 5, months: '6 settimane', text: 'Ho perso centimetri sui glutei e sulle cosce senza cambiare niente nella dieta. Una svolta.', verified: true, objectPosition: 'object-bottom' },
+  { type: 'photo', image: '/images/review7.jpg', name: 'Elena P.', city: 'Venezia', rating: 5, months: '5 settimane', text: 'La differenza sulla coscia è enorme. Pelle liscia e levigata, zero cellulite visibile.', verified: true },
+  { type: 'text', name: 'Alessia R.', city: 'Firenze', rating: 5, text: 'Lo uso ogni mattina sulle cosce e sui glutei. Dopo un mese la cellulite a buccia d\'arancia è quasi sparita. Non tornerei mai indietro.', verified: true },
+  { type: 'text', name: 'Monica D.', city: 'Bologna', rating: 5, text: 'Con questo massaggiatore in 3 settimane ho visto miglioramenti concreti. Nessuna crema aveva mai funzionato così.', verified: true },
   { type: 'text', name: 'Federica L.', city: 'Venezia', rating: 5, text: 'La funzione di calore è una meraviglia. Le mie gambe sono molto meno pesanti e gonfie rispetto a prima.', verified: true },
-  { type: 'photo', image: '/images/review3.jpg', name: 'Sara T.', city: 'Torino', rating: 5, months: '5 settimane', text: 'Risultati visibili già dopo 2 settimane! Le gambe sono molto più lisce e la ritenzione idrica è diminuita tantissimo.', verified: true },
-  { type: 'text', name: 'Giovanna P.', city: 'Palermo', rating: 5, text: 'Dopo due gravidanze la mia pelle era completamente ceduta. In 6 settimane ho recuperato una tonicità che non avevo più. Miracoloso!', verified: true },
-  { type: 'text', name: 'Martina C.', city: 'Genova', rating: 5, text: '15 minuti al giorno e la differenza è evidente. La cellulite sulle cosce si è ridotta visibilmente in sole 4 settimane.', verified: true },
-  { type: 'text', name: 'Simona V.', city: 'Bari', rating: 5, text: 'Avevo provato tutto. Questo è l\'unico che ha davvero funzionato sulla mia cellulite fibro. Consigliato assolutamente.', verified: true },
-  { type: 'photo', image: '/images/review4.jpg', name: 'Laura F.', city: 'Napoli', rating: 5, months: '7 settimane', text: 'Sono rimasta senza parole! Pelle più tonica, meno cellulite e più energia. I miglioramenti sono stati incredibili.', verified: true },
-  { type: 'text', name: 'Irene G.', city: 'Catania', rating: 5, text: 'Le gambe gonfie dopo una giornata in piedi sono diventate un ricordo. Il massaggio drenante funziona benissimo.', verified: true },
-  { type: 'text', name: 'Roberta M.', city: 'Verona', rating: 5, text: 'Ho speso centinaia di euro in trattamenti estetici e questo massaggiatore ha fatto più di tutti loro messi insieme.', verified: true },
+  { type: 'photo', image: '/images/review3.jpg', name: 'Sara T.', city: 'Torino', rating: 5, months: '5 settimane', text: 'Risultati visibili già dopo 2 settimane. Le gambe sono molto più lisce e il gonfiore è diminuito tantissimo.', verified: true },
+  { type: 'text', name: 'Giovanna P.', city: 'Palermo', rating: 5, text: 'Dopo due gravidanze la mia pelle era completamente ceduta. In 6 settimane ho recuperato una tonicità che non avevo più. Non me lo aspettavo.', verified: true },
+  { type: 'text', name: 'Martina C.', city: 'Genova', rating: 5, text: '15 minuti al giorno e la differenza si vede. La cellulite sulle cosce si è ridotta in 4 settimane.', verified: true },
+  { type: 'text', name: 'Simona V.', city: 'Bari', rating: 5, text: 'Avevo provato tutto. Questo è l\'unico che ha davvero funzionato sulla mia cellulite fibro. Lo consiglio.', verified: true },
+  { type: 'photo', image: '/images/review4.jpg', name: 'Laura F.', city: 'Napoli', rating: 5, months: '7 settimane', text: 'Sono rimasta senza parole. Pelle più tonica, meno cellulite e mi sento meglio. I miglioramenti sono stati davvero notevoli.', verified: true },
+  { type: 'text', name: 'Irene G.', city: 'Catania', rating: 5, text: 'Le gambe gonfie dopo una giornata in piedi sono diventate un ricordo. Il massaggio drenante funziona davvero.', verified: true },
+  { type: 'text', name: 'Roberta M.', city: 'Verona', rating: 5, text: 'Ho speso centinaia di euro in trattamenti estetici e questo massaggiatore ha fatto più di tutti loro insieme.', verified: true },
   { type: 'text', name: 'Serena A.', city: 'Perugia', rating: 5, text: '"Cosa hai fatto?" mi ha chiesto la mia estetista. Solo BellaCura, ogni sera!', verified: true },
-  { type: 'text', name: 'Paola N.', city: 'Ancona', rating: 5, text: 'Uso la testina a ventosa per il massaggio cupping sulle cosce: la circolazione migliora tantissimo. Risultati in 2 settimane!', verified: true },
-  { type: 'text', name: 'Raffaella S.', city: 'Reggio Calabria', rating: 5, text: 'La funzione ventosa è quello che mi ha convinto. Faccio il cupping 3 volte a settimana e la pelle a buccia d\'arancia è molto diminuita.', verified: true },
-  { type: 'text', name: 'Antonella C.', city: 'Brescia', rating: 5, text: 'Uso la ventosa per il cupping sulle gambe e la pelle è liscia come non lo era dai miei vent\'anni. Incredibile a 43 anni!', verified: true },
-  { type: 'text', name: 'Luisa T.', city: 'Modena', rating: 5, text: 'Il massaggio a pressione negativa con la testina ventosa è fantastico per drenare i liquidi. Le gambe pesanti sono sparite.', verified: true },
-  { type: 'text', name: 'Carla M.', city: 'Padova', rating: 5, text: 'Ho scoperto il cupping grazie a BellaCura! La testina a ventosa lavora in profondità sulla cellulite come nessun altro strumento.', verified: true },
+  { type: 'text', name: 'Paola N.', city: 'Ancona', rating: 5, text: 'Uso la testina a ventosa sulle cosce: la circolazione migliora tantissimo. Risultati in 2 settimane.', verified: true },
+  { type: 'text', name: 'Raffaella S.', city: 'Reggio Calabria', rating: 5, text: 'La funzione ventosa è quello che mi ha convinto. Faccio il cupping 3 volte a settimana e la pelle a buccia d\'arancia è molto migliorata.', verified: true },
+  { type: 'text', name: 'Antonella C.', city: 'Brescia', rating: 5, text: 'Uso la ventosa sulle gambe e la pelle è liscia come non lo era dai miei vent\'anni. Non me lo aspettavo a 43 anni.', verified: true },
+  { type: 'text', name: 'Luisa T.', city: 'Modena', rating: 5, text: 'Il massaggio a pressione negativa è perfetto per drenare i liquidi. Le gambe pesanti sono sparite.', verified: true },
+  { type: 'text', name: 'Carla M.', city: 'Padova', rating: 5, text: 'Ho scoperto il cupping grazie a BellaCura. La testina a ventosa lavora in profondità sulla cellulite come nessun altro strumento.', verified: true },
   { type: 'text', name: 'Daniela F.', city: 'Livorno', rating: 5, text: 'La cellulite sulle cosce si è attenuata molto in 5 settimane. Lo uso ogni sera prima di dormire, 10 minuti bastano.', verified: true },
-  { type: 'text', name: 'Angela P.', city: 'Salerno', rating: 5, text: 'Finalmente impermeabile! Con l\'acqua calda sotto la doccia i risultati sono ancora più veloci. Skin molto più liscia.', verified: true },
-  { type: 'text', name: 'Rosa B.', city: 'Messina', rating: 5, text: 'Mia sorella lo ha comprato per prima e quando ho visto la sua pelle ho ordinato subito anche io. Differenza visibile in 3 settimane.', verified: true },
-  { type: 'text', name: 'Teresa L.', city: 'Como', rating: 5, text: 'Ho 52 anni e pensavo fosse troppo tardi. Invece in 8 settimane la cellulite si è ridotta di tanto. Non mollate mai!', verified: true },
-  { type: 'text', name: 'Nadia R.', city: 'Taranto', rating: 5, text: 'Lo uso anche sull\'addome dopo il parto e la pancia si è molto rassodatta. Risultati sorprendenti!', verified: true },
+  { type: 'text', name: 'Angela P.', city: 'Salerno', rating: 5, text: 'Con l\'acqua calda sotto la doccia i risultati arrivano ancora più in fretta. La pelle è molto più liscia.', verified: true },
+  { type: 'text', name: 'Rosa B.', city: 'Messina', rating: 5, text: 'Mia sorella lo ha comprato per prima e quando ho visto la sua pelle ho ordinato subito anch\'io. Differenza visibile in 3 settimane.', verified: true },
+  { type: 'text', name: 'Teresa L.', city: 'Como', rating: 5, text: 'Ho 52 anni e pensavo fosse troppo tardi. Invece in 8 settimane la cellulite si è ridotta di tanto. Non mollate.', verified: true },
+  { type: 'text', name: 'Nadia R.', city: 'Taranto', rating: 5, text: 'Lo uso anche sull\'addome dopo il parto e la pancia si è molto rassodatta. Risultati davvero inaspettati.', verified: true },
   { type: 'text', name: 'Concetta V.', city: 'Caserta', rating: 5, text: 'Il pagamento alla consegna mi ha convinto. È arrivato in 2 giorni e da allora non l\'ho più posato.', verified: true },
-  { type: 'text', name: 'Graziella M.', city: 'Foggia', rating: 5, text: 'Uso calore e vibrazione alta insieme: è un massaggio professionale a casa mia. La cellulite si è attenuata visibilmente.', verified: true },
-  { type: 'text', name: 'Silvia T.', city: 'Pisa', rating: 5, text: 'Avevo la cellulite edematosa molto accentuata. Dopo 7 settimane la pelle è molto più uniforme. Il gonfiore è quasi sparito.', verified: true },
-  { type: 'text', name: 'Ornella C.', city: 'Udine', rating: 5, text: 'Ne ho già comprati 3 come regalo per le amiche. I risultati parlano da soli — il prodotto è robusto e duraturo.', verified: true },
-  { type: 'text', name: 'Beatrice R.', city: 'Bergamo', rating: 5, text: 'Dopo l\'allenamento faccio 10 minuti di massaggio sulle cosce e i muscoli si recuperano più in fretta. Doppio beneficio!', verified: true },
-  { type: 'text', name: 'Patrizia M.', city: 'Cagliari', rating: 5, text: 'Cupping con la testina ventosa: risultati straordinari sulla cellulite! La pelle è tornata compatta in 3 settimane.', verified: true },
+  { type: 'text', name: 'Graziella M.', city: 'Foggia', rating: 5, text: 'Uso calore e vibrazione alta insieme: è come un massaggio professionale a casa. La cellulite si è attenuata visibilmente.', verified: true },
+  { type: 'text', name: 'Silvia T.', city: 'Pisa', rating: 5, text: 'Avevo la cellulite edematosa molto accentuata. Dopo 7 settimane la pelle è molto più uniforme e il gonfiore è quasi sparito.', verified: true },
+  { type: 'text', name: 'Ornella C.', city: 'Udine', rating: 5, text: 'Ne ho già comprati 3 come regalo per le amiche. Il prodotto è robusto e duraturo, i risultati si vedono.', verified: true },
+  { type: 'text', name: 'Beatrice R.', city: 'Bergamo', rating: 5, text: 'Dopo l\'allenamento faccio 10 minuti di massaggio sulle cosce e i muscoli si recuperano più in fretta.', verified: true },
+  { type: 'text', name: 'Patrizia M.', city: 'Cagliari', rating: 5, text: 'Cupping con la testina ventosa: ottimi risultati sulla cellulite. La pelle è tornata compatta in 3 settimane.', verified: true },
   { type: 'text', name: 'Claudia B.', city: 'Rimini', rating: 5, text: 'La batteria dura tantissimo e la ricarica USB-C è comodissima. La cellulite sta migliorando settimana dopo settimana.', verified: true },
-  { type: 'text', name: 'Tiziana L.', city: 'Latina', rating: 5, text: 'Uso la ventosa ogni 2 giorni e le altre testine ogni giorno. Il mix di tecniche fa la differenza — pelle mai così tonica!', verified: true },
+  { type: 'text', name: 'Tiziana L.', city: 'Latina', rating: 5, text: 'Uso la ventosa ogni 2 giorni e le altre testine ogni giorno. Il mix di tecniche fa la differenza, la pelle non era mai così tonica.', verified: true },
   { type: 'text', name: 'Elena B.', city: 'Trieste', rating: 5, text: 'Le 5 intensità di vibrazione sono perfette. Uso la 3 la mattina e la 5 la sera. Risultati in 3 settimane.', verified: true },
 ]
 
@@ -121,7 +121,7 @@ function ReviewCard({ review }: { review: Review }) {
             src={review.image}
             alt={`Risultati di ${review.name}`}
             fill
-            className="object-cover object-top"
+            className={`object-cover ${review.objectPosition ?? 'object-top'}`}
             sizes="(max-width: 768px) 100vw, 33vw"
           />
           <div className="absolute bottom-0 left-0 right-0 flex">
