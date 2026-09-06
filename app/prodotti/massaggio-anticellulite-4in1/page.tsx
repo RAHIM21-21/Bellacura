@@ -7,6 +7,7 @@ import ProductImageGallery from '@/components/product/ProductImageGallery'
 import ReviewsCarousel from '@/components/ui/ReviewsCarousel'
 import StickyOrderButton from '@/components/product/StickyOrderButton'
 import VideoSection from '@/components/product/VideoSection'
+import CountdownTimer from '@/components/home/CountdownTimer'
 
 export const metadata: Metadata = {
  ...buildMetadata({
@@ -160,6 +161,22 @@ export default function ProductPage() {
  ))}
  </div>
 
+ {/* COD trust badges */}
+ <div className="flex flex-wrap gap-2">
+   <span className="inline-flex items-center gap-1.5 bg-green-50 border border-green-200 text-green-800 text-xs font-semibold px-3 py-1.5 rounded-full">
+     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
+     Paga alla consegna — nessun rischio
+   </span>
+   <span className="inline-flex items-center gap-1.5 bg-blue-50 border border-blue-200 text-blue-800 text-xs font-semibold px-3 py-1.5 rounded-full">
+     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
+     Spedizione gratuita 24-48h
+   </span>
+   <span className="inline-flex items-center gap-1.5 bg-rose-50 border border-rose-200 text-rose-800 text-xs font-semibold px-3 py-1.5 rounded-full">
+     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
+     Reso gratuito 14 giorni
+   </span>
+ </div>
+
  {/* Bundle picker */}
  <ProductBundlePicker />
 
@@ -167,6 +184,9 @@ export default function ProductPage() {
  </div>
  </div>
  </section>
+
+ {/* REVIEWS */}
+ <ReviewsCarousel />
 
   {/*
  COME VISTO SU
@@ -214,9 +234,6 @@ export default function ProductPage() {
      </div>
    </div>
  </section>
-
- {/* REVIEWS */}
- <ReviewsCarousel />
 
  {/*
  RISULTATI REALI
@@ -451,7 +468,7 @@ export default function ProductPage() {
  </p>
  <div className="flex flex-col sm:flex-row gap-4 justify-center">
  <a
- href="/checkout/?prodotto=massaggio-4in1&qty=1&metodo=cod"
+ href="/checkout-scelta/"
  className="font-bold text-lg px-10 py-4 rounded-2xl transition-colors shadow-xl" style={{background: '#7A2040', color: '#fff'}}
  >
  Ordina ora — Paga alla consegna
