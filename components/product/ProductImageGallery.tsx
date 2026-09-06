@@ -110,11 +110,12 @@ export default function ProductImageGallery() {
           <span className="text-[9px] font-medium opacity-90">garantito</span>
         </div>
 
-        {/* Stock badge */}
-        <div className="absolute bottom-4 left-4 bg-white rounded-full px-3 py-1.5 shadow-md flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-          <span className="text-xs font-bold text-gray-800">Solo 7 pezzi rimasti</span>
-        </div>
+      </div>
+
+      {/* Stock badge — outside the image so it never covers product text */}
+      <div className="flex items-center gap-2 bg-white border border-red-100 rounded-full px-4 py-2 shadow-sm w-fit">
+        <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+        <span className="text-xs font-bold text-gray-800">Solo 7 pezzi rimasti</span>
       </div>
 
       {/* Thumbnails */}
