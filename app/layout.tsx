@@ -63,6 +63,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
         />
+        {/* Crisp live chat */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.$crisp=[];window.CRISP_WEBSITE_ID="cbd677a8-aa17-4506-8794-ca6af0cc8e7c";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`
+          }}
+        />
       </head>
       <body className="min-h-screen flex flex-col bg-cream">
         <Header />
