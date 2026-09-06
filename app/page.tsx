@@ -4,6 +4,7 @@ import { buildMetadata } from '@/lib/seo'
 import { Star, Truck, RotateCcw, Shield, ChevronRight, CheckCircle2 } from 'lucide-react'
 import CountdownTimer from '@/components/home/CountdownTimer'
 import ReviewsCarousel from '@/components/ui/ReviewsCarousel'
+import BodyMap from '@/components/home/BodyMap'
 
 export const metadata: Metadata = buildMetadata({
  title: 'BellaCura – Massaggiatore Anticellulite 4 in 1 | Spedizione 24-48h',
@@ -278,7 +279,9 @@ export default function HomePage() {
  </div>
  </section>
 
- {/* VIDEO PROMO */}
+      <BodyMap />
+
+      {/* VIDEO PROMO */}
  <section className="bg-white py-16">
  <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
  <span className="inline-block bg-rose-100 text-rose-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">Vedi come funziona</span>

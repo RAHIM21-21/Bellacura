@@ -11,12 +11,24 @@ export default function StickyOrderButton({ desktop = false }: { desktop?: boole
   }
 
   return (
-    <div className="md:hidden px-3 pt-3 pb-3" style={{ paddingBottom: 'max(12px, env(safe-area-inset-bottom))' }}>
+    <div
+      className="md:hidden flex items-center gap-3 px-3 pt-2.5"
+      style={{ paddingBottom: 'max(10px, env(safe-area-inset-bottom))' }}
+    >
+      {/* Left: branding + price */}
+      <div className="flex-1 min-w-0">
+        <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 leading-none mb-0.5">BellaCura®</p>
+        <div className="flex items-baseline gap-1.5">
+          <span className="text-gray-400 line-through text-xs">€119,00</span>
+          <span className="font-extrabold text-gray-900 text-lg leading-none">€59,90</span>
+        </div>
+      </div>
+      {/* Right: CTA button */}
       <a
         href="/checkout-scelta/"
-        className="flex items-center justify-center gap-2 w-full bg-red-600 text-white font-bold text-base py-4 rounded-2xl shadow-lg active:bg-red-700"
+        className="shrink-0 flex items-center justify-center bg-red-600 active:bg-red-700 text-white font-bold text-sm px-5 py-3.5 rounded-2xl shadow-lg whitespace-nowrap"
       >
-        Ordina Ora — €59,90
+        Ordina Ora →
       </a>
     </div>
   )

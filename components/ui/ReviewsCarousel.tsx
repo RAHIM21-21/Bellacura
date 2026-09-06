@@ -58,9 +58,9 @@ export default function ReviewsCarousel() {
   const visibleItems = Array.from({ length: VISIBLE }, (_, i) => allReviews[(start + i) % total])
 
   return (
-    <section className="py-14 bg-white" id="recensioni">
+    <section className="py-7 md:py-14 bg-white" id="recensioni">
       <div className="container-tight">
-        <div className="text-center mb-10">
+        <div className="text-center mb-5 md:mb-10">
           <span className="badge mb-3">⭐ Recensioni Verificate</span>
           <h2 className="font-serif text-gray-900 mb-3">Cosa dicono le nostre clienti</h2>
           <p className="text-gray-500 text-sm">Oltre 2.400 donne soddisfatte · Foto e recensioni reali</p>
@@ -98,7 +98,7 @@ export default function ReviewsCarousel() {
         </div>
 
         {/* Progress dots */}
-        <div className="flex justify-center gap-1.5 mt-7">
+        <div className="flex justify-center gap-1.5 mt-3">
           {allReviews.map((_, i) => (
             <button
               key={i}

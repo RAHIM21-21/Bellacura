@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quello che lo rende unico — Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Raleway', system-ui, sans-serif; background: #f0ece8; }
+
+  @keyframes bc-fade-up {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .bc-tech-card {
+    background: white;
+    border-radius: 20px;
+    padding: 32px 26px 28px;
+    border: 1px solid rgba(168,53,90,0.10);
+    box-shadow: 0 2px 12px rgba(168,53,90,0.06);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    opacity: 0;
+  }
+  .bc-tech-card.visible {
+    animation: bc-fade-up 0.55s ease both;
+  }
+  .bc-tech-card:hover {
+    box-shadow: 0 8px 32px rgba(168,53,90,0.13), 0 2px 8px rgba(168,53,90,0.07);
+    transform: translateY(-3px);
+  }
+  .bc-tech-card:nth-child(1) { animation-delay: 0ms; }
+  .bc-tech-card:nth-child(2) { animation-delay: 80ms; }
+  .bc-tech-card:nth-child(3) { animation-delay: 160ms; }
+  .bc-tech-card:nth-child(4) { animation-delay: 240ms; }
+
+  section {
+    background: #FBF8F4;
+    padding: 80px 0 88px;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: white;
+    border: 1px solid #f3d4dd;
+    color: #A8355A;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 99px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(168,53,90,0.08);
+  }
+  .badge-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: #A8355A;
+    display: inline-block;
+  }
+  h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.1;
+    color: #0f0a0b;
+    margin-bottom: 14px;
+  }
+  .subtitle {
+    color: #9ca3af;
+    font-size: 15px;
+    max-width: 440px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .icon-wrap {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: rgba(168,53,90,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+  }
+  .card-label {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #A8355A;
+    margin-bottom: 6px;
+  }
+  .card-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    color: #0f0a0b;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .card-desc {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.75;
+  }
+
+  @media (max-width: 600px) {
+    .grid { grid-template-columns: 1fr; gap: 14px; }
+    section { padding: 60px 0 68px; }
+  }
+</style>
+</head>
+<body>
+<section>
+  <div class="container">
+
+    <div class="header">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Tecnologia
+      </div>
+      <h2>Quello che lo rende unico</h2>
+      <p class="subtitle">Quattro tecnologie professionali in un unico dispositivo,<br>pensato per la cura quotidiana a casa.</p>
+    </div>
+
+    <div class="grid">
+
+      <!-- Card 1 -->
+      <div class="bc-tech-card">
+        <div class="icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8355A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <line x1="12" y1="2" x2="12" y2="5"/>
+            <line x1="12" y1="19" x2="12" y2="22"/>
+            <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/>
+            <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
+            <line x1="2" y1="12" x2="5" y2="12"/>
+            <line x1="19" y1="12" x2="22" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/>
+            <line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/>
+          </svg>
+        </div>
+        <p class="card-label">Luce Rossa</p>
+        <h3 class="card-title">Collagene naturale</h3>
+        <p class="card-desc">La luce rossa a 630 nm stimola la naturale produzione di collagene della pelle, favorendo un aspetto più sodo, levigato e luminoso con l'uso continuato.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bc-tech-card">
+        <div class="icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8355A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2c0 6-6 6-6 12a6 6 0 0 0 12 0c0-6-6-6-6-12z"/>
+            <path d="M12 12c0 3-2 3-2 5a2 2 0 0 0 4 0c0-2-2-2-2-5z"/>
+          </svg>
+        </div>
+        <p class="card-label">Calore</p>
+        <h3 class="card-title">Calore a 45°C</h3>
+        <p class="card-desc">Il calore piacevolmente riscaldante favorisce la microcircolazione e prepara la pelle per un'azione massaggiante più profonda e rilassante.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bc-tech-card">
+        <div class="icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8355A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12h2"/>
+            <path d="M20 12h2"/>
+            <path d="M5 7c0 0 2 2.5 2 5s-2 5-2 5"/>
+            <path d="M19 7c0 0-2 2.5-2 5s2 5 2 5"/>
+            <path d="M8 9c0 0 1 1.5 1 3s-1 3-1 3"/>
+            <path d="M16 9c0 0-1 1.5-1 3s1 3 1 3"/>
+            <line x1="12" y1="9" x2="12" y2="15"/>
+          </svg>
+        </div>
+        <p class="card-label">Vibrazione</p>
+        <h3 class="card-title">5 livelli di intensità</h3>
+        <p class="card-desc">Da delicato a intenso. Adatta la potenza alla tua sensibilità e all'area del corpo, per un massaggio sempre confortevole e preciso.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bc-tech-card">
+        <div class="icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8355A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L5.5 9.5a6.5 6.5 0 1 0 13 0L12 2z"/>
+          </svg>
+        </div>
+        <p class="card-label">Impermeabile</p>
+        <h3 class="card-title">Certificazione IPX7</h3>
+        <p class="card-desc">Utilizzalo sotto la doccia o in vasca con oli e creme. Facile da pulire, pronto ogni giorno senza compromessi.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const cards = document.querySelectorAll('.bc-tech-card');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  cards.forEach(c => obs.observe(c));
+  // Show immediately if already in view
+  setTimeout(() => cards.forEach(c => { if (!c.classList.contains('visible')) c.classList.add('visible'); }), 100);
+</script>
+</body>
+</html>

@@ -85,7 +85,7 @@
   }
 
   .section {
-    @apply py-16 sm:py-24;
+    @apply py-8 sm:py-24;
   }
 
   /* ── Badge / pill labels ── */

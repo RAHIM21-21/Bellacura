@@ -121,10 +121,13 @@ export default function ProductBundlePicker() {
         <img src="/images/payment-methods.png" alt="Metodi di pagamento accettati" className="h-10 w-auto object-contain opacity-90" />
         <div className="flex items-center gap-2">
           <span className="text-gray-400 text-xs font-semibold">oppure</span>
-          <div className="flex items-center gap-1.5 bg-green-50 border border-green-200 rounded-lg px-3 py-1.5">
+          <a
+            href={`/checkout-scelta/?bundle=${selected}&cod=1`}
+            className="flex items-center gap-1.5 bg-green-50 border border-green-200 rounded-lg px-3 py-1.5 hover:bg-green-100 transition-colors"
+          >
             <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
             <span className="text-green-800 text-xs font-bold whitespace-nowrap">Paga alla consegna</span>
-          </div>
+          </a>
         </div>
       </div>
 

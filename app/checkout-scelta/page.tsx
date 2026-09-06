@@ -21,7 +21,8 @@ function CheckoutSceltaInner() {
   const productPrice = isDouble ? '€99,90' : '€59,90'
   const originalPrice = isDouble ? '€238,00' : '€119,00'
 
-  const [step, setStep] = useState<Step>('choose')
+  const isCod = searchParams.get('cod') === '1'
+  const [step, setStep] = useState<Step>(isCod ? 'form' : 'choose')
   const [loading, setLoading] = useState(false)
   const [form, setForm] = useState({
     nome: '', cognome: '', telefono: '', indirizzo: '', citta: '', cap: '', note: ''
