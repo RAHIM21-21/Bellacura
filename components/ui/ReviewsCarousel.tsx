@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { Star, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react'
 
@@ -51,6 +51,7 @@ const VISIBLE = 3 // cards visible at once on desktop
 export default function ReviewsCarousel() {
   const [start, setStart] = useState(0)
   const total = allReviews.length
+  const touchStartX = React.useRef<number | null>(null)
 
   const prev = () => setStart((s) => (s - 1 + total) % total)
   const next = () => setStart((s) => (s + 1) % total)
@@ -67,7 +68,16 @@ export default function ReviewsCarousel() {
         </div>
 
         {/* Carousel */}
-        <div className="relative">
+        <div
+          className="relative"
+          onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX }}
+          onTouchEnd={(e) => {
+            if (touchStartX.current === null) return
+            const diff = touchStartX.current - e.changedTouches[0].clientX
+            if (Math.abs(diff) > 40) diff > 0 ? next() : prev()
+            touchStartX.current = null
+          }}
+        >
           {/* Desktop: 3 cards */}
           <div className="hidden md:grid grid-cols-3 gap-5">
             {visibleItems.map((r, i) => (

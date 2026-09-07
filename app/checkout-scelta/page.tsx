@@ -147,7 +147,7 @@ function CheckoutSceltaInner() {
             <div className="grid grid-cols-3 gap-3 mt-6">
               {[
                 { icon: <Truck size={16} className="text-rose-400" />, label: 'Spedizione Gratis' },
-                { icon: <RotateCcw size={16} className="text-rose-400" />, label: 'Reso 30 Giorni' },
+                { icon: <RotateCcw size={16} className="text-rose-400" />, label: 'Reso 14 Giorni' },
                 { icon: <Shield size={16} className="text-rose-400" />, label: 'Pagamento Sicuro' },
               ].map(({ icon, label }) => (
                 <div key={label} className="flex flex-col items-center gap-1.5 bg-white rounded-xl p-3 border border-gray-100 text-center">
