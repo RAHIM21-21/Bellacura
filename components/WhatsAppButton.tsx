@@ -6,7 +6,7 @@ const WA_URL = `https://wa.me/${PHONE}?text=${MESSAGE}`
 
 export default function WhatsAppButton() {
   return (
-    <div className="fixed bottom-[72px] md:bottom-4 right-4 md:right-6 z-[998] flex items-center gap-2">
+    <div className="fixed bottom-[96px] md:bottom-6 right-4 md:right-6 z-[998] flex items-center gap-2">
       {/* Always-visible label */}
       <div className="bg-white rounded-2xl shadow-lg px-3 py-2 border border-gray-100 hidden md:block">
         <p className="text-xs font-semibold text-gray-800 whitespace-nowrap">Hai domande?</p>
