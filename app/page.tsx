@@ -65,7 +65,7 @@ const benefits = [
 ]
 
 export default function HomePage() {
-  redirect(\'/prodotti/massaggio-anticellulite-4in1\')
+  redirect('/prodotti/massaggio-anticellulite-4in1')
  return (
  <>
  {/* HERO */}
