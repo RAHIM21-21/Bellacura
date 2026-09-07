@@ -13,6 +13,7 @@ function VideoCard({ src, label }: { src: string; label: string }) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [muted, setMuted] = useState(true)
   const [loaded, setLoaded] = useState(false)
+  const srcAssigned = useRef(false)
 
   useEffect(() => {
     const el = videoRef.current
@@ -21,12 +22,17 @@ function VideoCard({ src, label }: { src: string; label: string }) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Assign src the first time — triggers network load only when visible
-          if (!el.src || !el.src.includes(src.replace('/video/', ''))) {
+          if (!srcAssigned.current) {
+            srcAssigned.current = true
             el.src = src
             el.load()
+            // Wait for enough data before playing
+            el.addEventListener('canplay', () => {
+              el.play().catch(() => {})
+            }, { once: true })
+          } else {
+            el.play().catch(() => {})
           }
-          el.play().catch(() => {})
         } else {
           el.pause()
         }
@@ -45,7 +51,7 @@ function VideoCard({ src, label }: { src: string; label: string }) {
 
   return (
     <div
-      className="relative rounded-3xl overflow-hidden shadow-2xl group flex-shrink-0 w-[75vw] sm:w-auto bg-gray-100"
+      className="relative rounded-3xl overflow-hidden shadow-2xl group flex-shrink-0 bg-gray-100"
       style={{ aspectRatio: '9/16' }}
     >
       <video
@@ -59,14 +65,14 @@ function VideoCard({ src, label }: { src: string; label: string }) {
         onCanPlay={() => setLoaded(true)}
       />
 
-      {/* Spinner shown until video can play */}
+      {/* Spinner until video can play */}
       {!loaded && (
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
         </div>
       )}
 
-      {/* Mute/unmute button */}
+      {/* Mute/unmute */}
       <button
         onClick={toggleMute}
         aria-label={muted ? 'Attiva audio' : 'Disattiva audio'}
