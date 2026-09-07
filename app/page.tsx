@@ -289,7 +289,7 @@ export default function HomePage() {
  Risultati reali, routine semplice
  </h2>
  <div className="relative rounded-3xl overflow-hidden shadow-2xl mx-auto max-w-xs">
- <video src="/videos/bellacura-promo.mp4" autoPlay muted loop playsInline className="w-full h-auto" />
+ <video src="/videos/bellacura-promo.mp4" autoPlay muted loop playsInline preload="none" className="w-full h-auto" />
  </div>
  <p className="mt-6 text-gray-500 text-sm max-w-md mx-auto">
  Solo 10 minuti al giorno. I risultati parlano da soli.

@@ -1,42 +1,43 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond, Raleway, Pinyon_Script } from 'next/font/google'
+import dynamic from 'next/dynamic'
 import '@/styles/globals.css'
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL, buildMetadata, organizationSchema } from '@/lib/seo'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import SocialProofToast from '@/components/home/SocialProofToast'
-import ExitIntentPopup from '@/components/ExitIntentPopup'
 import WhatsAppButton from '@/components/WhatsAppButton'
 
-// Cormorant Garamond — ultra-luxury serif for all headings and logo
-// Used by Bottega Veneta, De Beers, high fashion. Distinctively Italian.
+// Only the weights actually used in the design; italic only for Cormorant (all headings are italic)
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
   variable: '--font-cormorant',
   display: 'swap',
   preload: true,
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600'],
   style: ['normal', 'italic'],
 })
 
-// Pinyon Script — refined pen-nib calligraphy for the logo
+// Pinyon Script — logo wordmark only; not critical-path, no eager preload
 const pinyonScript = Pinyon_Script({
   subsets: ['latin'],
   variable: '--font-pinyon',
   display: 'swap',
-  preload: true,
+  preload: false,
   weight: ['400'],
 })
 
-// Raleway — Art Deco geometric sans for body text
-// Fashion/beauty industry standard. Elegant, not tech-associated.
+// Raleway — body text; display:swap means system font shows first, no eager preload needed
 const raleway = Raleway({
   subsets: ['latin'],
   variable: '--font-raleway',
   display: 'swap',
-  preload: true,
-  weight: ['300', '400', '500', '600', '700'],
+  preload: false,
+  weight: ['400', '500', '600', '700'],
 })
+
+// Lazy-load non-critical interactive overlays — JS deferred to after hydration
+const SocialProofToast = dynamic(() => import('@/components/home/SocialProofToast'), { ssr: false })
+const ExitIntentPopup  = dynamic(() => import('@/components/ExitIntentPopup'), { ssr: false })
 
 export const metadata: Metadata = buildMetadata({
   title: 'BellaCura – Benessere e Cura del Corpo per la Donna',
@@ -52,8 +53,6 @@ export default function RootLayout({
   return (
     <html lang="it" className={`${cormorant.variable} ${raleway.variable} ${pinyonScript.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

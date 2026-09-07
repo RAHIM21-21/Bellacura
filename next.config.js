@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Compress responses
   compress: true,
-
-  // Power by header off (security + clean headers)
   poweredByHeader: false,
 
-  // Image optimization
+  // Better tree-shaking for icon libraries
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
+  },
+
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [390, 640, 750, 828, 1080, 1200, 1920],
@@ -14,7 +15,6 @@ const nextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
   },
 
-  // Strict headers for SEO and security
   async headers() {
     return [
       {
@@ -25,24 +25,25 @@ const nextConfig = {
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
         ],
       },
-      // Cache static assets aggressively
+      // Static assets — immutable cache (filename-based cache busting)
       {
         source: '/images/(.*)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
+        source: '/video/(.*)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
+        source: '/videos/(.*)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
     ]
   },
 
-  // Redirects (www → non-www, trailing slash)
   async redirects() {
     return [
-      {
-        source: '/index',
-        destination: '/',
-        permanent: true,
-      },
+      { source: '/index', destination: '/', permanent: true },
     ]
   },
 }
