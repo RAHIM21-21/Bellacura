@@ -9,6 +9,7 @@ import WhatsAppButton from '@/components/WhatsAppButton'
 import CrispChat from '@/components/CrispChat'
 import MicrosoftClarity from '@/components/MicrosoftClarity'
 import MetaPixel from '@/components/MetaPixel'
+import AddToCartTracker from '@/components/AddToCartTracker'
 
 // Only the weights actually used in the design; italic only for Cormorant (all headings are italic)
 const cormorant = Cormorant_Garamond({
@@ -78,6 +79,7 @@ export default function RootLayout({
         <CrispChat />
         <MicrosoftClarity />
         <MetaPixel />
+        <AddToCartTracker />
       </body>
     </html>
   )
