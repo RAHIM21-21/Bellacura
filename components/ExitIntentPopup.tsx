@@ -147,7 +147,7 @@ export default function ExitIntentPopup() {
               />
               <input
                 type="tel"
-                placeholder="📱 Telefono (opzionale — per offerte WhatsApp)"
+                placeholder="📱 Telefono (opzionale — per ricevere il codice su WhatsApp)"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 className="w-full border border-gray-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400"
