@@ -8,7 +8,6 @@ import Footer from '@/components/layout/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import CrispChat from '@/components/CrispChat'
 import MicrosoftClarity from '@/components/MicrosoftClarity'
-import MetaPixel from '@/components/MetaPixel'
 import AddToCartTracker from '@/components/AddToCartTracker'
 
 // Only the weights actually used in the design; italic only for Cormorant (all headings are italic)
@@ -66,6 +65,20 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
         />
+        <script
+          dangerouslySetInnerHTML={{ __html: `
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1055883607362457');
+            fbq('track', 'PageView');
+          ` }}
+        />
       </head>
       <body className="min-h-screen flex flex-col bg-cream">
         <Header />
@@ -78,7 +91,6 @@ export default function RootLayout({
         <WhatsAppButton />
         <CrispChat />
         <MicrosoftClarity />
-        <MetaPixel />
         <AddToCartTracker />
       </body>
     </html>
