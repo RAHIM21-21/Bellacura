@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useCallback } from 'react'
 import Image from 'next/image'
 
 type MediaItem =
@@ -17,34 +17,68 @@ const media: MediaItem[] = [
   { type: 'video', src: '/video/promo.mp4',             alt: 'BellaCura in azione' },
 ]
 
-const THRESHOLD = 40
+const THRESHOLD = 50 // px to commit a swipe
 
 export default function ProductImageGallery() {
   const [active, setActive]       = useState(0)
-  const [slideClass, setSlideClass] = useState('')
-  const [animKey, setAnimKey]     = useState(0)
+  const [drag, setDrag]           = useState(0)       // live px offset while finger is down
+  const [snapping, setSnapping]   = useState(false)   // true during snap-back animation
   const touchStartX               = useRef<number | null>(null)
   const total                     = media.length
   const current                   = media[active]
 
-  const navigate = (next: number, direction: 'left' | 'right') => {
-    setSlideClass(direction === 'right' ? 'gallery-slide-right' : 'gallery-slide-left')
-    setAnimKey(k => k + 1)
-    setActive(next)
-  }
+  // Neighbor shown behind current during drag
+  const neighborIdx = drag < 0
+    ? (active + 1) % total          // swiping left → next image peeks from right
+    : (active - 1 + total) % total  // swiping right → prev image peeks from left
+  const neighbor = drag !== 0 ? media[neighborIdx] : null
 
-  const goPrev = () => navigate((active - 1 + total) % total, 'right')
-  const goNext = () => navigate((active + 1) % total, 'left')
+  const commitSwipe = useCallback((direction: 'left' | 'right') => {
+    setActive(a => direction === 'left'
+      ? (a + 1) % total
+      : (a - 1 + total) % total
+    )
+    setDrag(0)
+    setSnapping(false)
+  }, [total])
+
+  const cancelSwipe = useCallback(() => {
+    setSnapping(true)
+    setDrag(0)
+    setTimeout(() => setSnapping(false), 300)
+  }, [])
 
   const onTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX
+    setSnapping(false)
   }
-  const onTouchEnd = (e: React.TouchEvent) => {
+
+  const onTouchMove = (e: React.TouchEvent) => {
     if (touchStartX.current === null) return
-    const dx = e.changedTouches[0].clientX - touchStartX.current
-    if (Math.abs(dx) > THRESHOLD) dx > 0 ? goPrev() : goNext()
+    let dx = e.touches[0].clientX - touchStartX.current
+    // Resist at edges
+    if ((active === 0 && dx > 0) || (active === total - 1 && dx < 0)) {
+      dx = dx * 0.2
+    }
+    setDrag(dx)
+  }
+
+  const onTouchEnd = () => {
+    if (Math.abs(drag) >= THRESHOLD) {
+      commitSwipe(drag < 0 ? 'left' : 'right')
+    } else {
+      cancelSwipe()
+    }
     touchStartX.current = null
   }
+
+  const goTo = (i: number) => {
+    setActive(i)
+    setDrag(0)
+  }
+
+  // Transition only during snap-back, never while finger is down
+  const transition = snapping ? 'transform 0.25s ease-out' : 'none'
 
   return (
     <div className="space-y-3">
@@ -52,11 +86,25 @@ export default function ProductImageGallery() {
       <div
         className="relative rounded-3xl overflow-hidden bg-gray-50 aspect-square shadow-xl select-none"
         onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
+        {/* Neighbor image — behind current, peeking in from opposite side */}
+        {neighbor && neighbor.type === 'image' && (
+          <div
+            className="absolute inset-0"
+            style={{
+              transform: `translateX(calc(${drag < 0 ? '100%' : '-100%'} + ${drag}px))`,
+              transition,
+            }}
+          >
+            <Image src={neighbor.src} alt={neighbor.alt} fill className="object-cover" />
+          </div>
+        )}
+
+        {/* Current item */}
         {current.type === 'video' ? (
           <video
-            key={active}
             src={current.src}
             className="w-full h-full object-contain"
             controls
@@ -66,41 +114,25 @@ export default function ProductImageGallery() {
             preload="metadata"
           />
         ) : (
-          <Image
-            key={animKey}
-            src={current.src}
-            alt={current.alt}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className={`object-cover ${slideClass}`}
-            priority={active === 0}
-            placeholder={active === 0 ? 'blur' : 'empty'}
-            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQIAJQAlAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAcEAABAwUAAAAAAAAAAAAAAAAAAgMFAQQREkH/xAAVAQEBAAAAAAAAAAAAAAAAAAABBP/EABYRAQEBAAAAAAAAAAAAAAAAAAEAIf/aAAwDAQACEQMRAD8AsstMXzMhowlSqZ4AASrHL//Z"
-          />
-        )}
-
-        {/* Prev / Next arrows (desktop) */}
-        {active > 0 && (
-          <button
-            onClick={goPrev}
-            aria-label="Immagine precedente"
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-gray-700 hover:bg-white transition hidden sm:flex"
+          <div
+            className="absolute inset-0"
+            style={{ transform: `translateX(${drag}px)`, transition }}
           >
-            ‹
-          </button>
-        )}
-        {active < total - 1 && (
-          <button
-            onClick={goNext}
-            aria-label="Immagine successiva"
-            className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-gray-700 hover:bg-white transition hidden sm:flex"
-          >
-            ›
-          </button>
+            <Image
+              src={current.src}
+              alt={current.alt}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              priority={active === 0}
+              placeholder={active === 0 ? 'blur' : 'empty'}
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQIAJQAlAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAcEAABAwUAAAAAAAAAAAAAAAAAAgMFAQQREkH/xAAVAQEBAAAAAAAAAAAAAAAAAAABBP/EABYRAQEBAAAAAAAAAAAAAAAAAAEAIf/aAAwDAQACEQMRAD8AsstMXzMhowlSqZ4AASrHL//Z"
+            />
+          </div>
         )}
 
         {/* Dot indicators */}
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 pointer-events-none">
           {media.map((_, i) => (
             <span
               key={i}
@@ -123,7 +155,7 @@ export default function ProductImageGallery() {
         {media.map((item, i) => (
           <button
             key={i}
-            onClick={() => navigate(i, i > active ? 'left' : 'right')}
+            onClick={() => goTo(i)}
             aria-label={item.alt}
             className={`relative aspect-square rounded-lg overflow-hidden border-2 transition-all focus:outline-none focus:ring-2 focus:ring-rose-400 ${
               active === i
