@@ -12,13 +12,20 @@ const videos = [
 function VideoCard({ src, label }: { src: string; label: string }) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [muted, setMuted] = useState(true)
+  const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
     const el = videoRef.current
     if (!el) return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          // Assign src the first time — triggers network load only when visible
+          if (!el.src || !el.src.includes(src.replace('/video/', ''))) {
+            el.src = src
+            el.load()
+          }
           el.play().catch(() => {})
         } else {
           el.pause()
@@ -28,7 +35,7 @@ function VideoCard({ src, label }: { src: string; label: string }) {
     )
     observer.observe(el)
     return () => observer.disconnect()
-  }, [])
+  }, [src])
 
   const toggleMute = () => {
     if (!videoRef.current) return
@@ -37,17 +44,28 @@ function VideoCard({ src, label }: { src: string; label: string }) {
   }
 
   return (
-    <div className="relative rounded-3xl overflow-hidden shadow-2xl group flex-shrink-0 w-[75vw] sm:w-auto">
+    <div
+      className="relative rounded-3xl overflow-hidden shadow-2xl group flex-shrink-0 w-[75vw] sm:w-auto bg-gray-100"
+      style={{ aspectRatio: '9/16' }}
+    >
       <video
         ref={videoRef}
-        src={src}
         muted
         loop
         playsInline
-        preload="metadata"
-        className="w-full h-auto"
+        preload="none"
+        className="w-full h-full object-cover"
         aria-label={label}
+        onCanPlay={() => setLoaded(true)}
       />
+
+      {/* Spinner shown until video can play */}
+      {!loaded && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+        </div>
+      )}
+
       {/* Mute/unmute button */}
       <button
         onClick={toggleMute}
