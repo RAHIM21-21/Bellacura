@@ -45,7 +45,7 @@ export default function ProductImageGallery() {
     <div className="space-y-3">
       {/* Main viewer */}
       <div
-        className="relative rounded-3xl overflow-hidden bg-gray-900 aspect-square shadow-xl select-none"
+        className="relative rounded-3xl overflow-hidden bg-gray-50 aspect-square shadow-xl select-none"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
@@ -65,8 +65,11 @@ export default function ProductImageGallery() {
             src={current.src}
             alt={current.alt}
             fill
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover transition-opacity duration-300"
-            priority
+            priority={active === 0}
+            placeholder={active === 0 ? "blur" : "empty"}
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQIAJQAlAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAcEAABAwUAAAAAAAAAAAAAAAAAAgMFAQQREkH/xAAVAQEBAAAAAAAAAAAAAAAAAAABBP/EABYRAQEBAAAAAAAAAAAAAAAAAAEAIf/aAAwDAQACEQMRAD8AsstMXzMhowlSqZ4AASrHL//Z"
           />
         )}
 
