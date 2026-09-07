@@ -8,7 +8,7 @@ type MediaItem =
   | { type: 'video'; src: string; alt: string }
 
 const media: MediaItem[] = [
-  { type: 'image', src: '/images/g1-clean.png',      alt: 'BellaCura — dispositivo' },
+  { type: 'image', src: '/images/g1-clean.jpg',      alt: 'BellaCura — dispositivo' },
   { type: 'image', src: '/images/g2-thigh.jpg',     alt: 'Riduce la cellulite · Migliora la circolazione · Terapia con luce rossa' },
   { type: 'image', src: '/images/g3-stat.jpg',      alt: '94% — pelle visibilmente più compatta dopo 3 settimane' },
   { type: 'image', src: '/images/g4-martina.jpg',   alt: 'Prima e dopo — Martina C.' },
@@ -58,6 +58,7 @@ export default function ProductImageGallery() {
             autoPlay
             loop
             playsInline
+            preload="metadata"
           />
         ) : (
           <Image

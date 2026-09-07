@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 
 const videos = [
   { src: '/video/promo.mp4', label: 'BellaCura in azione' },
@@ -13,6 +13,23 @@ function VideoCard({ src, label }: { src: string; label: string }) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [muted, setMuted] = useState(true)
 
+  useEffect(() => {
+    const el = videoRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.play().catch(() => {})
+        } else {
+          el.pause()
+        }
+      },
+      { threshold: 0.25 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
   const toggleMute = () => {
     if (!videoRef.current) return
     videoRef.current.muted = !videoRef.current.muted
@@ -24,10 +41,10 @@ function VideoCard({ src, label }: { src: string; label: string }) {
       <video
         ref={videoRef}
         src={src}
-        autoPlay
         muted
         loop
         playsInline
+        preload="none"
         className="w-full h-auto"
         aria-label={label}
       />
