@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { Star } from 'lucide-react'
 
 const purchases = [
@@ -14,51 +15,60 @@ const purchases = [
  { name: 'Chiara', city: 'Palermo', product: 'Massaggiatore 4 in 1', time: '1 minuto fa' },
 ]
 
+const CHECKOUT_PATHS = ['/checkout-scelta', '/checkout', '/grazie']
+
 export default function SocialProofToast() {
+ const pathname = usePathname()
  const [visible, setVisible] = useState(false)
  const [current, setCurrent] = useState(0)
 
+ const isCheckout = CHECKOUT_PATHS.some(p => pathname?.startsWith(p))
+
  useEffect(() => {
- // First show after 6s
- const firstTimer = setTimeout(() => {
- setVisible(true)
- // Hide after 4s
- setTimeout(() => setVisible(false), 4000)
- }, 6000)
+   if (isCheckout) return
 
- // Then repeat every 18s
- const interval = setInterval(() => {
- setCurrent((c) => (c + 1) % purchases.length)
- setVisible(true)
- setTimeout(() => setVisible(false), 4000)
- }, 18000)
+   // First show after 6s
+   const firstTimer = setTimeout(() => {
+     setVisible(true)
+     // Hide after 4s
+     setTimeout(() => setVisible(false), 4000)
+   }, 6000)
 
- return () => { clearTimeout(firstTimer); clearInterval(interval) }
- }, [])
+   // Then repeat every 18s
+   const interval = setInterval(() => {
+     setCurrent((c) => (c + 1) % purchases.length)
+     setVisible(true)
+     setTimeout(() => setVisible(false), 4000)
+   }, 18000)
+
+   return () => { clearTimeout(firstTimer); clearInterval(interval) }
+ }, [isCheckout])
+
+ if (isCheckout) return null
 
  const p = purchases[current]
 
  return (
- <div
- className={`fixed bottom-24 left-4 z-50 transition-all duration-500 ${
- visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
- }`}
- >
- <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 flex items-center gap-3 max-w-xs">
- <div className="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center text-xl shrink-0">
-
- </div>
- <div>
- <p className="text-sm font-semibold text-gray-900">
- {p.name} da {p.city}
- </p>
- <p className="text-xs text-gray-500">ha appena ordinato <strong>{p.product}</strong></p>
- <div className="flex items-center gap-1 mt-1">
- {[...Array(5)].map((_, i) => <Star key={i} size={10} className="text-amber-400 fill-amber-400" />)}
- <span className="text-xs text-gray-400 ml-1">{p.time}</span>
- </div>
- </div>
- </div>
- </div>
+   <div
+     className={`fixed bottom-24 left-4 z-50 transition-all duration-500 ${
+       visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+     }`}
+   >
+     <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 flex items-center gap-3 max-w-xs">
+       <div className="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center text-xl shrink-0">
+         🛍️
+       </div>
+       <div>
+         <p className="text-sm font-semibold text-gray-900">
+           {p.name} da {p.city}
+         </p>
+         <p className="text-xs text-gray-500">ha appena ordinato <strong>{p.product}</strong></p>
+         <div className="flex items-center gap-1 mt-1">
+           {[...Array(5)].map((_, i) => <Star key={i} size={10} className="text-amber-400 fill-amber-400" />)}
+           <span className="text-xs text-gray-400 ml-1">{p.time}</span>
+         </div>
+       </div>
+     </div>
+   </div>
  )
 }

@@ -1,8 +1,14 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { usePathname } from 'next/navigation'
+
+const CHECKOUT_PATHS = ['/checkout-scelta', '/checkout', '/grazie']
 
 export default function ExitIntentPopup() {
+  const pathname = usePathname()
+  const isCheckout = CHECKOUT_PATHS.some(p => pathname?.startsWith(p))
+
   const [visible, setVisible] = useState(false)
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -11,6 +17,7 @@ export default function ExitIntentPopup() {
   const lastScrollTime = useRef(Date.now())
 
   useEffect(() => {
+    if (isCheckout) return
     if (sessionStorage.getItem('exit_popup_seen')) return
 
     // Desktop: mouse leaves from the top of the viewport
@@ -26,10 +33,9 @@ export default function ExitIntentPopup() {
     const onScroll = () => {
       const currentY = window.scrollY
       const currentTime = Date.now()
-      const dy = lastScrollY.current - currentY          // positive = scrolling up
-      const dt = currentTime - lastScrollTime.current    // ms since last check
+      const dy = lastScrollY.current - currentY
+      const dt = currentTime - lastScrollTime.current
 
-      // Trigger if: scrolling up fast (>800px/s), currently near top, and scrolled down before
       if (
         !triggered.current &&
         dy > 0 &&
@@ -64,7 +70,7 @@ export default function ExitIntentPopup() {
       document.removeEventListener('mouseleave', onMouseLeave)
       window.removeEventListener('scroll', onScroll)
     }
-  }, [])
+  }, [isCheckout])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -86,7 +92,7 @@ export default function ExitIntentPopup() {
     }
   }
 
-  if (!visible) return null
+  if (isCheckout || !visible) return null
 
   return (
     <div
@@ -95,7 +101,6 @@ export default function ExitIntentPopup() {
       onClick={(e) => { if (e.target === e.currentTarget) setVisible(false) }}
     >
       <div className="relative bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden">
-        {/* Close */}
         <button
           onClick={() => setVisible(false)}
           className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl leading-none z-10"
@@ -104,7 +109,6 @@ export default function ExitIntentPopup() {
           ×
         </button>
 
-        {/* Pink top band */}
         <div className="bg-[#F9E5E9] px-8 pt-8 pb-6 text-center">
           <p className="text-xs font-bold tracking-widest uppercase text-rose-500 mb-2">Offerta esclusiva</p>
           <h2 className="text-3xl font-black text-gray-900 leading-tight mb-1">
@@ -115,7 +119,6 @@ export default function ExitIntentPopup() {
           </p>
         </div>
 
-        {/* Form */}
         <div className="px-8 py-6">
           {status === 'success' ? (
             <div className="text-center py-4">
@@ -158,7 +161,6 @@ export default function ExitIntentPopup() {
           )}
         </div>
 
-        {/* Bottom trust strip */}
         <div className="border-t border-gray-100 px-8 py-3 flex justify-center gap-6 text-xs text-gray-400">
           <span>🔒 Dati sicuri</span>
           <span>📦 Spedizione gratis</span>
