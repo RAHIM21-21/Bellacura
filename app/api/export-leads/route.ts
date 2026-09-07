@@ -1,34 +1,30 @@
 import { NextRequest, NextResponse } from 'next/server'
-import fs from 'fs'
-import path from 'path'
+import { neon } from '@neondatabase/serverless'
 
-const LEADS_FILE = path.join(process.cwd(), 'data', 'leads.json')
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'bellacura2024'
-
-type Lead = { email: string; source: string; date: string }
 
 export async function GET(req: NextRequest) {
   const pw = req.nextUrl.searchParams.get('pw') ?? ''
   if (pw !== ADMIN_PASSWORD) {
     return new NextResponse('Non autorizzato', { status: 401 })
   }
-
-  let leads: Lead[] = []
   try {
-    if (fs.existsSync(LEADS_FILE)) {
-      leads = JSON.parse(fs.readFileSync(LEADS_FILE, 'utf-8'))
-    }
-  } catch {}
-
-  const csv = [
-    'Email,Fonte,Data',
-    ...leads.map((l) => `${l.email},${l.source},${new Date(l.date).toLocaleString('it-IT')}`),
-  ].join('\n')
-
-  return new NextResponse(csv, {
-    headers: {
-      'Content-Type': 'text/csv; charset=utf-8',
-      'Content-Disposition': `attachment; filename="bellacura-leads-${new Date().toISOString().slice(0, 10)}.csv"`,
-    },
-  })
+    const sql = neon(process.env.DATABASE_URL!)
+    const rows = await sql`SELECT email, source, created_at FROM leads ORDER BY created_at DESC`
+    const csv = [
+      'Email,Fonte,Data',
+      ...rows.map((l: any) =>
+        `${l.email},${l.source},${new Date(l.created_at).toLocaleString('it-IT')}`
+      ),
+    ].join('\n')
+    return new NextResponse(csv, {
+      headers: {
+        'Content-Type': 'text/csv; charset=utf-8',
+        'Content-Disposition': `attachment; filename="bellacura-leads-${new Date().toISOString().slice(0, 10)}.csv"`,
+      },
+    })
+  } catch (err) {
+    console.error('export-leads error:', err)
+    return new NextResponse('Server error', { status: 500 })
+  }
 }

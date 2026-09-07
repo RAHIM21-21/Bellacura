@@ -1,22 +1,20 @@
-import { redirect } from 'next/navigation'
-import fs from 'fs'
-import path from 'path'
+import { neon } from '@neondatabase/serverless'
 
-const LEADS_FILE = path.join(process.cwd(), 'data', 'leads.json')
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'bellacura2024'
 
-type Lead = { email: string; source: string; date: string }
+type Lead = { email: string; source: string; created_at: string }
 
-function readLeads(): Lead[] {
+async function readLeads(): Promise<Lead[]> {
   try {
-    if (!fs.existsSync(LEADS_FILE)) return []
-    return JSON.parse(fs.readFileSync(LEADS_FILE, 'utf-8'))
+    const sql = neon(process.env.DATABASE_URL!)
+    const rows = await sql`SELECT email, source, created_at FROM leads ORDER BY created_at DESC`
+    return rows as Lead[]
   } catch {
     return []
   }
 }
 
-export default function LeadsPage({
+export default async function LeadsPage({
   searchParams,
 }: {
   searchParams: { pw?: string }
@@ -45,9 +43,7 @@ export default function LeadsPage({
     )
   }
 
-  const leads = readLeads().sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  )
+  const leads = await readLeads()
 
   return (
     <div className="min-h-screen bg-[#F9E5E9] py-12 px-6">
@@ -92,7 +88,7 @@ export default function LeadsPage({
                       </span>
                     </td>
                     <td className="px-6 py-4 text-gray-500">
-                      {new Date(lead.date).toLocaleString('it-IT', {
+                      {new Date(lead.created_at).toLocaleString('it-IT', {
                         day: '2-digit',
                         month: '2-digit',
                         year: 'numeric',

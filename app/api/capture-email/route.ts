@@ -1,22 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server'
-import fs from 'fs'
-import path from 'path'
+import { neon } from '@neondatabase/serverless'
 
-const LEADS_FILE = path.join(process.cwd(), 'data', 'leads.json')
-
-function readLeads(): Lead[] {
-  try {
-    if (!fs.existsSync(LEADS_FILE)) return []
-    return JSON.parse(fs.readFileSync(LEADS_FILE, 'utf-8'))
-  } catch {
-    return []
-  }
+async function getDb() {
+  const sql = neon(process.env.DATABASE_URL!)
+  return sql
 }
 
-type Lead = {
-  email: string
-  source: string
-  date: string
+async function initTable(sql: ReturnType<typeof neon>) {
+  await sql`
+    CREATE TABLE IF NOT EXISTS leads (
+      id SERIAL PRIMARY KEY,
+      email TEXT UNIQUE NOT NULL,
+      source TEXT NOT NULL DEFAULT 'exit_popup',
+      created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    )
+  `
 }
 
 export async function POST(req: NextRequest) {
@@ -25,18 +23,13 @@ export async function POST(req: NextRequest) {
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: 'Email non valida' }, { status: 400 })
     }
-
-    const leads = readLeads()
-
-    // Avoid duplicate emails
-    if (leads.some((l) => l.email.toLowerCase() === email.toLowerCase())) {
+    const sql = await getDb()
+    await initTable(sql)
+    const existing = await sql`SELECT id FROM leads WHERE LOWER(email) = LOWER(${email})`
+    if (existing.length > 0) {
       return NextResponse.json({ ok: true, duplicate: true })
     }
-
-    leads.push({ email, source, date: new Date().toISOString() })
-    fs.mkdirSync(path.dirname(LEADS_FILE), { recursive: true })
-    fs.writeFileSync(LEADS_FILE, JSON.stringify(leads, null, 2))
-
+    await sql`INSERT INTO leads (email, source) VALUES (${email}, ${source})`
     return NextResponse.json({ ok: true })
   } catch (err) {
     console.error('capture-email error:', err)
