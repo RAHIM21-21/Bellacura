@@ -61,7 +61,7 @@ export default function ExitIntentPopup() {
         setVisible(true)
         sessionStorage.setItem('exit_popup_seen', '1')
       }
-    }, 40000)
+    }, 60000)
 
     document.addEventListener('mouseleave', onMouseLeave)
     window.addEventListener('scroll', onScroll, { passive: true })
