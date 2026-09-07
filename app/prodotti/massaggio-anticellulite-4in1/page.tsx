@@ -73,6 +73,7 @@ export default function ProductPage() {
 
  return (
  <>
+ <link rel="preload" href="/images/g1-clean.jpg" as="image" fetchPriority="high" />
  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema_product) }} />
  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema_breadcrumb) }} />
  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema_faq) }} />
