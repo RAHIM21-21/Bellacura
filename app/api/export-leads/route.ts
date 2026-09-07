@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
     return new NextResponse('Non autorizzato', { status: 401 })
   }
   try {
-    const sql = neon(process.env.DATABASE_URL!)
+    const sql = neon(process.env.POSTGRES_URL as string)
     const rows = await sql`SELECT email, source, created_at FROM leads ORDER BY created_at DESC`
     const csv = [
       'Email,Fonte,Data',

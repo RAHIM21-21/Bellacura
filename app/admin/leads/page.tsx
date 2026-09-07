@@ -6,7 +6,7 @@ type Lead = { email: string; source: string; created_at: string }
 
 async function readLeads(): Promise<Lead[]> {
   try {
-    const sql = neon(process.env.DATABASE_URL!)
+    const sql = neon(process.env.POSTGRES_URL as string)
     const rows = await sql`SELECT email, source, created_at FROM leads ORDER BY created_at DESC`
     return rows as Lead[]
   } catch {
