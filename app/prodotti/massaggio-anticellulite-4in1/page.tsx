@@ -73,7 +73,14 @@ export default function ProductPage() {
 
  return (
  <>
- <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema_product) }} />
+  <link
+    rel="preload"
+    as="image"
+    href="/_next/image?url=%2Fimages%2Fg1-clean.jpg&w=828&q=75"
+    imageSrcSet="/_next/image?url=%2Fimages%2Fg1-clean.jpg&w=390&q=75 390w, /_next/image?url=%2Fimages%2Fg1-clean.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fg1-clean.jpg&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fg1-clean.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fg1-clean.jpg&w=1200&q=75 1200w"
+    imageSizes="(max-width: 768px) 100vw, 50vw"
+  />
+  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema_product) }} />
  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema_breadcrumb) }} />
  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema_faq) }} />
 
