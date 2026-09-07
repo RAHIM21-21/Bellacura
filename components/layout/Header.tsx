@@ -7,8 +7,7 @@ import clsx from 'clsx'
 
 const navLinks = [
  { href: '/prodotti/massaggio-anticellulite-4in1/', label: 'Massaggiatore' },
- { href: '/prodotti/leggings-anticellulite-3d/', label: 'Leggings 3D' },
- { href: '/blog/', label: 'Blog' },
+  { href: '/blog/', label: 'Blog' },
 ]
 
 const tickerMessages = [

@@ -25,7 +25,7 @@ export default function ComeOrdinarePage() {
  {/* Steps */}
  <div className="space-y-6 mb-16">
  {[
- { n: '1', icon: '', t: 'Scegli il prodotto', d: 'Visita la pagina del prodotto che vuoi (Massaggiatore 4 in 1 o Leggings 3D). Scegli la quantità, il colore e la taglia se applicabile.', cta: { label: 'Massaggiatore 4 in 1', href: '/prodotti/massaggio-anticellulite-4in1/' } },
+ { n: '1', icon: '', t: 'Scegli il prodotto', d: 'Visita la pagina del prodotto che vuoi. Scegli la quantità, il colore e la taglia se applicabile.', cta: { label: 'Massaggiatore 4 in 1', href: '/prodotti/massaggio-anticellulite-4in1/' } },
  { n: '2', icon: '', t: 'Compila il modulo d\'ordine', d: 'Inserisci nome, cognome, indirizzo di consegna e numero di telefono. Non serve creare un account. Scegli il metodo di pagamento: contrassegno (alla consegna) oppure carta/PayPal online.' },
  { n: '3', icon: '', t: 'Ricevi a casa e paga', d: 'Il corriere arriva a casa tua in 24-48 ore. Se hai scelto il contrassegno, paghi direttamente al corriere in contanti al momento della consegna. Se hai pagato online, non devi fare niente.' },
  ].map((step) => (

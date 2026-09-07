@@ -3,8 +3,7 @@ import Link from 'next/link'
 const footerLinks = {
  prodotti: [
  { href: '/prodotti/massaggio-anticellulite-4in1/', label: 'Massaggiatore Anticellulite 4 in 1' },
- { href: '/prodotti/leggings-anticellulite-3d/', label: 'Leggings Anticellulite 3D' },
- ],
+  ],
  aiuto: [
  { href: '/come-ordinare/', label: 'Come Ordinare' },
  { href: '/garanzia/', label: 'Garanzia & Resi' },

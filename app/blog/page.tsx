@@ -30,16 +30,6 @@ const posts = [
  date: '2024-09-01',
  image: '',
  },
- {
- slug: 'leggings-anticellulite-come-funzionano',
- title: 'Leggings Anticellulite: Come Funzionano e Quali Scegliere nel 2025',
- excerpt:
- 'I leggings anticellulite con tecnologia 3D possono davvero fare la differenza? Scopri come funziona la compressione graduata, i benefici scientificamente provati e come scegliere il modello giusto per te.',
- category: 'Leggings',
- readTime: '7 min',
- date: '2024-09-15',
- image: '',
- },
 ]
 
 export default function BlogPage() {
