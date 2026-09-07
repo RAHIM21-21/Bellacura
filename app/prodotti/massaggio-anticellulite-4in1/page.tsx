@@ -34,7 +34,7 @@ const reviews = [
 
 const faqs = [
  { question: 'Come funziona il massaggiatore anticellulite 4 in 1?', answer: 'Combina 4 tecnologie: vibrazione profonda ad alta frequenza, riscaldamento a 45°C, luce rossa e pressione meccanica. Insieme stimolano la circolazione, drenano i liquidi in eccesso e riducono visibilmente la cellulite.' },
- { question: 'In quanto tempo si vedono i risultati?', answer: 'La maggior parte delle clienti nota miglioramenti già dopo 7-10 giorni di utilizzo regolare (15 minuti al giorno). Risultati significativi dopo 4-6 settimane.' },
+ { question: 'In quanto tempo si vedono i risultati?', answer: 'La maggior parte delle clienti nota miglioramenti già dopo 7-10 giorni di utilizzo regolare (10 minuti al giorno). Risultati significativi dopo 4-6 settimane.' },
  { question: 'Quanto dura la batteria?', answer: 'Con una singola carica di circa 2 ore tramite USB-C, il massaggiatore offre fino a 90 minuti di utilizzo continuativo. Puoi ricaricarlo ogni sera e averlo sempre pronto per la tua routine.' },
  { question: 'Come funziona il pagamento alla consegna?', answer: 'Scegli "Pagamento alla consegna" al checkout. Il corriere consegna il prodotto a casa tua in 24-48 ore e paghi direttamente a lui in contanti al momento della ricezione.' },
  { question: 'Posso restituire il prodotto se non sono soddisfatta?', answer: 'Assolutamente sì. Hai 14 giorni dalla ricezione per restituire il prodotto per qualsiasi motivo. Il reso è completamente gratuito e rimborsiamo il 100% dell\'importo pagato.' },
@@ -43,7 +43,7 @@ const faqs = [
 const steps = [
  { n: '01', title: 'Applica il gel o l\'olio', body: 'Stendi il tuo olio massaggiante preferito sull\'area da trattare. Il gel aumenta la conduzione del calore e massimizza i risultati.' },
  { n: '02', title: 'Posiziona la testina', body: 'Appoggia la testina sull\'area da trattare — cosce, glutei, addome o fianchi — e lascia che il massaggio lavori in profondità.' },
- { n: '03', title: 'Massaggia 10–15 minuti', body: 'Usa movimenti circolari ascendenti. Inizia con intensità bassa e aumenta gradualmente fino al livello che preferisci.' },
+ { n: '03', title: 'Massaggia 10 minuti', body: 'Usa movimenti circolari ascendenti. Inizia con intensità bassa e aumenta gradualmente fino al livello che preferisci.' },
  { n: '04', title: 'Ripeti ogni giorno', body: 'Per risultati visibili in 14 giorni, massaggia ogni sera. Dopo 14 giorni la differenza sarà evidente anche agli altri.' },
 ]
 
@@ -117,7 +117,7 @@ export default function ProductPage() {
  ))}
  </div>
  <span className="font-bold text-gray-900">4.9/5.0</span>
- <span className="text-gray-400 text-sm">da 2.847 recensioni verificate</span>
+ <span className="text-gray-400 text-sm">da 2.800+ recensioni verificate</span>
  </div>
  </div>
 
@@ -147,7 +147,7 @@ export default function ProductPage() {
  ))}
  </div>
  <span className="font-bold text-gray-900">4.9/5.0</span>
- <span className="text-gray-400 text-sm">da 2.847 recensioni verificate</span>
+ <span className="text-gray-400 text-sm">da 2.800+ recensioni verificate</span>
  </div>
  </div>
 
@@ -607,7 +607,7 @@ export default function ProductPage() {
  Ordina ora — Paga alla consegna
  </a>
  </div>
- <p className="text-sm mt-4" style={{color: '#9B4060'}}> Spedizione gratuita · Garanzia 14 giorni · 2.847+ clienti soddisfatte</p>
+ <p className="text-sm mt-4" style={{color: '#9B4060'}}> Spedizione gratuita · Garanzia 14 giorni · 2.800+ clienti soddisfatte</p>
  </div>
  </section>
 
@@ -625,7 +625,7 @@ export default function ProductPage() {
  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
  </svg>
  ))}
- <span className="text-xs text-gray-500 ml-1">4.9 · 2.847 recensioni</span>
+ <span className="text-xs text-gray-500 ml-1">4.9 · 2.800+ recensioni</span>
  </div>
  </div>
  <div className="flex items-center gap-4">

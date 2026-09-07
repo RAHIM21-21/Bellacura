@@ -4,7 +4,7 @@ import { buildMetadata } from '@/lib/seo'
 import { CheckCircle2 } from 'lucide-react'
 
 export const metadata: Metadata = buildMetadata({
- title: 'Garanzia & Resi – 30 Giorni Soddisfatti o Rimborsati',
+ title: 'Garanzia & Resi – 14 Giorni Soddisfatti o Rimborsati',
  description: 'BellaCura garantisce il rimborso completo entro 14 giorni. Reso gratuito, nessuna domanda. Scopri la nostra politica di garanzia.',
  path: '/garanzia/',
 })
@@ -26,7 +26,7 @@ export default function GaranziaPage() {
  <div className="container-tight max-w-3xl">
  <div className="grid md:grid-cols-3 gap-6 mb-16">
  {[
- { icon: '', title: '30 Giorni', sub: 'Hai 14 giorni dalla ricezione per restituire il prodotto, anche se aperto e usato.' },
+ { icon: '', title: '14 Giorni', sub: 'Hai 14 giorni dalla ricezione per restituire il prodotto, anche se aperto e usato.' },
  { icon: '', title: 'Reso Gratuito', sub: 'Ti inviamo un\'etichetta prepagata. Non paghi nulla per la spedizione di ritorno.' },
  { icon: '', title: 'Rimborso 100%', sub: 'Rimborsiamo l\'intero importo pagato entro 5 giorni lavorativi dalla ricezione del reso.' },
  ].map((item) => (

@@ -54,7 +54,7 @@ const benefits = [
  {
  icon: '',
  title: 'Risultati Visibili in 2 Settimane',
- description: 'Oltre 2.400 clienti soddisfatte hanno visto miglioramenti concreti già dalla seconda settimana.',
+ description: 'Oltre 2.800+ clienti soddisfatte hanno visto miglioramenti concreti già dalla seconda settimana.',
  },
  {
  icon: '',
@@ -80,7 +80,7 @@ export default function HomePage() {
  ))}
  </div>
  <span className="text-sm font-semibold text-gray-700">
- Oltre <strong className="text-rose-600">2.400</strong> clienti soddisfatte
+ Oltre <strong className="text-rose-600">2.800+</strong> clienti soddisfatte
  </span>
  </div>
 
@@ -91,7 +91,7 @@ export default function HomePage() {
  </h1>
 
  <p className="text-lg text-gray-600 mb-6 leading-relaxed">
- Il massaggiatore professionale 4 in 1 che stai cercando. Usalo 15 minuti al giorno
+ Il massaggiatore professionale 4 in 1 che stai cercando. Usalo 10 minuti al giorno
  e vedi la differenza dalla seconda settimana.
  </p>
 
@@ -303,7 +303,7 @@ export default function HomePage() {
  <div className="text-center mb-12">
  <span className="badge mb-3">Recensioni Verificate</span>
  <h2 className="font-serif text-gray-900 mb-4">Cosa dicono le nostre clienti</h2>
- <p className="text-gray-600">Oltre 2.400 donne hanno già scelto BellaCura Italia</p>
+ <p className="text-gray-600">Oltre 2.800+ donne hanno già scelto BellaCura Italia</p>
  </div>
  <div className="grid md:grid-cols-3 gap-6">
  {testimonials.map((t) => (

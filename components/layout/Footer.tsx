@@ -37,7 +37,7 @@ export default function Footer() {
  { icon: '', title: 'Spedizione 24–48h', sub: 'Gratuita su tutti gli ordini' },
  { icon: '', title: 'Paga alla Consegna', sub: 'Nessun rischio, paghi quando ricevi' },
  { icon: '', title: 'Reso Gratuito 30gg', sub: 'Soddisfatti o rimborsati al 100%' },
- { icon: '', title: '2.400+ Clienti', sub: 'Recensioni verificate 4.9/5' },
+ { icon: '', title: '2.800+ Clienti', sub: 'Recensioni verificate 4.9/5' },
  ].map((t) => (
  <div key={t.title} className="text-center">
  <div className="text-2xl mb-1">{t.icon}</div>

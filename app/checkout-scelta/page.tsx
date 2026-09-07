@@ -93,7 +93,7 @@ function CheckoutSceltaInner() {
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={11} className="text-amber-400 fill-amber-400" />
                 ))}
-                <span className="text-xs text-gray-400 ml-1">4.9 (2.847 recensioni)</span>
+                <span className="text-xs text-gray-400 ml-1">4.9 (2.800+ recensioni)</span>
               </div>
               <p className="text-xs text-gray-400 mt-1">Spedizione in 24–48h · Reso gratuito</p>
             </div>
@@ -158,7 +158,7 @@ function CheckoutSceltaInner() {
             </div>
 
             <p className="text-center text-xs text-gray-400 mt-4">
-              Oltre <strong className="text-gray-600">2.400 clienti</strong> soddisfatte in Italia 🇮🇹
+              Oltre <strong className="text-gray-600">2.800+ clienti</strong> soddisfatte in Italia 🇮🇹
             </p>
           </>
         )}

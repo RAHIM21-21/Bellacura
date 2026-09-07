@@ -66,7 +66,7 @@ export default function ChiSiamoPage() {
  <section className="section bg-rose-600 text-white text-center">
  <div className="container-tight max-w-xl">
  <h2 className="font-serif text-white text-3xl mb-4">Scopri i nostri prodotti</h2>
- <p className="text-rose-100 mb-8">Selezionati con cura, testati con rigore, amati da oltre 2.400 donne italiane.</p>
+ <p className="text-rose-100 mb-8">Selezionati con cura, testati con rigore, amati da oltre 2.800+ donne italiane.</p>
  <div className="flex flex-col sm:flex-row gap-4 justify-center">
  <Link href="/prodotti/massaggio-anticellulite-4in1/" className="inline-flex items-center justify-center px-8 py-3 bg-white text-rose-600 font-bold rounded-full hover:bg-rose-50 transition-colors">Massaggiatore 4 in 1</Link>
  <Link href="/prodotti/leggings-anticellulite-3d/" className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors">Leggings 3D</Link>

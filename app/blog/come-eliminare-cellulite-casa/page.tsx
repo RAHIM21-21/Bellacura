@@ -87,7 +87,7 @@ export default function ArticoloCellulite() {
  microcircolazione, drenare i liquidi in eccesso e rompere i depositi di grasso localizzato.
 
  Come eseguirlo correttamente: applica una crema anticellulite sulla zona da trattare,
- poi lavora con movimenti circolari dal basso verso l'alto per 15 minuti al giorno.
+ poi lavora con movimenti circolari dal basso verso l'alto per 10 minuti al giorno.
  Dopo 10-14 giorni di utilizzo costante noterai una riduzione visibile della pelle a buccia d'arancia.`,
  tip: 'Il massaggiatore BellaCura 4 in 1 combina vibrazione, calore a infrarossi e 4 testine specifiche per ogni zona del corpo.',
  },
@@ -174,7 +174,7 @@ export default function ArticoloCellulite() {
  di trattamento combinato (massaggi + alimentazione + esercizio).
  </p>
  <p className="text-gray-700 leading-relaxed mt-3">
- La costanza è la chiave. Un massaggio da 15 minuti al giorno, tutti i giorni, vale più di una sessione
+ La costanza è la chiave. Un massaggio da 10 minuti al giorno, tutti i giorni, vale più di una sessione
  da un'ora una volta a settimana.
  </p>
  </section>

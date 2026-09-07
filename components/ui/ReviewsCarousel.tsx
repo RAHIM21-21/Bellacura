@@ -19,7 +19,7 @@ const allReviews: Review[] = [
   { type: 'text', name: 'Federica L.', city: 'Venezia', rating: 5, text: 'La funzione di calore è una meraviglia. Le mie gambe sono molto meno pesanti e gonfie rispetto a prima.', verified: true },
   { type: 'photo', image: '/images/review3.jpg', name: 'Sara T.', city: 'Torino', rating: 5, months: '5 settimane', text: 'Risultati visibili già dopo 2 settimane. Le gambe sono molto più lisce e il gonfiore è diminuito tantissimo.', verified: true },
   { type: 'text', name: 'Giovanna P.', city: 'Palermo', rating: 5, text: 'Dopo due gravidanze la mia pelle era completamente ceduta. In 6 settimane ho recuperato una tonicità che non avevo più. Non me lo aspettavo.', verified: true },
-  { type: 'text', name: 'Martina C.', city: 'Genova', rating: 5, text: '15 minuti al giorno e la differenza si vede. La cellulite sulle cosce si è ridotta in 4 settimane.', verified: true },
+  { type: 'text', name: 'Martina C.', city: 'Genova', rating: 5, text: '10 minuti al giorno e la differenza si vede. La cellulite sulle cosce si è ridotta in 4 settimane.', verified: true },
   { type: 'text', name: 'Simona V.', city: 'Bari', rating: 5, text: 'Avevo provato tutto. Questo è l\'unico che ha davvero funzionato sulla mia cellulite fibro. Lo consiglio.', verified: true },
   { type: 'photo', image: '/images/review4.jpg', name: 'Laura F.', city: 'Napoli', rating: 5, months: '7 settimane', text: 'Sono rimasta senza parole. Pelle più tonica, meno cellulite e mi sento meglio. I miglioramenti sono stati davvero notevoli.', verified: true },
   { type: 'text', name: 'Irene G.', city: 'Catania', rating: 5, text: 'Le gambe gonfie dopo una giornata in piedi sono diventate un ricordo. Il massaggio drenante funziona davvero.', verified: true },
@@ -64,7 +64,7 @@ export default function ReviewsCarousel() {
         <div className="text-center mb-5 md:mb-10">
           <span className="badge mb-3">⭐ Recensioni Verificate</span>
           <h2 className="font-serif text-gray-900 mb-3">Cosa dicono le nostre clienti</h2>
-          <p className="text-gray-500 text-sm">Oltre 2.400 donne soddisfatte · Foto e recensioni reali</p>
+          <p className="text-gray-500 text-sm">Oltre 2.800+ donne soddisfatte · Foto e recensioni reali</p>
         </div>
 
         {/* Carousel */}
