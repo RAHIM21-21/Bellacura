@@ -24,7 +24,7 @@ function VideoCard({ src, label }: { src: string; label: string }) {
           el.pause()
         }
       },
-      { threshold: 0.25 }
+      { threshold: 0 }
     )
     observer.observe(el)
     return () => observer.disconnect()
@@ -44,7 +44,7 @@ function VideoCard({ src, label }: { src: string; label: string }) {
         muted
         loop
         playsInline
-        preload="none"
+        preload="metadata"
         className="w-full h-auto"
         aria-label={label}
       />
