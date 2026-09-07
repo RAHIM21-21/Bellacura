@@ -8,101 +8,99 @@ type MediaItem =
   | { type: 'video'; src: string; alt: string }
 
 const media: MediaItem[] = [
-  { type: 'image', src: '/images/g1-clean.jpg',      alt: 'BellaCura — dispositivo' },
-  { type: 'image', src: '/images/g2-thigh.jpg',     alt: 'Riduce la cellulite · Migliora la circolazione · Terapia con luce rossa' },
-  { type: 'image', src: '/images/g3-stat.jpg',      alt: '94% — pelle visibilmente più compatta dopo 3 settimane' },
-  { type: 'image', src: '/images/g4-martina.jpg',   alt: 'Prima e dopo — Martina C.' },
-  { type: 'image', src: '/images/g5-francesca.jpg', alt: 'Prima e dopo — Francesca M.' },
+  { type: 'image', src: '/images/g1-clean.jpg',         alt: 'BellaCura — dispositivo' },
+  { type: 'image', src: '/images/g2-thigh.jpg',         alt: 'Riduce la cellulite · Migliora la circolazione · Terapia con luce rossa' },
+  { type: 'image', src: '/images/g3-stat.jpg',          alt: '94% — pelle visibilmente più compatta dopo 3 settimane' },
+  { type: 'image', src: '/images/g4-martina.jpg',       alt: 'Prima e dopo — Martina C.' },
+  { type: 'image', src: '/images/g5-francesca.jpg',     alt: 'Prima e dopo — Francesca M.' },
   { type: 'image', src: '/images/garanzia-pink-bg.jpg', alt: 'Garanzia rimborso 14 giorni — zero domande, zero burocrazia' },
-  { type: 'video', src: '/video/promo.mp4', alt: 'BellaCura in azione' },
+  { type: 'video', src: '/video/promo.mp4',             alt: 'BellaCura in azione' },
 ]
 
-const THRESHOLD = 40 // px to trigger slide
+const THRESHOLD = 40
 
 export default function ProductImageGallery() {
-  const [active, setActive] = useState(0)
-  const [drag, setDrag] = useState(0)       // live px offset while finger is down
-  const [dragging, setDragging] = useState(false)
-  const touchStartX = useRef<number | null>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
-  const total = media.length
+  const [active, setActive]       = useState(0)
+  const [slideClass, setSlideClass] = useState('')
+  const [animKey, setAnimKey]     = useState(0)
+  const touchStartX               = useRef<number | null>(null)
+  const total                     = media.length
+  const current                   = media[active]
 
-  const goTo = (i: number) => setActive(Math.max(0, Math.min(total - 1, i)))
-  const goPrev = () => goTo(active - 1)
-  const goNext = () => goTo(active + 1)
+  const navigate = (next: number, direction: 'left' | 'right') => {
+    setSlideClass(direction === 'right' ? 'gallery-slide-right' : 'gallery-slide-left')
+    setAnimKey(k => k + 1)
+    setActive(next)
+  }
+
+  const goPrev = () => navigate((active - 1 + total) % total, 'right')
+  const goNext = () => navigate((active + 1) % total, 'left')
 
   const onTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX
-    setDragging(true)
   }
-
-  const onTouchMove = (e: React.TouchEvent) => {
+  const onTouchEnd = (e: React.TouchEvent) => {
     if (touchStartX.current === null) return
-    const dx = e.touches[0].clientX - touchStartX.current
-    // Resist at edges
-    if ((active === 0 && dx > 0) || (active === total - 1 && dx < 0)) {
-      setDrag(dx * 0.25) // rubber-band feel at edges
-    } else {
-      setDrag(dx)
-    }
-  }
-
-  const onTouchEnd = () => {
-    if (Math.abs(drag) > THRESHOLD) {
-      drag < 0 ? goNext() : goPrev()
-    }
-    setDrag(0)
-    setDragging(false)
+    const dx = e.changedTouches[0].clientX - touchStartX.current
+    if (Math.abs(dx) > THRESHOLD) dx > 0 ? goPrev() : goNext()
     touchStartX.current = null
   }
 
-  const translateX = `calc(-${active * 100}% + ${drag}px)`
-
   return (
     <div className="space-y-3">
-      {/* Main sliding viewer */}
+      {/* Main viewer */}
       <div
-        ref={containerRef}
         className="relative rounded-3xl overflow-hidden bg-gray-50 aspect-square shadow-xl select-none"
         onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
-        {/* Slide strip — all items in a row */}
-        <div
-          className={`flex h-full ${dragging ? '' : 'transition-transform duration-300 ease-out'}`}
-          style={{ transform: `translateX(${translateX})`, width: `${total * 100}%` }}
-        >
-          {media.map((item, i) => (
-            <div key={i} className="relative h-full flex-shrink-0" style={{ width: `${100 / total}%` }}>
-              {item.type === 'video' ? (
-                <video
-                  src={item.src}
-                  className="w-full h-full object-contain"
-                  controls
-                  autoPlay={i === active}
-                  loop
-                  playsInline
-                  preload="metadata"
-                />
-              ) : (
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                  priority={i === 0}
-                  placeholder={i === 0 ? 'blur' : 'empty'}
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQIAJQAlAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAcEAABAwUAAAAAAAAAAAAAAAAAAgMFAQQREkH/xAAVAQEBAAAAAAAAAAAAAAAAAAABBP/EABYRAQEBAAAAAAAAAAAAAAAAAAEAIf/aAAwDAQACEQMRAD8AsstMXzMhowlSqZ4AASrHL//Z"
-                />
-              )}
-            </div>
-          ))}
-        </div>
+        {current.type === 'video' ? (
+          <video
+            key={active}
+            src={current.src}
+            className="w-full h-full object-contain"
+            controls
+            autoPlay
+            loop
+            playsInline
+            preload="metadata"
+          />
+        ) : (
+          <Image
+            key={animKey}
+            src={current.src}
+            alt={current.alt}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className={`object-cover ${slideClass}`}
+            priority={active === 0}
+            placeholder={active === 0 ? 'blur' : 'empty'}
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQIAJQAlAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAcEAABAwUAAAAAAAAAAAAAAAAAAgMFAQQREkH/xAAVAQEBAAAAAAAAAAAAAAAAAAABBP/EABYRAQEBAAAAAAAAAAAAAAAAAAEAIf/aAAwDAQACEQMRAD8AsstMXzMhowlSqZ4AASrHL//Z"
+          />
+        )}
+
+        {/* Prev / Next arrows (desktop) */}
+        {active > 0 && (
+          <button
+            onClick={goPrev}
+            aria-label="Immagine precedente"
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-gray-700 hover:bg-white transition hidden sm:flex"
+          >
+            ‹
+          </button>
+        )}
+        {active < total - 1 && (
+          <button
+            onClick={goNext}
+            aria-label="Immagine successiva"
+            className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-gray-700 hover:bg-white transition hidden sm:flex"
+          >
+            ›
+          </button>
+        )}
 
         {/* Dot indicators */}
-        <div className="absolute bottom-14 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 pointer-events-none">
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
           {media.map((_, i) => (
             <span
               key={i}
@@ -125,7 +123,7 @@ export default function ProductImageGallery() {
         {media.map((item, i) => (
           <button
             key={i}
-            onClick={() => goTo(i)}
+            onClick={() => navigate(i, i > active ? 'left' : 'right')}
             aria-label={item.alt}
             className={`relative aspect-square rounded-lg overflow-hidden border-2 transition-all focus:outline-none focus:ring-2 focus:ring-rose-400 ${
               active === i

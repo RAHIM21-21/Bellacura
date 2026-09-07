@@ -211,3 +211,19 @@
     bottom: 90px !important;
   }
 }
+
+/* ── Gallery slide animations ── */
+@keyframes slide-from-right {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+@keyframes slide-from-left {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+.gallery-slide-right {
+  animation: slide-from-right 0.28s cubic-bezier(0.25,0.46,0.45,0.94) both;
+}
+.gallery-slide-left {
+  animation: slide-from-left 0.28s cubic-bezier(0.25,0.46,0.45,0.94) both;
+}
