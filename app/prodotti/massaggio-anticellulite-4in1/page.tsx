@@ -235,7 +235,7 @@ export default function ProductPage() {
          { src: '/images/logo-glamour.png',      alt: 'Glamour2',     h: 52 },
        ].map(({ src, alt, h }) => (
          <span key={alt} style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 140, height: 60, flexShrink: 0}}>
-           <img src={src} alt={alt} className="press-logo" style={{height: h, width: 'auto', objectFit: 'contain'}} />
+           <img src={src} alt={alt} loading="lazy" decoding="async" className="press-logo" style={{height: h, width: 'auto', objectFit: 'contain'}} />
          </span>
        ))}
      </div>
