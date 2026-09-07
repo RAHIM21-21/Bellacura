@@ -27,12 +27,12 @@ const pinyonScript = Pinyon_Script({
   weight: ['400'],
 })
 
-// Raleway — body text; display:swap means system font shows first, no eager preload needed
+// Raleway — body text; preload true so it's ready before LCP paint
 const raleway = Raleway({
   subsets: ['latin'],
   variable: '--font-raleway',
   display: 'swap',
-  preload: false,
+  preload: true,
   weight: ['400', '500', '600', '700'],
 })
 
