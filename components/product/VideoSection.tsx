@@ -19,26 +19,30 @@ function VideoCard({ src, label }: { src: string; label: string }) {
     const el = videoRef.current
     if (!el) return
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          if (!srcAssigned.current) {
-            srcAssigned.current = true
-            el.src = src
-            el.load()
-            // Wait for enough data before playing
-            el.addEventListener('canplay', () => {
-              el.play().catch(() => {})
-            }, { once: true })
-          } else {
-            el.play().catch(() => {})
-          }
+    // React doesn't sync the `muted` JSX prop to the DOM property — set it explicitly
+    el.muted = true
+
+    const tryPlay = () => {
+      el.muted = true
+      el.play().catch(() => {})
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        if (!srcAssigned.current) {
+          srcAssigned.current = true
+          el.src = src
+          el.muted = true
+          el.load()
+          el.addEventListener('canplay', tryPlay, { once: true })
         } else {
-          el.pause()
+          tryPlay()
         }
-      },
-      { threshold: 0 }
-    )
+      } else {
+        el.pause()
+      }
+    }, { threshold: 0 })
+
     observer.observe(el)
     return () => observer.disconnect()
   }, [src])
@@ -56,7 +60,6 @@ function VideoCard({ src, label }: { src: string; label: string }) {
     >
       <video
         ref={videoRef}
-        muted
         loop
         playsInline
         preload="none"
@@ -65,14 +68,12 @@ function VideoCard({ src, label }: { src: string; label: string }) {
         onCanPlay={() => setLoaded(true)}
       />
 
-      {/* Spinner until video can play */}
       {!loaded && (
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
         </div>
       )}
 
-      {/* Mute/unmute */}
       <button
         onClick={toggleMute}
         aria-label={muted ? 'Attiva audio' : 'Disattiva audio'}
@@ -96,7 +97,6 @@ function VideoCard({ src, label }: { src: string; label: string }) {
 export default function VideoSection() {
   return (
     <>
-      {/* Mobile: horizontal swipeable carousel */}
       <div className="sm:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 px-4 -mx-4 scrollbar-none">
         {videos.map((v) => (
           <div key={v.src} className="snap-center flex-shrink-0 w-[75vw]">
@@ -105,7 +105,6 @@ export default function VideoSection() {
         ))}
       </div>
 
-      {/* Desktop: 2-col then 4-col grid */}
       <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {videos.map((v) => (
           <VideoCard key={v.src} src={v.src} label={v.label} />
