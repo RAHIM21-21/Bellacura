@@ -11,6 +11,7 @@ export default function ExitIntentPopup() {
 
   const [visible, setVisible] = useState(false)
   const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const triggered = useRef(false)
   const lastScrollY = useRef(0)
@@ -80,7 +81,7 @@ export default function ExitIntentPopup() {
       const res = await fetch('/api/capture-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'exit_popup' }),
+        body: JSON.stringify({ email, phone: phone || undefined, source: 'exit_popup' }),
       })
       if (res.ok) {
         setStatus('success')
@@ -142,6 +143,13 @@ export default function ExitIntentPopup() {
                 placeholder="La tua email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                className="w-full border border-gray-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400"
+              />
+              <input
+                type="tel"
+                placeholder="📱 Telefono (opzionale — per offerte WhatsApp)"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                 className="w-full border border-gray-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400"
               />
               <button

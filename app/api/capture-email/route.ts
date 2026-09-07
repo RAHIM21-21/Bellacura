@@ -5,7 +5,7 @@ const OWNER_EMAIL = 'rahimeladnani21@outlook.com'
 
 export async function POST(req: NextRequest) {
   try {
-    const { email, source = 'exit_popup' } = await req.json()
+    const { email, phone, source = 'exit_popup' } = await req.json()
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: 'Email non valida' }, { status: 400 })
