@@ -3,13 +3,13 @@
 import { useRef, useState, useEffect } from 'react'
 
 const videos = [
-  { src: '/video/promo.mp4', label: 'BellaCura in azione' },
-  { src: '/video/ad1.mp4',   label: 'Risultati reali' },
-  { src: '/video/ad2.mp4',   label: 'Come funziona' },
-  { src: '/video/ad3.mp4',   label: 'Testimonianza' },
+  { src: '/video/promo.mp4', label: 'BellaCura in azione',  eager: true },
+  { src: '/video/ad1.mp4',   label: 'Risultati reali',      eager: false },
+  { src: '/video/ad2.mp4',   label: 'Come funziona',        eager: false },
+  { src: '/video/ad3.mp4',   label: 'Testimonianza',        eager: false },
 ]
 
-function VideoCard({ src, label }: { src: string; label: string }) {
+function VideoCard({ src, label, eager }: { src: string; label: string; eager: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [muted, setMuted] = useState(true)
   const [loaded, setLoaded] = useState(false)
@@ -19,12 +19,20 @@ function VideoCard({ src, label }: { src: string; label: string }) {
     const el = videoRef.current
     if (!el) return
 
-    // React doesn't sync the `muted` JSX prop to the DOM property — set it explicitly
     el.muted = true
 
     const tryPlay = () => {
       el.muted = true
       el.play().catch(() => {})
+    }
+
+    // Eager videos start loading immediately — ready before user scrolls to them
+    if (eager && !srcAssigned.current) {
+      srcAssigned.current = true
+      el.src = src
+      el.muted = true
+      el.load()
+      el.addEventListener('canplay', tryPlay, { once: true })
     }
 
     const observer = new IntersectionObserver(([entry]) => {
@@ -35,7 +43,7 @@ function VideoCard({ src, label }: { src: string; label: string }) {
           el.muted = true
           el.load()
           el.addEventListener('canplay', tryPlay, { once: true })
-        } else {
+        } else if (el.paused) {
           tryPlay()
         }
       } else {
@@ -45,7 +53,7 @@ function VideoCard({ src, label }: { src: string; label: string }) {
 
     observer.observe(el)
     return () => observer.disconnect()
-  }, [src])
+  }, [src, eager])
 
   const toggleMute = () => {
     if (!videoRef.current) return
@@ -100,14 +108,14 @@ export default function VideoSection() {
       <div className="sm:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 px-4 -mx-4 scrollbar-none">
         {videos.map((v) => (
           <div key={v.src} className="snap-center flex-shrink-0 w-[75vw]">
-            <VideoCard src={v.src} label={v.label} />
+            <VideoCard src={v.src} label={v.label} eager={v.eager} />
           </div>
         ))}
       </div>
 
       <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {videos.map((v) => (
-          <VideoCard key={v.src} src={v.src} label={v.label} />
+          <VideoCard key={v.src} src={v.src} label={v.label} eager={v.eager} />
         ))}
       </div>
     </>
