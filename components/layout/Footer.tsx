@@ -100,7 +100,7 @@ export default function Footer() {
  {/* Payment methods + copyright */}
  <div className="border-t border-gray-800 pt-8">
  <div className="flex flex-col md:flex-row items-center justify-between gap-4">
- <p className="text-gray-500 text-sm">© {new Date().getFullYear()} BellaCura · P.IVA: IT00000000000 · Tutti i diritti riservati</p>
+ <p className="text-gray-500 text-sm">© {new Date().getFullYear()} BellaCura · Tutti i diritti riservati</p>
  <div className="flex items-center gap-3 text-gray-600 text-xs">
  <span className="bg-gray-800 px-3 py-1 rounded font-bold">VISA</span>
  <span className="bg-gray-800 px-3 py-1 rounded font-bold">MC</span>
