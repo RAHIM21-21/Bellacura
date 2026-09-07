@@ -6,8 +6,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CheckCircle2, ChevronLeft, Shield, Truck, RotateCcw, Star } from 'lucide-react'
 
-const WHATSAPP_NUMBER = '393314430286'
-const CALLMEBOT_APIKEY = 'LA_TUA_API_KEY'
 const SHOPIFY_URL_SINGLE = 'https://7q632q-cd.myshopify.com/cart/48232541651102:1?checkout'
 const SHOPIFY_URL_DOUBLE = 'https://7q632q-cd.myshopify.com/cart/48238649606302:1?checkout'
 
@@ -35,19 +33,16 @@ function CheckoutSceltaInner() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-    const msg = encodeURIComponent(
-      `NUOVO ORDINE BELLACURA\n` +
-      `Nome: ${form.nome} ${form.cognome}\n` +
-      `Tel: ${form.telefono}\n` +
-      `Prodotto: ${productLabel} - ${productPrice}\n` +
-      `Indirizzo: ${form.indirizzo}, ${form.cap} ${form.citta}\n` +
-      (form.note ? `Note: ${form.note}` : '')
-    )
     try {
-      await fetch(
-        `https://api.callmebot.com/whatsapp.php?phone=${WHATSAPP_NUMBER}&text=${msg}&apikey=${CALLMEBOT_APIKEY}`,
-        { mode: 'no-cors' }
-      )
+      await fetch('/api/notify-order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...form,
+          productLabel,
+          productPrice,
+        }),
+      })
     } catch (_) {}
     setLoading(false)
     setStep('success')

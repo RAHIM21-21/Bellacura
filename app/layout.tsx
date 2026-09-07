@@ -6,6 +6,7 @@ import { SITE_NAME, SITE_DESCRIPTION, SITE_URL, buildMetadata, organizationSchem
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
+import CrispChat from '@/components/CrispChat'
 
 // Only the weights actually used in the design; italic only for Cormorant (all headings are italic)
 const cormorant = Cormorant_Garamond({
@@ -72,6 +73,7 @@ export default function RootLayout({
         <SocialProofToast />
         <ExitIntentPopup />
         <WhatsAppButton />
+        <CrispChat />
       </body>
     </html>
   )
