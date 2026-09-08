@@ -6,7 +6,6 @@ import '@/styles/globals.css'
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL, buildMetadata, organizationSchema } from '@/lib/seo'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import WhatsAppButton from '@/components/WhatsAppButton'
 import CrispChat from '@/components/CrispChat'
 import MicrosoftClarity from '@/components/MicrosoftClarity'
 import AddToCartTracker from '@/components/AddToCartTracker'
@@ -82,7 +81,6 @@ export default function RootLayout({
         <Footer />
         <SocialProofToast />
         <ExitIntentPopup />
-        <WhatsAppButton />
         <CrispChat />
         <MicrosoftClarity />
         <AddToCartTracker />
