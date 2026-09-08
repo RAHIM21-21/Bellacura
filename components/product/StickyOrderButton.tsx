@@ -2,7 +2,7 @@ export default function StickyOrderButton({ desktop = false }: { desktop?: boole
   if (desktop) {
     return (
       <a
-        href="/checkout-scelta/"
+        href="/checkout-scelta/?bundle=single"
         className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3 rounded-xl transition-colors shadow-lg whitespace-nowrap"
       >
         Ordina Ora
@@ -25,7 +25,7 @@ export default function StickyOrderButton({ desktop = false }: { desktop?: boole
       </div>
       {/* Right: CTA button */}
       <a
-        href="/checkout-scelta/"
+        href="/checkout-scelta/?bundle=single"
         className="shrink-0 flex items-center justify-center bg-red-600 active:bg-red-700 text-white font-bold text-sm px-6 py-4 rounded-2xl shadow-lg whitespace-nowrap min-w-[130px]"
       >
         Ordina Ora →
