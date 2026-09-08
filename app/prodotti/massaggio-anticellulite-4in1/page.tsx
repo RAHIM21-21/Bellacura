@@ -88,7 +88,7 @@ export default function ProductPage() {
  <div className="py-3 px-4 bg-red-600">
    <div className="flex flex-col items-center justify-center gap-1.5 text-center">
      <span className="text-white/90 text-xs font-bold uppercase tracking-widest">⚡ Offerta limitata — Solo 7 pezzi rimasti a questo prezzo</span>
-     <CountdownTimer />
+     <Link href="/checkout-scelta/" className="cursor-pointer"><CountdownTimer /></Link>
    </div>
  </div>
 
@@ -126,7 +126,7 @@ export default function ProductPage() {
  ))}
  </div>
  <span className="font-bold text-gray-900">4.9/5.0</span>
- <span className="text-gray-400 text-sm">da 2.800+ recensioni verificate</span>
+ <a href="#recensioni" className="text-gray-400 text-sm hover:text-rose-500 hover:underline cursor-pointer transition-colors">da 2.800+ recensioni verificate</a>
  </div>
  </div>
 
@@ -156,7 +156,7 @@ export default function ProductPage() {
  ))}
  </div>
  <span className="font-bold text-gray-900">4.9/5.0</span>
- <span className="text-gray-400 text-sm">da 2.800+ recensioni verificate</span>
+ <a href="#recensioni" className="text-gray-400 text-sm hover:text-rose-500 hover:underline cursor-pointer transition-colors">da 2.800+ recensioni verificate</a>
  </div>
  </div>
 
@@ -200,7 +200,7 @@ export default function ProductPage() {
  </section>
 
  {/* REVIEWS */}
- <ReviewsCarousel />
+ <div id="recensioni"><ReviewsCarousel /></div>
 
   {/*
  COME VISTO SU
