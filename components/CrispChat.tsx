@@ -11,7 +11,7 @@ export default function CrispChat() {
     const style = document.createElement('style')
     style.textContent = `
       @media (max-width: 768px) {
-        #crisp-chatbox { bottom: 80px !important; }
+        #crisp-chatbox > div { bottom: 90px !important; }
       }
     `
     document.head.appendChild(style)
