@@ -7,7 +7,15 @@ export default function CrispChat() {
     const id = process.env.NEXT_PUBLIC_CRISP_WEBSITE_ID
     if (!id) return
 
-    // Delay 4s so Crisp doesn't compete with LCP — it's hidden anyway (we use WhatsApp)
+    // Inject CSS to lift Crisp bubble above the sticky CTA bar on mobile
+    const style = document.createElement('style')
+    style.textContent = `
+      @media (max-width: 768px) {
+        #crisp-chatbox { bottom: 80px !important; }
+      }
+    `
+    document.head.appendChild(style)
+
     const timer = setTimeout(() => {
       ;(window as any).$crisp = []
       ;(window as any).CRISP_WEBSITE_ID = id
