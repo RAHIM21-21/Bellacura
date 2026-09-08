@@ -15,9 +15,7 @@ export default function CrispChat() {
       const s = document.createElement('script')
       s.src = 'https://client.crisp.chat/l.js'
       s.async = true
-      s.onload = () => {
-        ;(window as any).$crisp.push(['do', 'chat:hide'])
-      }
+
       document.head.appendChild(s)
     }, 4000)
 
