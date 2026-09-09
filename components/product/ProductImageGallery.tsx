@@ -2,8 +2,9 @@
 
 import { useState } from 'react'
 
-const STOCK_NUMS = [5, 6, 7, 8, 9]
 import Image from 'next/image'
+
+const STOCK_NUMS = [5, 6, 7, 8, 9]
 
 type MediaItem =
   | { type: 'image'; src: string; alt: string }
