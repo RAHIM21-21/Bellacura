@@ -2,10 +2,11 @@ import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
 const OWNER_EMAIL = 'rahimeladnani21@outlook.com'
+const FROM_SENDER = 'BellaCura <offerte@bellacura-shop.it>'
 
 export async function POST(req: NextRequest) {
   try {
-    const { email, phone, source = 'exit_popup' } = await req.json()
+    const { email, source = 'exit_popup' } = await req.json()
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: 'Email non valida' }, { status: 400 })
@@ -13,8 +14,9 @@ export async function POST(req: NextRequest) {
 
     const resend = new Resend(process.env.RESEND_API_KEY)
 
+    // 1. Notify owner
     await resend.emails.send({
-      from: 'BellaCura Lead <onboarding@resend.dev>',
+      from: FROM_SENDER,
       to: OWNER_EMAIL,
       subject: `📧 Nuova Lead — ${email}`,
       html: `
@@ -40,6 +42,76 @@ export async function POST(req: NextRequest) {
             </table>
           </div>
         </div>
+      `,
+    })
+
+    // 2. Send discount email to customer
+    await resend.emails.send({
+      from: FROM_SENDER,
+      to: email,
+      subject: '🎁 Il tuo codice sconto esclusivo BellaCura è qui',
+      html: `
+        <!DOCTYPE html>
+        <html lang="it">
+        <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+        <body style="margin:0; padding:0; background:#fdf2f8; font-family: Georgia, 'Times New Roman', serif;">
+          <div style="max-width: 560px; margin: 0 auto; padding: 32px 16px;">
+
+            <!-- Header -->
+            <div style="background: linear-gradient(135deg, #BE185D, #9d174d); border-radius: 16px 16px 0 0; padding: 36px 32px; text-align: center;">
+              <p style="margin: 0 0 8px; color: #fce7f3; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; font-family: sans-serif;">Offerta Esclusiva</p>
+              <h1 style="margin: 0; color: #ffffff; font-size: 32px; font-weight: bold;">🎁 Il tuo -10%</h1>
+              <p style="margin: 10px 0 0; color: #fce7f3; font-size: 15px; font-family: sans-serif;">è pronto per te</p>
+            </div>
+
+            <!-- Body -->
+            <div style="background: #ffffff; border: 1px solid #fce7f3; border-top: none; border-radius: 0 0 16px 16px; padding: 36px 32px;">
+
+              <p style="margin: 0 0 20px; color: #374151; font-size: 16px; line-height: 1.7;">
+                Ciao! 💖<br><br>
+                Hai fatto la scelta giusta — BellaCura è già amato da centinaia di donne italiane e non vediamo l'ora che tu provi la differenza sulla tua pelle. 🌸<br><br>
+                Per ringraziarti, abbiamo preparato qualcosa di speciale solo per te:
+              </p>
+
+              <!-- CTA Button -->
+              <div style="text-align: center; margin: 28px 0;">
+                <a href="https://bellacura-shop.myshopify.com/cart/48232541651102:1?checkout"
+                   style="display: inline-block; background: linear-gradient(135deg, #BE185D, #9d174d); color: #ffffff; text-decoration: none; font-family: sans-serif; font-weight: bold; font-size: 17px; padding: 16px 36px; border-radius: 50px;">
+                  → Riscatta il tuo 10% di sconto
+                </a>
+                <p style="margin: 10px 0 0; color: #9ca3af; font-size: 12px; font-family: sans-serif;">Il codice <strong style="color:#BE185D;">BELLA10</strong> è già applicato automaticamente ✨</p>
+              </div>
+
+              <!-- Divider -->
+              <div style="border-top: 1px solid #fce7f3; margin: 28px 0;"></div>
+
+              <!-- COD option -->
+              <p style="margin: 0 0 12px; color: #374151; font-size: 15px; line-height: 1.7; font-family: sans-serif;">
+                💳 <strong>Preferisci pagare alla consegna?</strong><br>
+                <a href="https://www.bellacura-shop.it/checkout-scelta?bundle=single"
+                   style="color: #BE185D; font-weight: bold;">Ordina normalmente dal sito</a> — il corriere passa a casa tua e paghi il prezzo scontato direttamente quando ricevi il pacco.
+              </p>
+
+              <!-- Divider -->
+              <div style="border-top: 1px solid #fce7f3; margin: 28px 0;"></div>
+
+              <p style="margin: 0; color: #9ca3af; font-size: 13px; font-family: sans-serif; text-align: center;">
+                ⚠️ L'offerta è riservata a te e valida per poco.<br><br>
+                Con affetto,<br>
+                <strong style="color: #BE185D;">Il Team BellaCura 🌺</strong>
+              </p>
+
+            </div>
+
+            <!-- Footer -->
+            <p style="text-align: center; color: #d1d5db; font-size: 11px; font-family: sans-serif; margin: 20px 0 0;">
+              BellaCura · bellacura-shop.it<br>
+              Hai ricevuto questa email perché hai lasciato il tuo indirizzo sul nostro sito.
+            </p>
+
+          </div>
+        </body>
+        </html>
       `,
     })
 
