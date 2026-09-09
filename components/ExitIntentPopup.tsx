@@ -125,7 +125,7 @@ export default function ExitIntentPopup() {
               <div className="text-4xl mb-3">🎉</div>
               <p className="font-bold text-gray-800 text-lg">Fatto!</p>
               <p className="text-gray-500 text-sm mt-1">
-                Controlla la tua email — il codice <strong>BELLA10</strong> è in arrivo.
+                Controlla la tua email, il codice sconto è in arrivo.
               </p>
               <p className="text-gray-400 text-xs mt-2">
                 Se non lo ricevi entro 5 minuti, controlla la cartella spam.
@@ -157,9 +157,6 @@ export default function ExitIntentPopup() {
               {status === 'error' && (
                 <p className="text-red-500 text-xs text-center">Qualcosa è andato storto. Riprova.</p>
               )}
-              <p className="text-center text-xs text-gray-400">
-                Nessuno spam, disiscriviti quando vuoi.
-              </p>
             </form>
           )}
         </div>
