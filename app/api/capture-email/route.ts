@@ -86,11 +86,17 @@ export async function POST(req: NextRequest) {
               <div style="border-top: 1px solid #fce7f3; margin: 28px 0;"></div>
 
               <!-- COD option -->
-              <p style="margin: 0 0 12px; color: #374151; font-size: 15px; line-height: 1.7; font-family: sans-serif;">
-                💳 <strong>Preferisci pagare alla consegna?</strong><br>
+              <div style="text-align: center; margin: 0 0 12px;">
+                <p style="margin: 0 0 12px; color: #374151; font-size: 15px; line-height: 1.7; font-family: sans-serif;">
+                  💵 <strong>Preferisci pagare alla consegna?</strong><br>
+                  <span style="color: #6b7280; font-size: 14px;">Il corriere passa a casa tua e paghi in contanti alla ricezione.</span>
+                </p>
                 <a href="https://www.bellacura-shop.it/checkout-email"
-                   style="color: #BE185D; font-weight: bold;">Ordina normalmente dal sito</a> — il corriere passa a casa tua e paghi il prezzo scontato direttamente quando ricevi il pacco.
-              </p>
+                   style="display: inline-block; background: #16a34a; color: #ffffff; text-decoration: none; font-family: sans-serif; font-weight: bold; font-size: 17px; padding: 16px 36px; border-radius: 50px;">
+                  → Paga alla Consegna — €54,00
+                </a>
+                <p style="margin: 10px 0 0; color: #9ca3af; font-size: 12px; font-family: sans-serif;">Nessun rischio · Paghi solo quando ricevi il pacco ✓</p>
+              </div>
 
               <!-- Divider -->
               <div style="border-top: 1px solid #fce7f3; margin: 28px 0;"></div>
