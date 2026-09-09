@@ -88,7 +88,7 @@ export async function POST(req: NextRequest) {
               <!-- COD option -->
               <p style="margin: 0 0 12px; color: #374151; font-size: 15px; line-height: 1.7; font-family: sans-serif;">
                 💳 <strong>Preferisci pagare alla consegna?</strong><br>
-                <a href="https://www.bellacura-shop.it/checkout-scelta?bundle=single"
+                <a href="https://www.bellacura-shop.it/checkout-email"
                    style="color: #BE185D; font-weight: bold;">Ordina normalmente dal sito</a> — il corriere passa a casa tua e paghi il prezzo scontato direttamente quando ricevi il pacco.
               </p>
 
