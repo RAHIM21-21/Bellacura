@@ -31,9 +31,9 @@ const bundles = [
 ]
 
 const freeGifts = [
-  { emoji: '📘', name: 'Guida Anti-Cellulite PDF', value: '€19,90' },
-  { emoji: '🚚', name: 'Spedizione Gratuita', value: '€4,90' },
-  { emoji: '🥗', name: 'Scheda Nutrizione Detox', value: '€14,90' },
+  { name: 'Guida Anti-Cellulite PDF', value: '€19,90' },
+  { name: 'Spedizione Express Gratuita', value: '€4,90' },
+  { name: 'Scheda Nutrizione Detox', value: '€14,90' },
 ]
 
 export default function ProductBundlePicker() {
@@ -89,23 +89,6 @@ export default function ProductBundlePicker() {
         })}
       </div>
 
-      {/* Free Gifts — always visible */}
-      <div className="rounded-2xl border-2 border-amber-300 bg-amber-50 p-4">
-        <p className="text-sm font-bold text-gray-800 mb-3 flex items-center gap-2">
-          🎁 <span>Sblocca 3 Omaggi Gratuiti con il tuo ordine</span>
-        </p>
-        <div className="grid grid-cols-3 gap-2">
-          {freeGifts.map((g) => (
-            <div key={g.name} className="bg-white rounded-xl p-3 text-center border border-amber-200 shadow-sm">
-              <div className="text-2xl mb-1">{g.emoji}</div>
-              <p className="text-[10px] font-bold text-gray-700 leading-tight mb-1">{g.name}</p>
-              <p className="text-[9px] text-gray-400 line-through">{g.value}</p>
-              <p className="text-[10px] font-bold text-green-600">GRATIS</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* CTA button */}
       <div className="pt-1">
         <a
@@ -114,6 +97,26 @@ export default function ProductBundlePicker() {
         >
           Paga alla Consegna →
         </a>
+      </div>
+
+      {/* Incluso nel tuo ordine */}
+      <div className="pt-1 pb-1">
+        <div className="flex items-center gap-3 mb-3">
+          <div className="h-px flex-1 bg-gray-100" />
+          <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest whitespace-nowrap">Incluso nel tuo ordine</span>
+          <div className="h-px flex-1 bg-gray-100" />
+        </div>
+        <div className="space-y-2">
+          {freeGifts.map((g) => (
+            <div key={g.name} className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <svg className="w-3.5 h-3.5 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span className="text-sm text-gray-700">{g.name}</span>
+              </div>
+              <span className="text-xs text-gray-400 line-through ml-4">{g.value}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Payment methods */}
