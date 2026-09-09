@@ -109,7 +109,7 @@ function CheckoutSceltaInner() {
         {step === 'choose' && (
           <>
             <h1 className="text-xl font-extrabold text-gray-900 text-center mb-1">Come vuoi pagare?</h1>
-            <p className="text-sm text-gray-400 text-center mb-5">Nessun account richiesto. Ordine in 2 minuti.</p>
+            <p className="text-sm text-gray-400 text-center mb-5">Nessun account richiesto. Ordine in 60 secondi.</p>
 
             <div className="space-y-3">
               {/* COD */}
