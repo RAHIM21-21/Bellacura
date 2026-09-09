@@ -11,7 +11,6 @@ export default function ExitIntentPopup() {
 
   const [visible, setVisible] = useState(false)
   const [email, setEmail] = useState('')
-  const [phone, setPhone] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const triggered = useRef(false)
   const lastScrollY = useRef(0)
@@ -81,7 +80,7 @@ export default function ExitIntentPopup() {
       const res = await fetch('/api/capture-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, phone: phone || undefined, source: 'exit_popup' }),
+        body: JSON.stringify({ email, source: 'exit_popup' }),
       })
       if (res.ok) {
         setStatus('success')
@@ -128,6 +127,9 @@ export default function ExitIntentPopup() {
               <p className="text-gray-500 text-sm mt-1">
                 Controlla la tua email — il codice <strong>BELLA10</strong> è in arrivo.
               </p>
+              <p className="text-gray-400 text-xs mt-2">
+                Se non lo ricevi entro 5 minuti, controlla la cartella spam.
+              </p>
               <button
                 onClick={() => setVisible(false)}
                 className="mt-5 w-full bg-rose-600 text-white font-bold py-3 rounded-2xl hover:bg-rose-700 transition"
@@ -143,13 +145,6 @@ export default function ExitIntentPopup() {
                 placeholder="La tua email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full border border-gray-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400"
-              />
-              <input
-                type="tel"
-                placeholder="WhatsApp (opzionale)"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
                 className="w-full border border-gray-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400"
               />
               <button
