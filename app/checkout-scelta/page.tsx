@@ -115,13 +115,14 @@ function CheckoutSceltaInner() {
               {/* COD */}
               <button
                 onClick={() => setStep('form')}
-                className="w-full flex items-start gap-4 rounded-2xl p-5 text-left transition-all border-2 border-gray-200 bg-white hover:border-gray-300 shadow-sm"
+                className="w-full flex items-start gap-4 rounded-2xl p-5 text-left transition-all border-2 border-green-500 bg-green-50 hover:border-green-600 shadow-md relative"
               >
-                <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center text-2xl shrink-0">💵</div>
+                <span className="absolute -top-3 left-4 bg-green-500 text-white text-xs font-bold px-3 py-0.5 rounded-full uppercase tracking-wider">⭐ Più scelto</span>
+                <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center text-2xl shrink-0">💵</div>
                 <div className="flex-1">
                   <p className="font-extrabold text-gray-900 text-base mb-0.5">Paga alla Consegna</p>
-                  <p className="text-sm text-gray-500">Ricevi il pacco e paghi in contanti al corriere. Zero rischio.</p>
-                  <p className="text-xs text-rose-500 font-semibold mt-1.5">→ Inserisci i dati e ordini in 60 secondi</p>
+                  <p className="text-sm text-gray-600">Ricevi il pacco e paghi in contanti al corriere. Zero rischio.</p>
+                  <p className="text-xs text-green-600 font-semibold mt-1.5">→ Inserisci i dati e ordini in 60 secondi</p>
                 </div>
               </button>
 

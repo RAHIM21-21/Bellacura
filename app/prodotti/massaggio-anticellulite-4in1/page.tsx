@@ -13,7 +13,7 @@ import ComparisonVS from '@/components/product/ComparisonVS'
 
 export const metadata: Metadata = {
  ...buildMetadata({
- title: 'Massaggiatore Anticellulite 4 in 1 – Pelle Più Tonica in 14 Giorni | BellaCura',
+ title: 'Massaggiatore Anticellulite 4 in 1 – Pelle Più Tonica in 14 Giorni',
  description:
  'Il massaggiatore anticellulite professionale più venduto in Italia. Vibrazione + calore 45°C + luce rossa. Risultati visibili in 2 settimane. Paga alla consegna. Spedizione 24-48h GRATIS.',
  path: '/prodotti/massaggio-anticellulite-4in1/',
@@ -58,6 +58,9 @@ const features = [
  { title: 'Silenzioso < 40 dB', body: 'Silenzioso come un sussurro. Usalo mentre guardi la TV, leggi o ti rilassi senza disturbare nessuno.' },
 ]
 
+const STOCK_NUMS = [5, 6, 7, 8, 9]
+const dailyStock = STOCK_NUMS[Math.floor(Date.now() / 86400000) % STOCK_NUMS.length]
+
 export default function ProductPage() {
  const schema_product = productSchema({
  name: 'BellaCura Massaggiatore Anticellulite 4 in 1',
@@ -87,7 +90,7 @@ export default function ProductPage() {
  {/* OFFERTA A TEMPO */}
  <div className="py-3 px-4 bg-red-600">
    <div className="flex flex-col items-center justify-center gap-1.5 text-center">
-     <span className="text-white/90 text-xs font-bold uppercase tracking-widest">⚡ Offerta limitata — Solo 7 pezzi rimasti a questo prezzo</span>
+     <span className="text-white/90 text-xs font-bold uppercase tracking-widest">{`⚡ Offerta limitata — Solo ${dailyStock} pezzi rimasti a questo prezzo`}</span>
      <Link href="/checkout-scelta/" className="cursor-pointer"><CountdownTimer /></Link>
    </div>
  </div>

@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 // branded SVGs inline
 import clsx from 'clsx'
 
@@ -19,7 +20,10 @@ const tickerMessages = [
  '✅ Nessuna carta di credito richiesta',
 ]
 
-export default function Header() {
+export default function Header()
+{
+  const pathname = usePathname()
+  if (pathname?.startsWith('/checkout')) return null
  const [open, setOpen] = useState(false)
 
  return (

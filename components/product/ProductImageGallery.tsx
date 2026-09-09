@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+
+const STOCK_NUMS = [5, 6, 7, 8, 9]
 import Image from 'next/image'
 
 type MediaItem =
@@ -113,7 +115,7 @@ export default function ProductImageGallery() {
       {/* Stock badge */}
       <div className="flex items-center gap-2 bg-white border border-red-100 rounded-full px-4 py-2 shadow-sm w-fit">
         <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-        <span className="text-xs font-bold text-gray-800">Solo 7 pezzi rimasti</span>
+        <span className="text-xs font-bold text-gray-800">{`Solo ${STOCK_NUMS[Math.floor(Date.now() / 86400000) % STOCK_NUMS.length]} pezzi rimasti`}</span>
       </div>
 
       {/* Thumbnails */}

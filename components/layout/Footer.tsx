@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const footerLinks = {
  prodotti: [
@@ -26,6 +29,9 @@ const footerLinks = {
 }
 
 export default function Footer() {
+ const pathname = usePathname()
+ if (pathname?.startsWith('/checkout')) return null
+
  return (
  <footer className="bg-gray-900 text-gray-300 pt-16 pb-8">
  <div className="container-tight">

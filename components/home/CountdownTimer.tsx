@@ -2,16 +2,11 @@
 
 import { useEffect, useState } from 'react'
 
-function getEndTime(): number {
-  const stored = sessionStorage.getItem('bellacura_countdown')
-  if (stored) {
-    const end = parseInt(stored, 10)
-    if (end > Date.now()) return end
-  }
-  const hoursAhead = 2 + Math.random() * 3
-  const end = Date.now() + hoursAhead * 60 * 60 * 1000
-  sessionStorage.setItem('bellacura_countdown', String(end))
-  return end
+function getMidnightEnd(): number {
+  const now = new Date()
+  const midnight = new Date(now)
+  midnight.setHours(23, 59, 59, 999)
+  return midnight.getTime()
 }
 
 function TimerDisplay({ h, m, s }: { h: string; m: string; s: string }) {
@@ -40,7 +35,7 @@ export default function CountdownTimer() {
   const [remaining, setRemaining] = useState<number | null>(null)
 
   useEffect(() => {
-    const end = getEndTime()
+    const end = getMidnightEnd()
     const calc = () => Math.max(0, end - Date.now())
     setRemaining(calc())
     const interval = setInterval(() => setRemaining(calc()), 1000)
@@ -50,8 +45,7 @@ export default function CountdownTimer() {
   const pad = (n: number) => String(n).padStart(2, '0')
 
   if (remaining === null) {
-    // Show static placeholder immediately — no layout shift, no skeleton
-    return <TimerDisplay h="03" m="00" s="00" />
+    return <TimerDisplay h="--" m="--" s="--" />
   }
 
   const h = pad(Math.floor(remaining / 3600000))
