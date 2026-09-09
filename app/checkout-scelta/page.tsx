@@ -124,7 +124,7 @@ function CheckoutSceltaInner() {
                   <p className="text-sm text-gray-600">Ricevi il pacco e paghi in contanti al corriere. Zero rischio.</p>
                   <p className="text-xs text-green-600 font-semibold mt-1.5">→ Inserisci i dati e ordini in 60 secondi</p>
                 </div>
-  
+              </button>
 
               {/* Card */}
               <a
@@ -249,7 +249,7 @@ function CheckoutSceltaInner() {
                 className="w-full bg-rose-600 hover:bg-rose-700 disabled:opacity-60 text-white font-extrabold text-base py-4 rounded-2xl transition-colors shadow-lg shadow-rose-100"
               >
                 {loading ? 'Invio in corso...' : `✓ Conferma Ordine — ${productPrice}`}
-  
+              </button>
 
               <p className="text-center text-xs text-gray-400">
                 🔒 I tuoi dati sono protetti · usati solo per la spedizione
