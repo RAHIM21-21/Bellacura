@@ -255,10 +255,10 @@ export default function ProductPage() {
  {/*
  RISULTATI REALI
  */}
- <section className="bg-rose-50 py-8 md:py-14">
+ <section className="bg-green-50 py-8 md:py-14">
  <div className="max-w-4xl mx-auto px-4 sm:px-6">
  <div className="text-center mb-6 md:mb-10">
- <span className="inline-block bg-rose-100 text-rose-600 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">✨ Risultati certificati</span>
+ <span className="inline-block bg-green-100 text-green-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">✨ Risultati certificati</span>
  <h2 className="text-3xl font-extrabold text-gray-900 mb-2">I numeri parlano da soli</h2>
  <p className="text-gray-500 text-sm">Sondaggio su 1.200+ clienti BellaCura (2024)</p>
  </div>
@@ -271,10 +271,10 @@ export default function ProductPage() {
  const r = 36; const circ = 2 * Math.PI * r;
  const dash = (pct / 100) * circ;
  return (
- <div key={label} className="bg-white rounded-2xl p-4 md:p-6 flex items-center gap-4 md:gap-5 shadow-sm border border-rose-100">
+ <div key={label} className="bg-white rounded-2xl p-4 md:p-6 flex items-center gap-4 md:gap-5 shadow-sm border border-green-100">
  <svg width="72" height="72" viewBox="0 0 88 88" className="shrink-0 w-16 h-16 md:w-[88px] md:h-[88px]">
- <circle cx="44" cy="44" r={r} fill="none" stroke="#fce7f3" strokeWidth="8"/>
- <circle cx="44" cy="44" r={r} fill="none" stroke="#e11d48" strokeWidth="8"
+ <circle cx="44" cy="44" r={r} fill="none" stroke="#dcfce7" strokeWidth="8"/>
+ <circle cx="44" cy="44" r={r} fill="none" stroke="#16a34a" strokeWidth="8"
  strokeDasharray={`${dash} ${circ}`} strokeLinecap="round"
  transform="rotate(-90 44 44)" />
  <text x="44" y="49" textAnchor="middle" fontSize="16" fontWeight="900" fill="#1f2937">{label}</text>
