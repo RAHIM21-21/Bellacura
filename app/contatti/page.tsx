@@ -23,8 +23,8 @@ export default function ContattiPage() {
  <div className="container-tight max-w-3xl">
  <div className="grid md:grid-cols-3 gap-6 mb-16">
  {[
- { icon: '', title: 'Email', info: 'info@bellacura.it', sub: 'Risposta entro 4 ore', href: 'mailto:info@bellacura.it' },
- { icon: '', title: 'WhatsApp', info: '+39 000 000 0000', sub: 'Risposta entro 1 ora', href: 'https://wa.me/39000000000' },
+ { icon: '', title: 'Email', info: 'offerte@bellacura-shop.it', sub: 'Risposta entro 4 ore', href: 'mailto:offerte@bellacura-shop.it' },
+ { icon: '', title: 'WhatsApp', info: '+39 331 443 0286', sub: 'Risposta entro 1 ora', href: 'https://wa.me/393314430286' },
  { icon: '', title: 'Resi & Rimborsi', info: 'reso@bellacura.it', sub: 'Gestione entro 24h', href: 'mailto:reso@bellacura.it' },
  ].map((c) => (
  <a key={c.title} href={c.href} className="card text-center hover:shadow-md transition-shadow block">
