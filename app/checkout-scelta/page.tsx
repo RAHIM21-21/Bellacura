@@ -20,7 +20,7 @@ function CheckoutSceltaInner() {
   const originalPrice = isDouble ? '€238,00' : '€119,00'
 
   const isCod = searchParams.get('cod') === '1'
-  const [step, setStep] = useState<Step>(isCod ? 'form' : 'choose')
+  const [step, setStep] = useState<Step>('form')
   const [loading, setLoading] = useState(false)
   const [form, setForm] = useState({
     nome: '', cognome: '', telefono: '', indirizzo: '', citta: '', cap: '', note: ''
@@ -124,7 +124,7 @@ function CheckoutSceltaInner() {
                   <p className="text-sm text-gray-600">Ricevi il pacco e paghi in contanti al corriere. Zero rischio.</p>
                   <p className="text-xs text-green-600 font-semibold mt-1.5">→ Inserisci i dati e ordini in 60 secondi</p>
                 </div>
-              </button>
+  
 
               {/* Card */}
               <a
@@ -162,20 +162,19 @@ function CheckoutSceltaInner() {
         {/* STEP: FORM */}
         {step === 'form' && (
           <>
-            <button onClick={() => setStep('choose')} className="flex items-center gap-1 text-sm text-gray-400 hover:text-rose-500 mb-5">
-              <ChevronLeft size={15} /> Cambia metodo
-            </button>
+            
 
-            <div className="bg-rose-50 border border-rose-100 rounded-2xl p-4 mb-5 flex items-start gap-3">
-              <CheckCircle2 size={18} className="text-rose-500 shrink-0 mt-0.5" />
+
+
+            <div className="flex items-center justify-between mb-5">
               <div>
-                <p className="text-sm font-bold text-gray-900">Paga alla Consegna selezionato</p>
-                <p className="text-xs text-gray-500 mt-0.5">Compila il form e ti spediamo subito. Paghi al corriere in contanti.</p>
+                <h2 className="text-lg font-extrabold text-gray-900">💵 Dove spediamo?</h2>
+                <p className="text-sm text-gray-400 mt-0.5">Ci vogliono meno di 60 secondi</p>
               </div>
+              <a href={SHOPIFY_URL} className="text-xs text-gray-400 hover:text-rose-500 underline underline-offset-2 shrink-0 ml-4">
+                Preferisci pagare<br/>con carta?
+              </a>
             </div>
-
-            <h2 className="text-lg font-extrabold text-gray-900 mb-1">Dove spediamo?</h2>
-            <p className="text-sm text-gray-400 mb-5">Ci vogliono meno di 60 secondi</p>
 
             <form onSubmit={handleSubmit} className="space-y-3">
               <div className="grid grid-cols-2 gap-3">
@@ -250,7 +249,7 @@ function CheckoutSceltaInner() {
                 className="w-full bg-rose-600 hover:bg-rose-700 disabled:opacity-60 text-white font-extrabold text-base py-4 rounded-2xl transition-colors shadow-lg shadow-rose-100"
               >
                 {loading ? 'Invio in corso...' : `✓ Conferma Ordine — ${productPrice}`}
-              </button>
+  
 
               <p className="text-center text-xs text-gray-400">
                 🔒 I tuoi dati sono protetti · usati solo per la spedizione
