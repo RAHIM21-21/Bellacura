@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     }
 
     await resend.emails.send({
-      from: 'BellaCura Ordini <onboarding@resend.dev>',
+      from: 'BellaCura Ordini <offerte@bellacura-shop.it>',
       to: OWNER_EMAIL,
       subject: `🛍️ NUOVO ORDINE COD — ${nome} ${cognome} — ${productPrice}`,
       html: `
@@ -49,6 +49,22 @@ export async function POST(req: NextRequest) {
             </table>
             <div style="margin-top: 20px; padding: 14px; background: #f0fdf4; border-radius: 8px; border: 1px solid #bbf7d0;">
               <p style="margin: 0; font-size: 13px; color: #166534;">✅ Ordine ricevuto — procedi con la spedizione</p>
+            </div>
+            <div style="margin-top: 20px; text-align: center;">
+              <p style="margin: 0 0 10px; font-size: 13px; color: #6b7280;">Invia il messaggio di conferma WhatsApp al cliente:</p>
+              <a href="https://wa.me/${telefono.replace(/\D/g, '')}?text=${encodeURIComponent(`Ciao ${nome}! 👋
+
+Abbiamo ricevuto il tuo ordine per il Massaggiatore Anticellulite 4 in 1 — ${productPrice} pagamento alla consegna.
+
+Spediamo entro oggi/domani e riceverai il pacco in 24–48 ore all'indirizzo indicato in ${indirizzo}, ${cap} ${citta}.
+
+Puoi confermarci che l'indirizzo è corretto? Rispondici con un semplice "Confermo" e partiamo subito con la spedizione! 📦
+
+Per qualsiasi domanda siamo qui! 🙂
+Il team BellaCura Italia`)}"
+                 style="display: inline-block; background: #25D366; color: #ffffff; text-decoration: none; font-family: sans-serif; font-weight: bold; font-size: 16px; padding: 14px 32px; border-radius: 50px;">
+                💬 Invia WhatsApp al cliente
+              </a>
             </div>
           </div>
         </div>
