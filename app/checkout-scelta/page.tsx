@@ -23,7 +23,7 @@ function CheckoutSceltaInner() {
   const [step, setStep] = useState<Step>('form')
   const [loading, setLoading] = useState(false)
   const [form, setForm] = useState({
-    nome: '', cognome: '', telefono: '', indirizzo: '', citta: '', cap: '', note: ''
+    nome: '', telefono: '', indirizzo: ''
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -177,19 +177,11 @@ function CheckoutSceltaInner() {
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-3">
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="text-xs font-bold text-gray-600 block mb-1">Nome *</label>
-                  <input name="nome" required value={form.nome} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-100"
-                    placeholder="Maria" />
-                </div>
-                <div>
-                  <label className="text-xs font-bold text-gray-600 block mb-1">Cognome *</label>
-                  <input name="cognome" required value={form.cognome} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-100"
-                    placeholder="Rossi" />
-                </div>
+              <div>
+                <label className="text-xs font-bold text-gray-600 block mb-1">Nome *</label>
+                <input name="nome" required value={form.nome} onChange={handleChange}
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-100"
+                  placeholder="Maria" />
               </div>
 
               <div>
@@ -201,33 +193,13 @@ function CheckoutSceltaInner() {
               </div>
 
               <div>
-                <label className="text-xs font-bold text-gray-600 block mb-1">Indirizzo di Spedizione *</label>
+                <label className="text-xs font-bold text-gray-600 block mb-1">Indirizzo Completo *</label>
                 <input name="indirizzo" required value={form.indirizzo} onChange={handleChange}
                   className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-100"
-                  placeholder="Via Roma 1, interno 3" />
+                  placeholder="Via Roma 1, 20100 Milano" />
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="text-xs font-bold text-gray-600 block mb-1">Città *</label>
-                  <input name="citta" required value={form.citta} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-100"
-                    placeholder="Milano" />
-                </div>
-                <div>
-                  <label className="text-xs font-bold text-gray-600 block mb-1">CAP *</label>
-                  <input name="cap" required value={form.cap} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-100"
-                    placeholder="20100" />
-                </div>
-              </div>
 
-              <div>
-                <label className="text-xs font-bold text-gray-600 block mb-1">Note per il corriere (opzionale)</label>
-                <textarea name="note" value={form.note} onChange={handleChange} rows={2}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-100 resize-none"
-                  placeholder="Es. citofono, piano, orario preferito..." />
-              </div>
 
               {/* Order summary */}
               <div className="bg-gray-50 rounded-xl p-4 border border-gray-100">
@@ -271,7 +243,7 @@ function CheckoutSceltaInner() {
             <div className="bg-rose-50 border border-rose-100 rounded-2xl p-4 text-left mb-8">
               <p className="text-sm font-bold text-gray-900 mb-2">Riepilogo ordine</p>
               <p className="text-sm text-gray-600">📦 {productLabel}</p>
-              <p className="text-sm text-gray-600">🏠 {form.indirizzo}, {form.cap} {form.citta}</p>
+              <p className="text-sm text-gray-600">🏠 {form.indirizzo}</p>
               <p className="text-sm text-gray-600">💰 Pagamento alla consegna — {productPrice}</p>
             </div>
             <Link href="/" className="text-rose-600 font-bold hover:underline text-sm">← Torna alla Home</Link>

@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY)
     const body = await req.json()
-    const { nome, cognome, telefono, indirizzo, citta, cap, note, productLabel, productPrice } = body
+    const { nome, telefono, indirizzo, productLabel, productPrice } = body
 
     if (!nome || !telefono || !indirizzo) {
       return NextResponse.json({ success: false, error: 'Dati mancanti' }, { status: 400 })
@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: 'BellaCura Ordini <offerte@bellacura-shop.it>',
       to: OWNER_EMAIL,
-      subject: `🛍️ NUOVO ORDINE COD — ${nome} ${cognome} — ${productPrice}`,
+      subject: `🛍️ NUOVO ORDINE COD — ${nome} — ${productPrice}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 24px;">
           <div style="background: #BE185D; padding: 20px 24px; border-radius: 12px 12px 0 0;">
@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
             <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
               <tr style="background: #fdf2f8;">
                 <td style="padding: 10px 12px; font-weight: bold; color: #6b7280; width: 40%;">Cliente</td>
-                <td style="padding: 10px 12px; color: #111;">${nome} ${cognome}</td>
+                <td style="padding: 10px 12px; color: #111;">${nome}</td>
               </tr>
               <tr>
                 <td style="padding: 10px 12px; font-weight: bold; color: #6b7280;">Telefono</td>
@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
               </tr>
               <tr style="background: #fdf2f8;">
                 <td style="padding: 10px 12px; font-weight: bold; color: #6b7280;">Indirizzo</td>
-                <td style="padding: 10px 12px; color: #111;">${indirizzo}, ${cap} ${citta}</td>
+                <td style="padding: 10px 12px; color: #111;">${indirizzo}</td>
               </tr>
               <tr>
                 <td style="padding: 10px 12px; font-weight: bold; color: #6b7280;">Prodotto</td>
@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
 
 Abbiamo ricevuto il tuo ordine per il Massaggiatore Anticellulite 4 in 1 — ${productPrice} pagamento alla consegna.
 
-Spediamo entro oggi/domani e riceverai il pacco in 24–48 ore all'indirizzo indicato in ${indirizzo}, ${cap} ${citta}.
+Spediamo entro oggi/domani e riceverai il pacco in 24–48 ore all'indirizzo indicato: ${indirizzo}.
 
 Puoi confermarci che l'indirizzo è corretto? Rispondici con un semplice "Confermo" e partiamo subito con la spedizione! 📦
 
