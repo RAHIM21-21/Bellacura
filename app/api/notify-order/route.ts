@@ -45,7 +45,6 @@ export async function POST(req: NextRequest) {
                 <td style="padding: 10px 12px; font-weight: bold; color: #6b7280;">Importo COD</td>
                 <td style="padding: 10px 12px; font-size: 18px; font-weight: bold; color: #BE185D;">${productPrice}</td>
               </tr>
-              ${note ? `<tr><td style="padding: 10px 12px; font-weight: bold; color: #6b7280;">Note</td><td style="padding: 10px 12px; color: #111;">${note}</td></tr>` : ''}
             </table>
             <div style="margin-top: 20px; padding: 14px; background: #f0fdf4; border-radius: 8px; border: 1px solid #bbf7d0;">
               <p style="margin: 0; font-size: 13px; color: #166534;">✅ Ordine ricevuto — procedi con la spedizione</p>
