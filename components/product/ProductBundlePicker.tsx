@@ -71,7 +71,7 @@ export default function ProductBundlePicker() {
                 {bundle.tag}
               </span>
               <div className="relative w-14 h-14 rounded-xl overflow-hidden shrink-0 shadow-sm">
-                <Image src="/images/massaggiatore-bellacura.jpg" alt="BellaCura" fill className="object-cover" />
+                <Image src="/images/render-spa-hero.jpg" alt="BellaCura" fill className="object-cover" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-bold text-gray-900 text-sm leading-tight">{bundle.label}</p>
