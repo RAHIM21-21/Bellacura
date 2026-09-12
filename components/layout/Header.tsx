@@ -29,7 +29,7 @@ export default function Header()
  return (
  <header className="sticky top-0 z-50 bg-white shadow-sm">
  {/* Scrolling urgency ticker */}
- <div className="text-sm py-2 overflow-hidden" style={{background: '#1D3557', color: '#ffffff'}}>
+ <div className="text-sm py-2 overflow-hidden" style={{background: '#DCEAF2', color: '#1D3557'}}>
  <div className="ticker-wrapper">
  <div className="ticker-track">
  {[...tickerMessages, ...tickerMessages].map((msg, i) => (
