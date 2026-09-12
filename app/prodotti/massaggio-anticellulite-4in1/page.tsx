@@ -255,7 +255,7 @@ export default function ProductPage() {
  </section>
 
  {/* FAQ */}
- <section className="bg-white py-7 md:py-16">
+ <section className="faq-wave-bg py-7 md:py-16">
  <div className="max-w-2xl mx-auto px-4 sm:px-6">
  <div className="text-center mb-6 md:mb-10">
  <span className="inline-block bg-[#DCEAF2] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">FAQ</span>

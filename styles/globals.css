@@ -222,3 +222,23 @@
 .gallery-slide-left {
   animation: slide-from-left 0.28s cubic-bezier(0.25,0.46,0.45,0.94) both;
 }
+
+/* ── FAQ wave animated background (VACUVIA-style) ── */
+@keyframes faq-wave {
+  0%   { background-position: 0%   60%; }
+  50%  { background-position: 100% 40%; }
+  100% { background-position: 0%   60%; }
+}
+.faq-wave-bg {
+  background: linear-gradient(
+    135deg,
+    #DCEAF2 0%,
+    #EEF6FB 20%,
+    #C8DFF0 40%,
+    #D6EDF8 60%,
+    #EEF6FB 80%,
+    #DCEAF2 100%
+  );
+  background-size: 400% 400%;
+  animation: faq-wave 10s ease infinite;
+}
