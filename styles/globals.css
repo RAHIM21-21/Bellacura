@@ -5,10 +5,15 @@
 :root {
   --font-montserrat: 'Montserrat', system-ui, sans-serif;
   --font-pinyon: 'Pinyon Script', cursive;
-  --navy: #1D3557;
-  --blue-mid: #457B9D;
-  --blue-light: #D6EAF0;
-  --blue-tint: #EBF4F8;
+
+  /* VACUVIA-matched color system */
+  --navy:         #1D3557;   /* primary accent — VACUVIA color-base-accent-1 */
+  --navy-dark:    #152840;   /* hover state */
+  --blue-mid:     #457B9D;   /* secondary blue */
+  --blue-section: #DCEAF2;   /* section bg — VACUVIA rgb(220,234,242) */
+  --blue-count:   #DCE6F7;   /* countdown box — VACUVIA rgb(220,230,247) */
+  --text-primary: #000000;   /* VACUVIA body text */
+  --text-muted:   #6B7280;
 }
 
 @layer base {
@@ -18,13 +23,13 @@
   }
 
   body {
-    @apply bg-cream text-gray-800 antialiased;
+    @apply bg-white text-gray-900 antialiased;
     font-family: var(--font-montserrat), system-ui, sans-serif;
     font-weight: 400;
     letter-spacing: 0.01em;
   }
 
-  /* Montserrat headings — ExtraBold for impact */
+  /* Montserrat headings — ExtraBold for impact, matching VACUVIA weight */
   h1, h2, h3, h4 {
     font-family: var(--font-montserrat), system-ui, sans-serif;
     font-style: normal;
@@ -52,14 +57,8 @@
     text-decoration: none;
     position: relative;
   }
-  .logo-bella {
-    font-weight: 400;
-    font-style: normal;
-  }
-  .logo-cura {
-    font-weight: 400;
-    font-style: normal;
-  }
+  .logo-bella { font-weight: 400; font-style: normal; }
+  .logo-cura  { font-weight: 400; font-style: normal; }
 
   /* ── Buttons ── */
   .btn-primary {
@@ -76,7 +75,7 @@
   .btn-secondary {
     @apply inline-flex items-center justify-center px-8 py-4 rounded-full
            active:scale-95 transition-all duration-200
-           focus:outline-none focus:ring-4;
+           focus:outline-none;
     border: 1.5px solid var(--blue-mid);
     color: var(--navy);
     background: transparent;
@@ -86,12 +85,7 @@
     text-transform: uppercase;
     font-size: 0.8rem;
   }
-  .btn-secondary:hover {
-    background: var(--blue-tint);
-  }
-  .btn-secondary:focus {
-    box-shadow: 0 0 0 4px var(--blue-light);
-  }
+  .btn-secondary:hover { background: var(--blue-section); }
 
   .container-tight {
     @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
@@ -104,7 +98,7 @@
   /* ── Badge / pill labels ── */
   .badge {
     @apply inline-flex items-center px-4 py-1.5 rounded-full text-xs;
-    background: var(--blue-tint);
+    background: var(--blue-section);
     color: var(--navy);
     font-family: var(--font-montserrat), sans-serif;
     font-weight: 700;
@@ -118,20 +112,14 @@
 }
 
 /* ── Urgency ticker ── */
-.ticker-wrapper {
-  width: 100%;
-  overflow: hidden;
-}
+.ticker-wrapper { width: 100%; overflow: hidden; }
 
 .ticker-track {
   display: flex;
   width: max-content;
   animation: ticker-scroll 32s linear infinite;
 }
-
-.ticker-track:hover {
-  animation-play-state: paused;
-}
+.ticker-track:hover { animation-play-state: paused; }
 
 .ticker-item {
   white-space: nowrap;
@@ -142,11 +130,7 @@
   font-size: 0.7rem;
   font-family: var(--font-montserrat), sans-serif;
 }
-
-.ticker-sep {
-  margin-left: 1.25rem;
-  opacity: 0.4;
-}
+.ticker-sep { margin-left: 1.25rem; opacity: 0.4; }
 
 @keyframes ticker-scroll {
   0%   { transform: translateX(0); }
@@ -165,8 +149,7 @@
 }
 
 .stock-dot {
-  width: 7px;
-  height: 7px;
+  width: 7px; height: 7px;
   border-radius: 50%;
   background: #ea580c;
   animation: pulse-dot 1.4s ease-in-out infinite;
@@ -179,16 +162,13 @@
 
 /* ── Countdown timer ── */
 .countdown-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
 }
 
 .countdown-unit {
   text-align: center;
-  background: rgba(255,255,255,0.18);
-  border: 1px solid rgba(255,255,255,0.28);
+  background: var(--blue-count);
+  border: 1px solid rgba(29,53,87,0.15);
   border-radius: 8px;
   padding: 4px 10px;
   min-width: 46px;
@@ -198,7 +178,7 @@
   font-family: var(--font-montserrat), sans-serif;
   font-size: 1.4rem;
   font-weight: 900;
-  color: #ffffff;
+  color: var(--navy);
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -206,14 +186,14 @@
 .countdown-label {
   font-family: var(--font-montserrat), sans-serif;
   font-size: 0.5rem;
-  color: rgba(255,255,255,0.65);
+  color: var(--blue-mid);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-top: 3px;
 }
 
 .countdown-sep {
-  color: rgba(255,255,255,0.5);
+  color: var(--navy);
   font-weight: 900;
   font-size: 1.2rem;
   margin-bottom: 10px;

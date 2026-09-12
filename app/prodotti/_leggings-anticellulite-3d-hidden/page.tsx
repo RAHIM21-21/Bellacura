@@ -86,7 +86,7 @@ export default function LeggingsPage() {
  </div>
  <div className="grid grid-cols-4 gap-3">
  {['','','',''].map((e, i) => (
- <div key={i} className="aspect-square rounded-xl bg-[#EBF4F8] border-2 border-transparent hover:border-[#57A9C4] transition-colors flex items-center justify-center text-3xl cursor-pointer">
+ <div key={i} className="aspect-square rounded-xl bg-[#DCEAF2] border-2 border-transparent hover:border-[#57A9C4] transition-colors flex items-center justify-center text-3xl cursor-pointer">
  {e}
  </div>
  ))}
@@ -181,7 +181,7 @@ export default function LeggingsPage() {
  </section>
 
  {/* EDUCATIONAL SECTION */}
- <section className="section bg-cream">
+ <section className="section bg-white">
  <div className="container-tight">
  <div className="grid md:grid-cols-2 gap-16 items-center">
  <div>
@@ -272,7 +272,7 @@ export default function LeggingsPage() {
  </section>
 
  {/* REVIEWS */}
- <section className="section bg-[#EBF4F8]">
+ <section className="section bg-[#DCEAF2]">
  <div className="container-tight">
  <div className="text-center mb-10">
  <span className="badge mb-3">Recensioni Verificate</span>
@@ -327,7 +327,7 @@ export default function LeggingsPage() {
  </section>
 
  {/* CROSS-SELL */}
- <section className="section bg-cream">
+ <section className="section bg-white">
  <div className="container-tight text-center">
  <h2 className="font-sans text-gray-900 mb-3">Completa il tuo rituale anticellulite</h2>
  <p className="text-gray-500 mb-8 max-w-xl mx-auto">Le nostre clienti usano i leggings insieme al massaggiatore per risultati fino al 3× più rapidi.</p>
@@ -356,7 +356,7 @@ export default function LeggingsPage() {
  </p>
  <Link
  href="/checkout/?prodotto=leggings-3d&metodo=cod"
- className="inline-flex items-center justify-center px-10 py-4 bg-white text-[#1D3557] font-bold rounded-full hover:bg-[#EBF4F8] transition-colors shadow-xl text-lg"
+ className="inline-flex items-center justify-center px-10 py-4 bg-white text-[#1D3557] font-bold rounded-full hover:bg-[#DCEAF2] transition-colors shadow-xl text-lg"
  >
  Ordina Ora – Solo €34,90
  </Link>

@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Remapped from rose to blue — all components using rose-* get navy/blue automatically
+        // Remapped to navy/blue — all components using rose-* get navy/blue automatically
         rose: {
-          50:  '#EBF4F8',
-          100: '#D6EAF0',
+          50:  '#DCEAF2',
+          100: '#DCEAF2',
           200: '#A8DADC',
           300: '#7EC8D4',
           400: '#57A9C4',
@@ -20,15 +20,16 @@ const config: Config = {
           600: '#1D3557',
           700: '#152840',
         },
-        cream:  '#FBF8F4',
-        nude:   '#FAF6F4',
-        blush:  '#EBF4F8',
-        sand:   '#E8D9C8',
-        gold:   '#B8956A',
-        navy:   '#1D3557',
-        'blue-mid': '#457B9D',
-        'blue-light': '#D6EAF0',
-        'blue-tint':  '#EBF4F8',
+        // VACUVIA-exact background palette
+        cream:       '#FFFFFF',      // was warm beige — now white like VACUVIA
+        nude:        '#F8FAFC',      // very light off-white
+        blush:       '#DCEAF2',      // VACUVIA section light blue
+        sand:        '#E8D9C8',
+        gold:        '#B8956A',
+        navy:        '#1D3557',
+        'blue-mid':  '#457B9D',
+        'blue-light':'#DCEAF2',      // VACUVIA exact
+        'blue-tint': '#DCEAF2',      // VACUVIA exact
       },
       fontFamily: {
         sans:  ['var(--font-montserrat)', 'system-ui', 'sans-serif'],

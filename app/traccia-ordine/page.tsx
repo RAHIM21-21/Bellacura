@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
 export default function TracciaOrdinePage() {
  return (
  <>
- <section className="bg-gradient-to-br from-[#EBF4F8] to-white py-16 text-center">
+ <section className="bg-gradient-to-br from-[#DCEAF2] to-white py-16 text-center">
  <div className="container-tight max-w-xl">
  <span className="badge mb-4">Spedizioni</span>
  <h1 className="font-sans text-4xl text-gray-900 mb-4">Traccia il tuo Ordine</h1>
@@ -66,7 +66,7 @@ export default function TracciaOrdinePage() {
  </div>
  </section>
 
- <section className="section bg-[#EBF4F8] text-center">
+ <section className="section bg-[#DCEAF2] text-center">
  <div className="container-tight max-w-xl">
  <p className="text-gray-600 mb-4">Hai bisogno di aiuto con la tua spedizione?</p>
  <Link href="/contatti/" className="btn-primary inline-flex"> Contatta il Supporto</Link>

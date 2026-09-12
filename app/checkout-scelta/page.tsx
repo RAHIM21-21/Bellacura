@@ -74,7 +74,7 @@ function CheckoutSceltaInner() {
         {/* Product card */}
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-6">
           <div className="flex items-center gap-4 p-4">
-            <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-[#EBF4F8]">
+            <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-[#DCEAF2]">
               <Image
                 src="/images/gallery-1-uso.jpg"
                 alt="BellaCura Massaggiatore"
@@ -180,14 +180,14 @@ function CheckoutSceltaInner() {
               <div>
                 <label className="text-xs font-bold text-gray-600 block mb-1">Nome *</label>
                 <input name="nome" required value={form.nome} onChange={handleChange}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0]"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2]"
                   placeholder="Maria" />
               </div>
 
               <div>
                 <label className="text-xs font-bold text-gray-600 block mb-1">Numero di Telefono *</label>
                 <input name="telefono" required type="tel" value={form.telefono} onChange={handleChange}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0]"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2]"
                   placeholder="+39 333 000 0000" />
                 <p className="text-xs text-gray-400 mt-1">Per aggiornamenti sulla consegna</p>
               </div>
@@ -195,7 +195,7 @@ function CheckoutSceltaInner() {
               <div>
                 <label className="text-xs font-bold text-gray-600 block mb-1">Indirizzo Completo *</label>
                 <input name="indirizzo" required value={form.indirizzo} onChange={handleChange}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0]"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2]"
                   placeholder="Via Roma 1, 20100 Milano" />
               </div>
 
@@ -240,7 +240,7 @@ function CheckoutSceltaInner() {
             <p className="text-gray-500 mb-1">Grazie <strong>{form.nome}</strong>! Il tuo pacco è in preparazione.</p>
             <p className="text-gray-500 mb-2">Arriverà in <strong>24–48 ore</strong> all&apos;indirizzo indicato.</p>
             <p className="text-gray-500 mb-8">Pagherai <strong>{productPrice}</strong> in contanti al corriere.</p>
-            <div className="bg-[#EBF4F8] border border-[#D6EAF0] rounded-2xl p-4 text-left mb-8">
+            <div className="bg-[#DCEAF2] border border-[#D6EAF0] rounded-2xl p-4 text-left mb-8">
               <p className="text-sm font-bold text-gray-900 mb-2">Riepilogo ordine</p>
               <p className="text-sm text-gray-600">📦 {productLabel}</p>
               <p className="text-sm text-gray-600">🏠 {form.indirizzo}</p>

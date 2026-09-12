@@ -27,7 +27,7 @@ const categories = Array.from(new Set(faqs.map((f) => f.cat)))
 export default function FaqPage() {
  return (
  <>
- <section className="bg-gradient-to-br from-[#EBF4F8] to-white py-16">
+ <section className="bg-gradient-to-br from-[#DCEAF2] to-white py-16">
  <div className="container-tight text-center">
  <span className="badge mb-4">Supporto Clienti</span>
  <h1 className="font-sans text-4xl text-gray-900 mb-4">Domande Frequenti</h1>
@@ -59,7 +59,7 @@ export default function FaqPage() {
  </div>
  </section>
 
- <section className="section bg-[#EBF4F8] text-center">
+ <section className="section bg-[#DCEAF2] text-center">
  <div className="container-tight max-w-xl">
  <h2 className="font-sans text-gray-900 mb-4">Hai ancora domande?</h2>
  <p className="text-gray-600 mb-6">Il nostro team risponde entro poche ore, dal lunedì al sabato.</p>

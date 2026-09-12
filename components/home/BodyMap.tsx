@@ -37,7 +37,7 @@ export default function BodyMap() {
   const activeTech = activeSpot !== null ? technologies[activeSpot] : null
 
   return (
-    <section className="bg-cream py-6 sm:py-20">
+    <section className="bg-white py-6 sm:py-20">
       <div className="container-tight">
 
         {/* Header */}

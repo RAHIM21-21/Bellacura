@@ -71,7 +71,7 @@ export default function ProductPage() {
  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema_faq) }} />
 
  {/* OFFERTA A TEMPO */}
- <div className="py-3 px-4 bg-red-600">
+ <div className="py-3 px-4 bg-[#1D3557]">
    <div className="flex flex-col items-center justify-center gap-1.5 text-center">
      <span className="text-white/90 text-xs font-bold uppercase tracking-widest">{`⚡ Offerta limitata — Solo ${dailyStock} pezzi rimasti a questo prezzo`}</span>
      <Link href="/checkout-scelta/" className="cursor-pointer"><CountdownTimer /></Link>
@@ -157,7 +157,7 @@ export default function ProductPage() {
      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
      Spedizione gratuita 24-48h
    </span>
-   <span className="inline-flex items-center gap-1.5 bg-[#EBF4F8] border border-[#A8DADC] text-[#152840] text-xs font-semibold px-3 py-1.5 rounded-full">
+   <span className="inline-flex items-center gap-1.5 bg-[#DCEAF2] border border-[#A8DADC] text-[#152840] text-xs font-semibold px-3 py-1.5 rounded-full">
      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
      Reso gratuito 14 giorni
    </span>
@@ -172,11 +172,11 @@ export default function ProductPage() {
  <div id="recensioni"><ReviewsCarousel /></div>
 
  {/* COME VISTO SU */}
- <section className="py-6 md:py-10 overflow-hidden" style={{background: 'linear-gradient(180deg, #fff 0%, #FDF0F3 100%)'}}>
+ <section className="py-6 md:py-10 overflow-hidden" style={{background: 'linear-gradient(180deg, #ffffff 0%, #DCEAF2 100%)'}}>
    <div className="flex items-center gap-4 max-w-4xl mx-auto px-6 mb-4 md:mb-8">
-     <div className="flex-1 h-px bg-[#D6EAF0]" />
+     <div className="flex-1 h-px bg-[#DCEAF2]" />
      <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#457B9D] whitespace-nowrap">Come visto su</p>
-     <div className="flex-1 h-px bg-[#D6EAF0]" />
+     <div className="flex-1 h-px bg-[#DCEAF2]" />
    </div>
    <style>{`
      @keyframes marquee {
@@ -217,10 +217,10 @@ export default function ProductPage() {
  </section>
 
  {/* RISULTATI REALI */}
- <section className="bg-[#EBF4F8] py-8 md:py-14">
+ <section className="bg-[#DCEAF2] py-8 md:py-14">
  <div className="max-w-4xl mx-auto px-4 sm:px-6">
  <div className="text-center mb-6 md:mb-10">
- <span className="inline-block bg-[#D6EAF0] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">✨ Risultati certificati</span>
+ <span className="inline-block bg-[#DCEAF2] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">✨ Risultati certificati</span>
  <h2 className="text-3xl font-extrabold text-gray-900 mb-2">I numeri parlano da soli</h2>
  <p className="text-gray-500 text-sm">Sondaggio su 1.200+ clienti BellaCura (2024)</p>
  </div>
@@ -253,7 +253,7 @@ export default function ProductPage() {
  {/* VIDEO */}
  <section className="bg-white pt-4 pb-7 md:py-16">
  <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
- <span className="inline-block bg-[#D6EAF0] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">Vedi come funziona</span>
+ <span className="inline-block bg-[#DCEAF2] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">Vedi come funziona</span>
  <h2 className="text-3xl font-extrabold text-gray-900 mb-5 md:mb-8">
  Risultati reali, routine semplice
  </h2>
@@ -268,7 +268,7 @@ export default function ProductPage() {
  <section className="bg-white py-7 md:py-16">
  <div className="max-w-2xl mx-auto px-4 sm:px-6">
  <div className="text-center mb-6 md:mb-10">
- <span className="inline-block bg-[#D6EAF0] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">FAQ</span>
+ <span className="inline-block bg-[#DCEAF2] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">FAQ</span>
  <h2 className="text-3xl font-extrabold text-gray-900">Domande frequenti</h2>
  </div>
  <div className="space-y-3">
@@ -316,7 +316,7 @@ export default function ProductPage() {
    loading="lazy"
    decoding="async"
  />
- <div className="py-8 md:py-12 px-4 text-center bg-[#EBF4F8]">
+ <div className="py-8 md:py-12 px-4 text-center bg-[#DCEAF2]">
    <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">La Tua Routine di 10 Minuti</h2>
    <p className="text-gray-600 max-w-xl mx-auto text-base md:text-lg">
      Progettata per levigare la pelle, ridurre la tensione e valorizzare la tua routine di cura quotidiana — in soli tre semplici passi.
@@ -350,7 +350,7 @@ export default function ProductPage() {
    loading="lazy"
    decoding="async"
  />
- <div className="py-8 md:py-12 px-4 text-center bg-[#EBF4F8]">
+ <div className="py-8 md:py-12 px-4 text-center bg-[#DCEAF2]">
    <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Trattamento su Ogni Zona</h2>
    <p className="text-gray-600 max-w-xl mx-auto text-base md:text-lg">
      Un solo dispositivo per gambe, glutei, addome e schiena.

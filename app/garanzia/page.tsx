@@ -65,7 +65,7 @@ export default function GaranziaPage() {
  </div>
  </section>
 
- <section className="section bg-[#EBF4F8] text-center">
+ <section className="section bg-[#DCEAF2] text-center">
  <div className="container-tight max-w-xl">
  <h2 className="font-sans text-gray-900 mb-4">Pronta ad ordinare senza rischi?</h2>
  <p className="text-gray-600 mb-6">Paga alla consegna, reso gratuito 14 giorni. Zero rischi.</p>

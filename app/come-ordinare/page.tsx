@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 export default function ComeOrdinarePage() {
  return (
  <>
- <section className="bg-gradient-to-br from-[#EBF4F8] to-white py-16 text-center">
+ <section className="bg-gradient-to-br from-[#DCEAF2] to-white py-16 text-center">
  <div className="container-tight max-w-2xl">
  <span className="badge mb-4">Semplice e sicuro</span>
  <h1 className="font-sans text-4xl text-gray-900 mb-4">Come Ordinare su BellaCura</h1>
@@ -46,7 +46,7 @@ export default function ComeOrdinarePage() {
  </div>
 
  {/* Pagamento alla consegna explained */}
- <div className="p-8 bg-[#EBF4F8] rounded-2xl border border-[#D6EAF0] mb-10">
+ <div className="p-8 bg-[#DCEAF2] rounded-2xl border border-[#D6EAF0] mb-10">
  <h2 className="font-sans text-2xl text-gray-900 mb-4"> Pagamento alla Consegna (Contrassegno)</h2>
  <p className="text-gray-600 mb-5 leading-relaxed">
  Il <strong>pagamento alla consegna</strong> è il metodo preferito dalle nostre clienti: ordini oggi, paghi solo quando il corriere ti consegna il prodotto a casa. Zero anticipi, zero rischi.

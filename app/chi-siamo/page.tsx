@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 export default function ChiSiamoPage() {
  return (
  <>
- <section className="bg-gradient-to-br from-[#EBF4F8] via-white to-[#EBF4F8] py-20 text-center">
+ <section className="bg-gradient-to-br from-[#DCEAF2] via-white to-[#EBF4F8] py-20 text-center">
  <div className="container-tight max-w-2xl">
  <span className="badge mb-4">La nostra storia</span>
  <h1 className="font-sans text-4xl text-gray-900 mb-6">
@@ -27,7 +27,7 @@ export default function ChiSiamoPage() {
  <section className="section bg-white">
  <div className="container-tight max-w-3xl">
  <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
- <div className="aspect-video rounded-2xl bg-[#EBF4F8] flex items-center justify-center text-8xl">‍</div>
+ <div className="aspect-video rounded-2xl bg-[#DCEAF2] flex items-center justify-center text-8xl">‍</div>
  <div>
  <h2 className="font-sans text-2xl text-gray-900 mb-4">La nostra missione</h2>
  <p className="text-gray-600 leading-relaxed mb-4">
@@ -53,7 +53,7 @@ export default function ChiSiamoPage() {
  ))}
  </div>
 
- <div className="p-8 bg-[#EBF4F8] rounded-2xl text-center">
+ <div className="p-8 bg-[#DCEAF2] rounded-2xl text-center">
  <div className="flex justify-center mb-3">
  {[...Array(5)].map((_, i) => <Star key={i} size={20} className="text-amber-400 fill-amber-400" />)}
  </div>
@@ -68,7 +68,7 @@ export default function ChiSiamoPage() {
  <h2 className="font-sans text-white text-3xl mb-4">Scopri i nostri prodotti</h2>
  <p className="text-[#D6EAF0] mb-8">Selezionati con cura, testati con rigore, amati da oltre 2.800+ donne italiane.</p>
  <div className="flex flex-col sm:flex-row gap-4 justify-center">
- <Link href="/prodotti/massaggio-anticellulite-4in1/" className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#1D3557] font-bold rounded-full hover:bg-[#EBF4F8] transition-colors">Massaggiatore 4 in 1</Link>
+ <Link href="/prodotti/massaggio-anticellulite-4in1/" className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#1D3557] font-bold rounded-full hover:bg-[#DCEAF2] transition-colors">Massaggiatore 4 in 1</Link>
  <Link href="/prodotti/leggings-anticellulite-3d/" className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors">Leggings 3D</Link>
  </div>
  </div>

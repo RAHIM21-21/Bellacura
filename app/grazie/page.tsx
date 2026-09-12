@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 function GrazieContent() {
  return (
- <div className="min-h-screen bg-cream flex items-center justify-center py-16 px-4">
+ <div className="min-h-screen bg-white flex items-center justify-center py-16 px-4">
  <div className="max-w-lg w-full text-center">
  <div className="text-7xl mb-6"></div>
  <h1 className="font-sans text-4xl text-gray-900 mb-4">

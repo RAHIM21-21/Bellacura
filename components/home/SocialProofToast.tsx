@@ -55,7 +55,7 @@ export default function SocialProofToast() {
      }`}
    >
      <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 flex items-center gap-3 max-w-xs">
-       <div className="w-10 h-10 rounded-full bg-[#D6EAF0] flex items-center justify-center text-xl shrink-0">
+       <div className="w-10 h-10 rounded-full bg-[#DCEAF2] flex items-center justify-center text-xl shrink-0">
          🛍️
        </div>
        <div>

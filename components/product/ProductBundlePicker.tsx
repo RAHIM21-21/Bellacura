@@ -63,7 +63,7 @@ export default function ProductBundlePicker() {
               onClick={() => setSelected(bundle.id)}
               className={`relative w-full flex items-center gap-4 p-4 rounded-2xl border-2 text-left transition-all ${
                 isSelected
-                  ? 'border-[#1D3557] bg-[#EBF4F8] shadow-md'
+                  ? 'border-[#1D3557] bg-[#DCEAF2] shadow-md'
                   : 'border-gray-200 bg-white hover:border-[#7EC8D4]'
               }`}
             >

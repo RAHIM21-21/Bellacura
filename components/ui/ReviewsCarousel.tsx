@@ -113,7 +113,7 @@ export default function ReviewsCarousel() {
             <button
               key={i}
               onClick={() => setStart(i)}
-              className={`rounded-full transition-all ${i === start ? 'w-5 h-2 bg-[#457B9D]' : 'w-2 h-2 bg-[#D6EAF0]'}`}
+              className={`rounded-full transition-all ${i === start ? 'w-5 h-2 bg-[#457B9D]' : 'w-2 h-2 bg-[#DCEAF2]'}`}
             />
           ))}
         </div>
@@ -151,7 +151,7 @@ function ReviewCard({ review }: { review: Review }) {
         <p className="text-gray-700 text-sm leading-relaxed mb-3 flex-1">"{review.text}"</p>
 
         {'months' in review && (
-          <span className="inline-block bg-[#EBF4F8] text-[#152840] text-xs font-semibold px-2 py-0.5 rounded-full mb-2 w-fit">
+          <span className="inline-block bg-[#DCEAF2] text-[#152840] text-xs font-semibold px-2 py-0.5 rounded-full mb-2 w-fit">
             ⏱ {review.months}
           </span>
         )}

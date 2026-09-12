@@ -69,7 +69,7 @@ export default function HomePage() {
  return (
  <>
  {/* HERO */}
- <section className="bg-gradient-to-br from-[#EBF4F8] via-white to-[#EBF4F8] py-14 sm:py-20">
+ <section className="bg-gradient-to-br from-[#DCEAF2] via-white to-[#EBF4F8] py-14 sm:py-20">
  <div className="container-tight grid md:grid-cols-2 gap-10 items-center">
 
  {/* LEFT – copy */}
@@ -194,7 +194,7 @@ export default function HomePage() {
  </section>
 
  {/* BENEFITS */}
- <section className="section bg-cream">
+ <section className="section bg-white">
  <div className="container-tight">
  <div className="text-center mb-12">
  <span className="badge mb-3">Perché funziona</span>
@@ -230,10 +230,10 @@ export default function HomePage() {
 
  <div className="container-tight grid md:grid-cols-2 gap-12 items-center">
  <div className="grid grid-cols-2 gap-4">
- <div className="aspect-square rounded-2xl bg-[#EBF4F8] flex items-center justify-center text-6xl shadow-sm">‍</div>
- <div className="aspect-square rounded-2xl bg-[#EBF4F8] flex items-center justify-center text-6xl shadow-sm"></div>
+ <div className="aspect-square rounded-2xl bg-[#DCEAF2] flex items-center justify-center text-6xl shadow-sm">‍</div>
+ <div className="aspect-square rounded-2xl bg-[#DCEAF2] flex items-center justify-center text-6xl shadow-sm"></div>
  <div className="aspect-square rounded-2xl bg-fuchsia-50 flex items-center justify-center text-6xl shadow-sm"></div>
- <div className="aspect-square rounded-2xl bg-[#EBF4F8] flex items-center justify-center text-6xl shadow-sm"></div>
+ <div className="aspect-square rounded-2xl bg-[#DCEAF2] flex items-center justify-center text-6xl shadow-sm"></div>
  </div>
 
  <div>
@@ -286,7 +286,7 @@ export default function HomePage() {
       {/* VIDEO PROMO */}
  <section className="bg-white py-16">
  <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
- <span className="inline-block bg-[#D6EAF0] text-[#152840] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">Vedi come funziona</span>
+ <span className="inline-block bg-[#DCEAF2] text-[#152840] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">Vedi come funziona</span>
  <h2 className="text-3xl font-extrabold text-gray-900 mb-8">
  Risultati reali, routine semplice
  </h2>
@@ -300,7 +300,7 @@ export default function HomePage() {
  </section>
 
  {/* TESTIMONIALS */}
- <section className="section bg-[#EBF4F8]">
+ <section className="section bg-[#DCEAF2]">
  <div className="container-tight">
  <div className="text-center mb-12">
  <span className="badge mb-3">Recensioni Verificate</span>
@@ -357,7 +357,7 @@ export default function HomePage() {
  </div>
  <Link
  href="/checkout-scelta/?bundle=single"
- className="inline-flex items-center justify-center px-10 py-4 bg-white text-[#1D3557] font-bold rounded-full hover:bg-[#EBF4F8] transition-colors shadow-xl text-lg"
+ className="inline-flex items-center justify-center px-10 py-4 bg-white text-[#1D3557] font-bold rounded-full hover:bg-[#DCEAF2] transition-colors shadow-xl text-lg"
  >
  Ordina Ora – Solo €59,90
  <ChevronRight size={20} className="ml-2" />

@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
 export default function ContattiPage() {
  return (
  <>
- <section className="bg-gradient-to-br from-[#EBF4F8] to-white py-16 text-center">
+ <section className="bg-gradient-to-br from-[#DCEAF2] to-white py-16 text-center">
  <div className="container-tight max-w-2xl">
  <span className="badge mb-4">Siamo qui per te</span>
  <h1 className="font-sans text-4xl text-gray-900 mb-4">Contattaci</h1>

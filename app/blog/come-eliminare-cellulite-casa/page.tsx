@@ -54,7 +54,7 @@ export default function ArticoloCellulite() {
  </header>
 
  {/* Featured image placeholder */}
- <div className="aspect-video rounded-3xl bg-[#EBF4F8] flex items-center justify-center text-8xl mb-10 shadow-sm">
+ <div className="aspect-video rounded-3xl bg-[#DCEAF2] flex items-center justify-center text-8xl mb-10 shadow-sm">
  ‍
  </div>
 
@@ -156,7 +156,7 @@ export default function ArticoloCellulite() {
  <h3 className="font-semibold text-gray-900 text-lg mb-3">{item.title}</h3>
  <div className="text-gray-700 text-sm leading-relaxed whitespace-pre-line">{item.content}</div>
  {item.tip && (
- <div className="mt-4 bg-[#EBF4F8] rounded-xl p-3 text-[#152840] text-sm border border-[#D6EAF0]">
+ <div className="mt-4 bg-[#DCEAF2] rounded-xl p-3 text-[#152840] text-sm border border-[#D6EAF0]">
  <strong>Consiglio BellaCura:</strong> {item.tip}
  </div>
  )}
@@ -189,7 +189,7 @@ export default function ArticoloCellulite() {
  </p>
  <Link
  href="/prodotti/massaggio-anticellulite-4in1/"
- className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#1D3557] font-bold rounded-full hover:bg-[#EBF4F8] transition-colors"
+ className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#1D3557] font-bold rounded-full hover:bg-[#DCEAF2] transition-colors"
  >
  Scopri il Massaggiatore – €59,90
  </Link>

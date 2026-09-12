@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function DirittoRecessoPage() {
  return (
- <main className="min-h-screen bg-cream-50 py-16">
+ <main className="min-h-screen bg-white py-16">
  <div className="max-w-3xl mx-auto px-4 sm:px-6">
  <nav className="text-sm text-gray-500 mb-6">
  <Link href="/" className="hover:text-[#1D3557]">Home</Link>
@@ -21,7 +21,7 @@ export default function DirittoRecessoPage() {
  <p className="text-gray-500 text-sm mb-10">Ai sensi del D.Lgs. 206/2005 (Codice del Consumo)</p>
 
  {/* Hero box */}
- <div className="bg-gradient-to-r from-[#EBF4F8] to-[#EBF4F8] border border-[#A8DADC] rounded-2xl p-6 mb-10 text-center">
+ <div className="bg-gradient-to-r from-[#DCEAF2] to-[#EBF4F8] border border-[#A8DADC] rounded-2xl p-6 mb-10 text-center">
  <div className="text-5xl mb-3"></div>
  <h2 className="text-2xl font-bold text-gray-900 mb-2">14 giorni per ripensarci</h2>
  <p className="text-gray-600 max-w-lg mx-auto">
@@ -46,7 +46,7 @@ export default function DirittoRecessoPage() {
 
  <div className="space-y-4">
  <div className="flex gap-4 p-4 bg-white rounded-xl border border-gray-200">
- <div className="flex-shrink-0 w-10 h-10 bg-[#D6EAF0] rounded-full flex items-center justify-center text-[#1D3557] font-bold text-lg">1</div>
+ <div className="flex-shrink-0 w-10 h-10 bg-[#DCEAF2] rounded-full flex items-center justify-center text-[#1D3557] font-bold text-lg">1</div>
  <div>
  <h3 className="font-semibold text-gray-900 mb-1">Comunicaci la tua decisione</h3>
  <p className="text-gray-600 text-sm">
@@ -56,7 +56,7 @@ export default function DirittoRecessoPage() {
  </div>
 
  <div className="flex gap-4 p-4 bg-white rounded-xl border border-gray-200">
- <div className="flex-shrink-0 w-10 h-10 bg-[#D6EAF0] rounded-full flex items-center justify-center text-[#1D3557] font-bold text-lg">2</div>
+ <div className="flex-shrink-0 w-10 h-10 bg-[#DCEAF2] rounded-full flex items-center justify-center text-[#1D3557] font-bold text-lg">2</div>
  <div>
  <h3 className="font-semibold text-gray-900 mb-1">Rispedisci il prodotto</h3>
  <p className="text-gray-600 text-sm">
@@ -66,7 +66,7 @@ export default function DirittoRecessoPage() {
  </div>
 
  <div className="flex gap-4 p-4 bg-white rounded-xl border border-gray-200">
- <div className="flex-shrink-0 w-10 h-10 bg-[#D6EAF0] rounded-full flex items-center justify-center text-[#1D3557] font-bold text-lg">3</div>
+ <div className="flex-shrink-0 w-10 h-10 bg-[#DCEAF2] rounded-full flex items-center justify-center text-[#1D3557] font-bold text-lg">3</div>
  <div>
  <h3 className="font-semibold text-gray-900 mb-1">Ricevi il rimborso</h3>
  <p className="text-gray-600 text-sm">
@@ -116,7 +116,7 @@ export default function DirittoRecessoPage() {
  </a>
  <Link
  href="/garanzia/"
- className="flex-1 block text-center bg-white text-[#1D3557] border-2 border-[#1D3557] px-6 py-4 rounded-full font-semibold hover:bg-[#EBF4F8] transition-colors"
+ className="flex-1 block text-center bg-white text-[#1D3557] border-2 border-[#1D3557] px-6 py-4 rounded-full font-semibold hover:bg-[#DCEAF2] transition-colors"
  >
  La nostra garanzia
  </Link>

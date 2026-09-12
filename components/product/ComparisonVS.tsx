@@ -10,7 +10,7 @@ const rows = [
 
 export default function ComparisonVS() {
   return (
-    <section className="bc-comparison" style={{ background: '#FBF8F4', padding: '64px 0' }}>
+    <section className="bc-comparison" style={{ background: '#ffffff', padding: '64px 0' }}>
       <style>{`
         @media (max-width: 767px) {
           .bc-comparison { padding: 36px 0 !important; }

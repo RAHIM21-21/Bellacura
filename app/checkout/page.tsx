@@ -132,7 +132,7 @@ function CheckoutContent() {
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 sticky top-24">
               <h2 className="font-semibold text-gray-900 mb-4">Riepilogo Ordine</h2>
               <div className="flex items-center gap-4 pb-4 border-b border-gray-100 mb-4">
-                <div className="w-16 h-16 rounded-xl bg-[#EBF4F8] flex items-center justify-center text-3xl flex-shrink-0">{product.image}</div>
+                <div className="w-16 h-16 rounded-xl bg-[#DCEAF2] flex items-center justify-center text-3xl flex-shrink-0">{product.image}</div>
                 <div>
                   <p className="font-medium text-gray-900 text-sm">{product.name}</p>
                   <p className="text-gray-500 text-xs">Qty: 1</p>

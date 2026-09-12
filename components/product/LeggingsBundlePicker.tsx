@@ -64,7 +64,7 @@ export default function LeggingsBundlePicker() {
  key={bundle.id}
  onClick={() => setSelectedBundle(bundle.id)}
  className={`relative flex items-start gap-4 p-4 rounded-2xl border-2 cursor-pointer transition-all ${
- isSelected ? 'border-[#1D3557] bg-[#EBF4F8]' : 'border-gray-200 bg-white hover:border-[#A8DADC]'
+ isSelected ? 'border-[#1D3557] bg-[#DCEAF2]' : 'border-gray-200 bg-white hover:border-[#A8DADC]'
  }`}
  >
  {bundle.tag && (

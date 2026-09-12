@@ -79,11 +79,11 @@ export default async function LeadsPage({
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {leads.map((lead, i) => (
-                  <tr key={i} className="hover:bg-[#EBF4F8] transition">
+                  <tr key={i} className="hover:bg-[#DCEAF2] transition">
                     <td className="px-6 py-4 text-gray-400">{leads.length - i}</td>
                     <td className="px-6 py-4 font-medium text-gray-800">{lead.email}</td>
                     <td className="px-6 py-4">
-                      <span className="bg-[#D6EAF0] text-[#152840] text-xs px-2 py-0.5 rounded-full font-medium">
+                      <span className="bg-[#DCEAF2] text-[#152840] text-xs px-2 py-0.5 rounded-full font-medium">
                         {lead.source}
                       </span>
                     </td>

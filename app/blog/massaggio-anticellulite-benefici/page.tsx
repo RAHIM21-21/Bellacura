@@ -50,7 +50,7 @@ export default function ArticoloMassaggio() {
  </p>
  </header>
 
- <div className="aspect-video rounded-3xl bg-[#EBF4F8] flex items-center justify-center text-8xl mb-10 shadow-sm">
+ <div className="aspect-video rounded-3xl bg-[#DCEAF2] flex items-center justify-center text-8xl mb-10 shadow-sm">
  </div>
 
  <div className="space-y-8">
@@ -115,7 +115,7 @@ export default function ArticoloMassaggio() {
  { phase: 'Fase di Mantenimento', freq: '3-4 volte/settimana', duration: 'Continuativo', desc: 'Per consolidare i risultati e prevenire la recidiva.' },
  { phase: 'Minimo Efficace', freq: '2 volte/settimana', duration: 'Sempre', desc: 'Il minimo per mantenere i benefici nel tempo.' },
  ].map((p) => (
- <div key={p.phase} className="card text-center bg-[#EBF4F8] border-[#D6EAF0]">
+ <div key={p.phase} className="card text-center bg-[#DCEAF2] border-[#D6EAF0]">
  <p className="font-bold text-[#1D3557] text-lg mb-1">{p.freq}</p>
  <p className="font-semibold text-gray-900 text-sm mb-1">{p.phase}</p>
  <p className="text-gray-500 text-xs leading-relaxed">{p.desc}</p>
@@ -154,7 +154,7 @@ export default function ArticoloMassaggio() {
  </p>
  <Link
  href="/prodotti/massaggio-anticellulite-4in1/"
- className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#1D3557] font-bold rounded-full hover:bg-[#EBF4F8] transition-colors"
+ className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#1D3557] font-bold rounded-full hover:bg-[#DCEAF2] transition-colors"
  >
  Scopri il Massaggiatore – €59,90
  </Link>

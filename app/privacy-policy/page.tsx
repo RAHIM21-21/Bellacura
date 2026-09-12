@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen bg-cream-50 py-16">
+    <main className="min-h-screen bg-white py-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <nav className="text-sm text-gray-500 mb-6">
           <Link href="/" className="hover:text-[#1D3557]">Home</Link>
@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage() {
 
         </div>
 
-        <div className="mt-12 p-6 bg-[#EBF4F8] rounded-2xl border border-[#D6EAF0] text-center">
+        <div className="mt-12 p-6 bg-[#DCEAF2] rounded-2xl border border-[#D6EAF0] text-center">
           <p className="text-gray-700 mb-4">Hai domande sulla tua privacy?</p>
           <Link href="/contatti/" className="inline-block bg-[#1D3557] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#152840] transition-colors">
             Contattaci

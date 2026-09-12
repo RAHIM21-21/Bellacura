@@ -65,7 +65,7 @@ export default function CheckoutEmailForm() {
       <main className="max-w-2xl mx-auto px-4 py-6">
 
         {/* Discount banner */}
-        <div className="bg-[#EBF4F8] border border-[#A8DADC] rounded-2xl px-5 py-3 mb-5 flex items-center gap-3">
+        <div className="bg-[#DCEAF2] border border-[#A8DADC] rounded-2xl px-5 py-3 mb-5 flex items-center gap-3">
           <span className="text-2xl">🎁</span>
           <div>
             <p className="text-sm font-extrabold text-[#152840]">Offerta riservata — Sconto 10% applicato</p>
@@ -76,7 +76,7 @@ export default function CheckoutEmailForm() {
         {/* Product card */}
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-6">
           <div className="flex items-center gap-4 p-4">
-            <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-[#EBF4F8]">
+            <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-[#DCEAF2]">
               <Image
                 src="/images/gallery-1-uso.jpg"
                 alt="BellaCura Massaggiatore"
@@ -124,13 +124,13 @@ export default function CheckoutEmailForm() {
                 <div>
                   <label className="text-xs font-bold text-gray-600 block mb-1">Nome *</label>
                   <input name="nome" required value={form.nome} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0]"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2]"
                     placeholder="Maria" />
                 </div>
                 <div>
                   <label className="text-xs font-bold text-gray-600 block mb-1">Cognome *</label>
                   <input name="cognome" required value={form.cognome} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0]"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2]"
                     placeholder="Rossi" />
                 </div>
               </div>
@@ -138,7 +138,7 @@ export default function CheckoutEmailForm() {
               <div>
                 <label className="text-xs font-bold text-gray-600 block mb-1">Numero di Telefono *</label>
                 <input name="telefono" required type="tel" value={form.telefono} onChange={handleChange}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0]"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2]"
                   placeholder="+39 333 000 0000" />
                 <p className="text-xs text-gray-400 mt-1">Per aggiornamenti sulla consegna</p>
               </div>
@@ -146,7 +146,7 @@ export default function CheckoutEmailForm() {
               <div>
                 <label className="text-xs font-bold text-gray-600 block mb-1">Indirizzo di Spedizione *</label>
                 <input name="indirizzo" required value={form.indirizzo} onChange={handleChange}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0]"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2]"
                   placeholder="Via Roma 1, interno 3" />
               </div>
 
@@ -154,13 +154,13 @@ export default function CheckoutEmailForm() {
                 <div>
                   <label className="text-xs font-bold text-gray-600 block mb-1">Città *</label>
                   <input name="citta" required value={form.citta} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0]"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2]"
                     placeholder="Milano" />
                 </div>
                 <div>
                   <label className="text-xs font-bold text-gray-600 block mb-1">CAP *</label>
                   <input name="cap" required value={form.cap} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0]"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2]"
                     placeholder="20100" />
                 </div>
               </div>
@@ -168,7 +168,7 @@ export default function CheckoutEmailForm() {
               <div>
                 <label className="text-xs font-bold text-gray-600 block mb-1">Note per il corriere (opzionale)</label>
                 <textarea name="note" value={form.note} onChange={handleChange} rows={2}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0] resize-none"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2] resize-none"
                   placeholder="Es. citofono, piano, orario preferito..." />
               </div>
 
@@ -215,7 +215,7 @@ export default function CheckoutEmailForm() {
             <p className="text-gray-500 mb-1">Grazie <strong>{form.nome}</strong>! Il tuo pacco è in preparazione.</p>
             <p className="text-gray-500 mb-2">Arriverà in <strong>24–48 ore</strong> all&apos;indirizzo indicato.</p>
             <p className="text-gray-500 mb-8">Pagherai <strong>{PRODUCT_PRICE}</strong> in contanti al corriere.</p>
-            <div className="bg-[#EBF4F8] border border-[#D6EAF0] rounded-2xl p-4 text-left mb-8">
+            <div className="bg-[#DCEAF2] border border-[#D6EAF0] rounded-2xl p-4 text-left mb-8">
               <p className="text-sm font-bold text-gray-900 mb-2">Riepilogo ordine</p>
               <p className="text-sm text-gray-600">📦 {PRODUCT_LABEL}</p>
               <p className="text-sm text-gray-600">🏠 {form.indirizzo}, {form.cap} {form.citta}</p>
