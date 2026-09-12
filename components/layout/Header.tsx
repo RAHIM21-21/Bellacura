@@ -15,7 +15,7 @@ const tickerMessages = [
  '🚚 Spedizione GRATUITA in tutta Italia',
  '💳 Pagamento alla consegna disponibile',
  '⭐ Oltre 2.800+ clienti soddisfatte',
- '🔒 Garanzia soddisfatti o rimborsati 14 giorni',
+ '🔒 Garanzia soddisfatti o rimborsati 90 giorni',
  '⚡ Consegna in 24–48 ore',
  '✅ Nessuna carta di credito richiesta',
 ]

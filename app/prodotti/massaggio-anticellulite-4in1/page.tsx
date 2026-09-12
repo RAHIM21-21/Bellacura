@@ -36,7 +36,7 @@ const faqs = [
  { question: 'In quanto tempo si vedono i risultati?', answer: 'La maggior parte delle clienti nota miglioramenti già dopo 7-10 giorni di utilizzo regolare (10 minuti al giorno). Risultati significativi dopo 4-6 settimane.' },
  { question: 'Quanto dura la batteria?', answer: 'Con una singola carica di circa 2 ore tramite USB-C, il massaggiatore offre fino a 90 minuti di utilizzo continuativo. Puoi ricaricarlo ogni sera e averlo sempre pronto per la tua routine.' },
  { question: 'Come funziona il pagamento alla consegna?', answer: 'Scegli "Pagamento alla consegna" al checkout. Il corriere consegna il prodotto a casa tua in 24-48 ore e paghi direttamente a lui in contanti al momento della ricezione.' },
- { question: 'Posso restituire il prodotto se non sono soddisfatta?', answer: 'Assolutamente sì. Hai 14 giorni dalla ricezione per restituire il prodotto per qualsiasi motivo. Il reso è completamente gratuito e rimborsiamo il 100% dell\'importo pagato.' },
+ { question: 'Posso restituire il prodotto se non sono soddisfatta?', answer: 'Assolutamente sì. Hai 90 giorni dalla ricezione per restituire il prodotto per qualsiasi motivo. Il reso è completamente gratuito e rimborsiamo il 100% dell\'importo pagato.' },
  { question: 'Vale la pena rispetto a un salone estetico?', answer: 'Un singolo trattamento anticellulite in salone costa in media €60–€100. Con BellaCura paghi €59,90 una sola volta e hai i trattamenti illimitati a casa tua, quando vuoi, per sempre. Molte nostre clienti risparmiano centinaia di euro ogni anno.' },
  { question: 'È sicuro per la pelle sensibile?', answer: 'Sì. La luce rossa e il calore a infrarossi sono tecnologie dolci usate anche in ambito medico-estetico. Inizia con la vibrazione più bassa e aumenta gradualmente. In caso di patologie cutanee, consulta il tuo medico prima dell\'uso.' },
 ]
@@ -88,7 +88,7 @@ export default function ProductPage() {
  <h1 className="text-3xl font-extrabold text-gray-900 leading-tight">
  Massaggiatore Anticellulite 4 in 1™
  </h1>
- <p className="text-gray-500 text-base mt-1">Pelle più tonica e levigata — visibile in 14 giorni</p>
+ <p className="text-gray-500 text-base mt-1">Pelle più tonica e levigata — visibile in 90 giorni</p>
  </div>
  <div className="flex items-center gap-2">
  <div className="flex">
@@ -111,7 +111,7 @@ export default function ProductPage() {
  <h1 className="text-3xl font-extrabold text-gray-900 leading-tight">
  Massaggiatore Anticellulite 4 in 1™
  </h1>
- <p className="text-gray-500 text-base mt-1">Pelle più tonica e levigata — visibile in 14 giorni</p>
+ <p className="text-gray-500 text-base mt-1">Pelle più tonica e levigata — visibile in 90 giorni</p>
  </div>
  <div className="flex items-center gap-2">
  <div className="flex">
@@ -149,7 +149,7 @@ export default function ProductPage() {
    </span>
    <span className="inline-flex items-center gap-1.5 bg-[#DCEAF2] border border-[#A8DADC] text-[#152840] text-xs font-semibold px-3 py-1.5 rounded-full">
      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
-     Reso gratuito 14 giorni
+     Reso gratuito 90 giorni
    </span>
  </div>
  <ProductBundlePicker />
@@ -217,7 +217,7 @@ export default function ProductPage() {
  <div className="grid md:grid-cols-3 gap-3 md:gap-6">
  {[
  { pct: 92, label: '92%', text: 'Riduzione visibile della cellulite già dalla prima settimana.' },
- { pct: 89, label: '89%', text: 'Pelle più liscia e gambe più leggere dopo soli 14 giorni.' },
+ { pct: 89, label: '89%', text: 'Pelle più liscia e gambe più leggere dopo soli 90 giorni.' },
  { pct: 94, label: '94%', text: 'Sollievo muscolare percepito dopo ogni sessione di massaggio.' },
  ].map(({ pct, label, text }) => {
  const r = 36; const circ = 2 * Math.PI * r;
@@ -289,7 +289,7 @@ export default function ProductPage() {
  beforeSrc="/images/prima-cellulite.jpg"
  afterSrc="/images/dopo-bellacura.jpg"
  beforeLabel="Prima"
- afterLabel="Dopo 14 giorni"
+ afterLabel="Dopo 90 giorni"
  alt="Risultati anticellulite BellaCura"
  aspectRatio="120%"
  />

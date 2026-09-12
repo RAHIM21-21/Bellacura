@@ -89,7 +89,7 @@ export default function HomePage() {
  <h1 className="text-4xl sm:text-5xl font-sans font-bold text-gray-900 mb-5 leading-tight">
  Elimina la cellulite{' '}
  <span className="text-[#457B9D]">senza sforzo</span>{' '}
- — risultati in 14 giorni
+ — risultati in 90 giorni
  </h1>
 
  <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -140,7 +140,7 @@ export default function HomePage() {
  <ChevronRight size={18} className="ml-2" />
  </Link>
  <p className="text-sm text-gray-500 mt-3 flex items-center gap-2">
- Paga alla consegna · 14 giorni soddisfatti o rimborsati
+ Paga alla consegna · 90 giorni soddisfatti o rimborsati
  </p>
  </div>
  </div>
@@ -274,7 +274,7 @@ export default function HomePage() {
  <ChevronRight size={18} className="ml-2" />
  </Link>
  <p className="text-center text-sm text-gray-500 mt-3">
- Spedizione in 24–48h · Pagamento alla consegna · Reso 14 giorni
+ Spedizione in 24–48h · Pagamento alla consegna · Reso 90 giorni
  </p>
  </div>
  </div>
@@ -346,7 +346,7 @@ export default function HomePage() {
  Offerta Limitata
  </span>
  <h2 className="font-sans text-white text-4xl mb-4">
- Inizia oggi — risultati in 14 giorni
+ Inizia oggi — risultati in 90 giorni
  </h2>
  <p className="text-[#D6EAF0] mb-3 text-lg">
  Ordina ora, paga alla consegna. Spedizione express in 24–48 ore in tutta Italia.
@@ -362,7 +362,7 @@ export default function HomePage() {
  Ordina Ora – Solo €59,90
  <ChevronRight size={20} className="ml-2" />
  </Link>
- <p className="text-[#A8DADC] text-sm mt-4"> Spedizione in 24–48h · Paga alla consegna · 14 giorni reso gratis</p>
+ <p className="text-[#A8DADC] text-sm mt-4"> Spedizione in 24–48h · Paga alla consegna · 90 giorni reso gratis</p>
  </div>
  </section>
  </>

@@ -17,7 +17,7 @@ const media: MediaItem[] = [
   { type: 'image', src: '/images/g3-stat.jpg',         alt: '94% — pelle visibilmente più compatta dopo 3 settimane' },
   { type: 'image', src: '/images/g4-martina.jpg',      alt: 'Prima e dopo — Martina C.' },
   { type: 'image', src: '/images/g5-francesca.jpg',    alt: 'Prima e dopo — Francesca M.' },
-  { type: 'image', src: '/images/garanzia-pink-bg.jpg',alt: 'Garanzia rimborso 14 giorni — zero domande, zero burocrazia' },
+  { type: 'image', src: '/images/garanzia-pink-bg.jpg',alt: 'Garanzia rimborso 90 giorni — zero domande, zero burocrazia' },
   { type: 'video', src: '/video/promo.mp4',            alt: 'BellaCura in azione' },
 ]
 
@@ -58,6 +58,35 @@ export default function ProductImageGallery() {
             placeholder="blur"
             blurDataURL={BLUR}
           />
+        )}
+
+        {/* Garanzia 90 giorni badge — visible only on hero image */}
+        {active === 0 && (
+          <div
+            style={{
+              position: 'absolute',
+              top: 12,
+              right: 12,
+              zIndex: 20,
+              background: '#1D3557',
+              color: '#fff',
+              borderRadius: '50%',
+              width: 72,
+              height: 72,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              textAlign: 'center',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
+              lineHeight: 1.15,
+              pointerEvents: 'none',
+            }}
+          >
+            <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', opacity: 0.85 }}>Garanzia</span>
+            <span style={{ fontSize: 17, fontWeight: 800, lineHeight: 1 }}>90</span>
+            <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', opacity: 0.85 }}>giorni</span>
+          </div>
         )}
 
         {/* Left arrow */}
