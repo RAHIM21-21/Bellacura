@@ -340,13 +340,6 @@ export default function ProductPage() {
    loading="lazy"
    decoding="async"
  />
- <div className="py-8 md:py-12 px-4 text-center bg-white">
-   <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Trattamento su Ogni Zona</h2>
-   <p className="text-gray-600 max-w-xl mx-auto text-base md:text-lg">
-     Un solo dispositivo per gambe, glutei, addome e schiena.
-   </p>
- </div>
- </section>
 
  {/* COMPARISON VS — moved to end */}
  <ComparisonVS />
