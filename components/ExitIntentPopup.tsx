@@ -109,7 +109,7 @@ export default function ExitIntentPopup() {
           ×
         </button>
 
-        <div className="bg-[#F9E5E9] px-8 pt-8 pb-6 text-center">
+        <div className="bg-[#DCEAF2] px-8 pt-8 pb-6 text-center">
           <p className="text-xs font-bold tracking-widest uppercase text-[#457B9D] mb-2">Offerta esclusiva</p>
           <h2 className="text-3xl font-black text-gray-900 leading-tight mb-1">
             Aspetta — <span className="text-[#1D3557]">-10%</span>
