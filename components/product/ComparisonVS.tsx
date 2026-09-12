@@ -23,11 +23,11 @@ export default function ComparisonVS() {
         <div className="bc-comparison-header" style={{ textAlign: 'center', marginBottom: 36 }}>
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: 6,
-            background: 'white', border: '1px solid #f3d4dd',
+            background: 'white', border: '1px solid #DCEAF2',
             color: '#1D3557', fontSize: 10, fontWeight: 700,
             letterSpacing: '0.18em', textTransform: 'uppercase',
             padding: '6px 16px', borderRadius: 99, marginBottom: 16,
-            boxShadow: '0 1px 4px rgba(168,53,90,0.10)',
+            boxShadow: '0 1px 4px rgba(29,53,87,0.10)',
           }}>
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#1D3557', display: 'inline-block' }} />
             Confronta
@@ -50,7 +50,7 @@ export default function ComparisonVS() {
         <div style={{
           background: 'white', borderRadius: 20,
           overflow: 'hidden',
-          boxShadow: '0 4px 24px rgba(168,53,90,0.08), 0 1px 4px rgba(0,0,0,0.05)',
+          boxShadow: '0 4px 24px rgba(29,53,87,0.08), 0 1px 4px rgba(0,0,0,0.05)',
         }}>
 
           {/* Column headers */}
@@ -80,7 +80,7 @@ export default function ComparisonVS() {
               style={{
                 display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',
                 borderBottom: i < rows.length - 1 ? '1px solid #f3f4f6' : 'none',
-                background: i % 2 === 0 ? 'white' : '#fdfbfc',
+                background: i % 2 === 0 ? 'white' : '#f8fbfd',
               }}
             >
               {/* Metric */}
@@ -92,9 +92,9 @@ export default function ComparisonVS() {
               {/* BellaCura */}
               <div style={{
                 padding: '13px 10px', textAlign: 'center',
-                borderLeft: '1px solid rgba(168,53,90,0.10)',
-                borderRight: '1px solid rgba(168,53,90,0.10)',
-                background: 'rgba(168,53,90,0.03)',
+                borderLeft: '1px solid rgba(29,53,87,0.10)',
+                borderRight: '1px solid rgba(29,53,87,0.10)',
+                background: 'rgba(29,53,87,0.05)',
               }}>
                 <span style={{
                   fontSize: 11, fontWeight: 700, color: '#1D3557', lineHeight: 1.35,
