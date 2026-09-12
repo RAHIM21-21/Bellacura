@@ -78,16 +78,6 @@ export default function ProductPage() {
    </div>
  </div>
 
- {/* BREADCRUMB */}
- <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-100 py-2.5">
- <ol className="max-w-6xl mx-auto px-4 flex items-center gap-2 text-xs text-gray-400">
- <li><Link href="/" className="hover:text-[#457B9D]">Home</Link></li>
- <li>/</li>
- <li><Link href="/prodotti/" className="hover:text-[#457B9D]">Prodotti</Link></li>
- <li>/</li>
- <li className="text-gray-700 font-medium">Massaggiatore 4 in 1</li>
- </ol>
- </nav>
 
  {/* HERO */}
  <section className="bg-white py-5 md:py-12">
