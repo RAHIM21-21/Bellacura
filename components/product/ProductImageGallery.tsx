@@ -11,8 +11,9 @@ type MediaItem =
   | { type: 'video'; src: string; alt: string }
 
 const media: MediaItem[] = [
-  { type: 'image', src: '/images/g1-clean.jpg',        alt: 'BellaCura — dispositivo' },
-  { type: 'image', src: '/images/g2-thigh.jpg',        alt: 'Riduce la cellulite · Migliora la circolazione · Terapia con luce rossa' },
+  { type: 'image', src: '/images/render-spa-hero.jpg',  alt: 'BellaCura — dispositivo' },
+  { type: 'image', src: '/images/lifestyle-thigh.jpg',  alt: 'BellaCura in uso — trattamento coscia' },
+  { type: 'image', src: '/images/benefits-led.jpg',     alt: 'Riduce la cellulite · Migliora la circolazione · Terapia a luce rossa e blu' },
   { type: 'image', src: '/images/g3-stat.jpg',         alt: '94% — pelle visibilmente più compatta dopo 3 settimane' },
   { type: 'image', src: '/images/g4-martina.jpg',      alt: 'Prima e dopo — Martina C.' },
   { type: 'image', src: '/images/g5-francesca.jpg',    alt: 'Prima e dopo — Francesca M.' },
