@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
     <main className="min-h-screen bg-cream-50 py-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <nav className="text-sm text-gray-500 mb-6">
-          <Link href="/" className="hover:text-rose-600">Home</Link>
+          <Link href="/" className="hover:text-[#1D3557]">Home</Link>
           <span className="mx-2">/</span>
           <span className="text-gray-800">Privacy Policy</span>
         </nav>
@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-xl font-semibold text-gray-900 mb-3">1. Titolare del trattamento</h2>
             <p className="text-gray-700 leading-relaxed">
-              Il Titolare del trattamento dei dati personali è <strong>BellaCura S.r.l.</strong>, con sede legale in Italia. Puoi contattarci in qualsiasi momento all&apos;indirizzo: <a href="mailto:privacy@bellacura.it" className="text-rose-600 hover:underline">privacy@bellacura.it</a>
+              Il Titolare del trattamento dei dati personali è <strong>BellaCura S.r.l.</strong>, con sede legale in Italia. Puoi contattarci in qualsiasi momento all&apos;indirizzo: <a href="mailto:privacy@bellacura.it" className="text-[#1D3557] hover:underline">privacy@bellacura.it</a>
             </p>
           </section>
 
@@ -83,7 +83,7 @@ export default function PrivacyPolicyPage() {
               <li>Revocare il consenso in qualsiasi momento</li>
             </ul>
             <p className="text-gray-700 leading-relaxed mt-3">
-              Per esercitare i tuoi diritti, scrivi a <a href="mailto:privacy@bellacura.it" className="text-rose-600 hover:underline">privacy@bellacura.it</a>. Risponderemo entro 14 giorni.
+              Per esercitare i tuoi diritti, scrivi a <a href="mailto:privacy@bellacura.it" className="text-[#1D3557] hover:underline">privacy@bellacura.it</a>. Risponderemo entro 14 giorni.
             </p>
           </section>
 
@@ -97,22 +97,22 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-xl font-semibold text-gray-900 mb-3">8. Cookie</h2>
             <p className="text-gray-700 leading-relaxed">
-              Per informazioni dettagliate sull&apos;uso dei cookie, consulta la nostra <Link href="/cookie-policy/" className="text-rose-600 hover:underline">Cookie Policy</Link>.
+              Per informazioni dettagliate sull&apos;uso dei cookie, consulta la nostra <Link href="/cookie-policy/" className="text-[#1D3557] hover:underline">Cookie Policy</Link>.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold text-gray-900 mb-3">9. Reclami</h2>
             <p className="text-gray-700 leading-relaxed">
-              Hai il diritto di proporre reclamo al Garante per la Protezione dei Dati Personali (GPDP), Piazza Venezia 11, 00187 Roma — <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" className="text-rose-600 hover:underline">www.garanteprivacy.it</a>
+              Hai il diritto di proporre reclamo al Garante per la Protezione dei Dati Personali (GPDP), Piazza Venezia 11, 00187 Roma — <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" className="text-[#1D3557] hover:underline">www.garanteprivacy.it</a>
             </p>
           </section>
 
         </div>
 
-        <div className="mt-12 p-6 bg-rose-50 rounded-2xl border border-rose-100 text-center">
+        <div className="mt-12 p-6 bg-[#EBF4F8] rounded-2xl border border-[#D6EAF0] text-center">
           <p className="text-gray-700 mb-4">Hai domande sulla tua privacy?</p>
-          <Link href="/contatti/" className="inline-block bg-rose-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-rose-700 transition-colors">
+          <Link href="/contatti/" className="inline-block bg-[#1D3557] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#152840] transition-colors">
             Contattaci
           </Link>
         </div>

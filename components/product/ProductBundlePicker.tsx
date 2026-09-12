@@ -63,8 +63,8 @@ export default function ProductBundlePicker() {
               onClick={() => setSelected(bundle.id)}
               className={`relative w-full flex items-center gap-4 p-4 rounded-2xl border-2 text-left transition-all ${
                 isSelected
-                  ? 'border-rose-500 bg-rose-50 shadow-md'
-                  : 'border-gray-200 bg-white hover:border-rose-300'
+                  ? 'border-[#1D3557] bg-[#EBF4F8] shadow-md'
+                  : 'border-gray-200 bg-white hover:border-[#7EC8D4]'
               }`}
             >
               <span className={`absolute -top-3 right-4 ${bundle.tagColor} text-white text-[10px] font-bold px-3 py-0.5 rounded-full tracking-wide uppercase`}>
@@ -93,7 +93,7 @@ export default function ProductBundlePicker() {
       <div className="pt-1">
         <a
           href={`/checkout-scelta/?bundle=${selected}`}
-          className="flex items-center justify-center gap-2 w-full bg-red-600 hover:bg-red-700 active:bg-rose-800 text-white font-bold text-base py-4 rounded-2xl transition-all shadow-lg shadow-rose-200"
+          className="flex items-center justify-center gap-2 w-full bg-red-600 hover:bg-red-700 active:bg-[#0f1c2e] text-white font-bold text-base py-4 rounded-2xl transition-all shadow-lg shadow-[#A8DADC]"
         >
           Paga alla Consegna →
         </a>

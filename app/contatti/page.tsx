@@ -11,10 +11,10 @@ export const metadata: Metadata = buildMetadata({
 export default function ContattiPage() {
  return (
  <>
- <section className="bg-gradient-to-br from-rose-50 to-white py-16 text-center">
+ <section className="bg-gradient-to-br from-[#EBF4F8] to-white py-16 text-center">
  <div className="container-tight max-w-2xl">
  <span className="badge mb-4">Siamo qui per te</span>
- <h1 className="font-serif text-4xl text-gray-900 mb-4">Contattaci</h1>
+ <h1 className="font-sans text-4xl text-gray-900 mb-4">Contattaci</h1>
  <p className="text-gray-600 text-lg">Il nostro team risponde entro poche ore. Dal lunedì al sabato, 9:00–19:00.</p>
  </div>
  </section>
@@ -30,7 +30,7 @@ export default function ContattiPage() {
  <a key={c.title} href={c.href} className="card text-center hover:shadow-md transition-shadow block">
  <div className="text-4xl mb-3">{c.icon}</div>
  <h3 className="font-semibold text-gray-900 mb-1">{c.title}</h3>
- <p className="text-rose-500 font-medium text-sm mb-1">{c.info}</p>
+ <p className="text-[#457B9D] font-medium text-sm mb-1">{c.info}</p>
  <p className="text-gray-400 text-xs">{c.sub}</p>
  </a>
  ))}
@@ -51,7 +51,7 @@ export default function ContattiPage() {
  { icon: '', t: 'Domande frequenti', href: '/faq/' },
  { icon: '', t: 'Vedi i nostri prodotti', href: '/prodotti/massaggio-anticellulite-4in1/' },
  ].map((l) => (
- <Link key={l.t} href={l.href} className="flex items-center gap-2 p-3 bg-white rounded-xl border border-gray-100 hover:border-rose-200 transition-colors">
+ <Link key={l.t} href={l.href} className="flex items-center gap-2 p-3 bg-white rounded-xl border border-gray-100 hover:border-[#A8DADC] transition-colors">
  <span>{l.icon}</span> {l.t} →
  </Link>
  ))}

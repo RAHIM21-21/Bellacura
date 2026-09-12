@@ -26,9 +26,9 @@ export default function ArticoloCellulite() {
  {/* Breadcrumb */}
  <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-100 py-3">
  <ol className="container-tight flex items-center gap-2 text-sm text-gray-500">
- <li><Link href="/" className="hover:text-rose-500">Home</Link></li>
+ <li><Link href="/" className="hover:text-[#457B9D]">Home</Link></li>
  <li>/</li>
- <li><Link href="/blog/" className="hover:text-rose-500">Blog</Link></li>
+ <li><Link href="/blog/" className="hover:text-[#457B9D]">Blog</Link></li>
  <li>/</li>
  <li className="text-gray-900 font-medium" aria-current="page">Come Eliminare la Cellulite a Casa</li>
  </ol>
@@ -44,7 +44,7 @@ export default function ArticoloCellulite() {
  <time className="text-gray-400 text-sm" dateTime="2024-09-01">1 settembre 2024</time>
  <span className="text-gray-400 text-sm">· 8 min di lettura</span>
  </div>
- <h1 className="font-serif text-4xl text-gray-900 mb-6 leading-tight">
+ <h1 className="font-sans text-4xl text-gray-900 mb-6 leading-tight">
  Come Eliminare la Cellulite a Casa: 7 Metodi che Funzionano Davvero
  </h1>
  <p className="text-xl text-gray-600 leading-relaxed">
@@ -54,7 +54,7 @@ export default function ArticoloCellulite() {
  </header>
 
  {/* Featured image placeholder */}
- <div className="aspect-video rounded-3xl bg-rose-50 flex items-center justify-center text-8xl mb-10 shadow-sm">
+ <div className="aspect-video rounded-3xl bg-[#EBF4F8] flex items-center justify-center text-8xl mb-10 shadow-sm">
  ‍
  </div>
 
@@ -62,7 +62,7 @@ export default function ArticoloCellulite() {
  <div className="prose prose-gray max-w-none space-y-8">
 
  <section>
- <h2 className="font-serif text-2xl text-gray-900 mb-4">Cos'è la Cellulite e Perché Compare</h2>
+ <h2 className="font-sans text-2xl text-gray-900 mb-4">Cos'è la Cellulite e Perché Compare</h2>
  <p className="text-gray-700 leading-relaxed">
  La cellulite (o pannicolopatia edemato-fibrosclerotica) è un'alterazione del tessuto adiposo sottocutaneo
  che provoca la caratteristica pelle "a buccia d'arancia". Non è solo un inestetismo: indica una disfunzione
@@ -76,7 +76,7 @@ export default function ArticoloCellulite() {
  </section>
 
  <section>
- <h2 className="font-serif text-2xl text-gray-900 mb-6">I 7 Metodi Più Efficaci per Ridurre la Cellulite</h2>
+ <h2 className="font-sans text-2xl text-gray-900 mb-6">I 7 Metodi Più Efficaci per Ridurre la Cellulite</h2>
 
  {[
  {
@@ -149,14 +149,14 @@ export default function ArticoloCellulite() {
  ].map((item) => (
  <div key={item.num} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
  <div className="flex items-start gap-4">
- <span className="w-10 h-10 rounded-full bg-rose-500 text-white font-bold flex items-center justify-center flex-shrink-0">
+ <span className="w-10 h-10 rounded-full bg-[#457B9D] text-white font-bold flex items-center justify-center flex-shrink-0">
  {item.num}
  </span>
  <div className="flex-1">
  <h3 className="font-semibold text-gray-900 text-lg mb-3">{item.title}</h3>
  <div className="text-gray-700 text-sm leading-relaxed whitespace-pre-line">{item.content}</div>
  {item.tip && (
- <div className="mt-4 bg-rose-50 rounded-xl p-3 text-rose-700 text-sm border border-rose-100">
+ <div className="mt-4 bg-[#EBF4F8] rounded-xl p-3 text-[#152840] text-sm border border-[#D6EAF0]">
  <strong>Consiglio BellaCura:</strong> {item.tip}
  </div>
  )}
@@ -167,7 +167,7 @@ export default function ArticoloCellulite() {
  </section>
 
  <section>
- <h2 className="font-serif text-2xl text-gray-900 mb-4">Quanto Tempo Ci Vuole per Vedere i Risultati?</h2>
+ <h2 className="font-sans text-2xl text-gray-900 mb-4">Quanto Tempo Ci Vuole per Vedere i Risultati?</h2>
  <p className="text-gray-700 leading-relaxed">
  I primi miglioramenti — riduzione del gonfiore e maggiore tonicità — si notano già dopo <strong>7-10 giorni</strong>
  seguendo un programma costante. Per risultati più profondi e duraturi, sono necessarie 4-8 settimane
@@ -182,14 +182,14 @@ export default function ArticoloCellulite() {
  </div>
 
  {/* CTA box */}
- <div className="mt-12 bg-gradient-to-br from-rose-500 to-rose-600 rounded-3xl p-8 text-white text-center">
- <h2 className="font-serif text-2xl mb-3">Pronta a iniziare il tuo percorso?</h2>
- <p className="text-rose-100 mb-6">
+ <div className="mt-12 bg-gradient-to-br from-[#1D3557] to-[#457B9D] rounded-3xl p-8 text-white text-center">
+ <h2 className="font-sans text-2xl mb-3">Pronta a iniziare il tuo percorso?</h2>
+ <p className="text-[#D6EAF0] mb-6">
  Il Massaggiatore Anticellulite 4 in 1 di BellaCura combina tutti e 7 i metodi in un unico dispositivo.
  </p>
  <Link
  href="/prodotti/massaggio-anticellulite-4in1/"
- className="inline-flex items-center justify-center px-8 py-4 bg-white text-rose-600 font-bold rounded-full hover:bg-rose-50 transition-colors"
+ className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#1D3557] font-bold rounded-full hover:bg-[#EBF4F8] transition-colors"
  >
  Scopri il Massaggiatore – €59,90
  </Link>

@@ -15,7 +15,7 @@ export default function GaranziaPage() {
  <section className="bg-gradient-to-br from-green-50 to-white py-16 text-center">
  <div className="container-tight max-w-2xl">
  <div className="text-6xl mb-4"></div>
- <h1 className="font-serif text-4xl text-gray-900 mb-4">Garanzia Soddisfatti o Rimborsati</h1>
+ <h1 className="font-sans text-4xl text-gray-900 mb-4">Garanzia Soddisfatti o Rimborsati</h1>
  <p className="text-gray-600 text-lg">
  Ordina con fiducia. Se per qualsiasi motivo non sei soddisfatta, restituisci il prodotto entro 14 giorni e ti rimborsiamo il 100% — nessuna domanda.
  </p>
@@ -38,7 +38,7 @@ export default function GaranziaPage() {
  ))}
  </div>
 
- <h2 className="font-serif text-2xl text-gray-900 mb-6">Come fare un reso</h2>
+ <h2 className="font-sans text-2xl text-gray-900 mb-6">Come fare un reso</h2>
  <div className="space-y-4 mb-12">
  {[
  { n: '1', t: 'Contattaci entro 14 giorni', d: 'Scrivi a reso@bellacura.it o contattaci via WhatsApp con il numero d\'ordine e il motivo (opzionale).' },
@@ -47,7 +47,7 @@ export default function GaranziaPage() {
  { n: '4', t: 'Ricevi il rimborso', d: 'Appena riceviamo il pacco (2-3 giorni), rimborsiamo il 100% sul tuo metodo di pagamento entro 5 giorni lavorativi.' },
  ].map((step) => (
  <div key={step.n} className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
- <div className="w-8 h-8 rounded-full bg-rose-500 text-white font-bold flex items-center justify-center shrink-0">{step.n}</div>
+ <div className="w-8 h-8 rounded-full bg-[#457B9D] text-white font-bold flex items-center justify-center shrink-0">{step.n}</div>
  <div>
  <p className="font-semibold text-gray-900">{step.t}</p>
  <p className="text-gray-500 text-sm mt-1">{step.d}</p>
@@ -65,9 +65,9 @@ export default function GaranziaPage() {
  </div>
  </section>
 
- <section className="section bg-rose-50 text-center">
+ <section className="section bg-[#EBF4F8] text-center">
  <div className="container-tight max-w-xl">
- <h2 className="font-serif text-gray-900 mb-4">Pronta ad ordinare senza rischi?</h2>
+ <h2 className="font-sans text-gray-900 mb-4">Pronta ad ordinare senza rischi?</h2>
  <p className="text-gray-600 mb-6">Paga alla consegna, reso gratuito 14 giorni. Zero rischi.</p>
  <div className="flex flex-col sm:flex-row gap-4 justify-center">
  <Link href="/prodotti/massaggio-anticellulite-4in1/" className="btn-primary">Massaggiatore 4 in 1</Link>

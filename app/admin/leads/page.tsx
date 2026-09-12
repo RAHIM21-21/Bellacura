@@ -30,11 +30,11 @@ export default async function LeadsPage({
             name="pw"
             type="password"
             placeholder="Password"
-            className="w-full border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400"
+            className="w-full border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#457B9D]"
           />
           <button
             formAction="/admin/leads"
-            className="w-full bg-rose-600 text-white font-bold py-3 rounded-2xl hover:bg-rose-700 transition"
+            className="w-full bg-[#1D3557] text-white font-bold py-3 rounded-2xl hover:bg-[#152840] transition"
           >
             Accedi
           </button>
@@ -55,7 +55,7 @@ export default async function LeadsPage({
           </div>
           <a
             href={`/api/export-leads?pw=${pw}`}
-            className="bg-rose-600 text-white font-bold px-6 py-3 rounded-2xl hover:bg-rose-700 transition text-sm"
+            className="bg-[#1D3557] text-white font-bold px-6 py-3 rounded-2xl hover:bg-[#152840] transition text-sm"
           >
             ⬇ Esporta CSV
           </a>
@@ -79,11 +79,11 @@ export default async function LeadsPage({
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {leads.map((lead, i) => (
-                  <tr key={i} className="hover:bg-rose-50 transition">
+                  <tr key={i} className="hover:bg-[#EBF4F8] transition">
                     <td className="px-6 py-4 text-gray-400">{leads.length - i}</td>
                     <td className="px-6 py-4 font-medium text-gray-800">{lead.email}</td>
                     <td className="px-6 py-4">
-                      <span className="bg-rose-100 text-rose-700 text-xs px-2 py-0.5 rounded-full font-medium">
+                      <span className="bg-[#D6EAF0] text-[#152840] text-xs px-2 py-0.5 rounded-full font-medium">
                         {lead.source}
                       </span>
                     </td>

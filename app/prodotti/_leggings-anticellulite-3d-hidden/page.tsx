@@ -66,9 +66,9 @@ export default function LeggingsPage() {
  {/* Breadcrumb */}
  <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-100 py-3">
  <ol className="container-tight flex items-center gap-2 text-sm text-gray-500">
- <li><Link href="/" className="hover:text-rose-500">Home</Link></li>
+ <li><Link href="/" className="hover:text-[#457B9D]">Home</Link></li>
  <li>/</li>
- <li><Link href="/prodotti/massaggio-anticellulite-4in1/" className="hover:text-rose-500">Prodotti</Link></li>
+ <li><Link href="/prodotti/massaggio-anticellulite-4in1/" className="hover:text-[#457B9D]">Prodotti</Link></li>
  <li>/</li>
  <li className="text-gray-900 font-medium" aria-current="page">Leggings Anticellulite 3D</li>
  </ol>
@@ -81,12 +81,12 @@ export default function LeggingsPage() {
 
  {/* LEFT – gallery */}
  <div className="space-y-3">
- <div className="aspect-square rounded-2xl bg-gradient-to-br from-gray-100 to-rose-50 flex items-center justify-center text-[120px] shadow-lg overflow-hidden">
+ <div className="aspect-square rounded-2xl bg-gradient-to-br from-gray-100 to-[#EBF4F8] flex items-center justify-center text-[120px] shadow-lg overflow-hidden">
 
  </div>
  <div className="grid grid-cols-4 gap-3">
  {['','','',''].map((e, i) => (
- <div key={i} className="aspect-square rounded-xl bg-rose-50 border-2 border-transparent hover:border-rose-400 transition-colors flex items-center justify-center text-3xl cursor-pointer">
+ <div key={i} className="aspect-square rounded-xl bg-[#EBF4F8] border-2 border-transparent hover:border-[#57A9C4] transition-colors flex items-center justify-center text-3xl cursor-pointer">
  {e}
  </div>
  ))}
@@ -114,11 +114,11 @@ export default function LeggingsPage() {
  {/* RIGHT – product details */}
  <div className="md:sticky md:top-24">
 
- <h1 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900 mb-2 leading-tight">
+ <h1 className="text-3xl sm:text-4xl font-sans font-bold text-gray-900 mb-2 leading-tight">
  Leggings Anticellulite 3D –{' '}
- <span className="text-rose-500">Ridefinisci la tua silhouette senza sforzo</span>
+ <span className="text-[#457B9D]">Ridefinisci la tua silhouette senza sforzo</span>
  </h1>
- <div className="w-16 h-1 bg-rose-400 rounded mb-5" />
+ <div className="w-16 h-1 bg-[#57A9C4] rounded mb-5" />
 
  {/* Stars */}
  <div className="flex items-center gap-2 mb-5">
@@ -148,7 +148,7 @@ export default function LeggingsPage() {
  {/* Countdown */}
  <div className="mb-5">
  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 flex items-center gap-1">
- <Zap size={13} className="text-rose-500" /> Offerta speciale termina tra:
+ <Zap size={13} className="text-[#457B9D]" /> Offerta speciale termina tra:
  </p>
  <CountdownTimer />
  </div>
@@ -170,7 +170,7 @@ export default function LeggingsPage() {
  { icon: <Shield size={16} />, label: 'Taglie XS–5XL' },
  ].map((item) => (
  <div key={item.label} className="bg-gray-50 rounded-xl p-3 border border-gray-100 flex flex-col items-center gap-1">
- <span className="text-rose-500">{item.icon}</span>
+ <span className="text-[#457B9D]">{item.icon}</span>
  <span className="text-xs font-medium text-gray-700">{item.label}</span>
  </div>
  ))}
@@ -186,9 +186,9 @@ export default function LeggingsPage() {
  <div className="grid md:grid-cols-2 gap-16 items-center">
  <div>
  <span className="badge mb-4">Gli unici leggings clinicamente testati</span>
- <h2 className="font-serif text-gray-900 mb-4">
+ <h2 className="font-sans text-gray-900 mb-4">
  Agiscono sulla{' '}
- <span className="text-rose-500">vera causa</span>{' '}
+ <span className="text-[#457B9D]">vera causa</span>{' '}
  della cellulite
  </h2>
  <p className="text-gray-600 mb-5 leading-relaxed">
@@ -234,7 +234,7 @@ export default function LeggingsPage() {
  </div>
  </div>
  <div className="p-4 bg-white rounded-2xl shadow border border-gray-100 text-center">
- <p className="text-2xl font-bold text-rose-600 mb-1">Indossali e basta</p>
+ <p className="text-2xl font-bold text-[#1D3557] mb-1">Indossali e basta</p>
  <p className="text-sm text-gray-600">Lavorano per te 24h su 24 – anche seduta in ufficio</p>
  </div>
  </div>
@@ -247,7 +247,7 @@ export default function LeggingsPage() {
  <div className="container-tight">
  <div className="text-center mb-12">
  <span className="badge mb-3">Tecnologia 3D</span>
- <h2 className="font-serif text-gray-900 mb-3">Cosa rende unici i BellaCura 3D</h2>
+ <h2 className="font-sans text-gray-900 mb-3">Cosa rende unici i BellaCura 3D</h2>
  <p className="text-gray-500 max-w-xl mx-auto">Non sono semplici leggings compressivi — è una tecnologia brevettata che agisce sulla cellulite tutto il giorno.</p>
  </div>
  <div className="grid md:grid-cols-2 gap-4">
@@ -272,11 +272,11 @@ export default function LeggingsPage() {
  </section>
 
  {/* REVIEWS */}
- <section className="section bg-rose-50">
+ <section className="section bg-[#EBF4F8]">
  <div className="container-tight">
  <div className="text-center mb-10">
  <span className="badge mb-3">Recensioni Verificate</span>
- <h2 className="font-serif text-gray-900 mb-2">Cosa dicono le nostre clienti</h2>
+ <h2 className="font-sans text-gray-900 mb-2">Cosa dicono le nostre clienti</h2>
  <div className="flex items-center justify-center gap-2 mt-3">
  {[...Array(5)].map((_, i) => <Star key={i} size={20} className="text-amber-400 fill-amber-400" />)}
  <span className="font-bold text-gray-800 ml-1">4.9/5</span>
@@ -311,13 +311,13 @@ export default function LeggingsPage() {
  {/* FAQ */}
  <section className="section bg-white">
  <div className="container-tight max-w-3xl">
- <h2 className="font-serif text-center text-gray-900 mb-10">Domande Frequenti</h2>
+ <h2 className="font-sans text-center text-gray-900 mb-10">Domande Frequenti</h2>
  <div className="space-y-4">
  {faqs.map((faq, i) => (
  <details key={i} className="card cursor-pointer group">
  <summary className="flex items-center justify-between font-semibold text-gray-900 list-none">
  {faq.question}
- <ChevronDown size={18} className="text-rose-400 group-open:rotate-180 transition-transform shrink-0 ml-4" />
+ <ChevronDown size={18} className="text-[#457B9D] group-open:rotate-180 transition-transform shrink-0 ml-4" />
  </summary>
  <p className="mt-4 text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
  </details>
@@ -329,7 +329,7 @@ export default function LeggingsPage() {
  {/* CROSS-SELL */}
  <section className="section bg-cream">
  <div className="container-tight text-center">
- <h2 className="font-serif text-gray-900 mb-3">Completa il tuo rituale anticellulite</h2>
+ <h2 className="font-sans text-gray-900 mb-3">Completa il tuo rituale anticellulite</h2>
  <p className="text-gray-500 mb-8 max-w-xl mx-auto">Le nostre clienti usano i leggings insieme al massaggiatore per risultati fino al 3× più rapidi.</p>
  <Link
  href="/prodotti/massaggio-anticellulite-4in1/"
@@ -346,21 +346,21 @@ export default function LeggingsPage() {
  </section>
 
  {/* FINAL CTA */}
- <section className="section bg-rose-600 text-white text-center">
+ <section className="section bg-[#1D3557] text-white text-center">
  <div className="container-tight max-w-2xl">
- <h2 className="font-serif text-white text-3xl sm:text-4xl mb-4">
+ <h2 className="font-sans text-white text-3xl sm:text-4xl mb-4">
  Pronta a ridefinire la tua silhouette?
  </h2>
- <p className="text-rose-100 mb-8 text-lg">
+ <p className="text-[#D6EAF0] mb-8 text-lg">
  Ordina ora e ricevi in 24–48 ore. Paga alla consegna, senza rischi.
  </p>
  <Link
  href="/checkout/?prodotto=leggings-3d&metodo=cod"
- className="inline-flex items-center justify-center px-10 py-4 bg-white text-rose-600 font-bold rounded-full hover:bg-rose-50 transition-colors shadow-xl text-lg"
+ className="inline-flex items-center justify-center px-10 py-4 bg-white text-[#1D3557] font-bold rounded-full hover:bg-[#EBF4F8] transition-colors shadow-xl text-lg"
  >
  Ordina Ora – Solo €34,90
  </Link>
- <p className="text-rose-200 text-sm mt-4"> Paga alla consegna · 30 giorni reso gratis · 4.800+ clienti · Taglie XS–5XL</p>
+ <p className="text-[#A8DADC] text-sm mt-4"> Paga alla consegna · 30 giorni reso gratis · 4.800+ clienti · Taglie XS–5XL</p>
  </div>
  </section>
 

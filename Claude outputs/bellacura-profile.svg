@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&amp;family=DM+Sans:wght@300;400&amp;display=swap');
+    </style>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#F3ECE5"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1" gradientUnits="userSpaceOnUse" x1="100" y1="100" x2="900" y2="900">
+      <stop offset="0%" stop-color="#D4BA90" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#C9A87C" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="url(#bg)"/>
+
+  <!-- Soft ambient circles — far background -->
+  <circle cx="730" cy="260" r="370" fill="#D4AAAA" fill-opacity="0.09"/>
+  <circle cx="210" cy="770" r="310" fill="#C9A87C" fill-opacity="0.06"/>
+  <circle cx="820" cy="820" r="200" fill="#7C4F5C" fill-opacity="0.04"/>
+
+  <!-- Outer gold ring -->
+  <circle cx="500" cy="500" r="446" fill="none" stroke="#C9A87C" stroke-width="1.2" stroke-opacity="0.50"/>
+  <!-- Inner fine ring -->
+  <circle cx="500" cy="500" r="430" fill="none" stroke="#C9A87C" stroke-width="0.6" stroke-opacity="0.22"/>
+  <!-- Innermost ring — very close to text -->
+  <circle cx="500" cy="500" r="414" fill="none" stroke="#D4BA90" stroke-width="0.4" stroke-opacity="0.15"/>
+
+  <!-- "bella" — italic Cormorant Garamond, mauve -->
+  <text
+    x="500"
+    y="530"
+    font-family="'Cormorant Garamond', 'Palatino Linotype', Georgia, serif"
+    font-size="210"
+    font-weight="300"
+    font-style="italic"
+    fill="#7C4F5C"
+    text-anchor="middle"
+    dominant-baseline="alphabetic"
+  >bella</text>
+
+  <!-- Divider line -->
+  <line x1="362" y1="579" x2="638" y2="579" stroke="#C9A87C" stroke-width="0.9" stroke-opacity="0.70"/>
+
+  <!-- "CURA" — spaced, DM Sans -->
+  <text
+    x="506"
+    y="638"
+    font-family="'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="36"
+    font-weight="300"
+    fill="#C9A87C"
+    text-anchor="middle"
+    dominant-baseline="alphabetic"
+    letter-spacing="16"
+  >CURA</text>
+
+</svg>

@@ -43,10 +43,10 @@ export default function BodyMap() {
         {/* Header */}
         <div className="text-center mb-4">
           <div className="badge mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#A8355A] inline-block mr-2" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1D3557] inline-block mr-2" />
             Massaggiatore 4 in 1™
           </div>
-          <h2 className="font-serif italic text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900">
+          <h2 className="font-sans italic text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900">
             Una sola tecnologia.<br />Tutto il tuo corpo.
           </h2>
         </div>
@@ -107,7 +107,7 @@ export default function BodyMap() {
                   <span className="block font-[Raleway,system-ui,sans-serif] text-[8px] font-extrabold tracking-[0.18em] uppercase mb-0.5" style={{ color: 'rgba(255,255,255,0.95)' }}>
                     {ann.area}
                   </span>
-                  <span className="block font-serif italic font-light text-[0.78rem]" style={{ color: 'rgba(255,255,255,0.78)' }}>
+                  <span className="block font-sans italic font-light text-[0.78rem]" style={{ color: 'rgba(255,255,255,0.78)' }}>
                     {ann.desc}
                   </span>
                 </div>
@@ -178,7 +178,7 @@ export default function BodyMap() {
                   <p className="font-[Raleway,system-ui,sans-serif] text-[9px] font-extrabold tracking-[0.18em] uppercase mb-1.5" style={{ color: 'rgba(255,255,255,0.95)' }}>
                     {activeTech.icon} {activeTech.name}
                   </p>
-                  <p className="font-serif italic text-[0.78rem] leading-relaxed" style={{ color: 'rgba(255,255,255,0.80)' }}>
+                  <p className="font-sans italic text-[0.78rem] leading-relaxed" style={{ color: 'rgba(255,255,255,0.80)' }}>
                     {activeTech.desc}
                   </p>
                 </div>

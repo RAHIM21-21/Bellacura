@@ -38,7 +38,7 @@ export default function BlogPage() {
  <div className="container-tight">
  <div className="text-center mb-12">
  <span className="badge mb-3">Blog BellaCura</span>
- <h1 className="font-serif text-gray-900 mb-4">Consigli per il tuo Benessere</h1>
+ <h1 className="font-sans text-gray-900 mb-4">Consigli per il tuo Benessere</h1>
  <p className="text-gray-600 max-w-xl mx-auto">
  Guide, consigli e routine di bellezza per la donna moderna. Contenuti creati con cura dai nostri esperti.
  </p>
@@ -47,7 +47,7 @@ export default function BlogPage() {
  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
  {posts.map((post) => (
  <article key={post.slug} className="card hover:shadow-md transition-shadow">
- <div className="aspect-video rounded-xl bg-rose-50 flex items-center justify-center text-6xl mb-5">
+ <div className="aspect-video rounded-xl bg-[#EBF4F8] flex items-center justify-center text-6xl mb-5">
  {post.image}
  </div>
  <div className="flex items-center gap-3 mb-3 flex-wrap">
@@ -57,13 +57,13 @@ export default function BlogPage() {
  {new Date(post.date).toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' })}
  </time>
  </div>
- <h2 className="font-serif text-xl text-gray-900 mb-3 leading-snug">
- <Link href={`/blog/${post.slug}/`} className="hover:text-rose-600 transition-colors">
+ <h2 className="font-sans text-xl text-gray-900 mb-3 leading-snug">
+ <Link href={`/blog/${post.slug}/`} className="hover:text-[#1D3557] transition-colors">
  {post.title}
  </Link>
  </h2>
  <p className="text-gray-500 text-sm leading-relaxed mb-4">{post.excerpt}</p>
- <Link href={`/blog/${post.slug}/`} className="text-rose-500 font-medium text-sm hover:text-rose-600 transition-colors">
+ <Link href={`/blog/${post.slug}/`} className="text-[#457B9D] font-medium text-sm hover:text-[#1D3557] transition-colors">
  Leggi l&apos;articolo →
  </Link>
  </article>

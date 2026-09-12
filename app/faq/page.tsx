@@ -27,13 +27,13 @@ const categories = Array.from(new Set(faqs.map((f) => f.cat)))
 export default function FaqPage() {
  return (
  <>
- <section className="bg-gradient-to-br from-rose-50 to-white py-16">
+ <section className="bg-gradient-to-br from-[#EBF4F8] to-white py-16">
  <div className="container-tight text-center">
  <span className="badge mb-4">Supporto Clienti</span>
- <h1 className="font-serif text-4xl text-gray-900 mb-4">Domande Frequenti</h1>
+ <h1 className="font-sans text-4xl text-gray-900 mb-4">Domande Frequenti</h1>
  <p className="text-gray-600 text-lg max-w-xl mx-auto">
  Trova risposta alle domande più comuni. Non trovi quello che cerchi?{' '}
- <Link href="/contatti/" className="text-rose-500 underline">Scrivici</Link>.
+ <Link href="/contatti/" className="text-[#457B9D] underline">Scrivici</Link>.
  </p>
  </div>
  </section>
@@ -42,13 +42,13 @@ export default function FaqPage() {
  <div className="container-tight max-w-3xl">
  {categories.map((cat) => (
  <div key={cat} className="mb-10">
- <h2 className="font-serif text-xl text-gray-900 mb-4 pb-2 border-b border-rose-100">{cat}</h2>
+ <h2 className="font-sans text-xl text-gray-900 mb-4 pb-2 border-b border-[#D6EAF0]">{cat}</h2>
  <div className="space-y-3">
  {faqs.filter((f) => f.cat === cat).map((faq, i) => (
  <details key={i} className="card cursor-pointer group">
  <summary className="flex items-center justify-between font-semibold text-gray-900 list-none">
  {faq.q}
- <ChevronDown size={18} className="text-rose-400 group-open:rotate-180 transition-transform shrink-0 ml-4" />
+ <ChevronDown size={18} className="text-[#457B9D] group-open:rotate-180 transition-transform shrink-0 ml-4" />
  </summary>
  <p className="mt-4 text-gray-600 text-sm leading-relaxed">{faq.a}</p>
  </details>
@@ -59,9 +59,9 @@ export default function FaqPage() {
  </div>
  </section>
 
- <section className="section bg-rose-50 text-center">
+ <section className="section bg-[#EBF4F8] text-center">
  <div className="container-tight max-w-xl">
- <h2 className="font-serif text-gray-900 mb-4">Hai ancora domande?</h2>
+ <h2 className="font-sans text-gray-900 mb-4">Hai ancora domande?</h2>
  <p className="text-gray-600 mb-6">Il nostro team risponde entro poche ore, dal lunedì al sabato.</p>
  <div className="flex flex-col sm:flex-row gap-4 justify-center">
  <Link href="/contatti/" className="btn-primary"> Scrivici</Link>

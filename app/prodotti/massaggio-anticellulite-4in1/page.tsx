@@ -81,9 +81,9 @@ export default function ProductPage() {
  {/* BREADCRUMB */}
  <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-100 py-2.5">
  <ol className="max-w-6xl mx-auto px-4 flex items-center gap-2 text-xs text-gray-400">
- <li><Link href="/" className="hover:text-rose-500">Home</Link></li>
+ <li><Link href="/" className="hover:text-[#457B9D]">Home</Link></li>
  <li>/</li>
- <li><Link href="/prodotti/" className="hover:text-rose-500">Prodotti</Link></li>
+ <li><Link href="/prodotti/" className="hover:text-[#457B9D]">Prodotti</Link></li>
  <li>/</li>
  <li className="text-gray-700 font-medium">Massaggiatore 4 in 1</li>
  </ol>
@@ -94,7 +94,7 @@ export default function ProductPage() {
  <div className="max-w-6xl mx-auto px-4 sm:px-6">
  <div className="md:hidden space-y-2 mb-3">
  <div>
- <p className="text-rose-600 text-xs font-bold uppercase tracking-widest mb-1">BellaCura® Original</p>
+ <p className="text-[#1D3557] text-xs font-bold uppercase tracking-widest mb-1">BellaCura® Original</p>
  <h1 className="text-3xl font-extrabold text-gray-900 leading-tight">
  Massaggiatore Anticellulite 4 in 1™
  </h1>
@@ -109,7 +109,7 @@ export default function ProductPage() {
  ))}
  </div>
  <span className="font-bold text-gray-900">4.9/5.0</span>
- <a href="#recensioni" className="text-gray-400 text-sm hover:text-rose-500 hover:underline cursor-pointer transition-colors">da 2.800+ recensioni verificate</a>
+ <a href="#recensioni" className="text-gray-400 text-sm hover:text-[#457B9D] hover:underline cursor-pointer transition-colors">da 2.800+ recensioni verificate</a>
  </div>
  </div>
  <div className="grid md:grid-cols-[1fr_420px] gap-3 md:gap-10 items-start">
@@ -117,7 +117,7 @@ export default function ProductPage() {
  <div className="md:sticky md:top-24 space-y-3 md:space-y-5">
  <div className="hidden md:block space-y-4">
  <div>
- <p className="text-rose-600 text-xs font-bold uppercase tracking-widest mb-1">BellaCura® Original</p>
+ <p className="text-[#1D3557] text-xs font-bold uppercase tracking-widest mb-1">BellaCura® Original</p>
  <h1 className="text-3xl font-extrabold text-gray-900 leading-tight">
  Massaggiatore Anticellulite 4 in 1™
  </h1>
@@ -132,7 +132,7 @@ export default function ProductPage() {
  ))}
  </div>
  <span className="font-bold text-gray-900">4.9/5.0</span>
- <a href="#recensioni" className="text-gray-400 text-sm hover:text-rose-500 hover:underline cursor-pointer transition-colors">da 2.800+ recensioni verificate</a>
+ <a href="#recensioni" className="text-gray-400 text-sm hover:text-[#457B9D] hover:underline cursor-pointer transition-colors">da 2.800+ recensioni verificate</a>
  </div>
  </div>
  <div className="space-y-2">
@@ -143,7 +143,7 @@ export default function ProductPage() {
  '10 min al giorno — nessun salone a €200',
  ].map((text) => (
  <div key={text} className="flex items-start gap-3">
- <svg className="w-4 h-4 mt-0.5 shrink-0 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+ <svg className="w-4 h-4 mt-0.5 shrink-0 text-[#457B9D]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
  <span className="text-gray-700 text-sm">{text}</span>
  </div>
  ))}
@@ -157,7 +157,7 @@ export default function ProductPage() {
      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
      Spedizione gratuita 24-48h
    </span>
-   <span className="inline-flex items-center gap-1.5 bg-rose-50 border border-rose-200 text-rose-800 text-xs font-semibold px-3 py-1.5 rounded-full">
+   <span className="inline-flex items-center gap-1.5 bg-[#EBF4F8] border border-[#A8DADC] text-[#152840] text-xs font-semibold px-3 py-1.5 rounded-full">
      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
      Reso gratuito 14 giorni
    </span>
@@ -174,9 +174,9 @@ export default function ProductPage() {
  {/* COME VISTO SU */}
  <section className="py-6 md:py-10 overflow-hidden" style={{background: 'linear-gradient(180deg, #fff 0%, #FDF0F3 100%)'}}>
    <div className="flex items-center gap-4 max-w-4xl mx-auto px-6 mb-4 md:mb-8">
-     <div className="flex-1 h-px bg-rose-100" />
-     <p className="text-xs font-bold uppercase tracking-[0.2em] text-rose-400 whitespace-nowrap">Come visto su</p>
-     <div className="flex-1 h-px bg-rose-100" />
+     <div className="flex-1 h-px bg-[#D6EAF0]" />
+     <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#457B9D] whitespace-nowrap">Come visto su</p>
+     <div className="flex-1 h-px bg-[#D6EAF0]" />
    </div>
    <style>{`
      @keyframes marquee {
@@ -217,10 +217,10 @@ export default function ProductPage() {
  </section>
 
  {/* RISULTATI REALI */}
- <section className="bg-rose-50 py-8 md:py-14">
+ <section className="bg-[#EBF4F8] py-8 md:py-14">
  <div className="max-w-4xl mx-auto px-4 sm:px-6">
  <div className="text-center mb-6 md:mb-10">
- <span className="inline-block bg-rose-100 text-rose-600 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">✨ Risultati certificati</span>
+ <span className="inline-block bg-[#D6EAF0] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">✨ Risultati certificati</span>
  <h2 className="text-3xl font-extrabold text-gray-900 mb-2">I numeri parlano da soli</h2>
  <p className="text-gray-500 text-sm">Sondaggio su 1.200+ clienti BellaCura (2024)</p>
  </div>
@@ -233,7 +233,7 @@ export default function ProductPage() {
  const r = 36; const circ = 2 * Math.PI * r;
  const dash = (pct / 100) * circ;
  return (
- <div key={label} className="bg-white rounded-2xl p-4 md:p-6 flex items-center gap-4 md:gap-5 shadow-sm border border-rose-100">
+ <div key={label} className="bg-white rounded-2xl p-4 md:p-6 flex items-center gap-4 md:gap-5 shadow-sm border border-[#D6EAF0]">
  <svg width="72" height="72" viewBox="0 0 88 88" className="shrink-0 w-16 h-16 md:w-[88px] md:h-[88px]">
  <circle cx="44" cy="44" r={r} fill="none" stroke="#dcfce7" strokeWidth="8"/>
  <circle cx="44" cy="44" r={r} fill="none" stroke="#16a34a" strokeWidth="8"
@@ -253,7 +253,7 @@ export default function ProductPage() {
  {/* VIDEO */}
  <section className="bg-white pt-4 pb-7 md:py-16">
  <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
- <span className="inline-block bg-rose-100 text-rose-600 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">Vedi come funziona</span>
+ <span className="inline-block bg-[#D6EAF0] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">Vedi come funziona</span>
  <h2 className="text-3xl font-extrabold text-gray-900 mb-5 md:mb-8">
  Risultati reali, routine semplice
  </h2>
@@ -268,7 +268,7 @@ export default function ProductPage() {
  <section className="bg-white py-7 md:py-16">
  <div className="max-w-2xl mx-auto px-4 sm:px-6">
  <div className="text-center mb-6 md:mb-10">
- <span className="inline-block bg-rose-100 text-rose-600 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">FAQ</span>
+ <span className="inline-block bg-[#D6EAF0] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">FAQ</span>
  <h2 className="text-3xl font-extrabold text-gray-900">Domande frequenti</h2>
  </div>
  <div className="space-y-3">
@@ -276,7 +276,7 @@ export default function ProductPage() {
  <details key={i} className="group rounded-2xl border border-gray-200 bg-gray-50 overflow-hidden">
  <summary className="flex items-center justify-between gap-3 px-5 py-3.5 cursor-pointer font-semibold text-gray-900 text-sm list-none hover:bg-gray-100 transition-colors">
  {faq.question}
- <span className="text-rose-500 shrink-0 text-lg group-open:rotate-45 transition-transform">+</span>
+ <span className="text-[#457B9D] shrink-0 text-lg group-open:rotate-45 transition-transform">+</span>
  </summary>
  <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-3">
  {faq.answer}
@@ -316,7 +316,7 @@ export default function ProductPage() {
    loading="lazy"
    decoding="async"
  />
- <div className="py-8 md:py-12 px-4 text-center bg-rose-50">
+ <div className="py-8 md:py-12 px-4 text-center bg-[#EBF4F8]">
    <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">La Tua Routine di 10 Minuti</h2>
    <p className="text-gray-600 max-w-xl mx-auto text-base md:text-lg">
      Progettata per levigare la pelle, ridurre la tensione e valorizzare la tua routine di cura quotidiana — in soli tre semplici passi.
@@ -350,7 +350,7 @@ export default function ProductPage() {
    loading="lazy"
    decoding="async"
  />
- <div className="py-8 md:py-12 px-4 text-center bg-rose-50">
+ <div className="py-8 md:py-12 px-4 text-center bg-[#EBF4F8]">
    <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Trattamento su Ogni Zona</h2>
    <p className="text-gray-600 max-w-xl mx-auto text-base md:text-lg">
      Un solo dispositivo per gambe, glutei, addome e schiena.

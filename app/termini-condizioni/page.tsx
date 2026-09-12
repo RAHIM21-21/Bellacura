@@ -12,7 +12,7 @@ export default function TerminiCondizioniPage() {
  <main className="min-h-screen bg-cream-50 py-16">
  <div className="max-w-3xl mx-auto px-4 sm:px-6">
  <nav className="text-sm text-gray-500 mb-6">
- <Link href="/" className="hover:text-rose-600">Home</Link>
+ <Link href="/" className="hover:text-[#1D3557]">Home</Link>
  <span className="mx-2">/</span>
  <span className="text-gray-800">Termini e Condizioni</span>
  </nav>
@@ -25,7 +25,7 @@ export default function TerminiCondizioniPage() {
  <section>
  <h2 className="text-xl font-semibold text-gray-900 mb-3">1. Informazioni sull&apos;azienda</h2>
  <p className="text-gray-700 leading-relaxed">
- BellaCura S.r.l. gestisce il sito bellacura.it e vende prodotti per la cura del corpo in tutta Italia. Per qualsiasi comunicazione: <a href="mailto:info@bellacura.it" className="text-rose-600 hover:underline">info@bellacura.it</a>
+ BellaCura S.r.l. gestisce il sito bellacura.it e vende prodotti per la cura del corpo in tutta Italia. Per qualsiasi comunicazione: <a href="mailto:info@bellacura.it" className="text-[#1D3557] hover:underline">info@bellacura.it</a>
  </p>
  </section>
 
@@ -69,14 +69,14 @@ export default function TerminiCondizioniPage() {
  <h2 className="text-xl font-semibold text-gray-900 mb-3">5. Diritto di recesso</h2>
  <p className="text-gray-700 leading-relaxed">
  Hai diritto di recedere dal contratto entro <strong>14 giorni</strong> dalla ricezione del prodotto, senza dover fornire alcuna motivazione. Per esercitare il diritto di recesso, consulta la nostra pagina dedicata:{' '}
- <Link href="/diritto-recesso/" className="text-rose-600 hover:underline">Diritto di Recesso</Link>.
+ <Link href="/diritto-recesso/" className="text-[#1D3557] hover:underline">Diritto di Recesso</Link>.
  </p>
  </section>
 
  <section>
  <h2 className="text-xl font-semibold text-gray-900 mb-3">6. Garanzia legale</h2>
  <p className="text-gray-700 leading-relaxed">
- Tutti i prodotti BellaCura sono coperti dalla garanzia legale di conformità di 2 anni prevista dal Codice del Consumo (D.Lgs. 206/2005). In aggiunta, offriamo la nostra <Link href="/garanzia/" className="text-rose-600 hover:underline">Garanzia Soddisfatti o Rimborsati 14 giorni</Link>.
+ Tutti i prodotti BellaCura sono coperti dalla garanzia legale di conformità di 2 anni prevista dal Codice del Consumo (D.Lgs. 206/2005). In aggiunta, offriamo la nostra <Link href="/garanzia/" className="text-[#1D3557] hover:underline">Garanzia Soddisfatti o Rimborsati 14 giorni</Link>.
  </p>
  </section>
 
@@ -104,15 +104,15 @@ export default function TerminiCondizioniPage() {
  </div>
 
  <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
- <Link href="/garanzia/" className="block p-4 bg-white rounded-xl border border-gray-200 hover:border-rose-300 transition-colors text-center">
+ <Link href="/garanzia/" className="block p-4 bg-white rounded-xl border border-gray-200 hover:border-[#7EC8D4] transition-colors text-center">
  <div className="text-2xl mb-2"></div>
  <div className="font-semibold text-gray-900 text-sm">Garanzia 14 giorni</div>
  </Link>
- <Link href="/diritto-recesso/" className="block p-4 bg-white rounded-xl border border-gray-200 hover:border-rose-300 transition-colors text-center">
+ <Link href="/diritto-recesso/" className="block p-4 bg-white rounded-xl border border-gray-200 hover:border-[#7EC8D4] transition-colors text-center">
  <div className="text-2xl mb-2">↩</div>
  <div className="font-semibold text-gray-900 text-sm">Diritto di Recesso</div>
  </Link>
- <Link href="/contatti/" className="block p-4 bg-white rounded-xl border border-gray-200 hover:border-rose-300 transition-colors text-center">
+ <Link href="/contatti/" className="block p-4 bg-white rounded-xl border border-gray-200 hover:border-[#7EC8D4] transition-colors text-center">
  <div className="text-2xl mb-2"></div>
  <div className="font-semibold text-gray-900 text-sm">Contattaci</div>
  </Link>

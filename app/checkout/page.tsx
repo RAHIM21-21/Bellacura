@@ -58,7 +58,7 @@ function CheckoutContent() {
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-8">
-          <Link href="/" className="font-serif text-2xl font-bold text-rose-600">BellaCura</Link>
+          <Link href="/" className="font-sans text-2xl font-bold text-[#1D3557]">BellaCura</Link>
           <p className="text-gray-500 text-sm mt-1">Checkout Sicuro</p>
         </div>
         <div className="grid lg:grid-cols-5 gap-8">
@@ -81,7 +81,7 @@ function CheckoutContent() {
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Nome *</label>
                     <input {...register('nome', { required: 'Nome richiesto', minLength: { value: 2, message: 'Minimo 2 caratteri' } })}
-                      className={`w-full border rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-300 ${errors.nome ? 'border-red-400' : 'border-gray-300'}`}
+                      className={`w-full border rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#7EC8D4] ${errors.nome ? 'border-red-400' : 'border-gray-300'}`}
                       placeholder="Maria" />
                     {errors.nome && <p className="text-red-500 text-xs mt-1">{errors.nome.message}</p>}
                   </div>
@@ -90,7 +90,7 @@ function CheckoutContent() {
                     <label className="block text-sm font-medium text-gray-700 mb-1">Telefono * <span className="text-gray-400 font-normal">(per aggiornamenti consegna)</span></label>
                     <input {...register('telefono', { required: 'Telefono richiesto', minLength: { value: 9, message: 'Numero non valido' } })}
                       type="tel"
-                      className={`w-full border rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-300 ${errors.telefono ? 'border-red-400' : 'border-gray-300'}`}
+                      className={`w-full border rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#7EC8D4] ${errors.telefono ? 'border-red-400' : 'border-gray-300'}`}
                       placeholder="+39 333 1234567" />
                     {errors.telefono && <p className="text-red-500 text-xs mt-1">{errors.telefono.message}</p>}
                   </div>
@@ -98,7 +98,7 @@ function CheckoutContent() {
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Indirizzo Completo * <span className="text-gray-400 font-normal">(via, civico, CAP, città)</span></label>
                     <input {...register('indirizzo', { required: 'Indirizzo richiesto', minLength: { value: 10, message: 'Inserisci l\'indirizzo completo' } })}
-                      className={`w-full border rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-300 ${errors.indirizzo ? 'border-red-400' : 'border-gray-300'}`}
+                      className={`w-full border rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#7EC8D4] ${errors.indirizzo ? 'border-red-400' : 'border-gray-300'}`}
                       placeholder="Via Roma 12, 20100 Milano" />
                     {errors.indirizzo && <p className="text-red-500 text-xs mt-1">{errors.indirizzo.message}</p>}
                   </div>
@@ -132,7 +132,7 @@ function CheckoutContent() {
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 sticky top-24">
               <h2 className="font-semibold text-gray-900 mb-4">Riepilogo Ordine</h2>
               <div className="flex items-center gap-4 pb-4 border-b border-gray-100 mb-4">
-                <div className="w-16 h-16 rounded-xl bg-rose-50 flex items-center justify-center text-3xl flex-shrink-0">{product.image}</div>
+                <div className="w-16 h-16 rounded-xl bg-[#EBF4F8] flex items-center justify-center text-3xl flex-shrink-0">{product.image}</div>
                 <div>
                   <p className="font-medium text-gray-900 text-sm">{product.name}</p>
                   <p className="text-gray-500 text-xs">Qty: 1</p>
@@ -141,7 +141,7 @@ function CheckoutContent() {
               </div>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between text-gray-600"><span>Subtotale</span><span className="line-through text-gray-400">€{product.originalPrice.toFixed(2)}</span></div>
-                <div className="flex justify-between text-rose-600 font-semibold"><span>Sconto</span><span>–€{(product.originalPrice - product.price).toFixed(2)}</span></div>
+                <div className="flex justify-between text-[#1D3557] font-semibold"><span>Sconto</span><span>–€{(product.originalPrice - product.price).toFixed(2)}</span></div>
                 <div className="flex justify-between text-gray-600"><span>Spedizione</span><span className="text-green-600 font-medium">Gratuita</span></div>
               </div>
               <div className="border-t border-gray-100 mt-4 pt-4 flex justify-between font-bold text-gray-900">
@@ -155,7 +155,7 @@ function CheckoutContent() {
                   { icon: <RotateCcw size={14} />, text: 'Reso gratuito entro 14 giorni' },
                 ].map((item) => (
                   <div key={item.text} className="flex items-center gap-2 text-gray-600 text-xs">
-                    <span className="text-rose-500">{item.icon}</span>{item.text}
+                    <span className="text-[#457B9D]">{item.icon}</span>{item.text}
                   </div>
                 ))}
               </div>

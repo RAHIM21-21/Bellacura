@@ -54,7 +54,7 @@ export default function Header()
  <Link
  key={link.href}
  href={link.href}
- className="text-gray-700 hover:text-rose-600 font-medium transition-colors"
+ className="text-gray-700 hover:text-[#1D3557] font-medium transition-colors"
  >
  {link.label}
  </Link>
@@ -63,7 +63,7 @@ export default function Header()
 
  {/* CTA */}
  <div className="hidden md:flex items-center gap-4">
- <a href="https://wa.me/393314430286?text=Ciao%21%20Ho%20una%20domanda%20sul%20massaggiatore%20BellaCura%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-rose-500 flex items-center gap-1 text-sm">
+ <a href="https://wa.me/393314430286?text=Ciao%21%20Ho%20una%20domanda%20sul%20massaggiatore%20BellaCura%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#457B9D] flex items-center gap-1 text-sm">
  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.12 2.38 2 2 0 012.11.2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg> Supporto
  </a>
  <Link href="/checkout-scelta" className="btn-primary py-2 px-6 text-sm">
@@ -97,7 +97,7 @@ export default function Header()
  <Link
  key={link.href}
  href={link.href}
- className="text-gray-700 hover:text-rose-600 font-medium py-2"
+ className="text-gray-700 hover:text-[#1D3557] font-medium py-2"
  onClick={() => setOpen(false)}
  >
  {link.label}

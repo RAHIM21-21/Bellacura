@@ -55,13 +55,13 @@ export default function Footer() {
  <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
  {/* Brand */}
  <div className="col-span-2 md:col-span-1">
- <p className="font-serif text-2xl font-bold text-white mb-3">BellaCura</p>
+ <p className="font-sans text-2xl font-bold text-white mb-3">BellaCura</p>
  <p className="text-sm text-gray-400 leading-relaxed mb-4">
  Prodotti di benessere selezionati per la donna italiana. Qualità, cura e risultati garantiti.
  </p>
  <div className="flex gap-4">
- <a href="https://www.instagram.com/bellacura.it" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-400 transition-colors text-sm">Instagram</a>
- <a href="https://www.tiktok.com/@bellacura.it" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-400 transition-colors text-sm">TikTok</a>
+ <a href="https://www.instagram.com/bellacura.it" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#457B9D] transition-colors text-sm">Instagram</a>
+ <a href="https://www.tiktok.com/@bellacura.it" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#457B9D] transition-colors text-sm">TikTok</a>
  </div>
  </div>
 
@@ -69,7 +69,7 @@ export default function Footer() {
  <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Prodotti</h3>
  <ul className="space-y-2">
  {footerLinks.prodotti.map((l) => (
- <li key={l.href}><Link href={l.href} className="text-gray-400 hover:text-rose-400 text-sm transition-colors">{l.label}</Link></li>
+ <li key={l.href}><Link href={l.href} className="text-gray-400 hover:text-[#457B9D] text-sm transition-colors">{l.label}</Link></li>
  ))}
  </ul>
  </div>
@@ -78,7 +78,7 @@ export default function Footer() {
  <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Aiuto</h3>
  <ul className="space-y-2">
  {footerLinks.aiuto.map((l) => (
- <li key={l.href}><Link href={l.href} className="text-gray-400 hover:text-rose-400 text-sm transition-colors">{l.label}</Link></li>
+ <li key={l.href}><Link href={l.href} className="text-gray-400 hover:text-[#457B9D] text-sm transition-colors">{l.label}</Link></li>
  ))}
  </ul>
  </div>
@@ -87,7 +87,7 @@ export default function Footer() {
  <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Informazioni</h3>
  <ul className="space-y-2">
  {footerLinks.informazioni.map((l) => (
- <li key={l.href}><Link href={l.href} className="text-gray-400 hover:text-rose-400 text-sm transition-colors">{l.label}</Link></li>
+ <li key={l.href}><Link href={l.href} className="text-gray-400 hover:text-[#457B9D] text-sm transition-colors">{l.label}</Link></li>
  ))}
  </ul>
  </div>
@@ -96,7 +96,7 @@ export default function Footer() {
  <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Legale</h3>
  <ul className="space-y-2">
  {footerLinks.legale.map((l) => (
- <li key={l.href}><Link href={l.href} className="text-gray-400 hover:text-rose-400 text-sm transition-colors">{l.label}</Link></li>
+ <li key={l.href}><Link href={l.href} className="text-gray-400 hover:text-[#457B9D] text-sm transition-colors">{l.label}</Link></li>
  ))}
  </ul>
  </div>

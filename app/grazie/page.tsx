@@ -15,7 +15,7 @@ function GrazieContent() {
  <div className="min-h-screen bg-cream flex items-center justify-center py-16 px-4">
  <div className="max-w-lg w-full text-center">
  <div className="text-7xl mb-6"></div>
- <h1 className="font-serif text-4xl text-gray-900 mb-4">
+ <h1 className="font-sans text-4xl text-gray-900 mb-4">
  Grazie per il tuo ordine!
  </h1>
  <p className="text-gray-600 mb-8 leading-relaxed">
@@ -33,7 +33,7 @@ function GrazieContent() {
  { step: '4', text: 'Paghi in contanti al corriere al momento della consegna' },
  ].map((item) => (
  <li key={item.step} className="flex items-start gap-3">
- <span className="w-6 h-6 rounded-full bg-rose-500 text-white text-xs flex items-center justify-center flex-shrink-0 font-bold">
+ <span className="w-6 h-6 rounded-full bg-[#457B9D] text-white text-xs flex items-center justify-center flex-shrink-0 font-bold">
  {item.step}
  </span>
  <span className="text-gray-700 text-sm">{item.text}</span>
@@ -46,7 +46,7 @@ function GrazieContent() {
  <Link href="/" className="btn-primary w-full justify-center">
  Torna alla Home
  </Link>
- <a href="mailto:info@bellacura.it" className="text-rose-500 text-sm hover:underline block">
+ <a href="mailto:info@bellacura.it" className="text-[#457B9D] text-sm hover:underline block">
  Hai domande? Scrivici a info@bellacura.it
  </a>
  </div>

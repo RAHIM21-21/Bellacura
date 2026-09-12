@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="624" viewBox="0 0 1640 624">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&amp;family=DM+Sans:wght@300;400&amp;display=swap');
+    </style>
+    <linearGradient id="bgCover" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#FDFBF7"/>
+      <stop offset="55%"  stop-color="#FAF5F0"/>
+      <stop offset="100%" stop-color="#F0E5E5"/>
+    </linearGradient>
+    <linearGradient id="bgVertical" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#FDFBF7" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#F5EDE8" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="circleGlow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C9A87C" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#C9A87C" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="circleGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4AAAA" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#D4AAAA" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background base -->
+  <rect width="1640" height="624" fill="url(#bgCover)"/>
+  <!-- Subtle vertical tint overlay -->
+  <rect width="1640" height="624" fill="url(#bgVertical)" fill-opacity="0.5"/>
+
+  <!-- ── RIGHT SIDE: Organic circle composition ───────────────────── -->
+
+  <!-- Large soft mauve circle — anchor -->
+  <circle cx="1240" cy="312" r="310" fill="#7C4F5C" fill-opacity="0.07"/>
+  <!-- Blush circle upper-right -->
+  <circle cx="1440" cy="148" r="220" fill="#D4AAAA" fill-opacity="0.10"/>
+  <!-- Gold circle lower area -->
+  <circle cx="1180" cy="520" r="190" fill="#C9A87C" fill-opacity="0.08"/>
+  <!-- Mauve accent smaller -->
+  <circle cx="1360" cy="480" r="140" fill="#A87888" fill-opacity="0.07"/>
+  <!-- Outer blush far right -->
+  <circle cx="1580" cy="300" r="170" fill="#EDD5D5" fill-opacity="0.12"/>
+  <!-- Very small gold dot -->
+  <circle cx="1090" cy="130" r="90"  fill="#D4BA90" fill-opacity="0.09"/>
+  <!-- Tiny accent top -->
+  <circle cx="1490" cy="60"  r="65"  fill="#7C4F5C" fill-opacity="0.05"/>
+
+  <!-- Thin arc strokes — structural elegance -->
+  <circle cx="1240" cy="312" r="282" fill="none" stroke="#C9A87C" stroke-width="0.8" stroke-opacity="0.22"
+    stroke-dasharray="none"/>
+  <circle cx="1280" cy="340" r="360" fill="none" stroke="#7C4F5C" stroke-width="0.6" stroke-opacity="0.10"/>
+
+  <!-- Radial glow blobs -->
+  <ellipse cx="1260" cy="270" rx="240" ry="210" fill="url(#circleGlow1)" opacity="0.7"/>
+  <ellipse cx="1420" cy="380" rx="200" ry="170" fill="url(#circleGlow2)" opacity="0.7"/>
+
+  <!-- ── LEFT SIDE: Brand text ────────────────────────────────────── -->
+
+  <!-- Thin vertical gold accent bar -->
+  <line x1="72" y1="112" x2="72" y2="504" stroke="#C9A87C" stroke-width="1.5" stroke-opacity="0.45"/>
+
+  <!-- Eyebrow text -->
+  <text
+    x="98"
+    y="152"
+    font-family="'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="20"
+    font-weight="300"
+    fill="#C9A87C"
+    fill-opacity="0.90"
+    letter-spacing="5"
+  >BEAUTY · SKINCARE</text>
+
+  <!-- "bella" — large italic Cormorant, mauve -->
+  <text
+    x="90"
+    y="300"
+    font-family="'Cormorant Garamond', 'Palatino Linotype', Georgia, serif"
+    font-size="180"
+    font-weight="300"
+    font-style="italic"
+    fill="#7C4F5C"
+    fill-opacity="0.95"
+    dominant-baseline="alphabetic"
+  >bella</text>
+
+  <!-- "cura" — smaller, gold, same baseline family -->
+  <text
+    x="97"
+    y="378"
+    font-family="'Cormorant Garamond', 'Palatino Linotype', Georgia, serif"
+    font-size="88"
+    font-weight="400"
+    fill="#C9A87C"
+    fill-opacity="0.90"
+    dominant-baseline="alphabetic"
+  >cura</text>
+
+  <!-- Thin horizontal rule below wordmark -->
+  <line x1="98" y1="408" x2="490" y2="408" stroke="#7C4F5C" stroke-width="0.75" stroke-opacity="0.25"/>
+
+  <!-- Tagline -->
+  <text
+    x="98"
+    y="444"
+    font-family="'Cormorant Garamond', 'Palatino Linotype', Georgia, serif"
+    font-size="26"
+    font-weight="300"
+    font-style="italic"
+    fill="#1C1418"
+    fill-opacity="0.45"
+    letter-spacing="0.5"
+  >La cura che meriti. La bellezza che sei.</text>
+
+  <!-- Domain -->
+  <text
+    x="99"
+    y="492"
+    font-family="'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="19"
+    font-weight="300"
+    fill="#7C4F5C"
+    fill-opacity="0.40"
+    letter-spacing="2"
+  >bellacura.it</text>
+
+</svg>

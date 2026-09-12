@@ -49,13 +49,18 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: FROM_SENDER,
       to: email,
-      subject: '🎁 Il tuo codice sconto esclusivo BellaCura è qui',
+      subject: '🎁 Il tuo codice sconto BellaCura è qui (valido per 2 ore)',
       html: `
         <!DOCTYPE html>
         <html lang="it">
         <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
         <body style="margin:0; padding:0; background:#fdf2f8; font-family: Georgia, 'Times New Roman', serif;">
           <div style="max-width: 560px; margin: 0 auto; padding: 32px 16px;">
+
+            <!-- Urgency Banner -->
+            <div style="background:#fff3cd;border:1px solid #ffc107;border-radius:10px;padding:12px 16px;text-align:center;margin-bottom:16px;">
+              <p style="margin:0;color:#856404;font-family:sans-serif;font-size:14px;font-weight:600;">⏰ Questa offerta è valida solo per le prossime <strong>2 ore</strong> — approfitta ora!</p>
+            </div>
 
             <!-- Header -->
             <div style="background: linear-gradient(135deg, #BE185D, #9d174d); border-radius: 16px 16px 0 0; padding: 36px 32px; text-align: center;">
@@ -102,7 +107,7 @@ export async function POST(req: NextRequest) {
               <div style="border-top: 1px solid #fce7f3; margin: 28px 0;"></div>
 
               <p style="margin: 0; color: #9ca3af; font-size: 13px; font-family: sans-serif; text-align: center;">
-                ⚠️ L'offerta è riservata a te e valida per poco.<br><br>
+                ⚠️ Questa offerta scade entro <strong>2 ore</strong> dall'invio di questa email.<br><br>
                 Con affetto,<br>
                 <strong style="color: #BE185D;">Il Team BellaCura 🌺</strong>
               </p>

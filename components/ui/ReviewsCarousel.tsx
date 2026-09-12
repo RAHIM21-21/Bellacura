@@ -63,7 +63,7 @@ export default function ReviewsCarousel() {
       <div className="container-tight">
         <div className="text-center mb-5 md:mb-10">
           <span className="badge mb-3">⭐ Recensioni Verificate</span>
-          <h2 className="font-serif text-gray-900 mb-3">Cosa dicono le nostre clienti</h2>
+          <h2 className="font-sans text-gray-900 mb-3">Cosa dicono le nostre clienti</h2>
           <p className="text-gray-500 text-sm">Oltre 2.800+ donne soddisfatte · Foto e recensioni reali</p>
         </div>
 
@@ -93,14 +93,14 @@ export default function ReviewsCarousel() {
           {/* Arrows */}
           <button
             onClick={prev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white border border-rose-100 shadow-md rounded-full p-2 text-gray-400 hover:text-rose-600 transition-colors z-10"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white border border-[#D6EAF0] shadow-md rounded-full p-2 text-gray-400 hover:text-[#1D3557] transition-colors z-10"
             aria-label="Precedente"
           >
             <ChevronLeft size={20} />
           </button>
           <button
             onClick={next}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white border border-rose-100 shadow-md rounded-full p-2 text-gray-400 hover:text-rose-600 transition-colors z-10"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white border border-[#D6EAF0] shadow-md rounded-full p-2 text-gray-400 hover:text-[#1D3557] transition-colors z-10"
             aria-label="Successiva"
           >
             <ChevronRight size={20} />
@@ -113,7 +113,7 @@ export default function ReviewsCarousel() {
             <button
               key={i}
               onClick={() => setStart(i)}
-              className={`rounded-full transition-all ${i === start ? 'w-5 h-2 bg-rose-500' : 'w-2 h-2 bg-rose-200'}`}
+              className={`rounded-full transition-all ${i === start ? 'w-5 h-2 bg-[#457B9D]' : 'w-2 h-2 bg-[#D6EAF0]'}`}
             />
           ))}
         </div>
@@ -124,7 +124,7 @@ export default function ReviewsCarousel() {
 
 function ReviewCard({ review }: { review: Review }) {
   return (
-    <article className="rounded-2xl overflow-hidden border border-rose-100 bg-white shadow-sm flex flex-col">
+    <article className="rounded-2xl overflow-hidden border border-[#D6EAF0] bg-white shadow-sm flex flex-col">
       {review.type === 'photo' && (
         <div className="relative w-full aspect-[16/9] overflow-hidden shrink-0">
           <Image
@@ -136,7 +136,7 @@ function ReviewCard({ review }: { review: Review }) {
           />
           <div className="absolute bottom-0 left-0 right-0 flex">
             <div className="flex-1 bg-black/40 text-white text-[10px] font-bold text-center py-1">PRIMA</div>
-            <div className="flex-1 bg-rose-600/80 text-white text-[10px] font-bold text-center py-1">DOPO</div>
+            <div className="flex-1 bg-[#1D3557]/80 text-white text-[10px] font-bold text-center py-1">DOPO</div>
           </div>
         </div>
       )}
@@ -151,12 +151,12 @@ function ReviewCard({ review }: { review: Review }) {
         <p className="text-gray-700 text-sm leading-relaxed mb-3 flex-1">"{review.text}"</p>
 
         {'months' in review && (
-          <span className="inline-block bg-rose-50 text-rose-700 text-xs font-semibold px-2 py-0.5 rounded-full mb-2 w-fit">
+          <span className="inline-block bg-[#EBF4F8] text-[#152840] text-xs font-semibold px-2 py-0.5 rounded-full mb-2 w-fit">
             ⏱ {review.months}
           </span>
         )}
 
-        <div className="flex items-center justify-between pt-2 border-t border-rose-50">
+        <div className="flex items-center justify-between pt-2 border-t border-[#EBF4F8]">
           <div>
             <p className="font-semibold text-gray-900 text-sm">{review.name}</p>
             <p className="text-gray-400 text-xs">{review.city}</p>

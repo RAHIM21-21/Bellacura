@@ -24,12 +24,12 @@ export default function ComparisonVS() {
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: 6,
             background: 'white', border: '1px solid #f3d4dd',
-            color: '#A8355A', fontSize: 10, fontWeight: 700,
+            color: '#1D3557', fontSize: 10, fontWeight: 700,
             letterSpacing: '0.18em', textTransform: 'uppercase',
             padding: '6px 16px', borderRadius: 99, marginBottom: 16,
             boxShadow: '0 1px 4px rgba(168,53,90,0.10)',
           }}>
-            <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#A8355A', display: 'inline-block' }} />
+            <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#1D3557', display: 'inline-block' }} />
             Confronta
           </div>
           <h2 style={{
@@ -58,7 +58,7 @@ export default function ComparisonVS() {
             <div style={{ padding: '12px 10px' }} />
             <div style={{
               padding: '12px 10px', textAlign: 'center',
-              background: 'linear-gradient(135deg, #A8355A 0%, #c2546f 100%)',
+              background: 'linear-gradient(135deg, #1D3557 0%, #457B9D 100%)',
             }}>
               <span style={{
                 color: 'white', fontSize: 11, fontWeight: 800,
@@ -97,7 +97,7 @@ export default function ComparisonVS() {
                 background: 'rgba(168,53,90,0.03)',
               }}>
                 <span style={{
-                  fontSize: 11, fontWeight: 700, color: '#A8355A', lineHeight: 1.35,
+                  fontSize: 11, fontWeight: 700, color: '#1D3557', lineHeight: 1.35,
                   display: 'block',
                 }}>
                   {row.bc}
@@ -116,7 +116,7 @@ export default function ComparisonVS() {
         {/* Footer callout */}
         <p style={{ textAlign: 'center', color: '#6b7280', fontSize: 13, marginTop: 20 }}>
           Con BellaCura risparmi fino a{' '}
-          <strong style={{ color: '#A8355A' }}>€3.960 l&apos;anno</strong>
+          <strong style={{ color: '#1D3557' }}>€3.960 l&apos;anno</strong>
           {' '}rispetto alle sedute in salone.
         </p>
 

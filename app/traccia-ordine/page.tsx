@@ -11,10 +11,10 @@ export const metadata: Metadata = buildMetadata({
 export default function TracciaOrdinePage() {
  return (
  <>
- <section className="bg-gradient-to-br from-rose-50 to-white py-16 text-center">
+ <section className="bg-gradient-to-br from-[#EBF4F8] to-white py-16 text-center">
  <div className="container-tight max-w-xl">
  <span className="badge mb-4">Spedizioni</span>
- <h1 className="font-serif text-4xl text-gray-900 mb-4">Traccia il tuo Ordine</h1>
+ <h1 className="font-sans text-4xl text-gray-900 mb-4">Traccia il tuo Ordine</h1>
  <p className="text-gray-600 text-lg">Controlla lo stato della tua spedizione in tempo reale.</p>
  </div>
  </section>
@@ -27,13 +27,13 @@ export default function TracciaOrdinePage() {
  <input
  type="text"
  placeholder="Es. BC-2024-001234"
- className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-rose-400 outline-none transition-colors text-gray-900"
+ className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#57A9C4] outline-none transition-colors text-gray-900"
  readOnly
  />
  <input
  type="email"
  placeholder="Email usata per l'ordine"
- className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-rose-400 outline-none transition-colors text-gray-900"
+ className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#57A9C4] outline-none transition-colors text-gray-900"
  readOnly
  />
  <button className="btn-primary w-full justify-center">
@@ -59,14 +59,14 @@ export default function TracciaOrdinePage() {
  ].map((z) => (
  <div key={z.zona} className="flex justify-between items-center p-3 bg-gray-50 rounded-xl">
  <span className="text-gray-700 text-sm font-medium">{z.zona}</span>
- <span className="text-rose-600 text-sm font-bold">{z.tempo}</span>
+ <span className="text-[#1D3557] text-sm font-bold">{z.tempo}</span>
  </div>
  ))}
  </div>
  </div>
  </section>
 
- <section className="section bg-rose-50 text-center">
+ <section className="section bg-[#EBF4F8] text-center">
  <div className="container-tight max-w-xl">
  <p className="text-gray-600 mb-4">Hai bisogno di aiuto con la tua spedizione?</p>
  <Link href="/contatti/" className="btn-primary inline-flex"> Contatta il Supporto</Link>

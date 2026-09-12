@@ -69,7 +69,7 @@ export default function HomePage() {
  return (
  <>
  {/* HERO */}
- <section className="bg-gradient-to-br from-rose-50 via-white to-pink-50 py-14 sm:py-20">
+ <section className="bg-gradient-to-br from-[#EBF4F8] via-white to-[#EBF4F8] py-14 sm:py-20">
  <div className="container-tight grid md:grid-cols-2 gap-10 items-center">
 
  {/* LEFT – copy */}
@@ -82,13 +82,13 @@ export default function HomePage() {
  ))}
  </div>
  <span className="text-sm font-semibold text-gray-700">
- Oltre <strong className="text-rose-600">2.800+</strong> clienti soddisfatte
+ Oltre <strong className="text-[#1D3557]">2.800+</strong> clienti soddisfatte
  </span>
  </div>
 
- <h1 className="text-4xl sm:text-5xl font-serif font-bold text-gray-900 mb-5 leading-tight">
+ <h1 className="text-4xl sm:text-5xl font-sans font-bold text-gray-900 mb-5 leading-tight">
  Elimina la cellulite{' '}
- <span className="text-rose-500">senza sforzo</span>{' '}
+ <span className="text-[#457B9D]">senza sforzo</span>{' '}
  — risultati in 14 giorni
  </h1>
 
@@ -106,7 +106,7 @@ export default function HomePage() {
  'Usalo sotto la doccia – completamente impermeabile',
  ].map((pt) => (
  <li key={pt} className="flex items-start gap-2 text-gray-700">
- <CheckCircle2 size={18} className="text-rose-500 mt-0.5 shrink-0" />
+ <CheckCircle2 size={18} className="text-[#457B9D] mt-0.5 shrink-0" />
  <span>{pt}</span>
  </li>
  ))}
@@ -147,12 +147,12 @@ export default function HomePage() {
 
  {/* RIGHT – product visual */}
  <div className="relative flex items-center justify-center">
- <div className="w-full max-w-sm aspect-square rounded-3xl bg-gradient-to-br from-rose-100 to-pink-100 shadow-2xl shadow-rose-100 overflow-hidden">
+ <div className="w-full max-w-sm aspect-square rounded-3xl bg-gradient-to-br from-[#D6EAF0] to-[#A8DADC] shadow-2xl shadow-[#D6EAF0] overflow-hidden">
  <img src="/images/massaggiatore-bellacura.jpg" alt="BellaCura Massaggiatore Anticellulite 4 in 1" className="w-full h-full object-cover" />
  </div>
 
  {/* Floating badge – delivery */}
- <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3 border border-rose-50">
+ <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3 border border-[#EBF4F8]">
  <span className="text-2xl"></span>
  <div>
  <p className="text-xs text-gray-500 font-medium">Spedizione Express</p>
@@ -161,7 +161,7 @@ export default function HomePage() {
  </div>
 
  {/* Floating badge – reviews */}
- <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-xl p-3 border border-rose-50">
+ <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-xl p-3 border border-[#EBF4F8]">
  <div className="flex gap-0.5 mb-1">
  {[...Array(5)].map((_, i) => (
  <Star key={i} size={12} className="text-amber-400 fill-amber-400" />
@@ -180,9 +180,9 @@ export default function HomePage() {
  <div className="container-tight">
  <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
  {[
- { icon: <Truck size={20} className="text-rose-500" />, text: 'Spedizione 24–48h Gratis' },
- { icon: <RotateCcw size={20} className="text-rose-500" />, text: 'Reso 14 Giorni' },
- { icon: <Shield size={20} className="text-rose-500" />, text: 'Pagamento Sicuro' },
+ { icon: <Truck size={20} className="text-[#457B9D]" />, text: 'Spedizione 24–48h Gratis' },
+ { icon: <RotateCcw size={20} className="text-[#457B9D]" />, text: 'Reso 14 Giorni' },
+ { icon: <Shield size={20} className="text-[#457B9D]" />, text: 'Pagamento Sicuro' },
  { icon: <span className="text-lg"></span>, text: 'Contrassegno Disponibile' },
  ].map((item, i) => (
  <li key={i} className="flex items-center justify-center gap-2 text-sm font-semibold text-gray-700">
@@ -198,7 +198,7 @@ export default function HomePage() {
  <div className="container-tight">
  <div className="text-center mb-12">
  <span className="badge mb-3">Perché funziona</span>
- <h2 className="font-serif text-gray-900 mb-4">La tecnologia che fa la differenza</h2>
+ <h2 className="font-sans text-gray-900 mb-4">La tecnologia che fa la differenza</h2>
  <p className="text-gray-600 max-w-xl mx-auto">
  Non è un semplice massaggiatore. È un sistema professionale in 4 funzioni che le spa usano da anni.
  </p>
@@ -220,7 +220,7 @@ export default function HomePage() {
  <div className="container-tight">
  <div className="text-center mb-12">
  <span className="badge mb-3"> Best Seller #1 in Italia</span>
- <h2 className="text-3xl sm:text-4xl font-serif text-gray-900 mb-4">
+ <h2 className="text-3xl sm:text-4xl font-sans text-gray-900 mb-4">
  Massaggiatore Anticellulite 4 in 1
  </h2>
  <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -230,10 +230,10 @@ export default function HomePage() {
 
  <div className="container-tight grid md:grid-cols-2 gap-12 items-center">
  <div className="grid grid-cols-2 gap-4">
- <div className="aspect-square rounded-2xl bg-rose-50 flex items-center justify-center text-6xl shadow-sm">‍</div>
- <div className="aspect-square rounded-2xl bg-pink-50 flex items-center justify-center text-6xl shadow-sm"></div>
+ <div className="aspect-square rounded-2xl bg-[#EBF4F8] flex items-center justify-center text-6xl shadow-sm">‍</div>
+ <div className="aspect-square rounded-2xl bg-[#EBF4F8] flex items-center justify-center text-6xl shadow-sm"></div>
  <div className="aspect-square rounded-2xl bg-fuchsia-50 flex items-center justify-center text-6xl shadow-sm"></div>
- <div className="aspect-square rounded-2xl bg-rose-50 flex items-center justify-center text-6xl shadow-sm"></div>
+ <div className="aspect-square rounded-2xl bg-[#EBF4F8] flex items-center justify-center text-6xl shadow-sm"></div>
  </div>
 
  <div>
@@ -264,7 +264,7 @@ export default function HomePage() {
  'Impermeabile – usalo sotto la doccia',
  ].map((feat) => (
  <li key={feat} className="flex items-center gap-2 text-gray-700">
- <CheckCircle2 size={16} className="text-rose-500 shrink-0" /> {feat}
+ <CheckCircle2 size={16} className="text-[#457B9D] shrink-0" /> {feat}
  </li>
  ))}
  </ul>
@@ -286,7 +286,7 @@ export default function HomePage() {
       {/* VIDEO PROMO */}
  <section className="bg-white py-16">
  <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
- <span className="inline-block bg-rose-100 text-rose-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">Vedi come funziona</span>
+ <span className="inline-block bg-[#D6EAF0] text-[#152840] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">Vedi come funziona</span>
  <h2 className="text-3xl font-extrabold text-gray-900 mb-8">
  Risultati reali, routine semplice
  </h2>
@@ -300,11 +300,11 @@ export default function HomePage() {
  </section>
 
  {/* TESTIMONIALS */}
- <section className="section bg-rose-50">
+ <section className="section bg-[#EBF4F8]">
  <div className="container-tight">
  <div className="text-center mb-12">
  <span className="badge mb-3">Recensioni Verificate</span>
- <h2 className="font-serif text-gray-900 mb-4">Cosa dicono le nostre clienti</h2>
+ <h2 className="font-sans text-gray-900 mb-4">Cosa dicono le nostre clienti</h2>
  <p className="text-gray-600">Oltre 2.800+ donne hanno già scelto BellaCura Italia</p>
  </div>
  <div className="grid md:grid-cols-3 gap-6">
@@ -340,15 +340,15 @@ export default function HomePage() {
       <ReviewsCarousel />
 
  {/* FINAL CTA */}
- <section className="section bg-rose-600 text-white text-center">
+ <section className="section bg-[#1D3557] text-white text-center">
  <div className="container-tight max-w-2xl">
  <span className="inline-block bg-white/20 text-white text-sm font-bold px-4 py-1 rounded-full mb-4">
  Offerta Limitata
  </span>
- <h2 className="font-serif text-white text-4xl mb-4">
+ <h2 className="font-sans text-white text-4xl mb-4">
  Inizia oggi — risultati in 14 giorni
  </h2>
- <p className="text-rose-100 mb-3 text-lg">
+ <p className="text-[#D6EAF0] mb-3 text-lg">
  Ordina ora, paga alla consegna. Spedizione express in 24–48 ore in tutta Italia.
  </p>
  <div className="stock-badge w-fit mx-auto mb-8" style={{background:'rgba(255,255,255,0.15)', color:'white', borderColor:'rgba(255,255,255,0.3)'}}>
@@ -357,12 +357,12 @@ export default function HomePage() {
  </div>
  <Link
  href="/checkout-scelta/?bundle=single"
- className="inline-flex items-center justify-center px-10 py-4 bg-white text-rose-600 font-bold rounded-full hover:bg-rose-50 transition-colors shadow-xl text-lg"
+ className="inline-flex items-center justify-center px-10 py-4 bg-white text-[#1D3557] font-bold rounded-full hover:bg-[#EBF4F8] transition-colors shadow-xl text-lg"
  >
  Ordina Ora – Solo €59,90
  <ChevronRight size={20} className="ml-2" />
  </Link>
- <p className="text-rose-200 text-sm mt-4"> Spedizione in 24–48h · Paga alla consegna · 14 giorni reso gratis</p>
+ <p className="text-[#A8DADC] text-sm mt-4"> Spedizione in 24–48h · Paga alla consegna · 14 giorni reso gratis</p>
  </div>
  </section>
  </>

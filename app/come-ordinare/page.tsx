@@ -12,10 +12,10 @@ export const metadata: Metadata = buildMetadata({
 export default function ComeOrdinarePage() {
  return (
  <>
- <section className="bg-gradient-to-br from-rose-50 to-white py-16 text-center">
+ <section className="bg-gradient-to-br from-[#EBF4F8] to-white py-16 text-center">
  <div className="container-tight max-w-2xl">
  <span className="badge mb-4">Semplice e sicuro</span>
- <h1 className="font-serif text-4xl text-gray-900 mb-4">Come Ordinare su BellaCura</h1>
+ <h1 className="font-sans text-4xl text-gray-900 mb-4">Come Ordinare su BellaCura</h1>
  <p className="text-gray-600 text-lg">In 3 passi semplici. Paga alla consegna — zero rischi, zero anticipi.</p>
  </div>
  </section>
@@ -30,7 +30,7 @@ export default function ComeOrdinarePage() {
  { n: '3', icon: '', t: 'Ricevi a casa e paga', d: 'Il corriere arriva a casa tua in 24-48 ore. Se hai scelto il contrassegno, paghi direttamente al corriere in contanti al momento della consegna. Se hai pagato online, non devi fare niente.' },
  ].map((step) => (
  <div key={step.n} className="card flex gap-6 items-start">
- <div className="w-12 h-12 rounded-full bg-rose-500 text-white font-bold text-xl flex items-center justify-center shrink-0">{step.n}</div>
+ <div className="w-12 h-12 rounded-full bg-[#457B9D] text-white font-bold text-xl flex items-center justify-center shrink-0">{step.n}</div>
  <div className="flex-1">
  <div className="flex items-center gap-2 mb-2">
  <span className="text-2xl">{step.icon}</span>
@@ -38,7 +38,7 @@ export default function ComeOrdinarePage() {
  </div>
  <p className="text-gray-600 text-sm leading-relaxed mb-3">{step.d}</p>
  {'cta' in step && (
- <Link href={(step.cta as any).href} className="text-rose-500 font-semibold text-sm underline">{(step.cta as any).label} →</Link>
+ <Link href={(step.cta as any).href} className="text-[#457B9D] font-semibold text-sm underline">{(step.cta as any).label} →</Link>
  )}
  </div>
  </div>
@@ -46,8 +46,8 @@ export default function ComeOrdinarePage() {
  </div>
 
  {/* Pagamento alla consegna explained */}
- <div className="p-8 bg-rose-50 rounded-2xl border border-rose-100 mb-10">
- <h2 className="font-serif text-2xl text-gray-900 mb-4"> Pagamento alla Consegna (Contrassegno)</h2>
+ <div className="p-8 bg-[#EBF4F8] rounded-2xl border border-[#D6EAF0] mb-10">
+ <h2 className="font-sans text-2xl text-gray-900 mb-4"> Pagamento alla Consegna (Contrassegno)</h2>
  <p className="text-gray-600 mb-5 leading-relaxed">
  Il <strong>pagamento alla consegna</strong> è il metodo preferito dalle nostre clienti: ordini oggi, paghi solo quando il corriere ti consegna il prodotto a casa. Zero anticipi, zero rischi.
  </p>
@@ -59,7 +59,7 @@ export default function ComeOrdinarePage() {
  'Puoi rifiutare il pacco al corriere senza alcun costo',
  ].map((p) => (
  <li key={p} className="flex items-start gap-2 text-gray-700 text-sm">
- <CheckCircle2 size={16} className="text-rose-500 shrink-0 mt-0.5" /> {p}
+ <CheckCircle2 size={16} className="text-[#457B9D] shrink-0 mt-0.5" /> {p}
  </li>
  ))}
  </ul>

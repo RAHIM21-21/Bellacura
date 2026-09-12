@@ -12,7 +12,7 @@ export default function CookiePolicyPage() {
     <main className="min-h-screen bg-cream-50 py-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <nav className="text-sm text-gray-500 mb-6">
-          <Link href="/" className="hover:text-rose-600">Home</Link>
+          <Link href="/" className="hover:text-[#1D3557]">Home</Link>
           <span className="mx-2">/</span>
           <span className="text-gray-800">Cookie Policy</span>
         </nav>
@@ -110,10 +110,10 @@ export default function CookiePolicyPage() {
               Puoi gestire le tue preferenze cookie in qualsiasi momento attraverso le impostazioni del tuo browser:
             </p>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" className="text-rose-600 hover:underline">Google Chrome</a></li>
-              <li><a href="https://support.mozilla.org/it/kb/Attivare%20e%20disattivare%20i%20cookie" target="_blank" rel="noopener noreferrer" className="text-rose-600 hover:underline">Mozilla Firefox</a></li>
-              <li><a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer" className="text-rose-600 hover:underline">Safari (Mac)</a></li>
-              <li><a href="https://support.microsoft.com/it-it/microsoft-edge/eliminare-i-cookie-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer" className="text-rose-600 hover:underline">Microsoft Edge</a></li>
+              <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" className="text-[#1D3557] hover:underline">Google Chrome</a></li>
+              <li><a href="https://support.mozilla.org/it/kb/Attivare%20e%20disattivare%20i%20cookie" target="_blank" rel="noopener noreferrer" className="text-[#1D3557] hover:underline">Mozilla Firefox</a></li>
+              <li><a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer" className="text-[#1D3557] hover:underline">Safari (Mac)</a></li>
+              <li><a href="https://support.microsoft.com/it-it/microsoft-edge/eliminare-i-cookie-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer" className="text-[#1D3557] hover:underline">Microsoft Edge</a></li>
             </ul>
             <p className="text-gray-700 leading-relaxed mt-3">
               Tieni presente che la disabilitazione di alcuni cookie potrebbe influire sulla funzionalità del sito.
@@ -123,7 +123,7 @@ export default function CookiePolicyPage() {
           <section>
             <h2 className="text-xl font-semibold text-gray-900 mb-3">Ulteriori informazioni</h2>
             <p className="text-gray-700 leading-relaxed">
-              Per maggiori dettagli su come trattiamo i tuoi dati, consulta la nostra <Link href="/privacy-policy/" className="text-rose-600 hover:underline">Privacy Policy</Link>. Per qualsiasi domanda, contattaci a <a href="mailto:privacy@bellacura.it" className="text-rose-600 hover:underline">privacy@bellacura.it</a>.
+              Per maggiori dettagli su come trattiamo i tuoi dati, consulta la nostra <Link href="/privacy-policy/" className="text-[#1D3557] hover:underline">Privacy Policy</Link>. Per qualsiasi domanda, contattaci a <a href="mailto:privacy@bellacura.it" className="text-[#1D3557] hover:underline">privacy@bellacura.it</a>.
             </p>
           </section>
 

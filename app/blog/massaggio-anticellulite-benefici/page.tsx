@@ -25,9 +25,9 @@ export default function ArticoloMassaggio() {
 
  <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-100 py-3">
  <ol className="container-tight flex items-center gap-2 text-sm text-gray-500">
- <li><Link href="/" className="hover:text-rose-500">Home</Link></li>
+ <li><Link href="/" className="hover:text-[#457B9D]">Home</Link></li>
  <li>/</li>
- <li><Link href="/blog/" className="hover:text-rose-500">Blog</Link></li>
+ <li><Link href="/blog/" className="hover:text-[#457B9D]">Blog</Link></li>
  <li>/</li>
  <li className="text-gray-900 font-medium" aria-current="page">Massaggio Anticellulite: Benefici</li>
  </ol>
@@ -41,7 +41,7 @@ export default function ArticoloMassaggio() {
  <time className="text-gray-400 text-sm" dateTime="2024-09-01">1 settembre 2024</time>
  <span className="text-gray-400 text-sm">· 6 min di lettura</span>
  </div>
- <h1 className="font-serif text-4xl text-gray-900 mb-6 leading-tight">
+ <h1 className="font-sans text-4xl text-gray-900 mb-6 leading-tight">
  Massaggio Anticellulite: Benefici, Tecniche e Frequenza Ideale
  </h1>
  <p className="text-xl text-gray-600 leading-relaxed">
@@ -50,13 +50,13 @@ export default function ArticoloMassaggio() {
  </p>
  </header>
 
- <div className="aspect-video rounded-3xl bg-rose-50 flex items-center justify-center text-8xl mb-10 shadow-sm">
+ <div className="aspect-video rounded-3xl bg-[#EBF4F8] flex items-center justify-center text-8xl mb-10 shadow-sm">
  </div>
 
  <div className="space-y-8">
 
  <section>
- <h2 className="font-serif text-2xl text-gray-900 mb-4">Perché il Massaggio Funziona sulla Cellulite?</h2>
+ <h2 className="font-sans text-2xl text-gray-900 mb-4">Perché il Massaggio Funziona sulla Cellulite?</h2>
  <p className="text-gray-700 leading-relaxed">
  La cellulite si forma quando le cellule adipose si ingrandiscono e spingono contro il tessuto connettivo,
  creando quella caratteristica superficie irregolare. Il massaggio agisce su più fronti:
@@ -70,14 +70,14 @@ export default function ArticoloMassaggio() {
  'Aumenta la produzione di collagene ed elastina',
  ].map((item) => (
  <li key={item} className="flex items-start gap-2 text-gray-700 text-sm">
- <span className="text-rose-500 font-bold mt-0.5"></span> {item}
+ <span className="text-[#457B9D] font-bold mt-0.5"></span> {item}
  </li>
  ))}
  </ul>
  </section>
 
  <section>
- <h2 className="font-serif text-2xl text-gray-900 mb-6">Le 3 Tecniche di Massaggio Più Efficaci</h2>
+ <h2 className="font-sans text-2xl text-gray-900 mb-6">Le 3 Tecniche di Massaggio Più Efficaci</h2>
  <div className="space-y-6">
  {[
  {
@@ -96,7 +96,7 @@ export default function ArticoloMassaggio() {
  intensity: 'Profonda',
  },
  ].map((t) => (
- <div key={t.title} className="card border-l-4 border-rose-400">
+ <div key={t.title} className="card border-l-4 border-[#57A9C4]">
  <div className="flex justify-between items-start mb-2">
  <h3 className="font-semibold text-gray-900">{t.title}</h3>
  <span className="badge text-xs">{t.intensity}</span>
@@ -108,15 +108,15 @@ export default function ArticoloMassaggio() {
  </section>
 
  <section>
- <h2 className="font-serif text-2xl text-gray-900 mb-4">Con Quale Frequenza Eseguire il Massaggio?</h2>
+ <h2 className="font-sans text-2xl text-gray-900 mb-4">Con Quale Frequenza Eseguire il Massaggio?</h2>
  <div className="grid sm:grid-cols-3 gap-4">
  {[
  { phase: 'Fase Intensiva', freq: 'Ogni giorno', duration: '2-4 settimane', desc: 'Per i primi risultati e per "sbloccare" i tessuti irrigiditi.' },
  { phase: 'Fase di Mantenimento', freq: '3-4 volte/settimana', duration: 'Continuativo', desc: 'Per consolidare i risultati e prevenire la recidiva.' },
  { phase: 'Minimo Efficace', freq: '2 volte/settimana', duration: 'Sempre', desc: 'Il minimo per mantenere i benefici nel tempo.' },
  ].map((p) => (
- <div key={p.phase} className="card text-center bg-rose-50 border-rose-100">
- <p className="font-bold text-rose-600 text-lg mb-1">{p.freq}</p>
+ <div key={p.phase} className="card text-center bg-[#EBF4F8] border-[#D6EAF0]">
+ <p className="font-bold text-[#1D3557] text-lg mb-1">{p.freq}</p>
  <p className="font-semibold text-gray-900 text-sm mb-1">{p.phase}</p>
  <p className="text-gray-500 text-xs leading-relaxed">{p.desc}</p>
  </div>
@@ -125,7 +125,7 @@ export default function ArticoloMassaggio() {
  </section>
 
  <section>
- <h2 className="font-serif text-2xl text-gray-900 mb-4">Consigli per Massimizzare i Risultati</h2>
+ <h2 className="font-sans text-2xl text-gray-900 mb-4">Consigli per Massimizzare i Risultati</h2>
  <div className="space-y-3">
  {[
  'Esegui sempre il massaggio su pelle pulita o con crema/olio anticellulite',
@@ -135,7 +135,7 @@ export default function ArticoloMassaggio() {
  'Non eseguire il massaggio su pelle arrossata, irritata o varicosa',
  ].map((tip, i) => (
  <div key={i} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-gray-100">
- <span className="w-6 h-6 rounded-full bg-rose-500 text-white text-xs flex items-center justify-center flex-shrink-0 font-bold">
+ <span className="w-6 h-6 rounded-full bg-[#457B9D] text-white text-xs flex items-center justify-center flex-shrink-0 font-bold">
  {i + 1}
  </span>
  <p className="text-gray-700 text-sm">{tip}</p>
@@ -147,14 +147,14 @@ export default function ArticoloMassaggio() {
  </div>
 
  {/* CTA */}
- <div className="mt-12 bg-gradient-to-br from-rose-500 to-rose-600 rounded-3xl p-8 text-white text-center">
- <h2 className="font-serif text-2xl mb-3">Inizia il tuo trattamento oggi</h2>
- <p className="text-rose-100 mb-6">
+ <div className="mt-12 bg-gradient-to-br from-[#1D3557] to-[#457B9D] rounded-3xl p-8 text-white text-center">
+ <h2 className="font-sans text-2xl mb-3">Inizia il tuo trattamento oggi</h2>
+ <p className="text-[#D6EAF0] mb-6">
  Il Massaggiatore 4 in 1 di BellaCura è progettato per eseguire tutte e 3 le tecniche in modo semplice, a casa tua.
  </p>
  <Link
  href="/prodotti/massaggio-anticellulite-4in1/"
- className="inline-flex items-center justify-center px-8 py-4 bg-white text-rose-600 font-bold rounded-full hover:bg-rose-50 transition-colors"
+ className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#1D3557] font-bold rounded-full hover:bg-[#EBF4F8] transition-colors"
  >
  Scopri il Massaggiatore – €59,90
  </Link>

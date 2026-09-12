@@ -127,10 +127,10 @@ export default function ProductImageGallery() {
             key={i}
             onClick={() => goTo(i)}
             aria-label={item.alt}
-            className={`relative aspect-square rounded-lg overflow-hidden border-2 transition-all focus:outline-none focus:ring-2 focus:ring-rose-400 ${
+            className={`relative aspect-square rounded-lg overflow-hidden border-2 transition-all focus:outline-none focus:ring-2 focus:ring-[#457B9D] ${
               active === i
-                ? 'border-rose-500 ring-1 ring-rose-300 shadow-sm'
-                : 'border-transparent hover:border-rose-300'
+                ? 'border-[#1D3557] ring-1 ring-[#7EC8D4] shadow-sm'
+                : 'border-transparent hover:border-[#7EC8D4]'
             }`}
           >
             {item.type === 'video' ? (

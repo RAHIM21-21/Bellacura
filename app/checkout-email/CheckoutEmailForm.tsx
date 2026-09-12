@@ -52,10 +52,10 @@ export default function CheckoutEmailForm() {
       {/* Header */}
       <header className="bg-white border-b border-gray-100 py-3 px-4">
         <div className="max-w-2xl mx-auto flex items-center justify-between">
-          <Link href="/prodotti/massaggio-anticellulite-4in1/" className="flex items-center gap-1 text-sm text-gray-400 hover:text-rose-500">
+          <Link href="/prodotti/massaggio-anticellulite-4in1/" className="flex items-center gap-1 text-sm text-gray-400 hover:text-[#457B9D]">
             <ChevronLeft size={15} /> Indietro
           </Link>
-          <span className="font-extrabold text-rose-600 text-xl">BellaCura®</span>
+          <span className="font-extrabold text-[#1D3557] text-xl">BellaCura®</span>
           <div className="flex items-center gap-1 text-xs text-gray-400">
             <Shield size={13} className="text-green-500" /> Sicuro
           </div>
@@ -65,18 +65,18 @@ export default function CheckoutEmailForm() {
       <main className="max-w-2xl mx-auto px-4 py-6">
 
         {/* Discount banner */}
-        <div className="bg-rose-50 border border-rose-200 rounded-2xl px-5 py-3 mb-5 flex items-center gap-3">
+        <div className="bg-[#EBF4F8] border border-[#A8DADC] rounded-2xl px-5 py-3 mb-5 flex items-center gap-3">
           <span className="text-2xl">🎁</span>
           <div>
-            <p className="text-sm font-extrabold text-rose-700">Offerta riservata — Sconto 10% applicato</p>
-            <p className="text-xs text-rose-500 mt-0.5">Questo prezzo è esclusivo per te · Valido per poco</p>
+            <p className="text-sm font-extrabold text-[#152840]">Offerta riservata — Sconto 10% applicato</p>
+            <p className="text-xs text-[#457B9D] mt-0.5">Questo prezzo è esclusivo per te · Valido per poco</p>
           </div>
         </div>
 
         {/* Product card */}
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-6">
           <div className="flex items-center gap-4 p-4">
-            <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-rose-50">
+            <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-[#EBF4F8]">
               <Image
                 src="/images/gallery-1-uso.jpg"
                 alt="BellaCura Massaggiatore"
@@ -97,7 +97,7 @@ export default function CheckoutEmailForm() {
             <div className="text-right shrink-0">
               <p className="text-xs text-gray-300 line-through">{ORIGINAL_PRICE}</p>
               <p className="text-xl font-extrabold text-gray-900">{PRODUCT_PRICE}</p>
-              <span className="text-xs font-bold text-white bg-rose-500 px-2 py-0.5 rounded-full">–10%</span>
+              <span className="text-xs font-bold text-white bg-[#457B9D] px-2 py-0.5 rounded-full">–10%</span>
             </div>
           </div>
           <div className="bg-amber-50 border-t border-amber-100 px-4 py-2 flex items-center gap-2">
@@ -114,7 +114,7 @@ export default function CheckoutEmailForm() {
                 <h2 className="text-lg font-extrabold text-gray-900">💵 Dove spediamo?</h2>
                 <p className="text-sm text-gray-400 mt-0.5">Ci vogliono meno di 60 secondi</p>
               </div>
-              <a href={SHOPIFY_URL} className="text-xs text-gray-400 hover:text-rose-500 underline underline-offset-2 shrink-0 ml-4">
+              <a href={SHOPIFY_URL} className="text-xs text-gray-400 hover:text-[#457B9D] underline underline-offset-2 shrink-0 ml-4">
                 Preferisci pagare<br/>con carta?
               </a>
             </div>
@@ -124,13 +124,13 @@ export default function CheckoutEmailForm() {
                 <div>
                   <label className="text-xs font-bold text-gray-600 block mb-1">Nome *</label>
                   <input name="nome" required value={form.nome} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-100"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0]"
                     placeholder="Maria" />
                 </div>
                 <div>
                   <label className="text-xs font-bold text-gray-600 block mb-1">Cognome *</label>
                   <input name="cognome" required value={form.cognome} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-100"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0]"
                     placeholder="Rossi" />
                 </div>
               </div>
@@ -138,7 +138,7 @@ export default function CheckoutEmailForm() {
               <div>
                 <label className="text-xs font-bold text-gray-600 block mb-1">Numero di Telefono *</label>
                 <input name="telefono" required type="tel" value={form.telefono} onChange={handleChange}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-100"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0]"
                   placeholder="+39 333 000 0000" />
                 <p className="text-xs text-gray-400 mt-1">Per aggiornamenti sulla consegna</p>
               </div>
@@ -146,7 +146,7 @@ export default function CheckoutEmailForm() {
               <div>
                 <label className="text-xs font-bold text-gray-600 block mb-1">Indirizzo di Spedizione *</label>
                 <input name="indirizzo" required value={form.indirizzo} onChange={handleChange}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-100"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0]"
                   placeholder="Via Roma 1, interno 3" />
               </div>
 
@@ -154,13 +154,13 @@ export default function CheckoutEmailForm() {
                 <div>
                   <label className="text-xs font-bold text-gray-600 block mb-1">Città *</label>
                   <input name="citta" required value={form.citta} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-100"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0]"
                     placeholder="Milano" />
                 </div>
                 <div>
                   <label className="text-xs font-bold text-gray-600 block mb-1">CAP *</label>
                   <input name="cap" required value={form.cap} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-100"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0]"
                     placeholder="20100" />
                 </div>
               </div>
@@ -168,7 +168,7 @@ export default function CheckoutEmailForm() {
               <div>
                 <label className="text-xs font-bold text-gray-600 block mb-1">Note per il corriere (opzionale)</label>
                 <textarea name="note" value={form.note} onChange={handleChange} rows={2}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-100 resize-none"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#D6EAF0] resize-none"
                   placeholder="Es. citofono, piano, orario preferito..." />
               </div>
 
@@ -179,8 +179,8 @@ export default function CheckoutEmailForm() {
                   <span className="font-bold line-through text-gray-400">{ORIGINAL_PRICE}</span>
                 </div>
                 <div className="flex justify-between text-sm mb-1">
-                  <span className="text-rose-600 font-semibold">Sconto 10% applicato</span>
-                  <span className="font-bold text-rose-600">–€5,99</span>
+                  <span className="text-[#1D3557] font-semibold">Sconto 10% applicato</span>
+                  <span className="font-bold text-[#1D3557]">–€5,99</span>
                 </div>
                 <div className="flex justify-between text-sm mb-2">
                   <span className="text-gray-600">Spedizione</span>
@@ -193,7 +193,7 @@ export default function CheckoutEmailForm() {
               </div>
 
               <button type="submit" disabled={loading}
-                className="w-full bg-rose-600 hover:bg-rose-700 disabled:opacity-60 text-white font-extrabold text-base py-4 rounded-2xl transition-colors shadow-lg shadow-rose-100"
+                className="w-full bg-[#1D3557] hover:bg-[#152840] disabled:opacity-60 text-white font-extrabold text-base py-4 rounded-2xl transition-colors shadow-lg shadow-[#D6EAF0]"
               >
                 {loading ? 'Invio in corso...' : `✓ Conferma Ordine — ${PRODUCT_PRICE}`}
               </button>
@@ -215,13 +215,13 @@ export default function CheckoutEmailForm() {
             <p className="text-gray-500 mb-1">Grazie <strong>{form.nome}</strong>! Il tuo pacco è in preparazione.</p>
             <p className="text-gray-500 mb-2">Arriverà in <strong>24–48 ore</strong> all&apos;indirizzo indicato.</p>
             <p className="text-gray-500 mb-8">Pagherai <strong>{PRODUCT_PRICE}</strong> in contanti al corriere.</p>
-            <div className="bg-rose-50 border border-rose-100 rounded-2xl p-4 text-left mb-8">
+            <div className="bg-[#EBF4F8] border border-[#D6EAF0] rounded-2xl p-4 text-left mb-8">
               <p className="text-sm font-bold text-gray-900 mb-2">Riepilogo ordine</p>
               <p className="text-sm text-gray-600">📦 {PRODUCT_LABEL}</p>
               <p className="text-sm text-gray-600">🏠 {form.indirizzo}, {form.cap} {form.citta}</p>
               <p className="text-sm text-gray-600">💰 Pagamento alla consegna — {PRODUCT_PRICE}</p>
             </div>
-            <Link href="/" className="text-rose-600 font-bold hover:underline text-sm">← Torna alla Home</Link>
+            <Link href="/" className="text-[#1D3557] font-bold hover:underline text-sm">← Torna alla Home</Link>
           </div>
         )}
 

@@ -17,7 +17,7 @@ const bundles = [
  label: '1 Leggings 3D BellaCura',
  sub: '+ Guida anticellulite OMAGGIO inclusa',
  tag: 'SPEDIZIONE GRATUITA',
- tagColor: 'bg-rose-500',
+ tagColor: 'bg-[#457B9D]',
  price: 34.90,
  originalPrice: 69.90,
  savings: null,
@@ -64,7 +64,7 @@ export default function LeggingsBundlePicker() {
  key={bundle.id}
  onClick={() => setSelectedBundle(bundle.id)}
  className={`relative flex items-start gap-4 p-4 rounded-2xl border-2 cursor-pointer transition-all ${
- isSelected ? 'border-rose-500 bg-rose-50' : 'border-gray-200 bg-white hover:border-rose-200'
+ isSelected ? 'border-[#1D3557] bg-[#EBF4F8]' : 'border-gray-200 bg-white hover:border-[#A8DADC]'
  }`}
  >
  {bundle.tag && (
@@ -72,8 +72,8 @@ export default function LeggingsBundlePicker() {
  {bundle.tag}
  </span>
  )}
- <div className={`w-5 h-5 mt-0.5 rounded-full border-2 flex items-center justify-center shrink-0 ${isSelected ? 'border-rose-500' : 'border-gray-300'}`}>
- {isSelected && <div className="w-2.5 h-2.5 rounded-full bg-rose-500" />}
+ <div className={`w-5 h-5 mt-0.5 rounded-full border-2 flex items-center justify-center shrink-0 ${isSelected ? 'border-[#1D3557]' : 'border-gray-300'}`}>
+ {isSelected && <div className="w-2.5 h-2.5 rounded-full bg-[#457B9D]" />}
  </div>
  <div className="flex-1 min-w-0">
  <p className="font-semibold text-gray-900 text-sm leading-tight">{bundle.label}</p>
@@ -101,7 +101,7 @@ export default function LeggingsBundlePicker() {
  key={c.id}
  onClick={() => setSelectedColor(c.id)}
  title={c.label}
- className={`w-9 h-9 rounded-full border-4 transition-all ${selectedColor === c.id ? 'border-rose-500 scale-110' : 'border-gray-200 hover:border-gray-300'}`}
+ className={`w-9 h-9 rounded-full border-4 transition-all ${selectedColor === c.id ? 'border-[#1D3557] scale-110' : 'border-gray-200 hover:border-gray-300'}`}
  style={{ backgroundColor: c.hex }}
  />
  ))}
@@ -120,15 +120,15 @@ export default function LeggingsBundlePicker() {
  onClick={() => { setSelectedSize(s); setSizeError(false) }}
  className={`px-3 py-2 rounded-lg border-2 text-sm font-semibold transition-all ${
  selectedSize === s
- ? 'border-rose-500 bg-rose-500 text-white'
- : 'border-gray-200 text-gray-700 hover:border-rose-300'
+ ? 'border-[#1D3557] bg-[#457B9D] text-white'
+ : 'border-gray-200 text-gray-700 hover:border-[#7EC8D4]'
  }`}
  >
  {s}
  </button>
  ))}
  </div>
- <button className="text-xs text-rose-500 underline mt-2">Guida alle taglie →</button>
+ <button className="text-xs text-[#457B9D] underline mt-2">Guida alle taglie →</button>
  </div>
 
  {/* CTAs */}

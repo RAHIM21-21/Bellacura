@@ -110,9 +110,9 @@ export default function ExitIntentPopup() {
         </button>
 
         <div className="bg-[#F9E5E9] px-8 pt-8 pb-6 text-center">
-          <p className="text-xs font-bold tracking-widest uppercase text-rose-500 mb-2">Offerta esclusiva</p>
+          <p className="text-xs font-bold tracking-widest uppercase text-[#457B9D] mb-2">Offerta esclusiva</p>
           <h2 className="text-3xl font-black text-gray-900 leading-tight mb-1">
-            Aspetta — <span className="text-rose-600">-10%</span>
+            Aspetta — <span className="text-[#1D3557]">-10%</span>
           </h2>
           <p className="text-gray-600 text-sm">
             Lascia la tua email e ricevi subito un codice sconto del 10% sul tuo primo ordine.
@@ -132,7 +132,7 @@ export default function ExitIntentPopup() {
               </p>
               <button
                 onClick={() => setVisible(false)}
-                className="mt-5 w-full bg-rose-600 text-white font-bold py-3 rounded-2xl hover:bg-rose-700 transition"
+                className="mt-5 w-full bg-[#1D3557] text-white font-bold py-3 rounded-2xl hover:bg-[#152840] transition"
               >
                 Vai allo shop →
               </button>
@@ -145,12 +145,12 @@ export default function ExitIntentPopup() {
                 placeholder="La tua email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full border border-gray-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400"
+                className="w-full border border-gray-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#457B9D]"
               />
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full bg-rose-600 text-white font-bold py-3 rounded-2xl hover:bg-rose-700 transition disabled:opacity-60"
+                className="w-full bg-[#1D3557] text-white font-bold py-3 rounded-2xl hover:bg-[#152840] transition disabled:opacity-60"
               >
                 {status === 'loading' ? 'Invio in corso…' : 'Ricevi il codice sconto -10%'}
               </button>
