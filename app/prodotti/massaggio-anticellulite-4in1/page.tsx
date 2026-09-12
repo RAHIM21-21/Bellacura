@@ -340,6 +340,7 @@ export default function ProductPage() {
    loading="lazy"
    decoding="async"
  />
+ </section>
 
  {/* COMPARISON VS — moved to end */}
  <ComparisonVS />
