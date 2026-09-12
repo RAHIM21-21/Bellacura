@@ -282,7 +282,7 @@ export default function ProductPage() {
  <div className="max-w-4xl mx-auto px-4 sm:px-6">
  <div className="text-center mb-6 md:mb-10">
  <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">Tonicità naturale</h2>
- <p className="text-gray-500 text-base md:text-lg">dopo sole 3 settimane di utilizzo quotidiano</p>
+ <p className="text-gray-500 text-base md:text-lg">dopo sole 2 settimane di utilizzo quotidiano</p>
  </div>
  <div className="max-w-md mx-auto w-full px-0 sm:px-8">
  <BeforeAfterSlider
