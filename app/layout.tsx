@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Raleway, Pinyon_Script } from 'next/font/google'
+import { Montserrat, Pinyon_Script } from 'next/font/google'
 import Script from 'next/script'
 import dynamic from 'next/dynamic'
 import '@/styles/globals.css'
@@ -10,32 +10,23 @@ import CrispChat from '@/components/CrispChat'
 import MicrosoftClarity from '@/components/MicrosoftClarity'
 import AddToCartTracker from '@/components/AddToCartTracker'
 
-// Only the weights actually used in the design; italic only for Cormorant (all headings are italic)
-const cormorant = Cormorant_Garamond({
+// Montserrat — primary typeface for all UI, headings and body
+const montserrat = Montserrat({
   subsets: ['latin'],
-  variable: '--font-cormorant',
+  variable: '--font-montserrat',
   display: 'swap',
   preload: true,
-  weight: ['400', '500', '600'],
-  style: ['normal', 'italic'],
+  weight: ['400', '700', '800'],
+  style: ['normal'],
 })
 
-// Pinyon Script — logo wordmark only; not critical-path, no eager preload
+// Pinyon Script — logo wordmark only
 const pinyonScript = Pinyon_Script({
   subsets: ['latin'],
   variable: '--font-pinyon',
   display: 'swap',
   preload: false,
   weight: ['400'],
-})
-
-// Raleway — body text; preload true so it's ready before LCP paint
-const raleway = Raleway({
-  subsets: ['latin'],
-  variable: '--font-raleway',
-  display: 'swap',
-  preload: true,
-  weight: ['400', '500', '600', '700'],
 })
 
 // Lazy-load non-critical interactive overlays — JS deferred to after hydration
@@ -54,13 +45,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="it" className={`${cormorant.variable} ${raleway.variable} ${pinyonScript.variable}`}>
+    <html lang="it" className={`${montserrat.variable} ${pinyonScript.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#CF6685" />
+        <meta name="theme-color" content="#1D3557" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
