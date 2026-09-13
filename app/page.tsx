@@ -232,7 +232,7 @@ export default function HomePage() {
  <div className="grid grid-cols-2 gap-4">
  <div className="aspect-square rounded-2xl bg-[#DCEAF2] flex items-center justify-center text-6xl shadow-sm">‍</div>
  <div className="aspect-square rounded-2xl bg-[#DCEAF2] flex items-center justify-center text-6xl shadow-sm"></div>
- <div className="aspect-square rounded-2xl bg-fuchsia-50 flex items-center justify-center text-6xl shadow-sm"></div>
+ <div className="aspect-square rounded-2xl bg-[#EEF6FB] flex items-center justify-center text-6xl shadow-sm"></div>
  <div className="aspect-square rounded-2xl bg-[#DCEAF2] flex items-center justify-center text-6xl shadow-sm"></div>
  </div>
 

@@ -192,7 +192,7 @@ export default function ProductPage() {
        { src: '/images/review-wa-1.jpg', alt: 'Risultati cliente BellaCura 1' },
        { src: '/images/review-wa-2.jpg', alt: 'Risultati cliente BellaCura 2' },
        { src: '/images/review-wa-3.jpg', alt: 'Risultati cliente BellaCura 3' },
-       { src: '/images/review-instagram-elena.png', alt: 'Recensione Instagram Elena' },
+       { src: '/images/review-instagram-elena.jpg', alt: 'Recensione Instagram Elena' },
      ].map(({ src, alt }) => (
        <div key={src} className="flex-none w-[72vw] md:w-auto snap-start group">
          <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-transform duration-200 group-hover:scale-[1.02] group-hover:shadow-xl" style={{ aspectRatio: '9/16' }}>
@@ -354,7 +354,7 @@ export default function ProductPage() {
  {/* IMAGE 1 — Routine */}
  <section className="bg-white">
  <img
-   src="/images/routine-3passi.png"
+   src="/images/routine-3passi.jpg"
    alt="La tua routine BellaCura in 3 passi"
    className="w-full block"
    loading="lazy"
@@ -371,7 +371,7 @@ export default function ProductPage() {
  {/* IMAGE 2 — Massager features */}
  <section className="bg-white">
  <img
-   src="/images/massager-features.png"
+   src="/images/massager-features.jpg"
    alt="Massaggiatore 4-in-1 BellaCura — funzionalità"
    className="w-full block"
    loading="lazy"
