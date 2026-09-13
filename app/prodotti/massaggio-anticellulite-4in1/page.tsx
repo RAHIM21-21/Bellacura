@@ -158,8 +158,35 @@ export default function ProductPage() {
  </div>
  </section>
 
- {/* REVIEWS */}
- <div id="recensioni"><ReviewsCarousel /></div>
+ {/* WHATSAPP SOCIAL PROOF */}
+ <section className="bg-white py-8 md:py-14">
+ <div className="max-w-5xl mx-auto px-4 sm:px-6">
+   <div className="text-center mb-6 md:mb-10">
+     <span className="inline-block bg-[#DCEAF2] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">💬 Risultati reali</span>
+     <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Le nostre clienti parlano</h2>
+     <p className="text-gray-500 text-sm">Ogni settimana riceviamo messaggi così — prima e dopo reali, nessun filtro</p>
+   </div>
+   <div className="flex gap-3 overflow-x-auto pb-3 snap-x snap-mandatory md:grid md:grid-cols-4 md:overflow-visible md:pb-0">
+     {[
+       { src: '/images/review-wa-1.jpg', alt: 'Risultati cliente BellaCura 1' },
+       { src: '/images/review-wa-2.jpg', alt: 'Risultati cliente BellaCura 2' },
+       { src: '/images/review-wa-3.jpg', alt: 'Risultati cliente BellaCura 3' },
+       { src: '/images/review-instagram-elena.png', alt: 'Recensione Instagram Elena' },
+     ].map(({ src, alt }) => (
+       <div key={src} className="flex-none w-[72vw] md:w-auto snap-start">
+         <img
+           src={src}
+           alt={alt}
+           loading="lazy"
+           decoding="async"
+           className="w-full rounded-2xl shadow-md object-cover"
+           style={{ aspectRatio: '9/16' }}
+         />
+       </div>
+     ))}
+   </div>
+ </div>
+ </section>
 
  {/* COME VISTO SU */}
  <section className="py-6 md:py-10 overflow-hidden" style={{background: 'linear-gradient(180deg, #ffffff 0%, #DCEAF2 100%)'}}>
@@ -344,6 +371,9 @@ export default function ProductPage() {
 
  {/* COMPARISON VS — moved to end */}
  <ComparisonVS />
+
+ {/* REVIEWS */}
+ <div id="recensioni"><ReviewsCarousel /></div>
 
  {/* Fixed sticky CTA */}
  <div className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 shadow-2xl">
