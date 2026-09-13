@@ -213,6 +213,79 @@ export default function ProductPage() {
  </div>
  </section>
 
+
+
+ {/* RISULTATI REALI */}
+ <section className="py-8 md:py-14" style={{background: '#1D3557'}}>
+ <div className="max-w-4xl mx-auto px-4 sm:px-6">
+ <div className="text-center mb-6 md:mb-10">
+ <span className="inline-block bg-white/10 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">✨ Risultati certificati</span>
+ <h2 className="text-3xl font-extrabold text-white mb-2">I numeri parlano da soli</h2>
+ <p className="text-white/70 text-sm">Sondaggio su 1.200+ clienti BellaCura (2024)</p>
+ </div>
+ <div className="grid md:grid-cols-3 gap-3 md:gap-6">
+ {[
+ { pct: 92, label: '92%', text: 'Riduzione visibile della cellulite già dalla prima settimana.' },
+ { pct: 89, label: '89%', text: 'Pelle più liscia e gambe più leggere dopo soli 30 giorni.' },
+ { pct: 94, label: '94%', text: 'Sollievo muscolare percepito dopo ogni sessione di massaggio.' },
+ ].map(({ pct, label, text }) => {
+ const r = 36; const circ = 2 * Math.PI * r;
+ const dash = (pct / 100) * circ;
+ return (
+ <div key={label} className="bg-white rounded-2xl p-4 md:p-6 flex items-center gap-4 md:gap-5 shadow-sm border border-[#D6EAF0]">
+ <svg width="72" height="72" viewBox="0 0 88 88" className="shrink-0 w-16 h-16 md:w-[88px] md:h-[88px]">
+ <circle cx="44" cy="44" r={r} fill="none" stroke="#dcfce7" strokeWidth="8"/>
+ <circle cx="44" cy="44" r={r} fill="none" stroke="#16a34a" strokeWidth="8"
+ strokeDasharray={`${dash} ${circ}`} strokeLinecap="round"
+ transform="rotate(-90 44 44)" />
+ <text x="44" y="49" textAnchor="middle" fontSize="16" fontWeight="900" fill="#1f2937">{label}</text>
+ </svg>
+ <p className="text-gray-600 text-sm leading-relaxed">{text}</p>
+ </div>
+ )
+ })}
+ </div>
+ <p className="text-center text-xs text-white/50 mt-4">*Basato su sondaggi condotti su clienti BellaCura reali nel 2024</p>
+ </div>
+ </section>
+
+ {/* VIDEO */}
+ <section className="bg-white pt-4 pb-7 md:py-16">
+ <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+ <span className="inline-block bg-[#DCEAF2] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">Vedi come funziona</span>
+ <h2 className="text-3xl font-extrabold text-gray-900 mb-5 md:mb-8">
+ Risultati reali, routine semplice
+ </h2>
+ <VideoSection />
+ <p className="mt-4 text-gray-500 text-sm max-w-md mx-auto">
+ Solo 10 minuti al giorno. I risultati parlano da soli.
+ </p>
+ </div>
+ </section>
+
+ {/* FAQ */}
+ <section className="faq-wave-bg py-7 md:py-16">
+ <div className="max-w-2xl mx-auto px-4 sm:px-6">
+ <div className="text-center mb-6 md:mb-10">
+ <span className="inline-block bg-[#DCEAF2] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">FAQ</span>
+ <h2 className="text-3xl font-extrabold text-gray-900">Domande frequenti</h2>
+ </div>
+ <div className="space-y-3">
+ {faqs.map((faq, i) => (
+ <details key={i} className="group rounded-2xl border border-gray-200 bg-gray-50 overflow-hidden">
+ <summary className="flex items-center justify-between gap-3 px-5 py-3.5 cursor-pointer font-semibold text-gray-900 text-sm list-none hover:bg-gray-100 transition-colors">
+ {faq.question}
+ <span className="text-[#457B9D] shrink-0 text-lg group-open:rotate-45 transition-transform">+</span>
+ </summary>
+ <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-3">
+ {faq.answer}
+ </div>
+ </details>
+ ))}
+ </div>
+ </div>
+ </section>
+
  {/* COME VISTO SU */}
  <section className="py-6 md:py-10 overflow-hidden" style={{background: 'linear-gradient(180deg, #ffffff 0%, #DCEAF2 100%)'}}>
    <div className="flex items-center gap-4 max-w-4xl mx-auto px-6 mb-4 md:mb-8">
@@ -256,77 +329,6 @@ export default function ProductPage() {
        ))}
      </div>
    </div>
- </section>
-
- {/* RISULTATI REALI */}
- <section className="bg-[#DCEAF2] py-8 md:py-14">
- <div className="max-w-4xl mx-auto px-4 sm:px-6">
- <div className="text-center mb-6 md:mb-10">
- <span className="inline-block bg-[#DCEAF2] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">✨ Risultati certificati</span>
- <h2 className="text-3xl font-extrabold text-gray-900 mb-2">I numeri parlano da soli</h2>
- <p className="text-gray-500 text-sm">Sondaggio su 1.200+ clienti BellaCura (2024)</p>
- </div>
- <div className="grid md:grid-cols-3 gap-3 md:gap-6">
- {[
- { pct: 92, label: '92%', text: 'Riduzione visibile della cellulite già dalla prima settimana.' },
- { pct: 89, label: '89%', text: 'Pelle più liscia e gambe più leggere dopo soli 90 giorni.' },
- { pct: 94, label: '94%', text: 'Sollievo muscolare percepito dopo ogni sessione di massaggio.' },
- ].map(({ pct, label, text }) => {
- const r = 36; const circ = 2 * Math.PI * r;
- const dash = (pct / 100) * circ;
- return (
- <div key={label} className="bg-white rounded-2xl p-4 md:p-6 flex items-center gap-4 md:gap-5 shadow-sm border border-[#D6EAF0]">
- <svg width="72" height="72" viewBox="0 0 88 88" className="shrink-0 w-16 h-16 md:w-[88px] md:h-[88px]">
- <circle cx="44" cy="44" r={r} fill="none" stroke="#dcfce7" strokeWidth="8"/>
- <circle cx="44" cy="44" r={r} fill="none" stroke="#16a34a" strokeWidth="8"
- strokeDasharray={`${dash} ${circ}`} strokeLinecap="round"
- transform="rotate(-90 44 44)" />
- <text x="44" y="49" textAnchor="middle" fontSize="16" fontWeight="900" fill="#1f2937">{label}</text>
- </svg>
- <p className="text-gray-600 text-sm leading-relaxed">{text}</p>
- </div>
- )
- })}
- </div>
- <p className="text-center text-xs text-gray-400 mt-4">*Basato su sondaggi condotti su clienti BellaCura reali nel 2024</p>
- </div>
- </section>
-
- {/* VIDEO */}
- <section className="bg-white pt-4 pb-7 md:py-16">
- <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
- <span className="inline-block bg-[#DCEAF2] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">Vedi come funziona</span>
- <h2 className="text-3xl font-extrabold text-gray-900 mb-5 md:mb-8">
- Risultati reali, routine semplice
- </h2>
- <VideoSection />
- <p className="mt-4 text-gray-500 text-sm max-w-md mx-auto">
- Solo 10 minuti al giorno. I risultati parlano da soli.
- </p>
- </div>
- </section>
-
- {/* FAQ */}
- <section className="faq-wave-bg py-7 md:py-16">
- <div className="max-w-2xl mx-auto px-4 sm:px-6">
- <div className="text-center mb-6 md:mb-10">
- <span className="inline-block bg-[#DCEAF2] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">FAQ</span>
- <h2 className="text-3xl font-extrabold text-gray-900">Domande frequenti</h2>
- </div>
- <div className="space-y-3">
- {faqs.map((faq, i) => (
- <details key={i} className="group rounded-2xl border border-gray-200 bg-gray-50 overflow-hidden">
- <summary className="flex items-center justify-between gap-3 px-5 py-3.5 cursor-pointer font-semibold text-gray-900 text-sm list-none hover:bg-gray-100 transition-colors">
- {faq.question}
- <span className="text-[#457B9D] shrink-0 text-lg group-open:rotate-45 transition-transform">+</span>
- </summary>
- <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-3">
- {faq.answer}
- </div>
- </details>
- ))}
- </div>
- </div>
  </section>
 
  {/* FERMEZZA NATURALE — slider, no heading text, no checklist */}
