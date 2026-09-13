@@ -324,9 +324,9 @@ export default function ProductPage() {
 
  {/* IMAGES — back to back */}
  <section className="bg-white">
-   <img src="/images/routine-3passi.jpg" alt="La tua routine BellaCura in 3 passi" className="w-full block" loading="lazy" decoding="async" />
-   <img src="/images/massager-features.jpg" alt="Massaggiatore 4-in-1 BellaCura — funzionalità" className="w-full block" loading="lazy" decoding="async" />
-   <img src="/images/body-map-bellacura.jpg" alt="Zone in cui puoi usare BellaCura" className="w-full block" loading="lazy" decoding="async" />
+   <img src="/images/routine-3passi.jpg" alt="La tua routine BellaCura in 3 passi" width={1024} height={1024} className="w-full block" loading="lazy" decoding="async" />
+   <img src="/images/massager-features.jpg" alt="Massaggiatore 4-in-1 BellaCura — funzionalità" width={1024} height={1024} className="w-full block" loading="lazy" decoding="async" />
+   <img src="/images/body-map-bellacura.jpg" alt="Zone in cui puoi usare BellaCura" width={1024} height={1024} className="w-full block" loading="lazy" decoding="async" />
  </section>
 
  {/* COMPARISON VS — moved to end */}

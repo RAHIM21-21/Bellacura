@@ -45,7 +45,7 @@ export default function Header()
  <div className="container-tight flex items-center justify-between h-16">
  {/* Logo */}
  <Link href="/" className="flex items-center">
- <img src="/images/bellacura-logo.png" alt="BellaCura" height={44} style={{height: 44, width: "auto"}} />
+ <img src="/images/bellacura-logo.png" alt="BellaCura" width={175} height={44} style={{height: 44, width: "auto"}} />
  </Link>
 
  {/* Desktop nav */}
