@@ -142,10 +142,7 @@ export default function ProductPage() {
        <svg className="w-3.5 h-3.5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
        Risultati verificati
      </span>
-     <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
-       Le clienti che hanno provato BellaCura
-     </h2>
-     <p className="text-gray-500 text-base max-w-lg mx-auto">Prima e dopo reali — ricevuti direttamente su WhatsApp e Instagram dalle nostre clienti</p>
+
      {/* Stars row */}
      <div className="flex items-center justify-center gap-2 mt-4">
        <div className="flex">
