@@ -16,7 +16,7 @@ export default function CheckoutEmailForm() {
   const [step, setStep] = useState<Step>('form')
   const [loading, setLoading] = useState(false)
   const [form, setForm] = useState({
-    nome: '', cognome: '', telefono: '', indirizzo: '', citta: '', cap: '', note: ''
+    nome: '', telefono: '', indirizzo: ''
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -78,7 +78,7 @@ export default function CheckoutEmailForm() {
           <div className="flex items-center gap-4 p-4">
             <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-[#DCEAF2]">
               <Image
-                src="/images/gallery-1-uso.jpg"
+                src="/images/render-spa-hero.jpg"
                 alt="BellaCura Massaggiatore"
                 fill
                 className="object-cover"
@@ -120,19 +120,11 @@ export default function CheckoutEmailForm() {
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-3">
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="text-xs font-bold text-gray-600 block mb-1">Nome *</label>
-                  <input name="nome" required value={form.nome} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2]"
-                    placeholder="Maria" />
-                </div>
-                <div>
-                  <label className="text-xs font-bold text-gray-600 block mb-1">Cognome *</label>
-                  <input name="cognome" required value={form.cognome} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2]"
-                    placeholder="Rossi" />
-                </div>
+              <div>
+                <label className="text-xs font-bold text-gray-600 block mb-1">Nome *</label>
+                <input name="nome" required value={form.nome} onChange={handleChange}
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2]"
+                  placeholder="Maria" />
               </div>
 
               <div>
@@ -144,32 +136,10 @@ export default function CheckoutEmailForm() {
               </div>
 
               <div>
-                <label className="text-xs font-bold text-gray-600 block mb-1">Indirizzo di Spedizione *</label>
+                <label className="text-xs font-bold text-gray-600 block mb-1">Indirizzo Completo * <span className="text-gray-400 font-normal">(via, civico, CAP, città)</span></label>
                 <input name="indirizzo" required value={form.indirizzo} onChange={handleChange}
                   className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2]"
-                  placeholder="Via Roma 1, interno 3" />
-              </div>
-
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="text-xs font-bold text-gray-600 block mb-1">Città *</label>
-                  <input name="citta" required value={form.citta} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2]"
-                    placeholder="Milano" />
-                </div>
-                <div>
-                  <label className="text-xs font-bold text-gray-600 block mb-1">CAP *</label>
-                  <input name="cap" required value={form.cap} onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2]"
-                    placeholder="20100" />
-                </div>
-              </div>
-
-              <div>
-                <label className="text-xs font-bold text-gray-600 block mb-1">Note per il corriere (opzionale)</label>
-                <textarea name="note" value={form.note} onChange={handleChange} rows={2}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#57A9C4] focus:ring-1 focus:ring-[#DCEAF2] resize-none"
-                  placeholder="Es. citofono, piano, orario preferito..." />
+                  placeholder="Via Roma 1, 20100 Milano" />
               </div>
 
               {/* Order summary */}
@@ -218,7 +188,7 @@ export default function CheckoutEmailForm() {
             <div className="bg-[#DCEAF2] border border-[#D6EAF0] rounded-2xl p-4 text-left mb-8">
               <p className="text-sm font-bold text-gray-900 mb-2">Riepilogo ordine</p>
               <p className="text-sm text-gray-600">📦 {PRODUCT_LABEL}</p>
-              <p className="text-sm text-gray-600">🏠 {form.indirizzo}, {form.cap} {form.citta}</p>
+              <p className="text-sm text-gray-600">🏠 {form.indirizzo}</p>
               <p className="text-sm text-gray-600">💰 Pagamento alla consegna — {PRODUCT_PRICE}</p>
             </div>
             <Link href="/" className="text-[#1D3557] font-bold hover:underline text-sm">← Torna alla Home</Link>
