@@ -93,14 +93,14 @@ export default function ReviewsCarousel() {
           {/* Arrows */}
           <button
             onClick={prev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white border border-[#D6EAF0] shadow-md rounded-full p-2 text-gray-400 hover:text-[#1D3557] transition-colors z-10"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white border border-[#D6EAF0] shadow-md rounded-full p-2 text-gray-400 hover:text-[#1D3557] transition-colors z-10"
             aria-label="Precedente"
           >
             <ChevronLeft size={20} />
           </button>
           <button
             onClick={next}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white border border-[#D6EAF0] shadow-md rounded-full p-2 text-gray-400 hover:text-[#1D3557] transition-colors z-10"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white border border-[#D6EAF0] shadow-md rounded-full p-2 text-gray-400 hover:text-[#1D3557] transition-colors z-10"
             aria-label="Successiva"
           >
             <ChevronRight size={20} />
