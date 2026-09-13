@@ -76,7 +76,7 @@ function CheckoutSceltaInner() {
           <div className="flex items-center gap-4 p-4">
             <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-[#DCEAF2]">
               <Image
-                src="/images/gallery-1-uso.jpg"
+                src="/images/render-spa-hero.jpg"
                 alt="BellaCura Massaggiatore"
                 fill
                 className="object-cover"

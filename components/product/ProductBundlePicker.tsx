@@ -61,7 +61,7 @@ export default function ProductBundlePicker() {
               key={bundle.id}
               type="button"
               onClick={() => setSelected(bundle.id)}
-              className={`relative w-full flex items-center gap-4 p-4 rounded-2xl border-2 text-left transition-all ${
+              className={`relative w-full flex items-center gap-3 p-3 md:p-4 rounded-2xl border-2 text-left transition-all ${
                 isSelected
                   ? 'border-[#1D3557] bg-[#DCEAF2] shadow-md'
                   : 'border-gray-200 bg-white hover:border-[#7EC8D4]'
@@ -70,7 +70,7 @@ export default function ProductBundlePicker() {
               <span className={`absolute -top-3 right-4 ${bundle.tagColor} text-white text-[10px] font-bold px-3 py-0.5 rounded-full tracking-wide uppercase`}>
                 {bundle.tag}
               </span>
-              <div className="relative w-14 h-14 rounded-xl overflow-hidden shrink-0 shadow-sm">
+              <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden shrink-0 shadow-sm">
                 <Image src="/images/render-spa-hero.jpg" alt="BellaCura" fill className="object-cover" />
               </div>
               <div className="flex-1 min-w-0">

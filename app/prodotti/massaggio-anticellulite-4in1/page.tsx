@@ -138,20 +138,6 @@ export default function ProductPage() {
  </div>
  ))}
  </div>
- <div className="flex flex-wrap gap-2">
-   <span className="inline-flex items-center gap-1.5 bg-green-50 border border-green-200 text-green-800 text-xs font-semibold px-3 py-1.5 rounded-full">
-     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
-     Paga alla consegna — nessun rischio
-   </span>
-   <span className="inline-flex items-center gap-1.5 bg-blue-50 border border-blue-200 text-blue-800 text-xs font-semibold px-3 py-1.5 rounded-full">
-     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
-     Spedizione gratuita 24-48h
-   </span>
-   <span className="inline-flex items-center gap-1.5 bg-[#DCEAF2] border border-[#A8DADC] text-[#152840] text-xs font-semibold px-3 py-1.5 rounded-full">
-     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
-     Reso gratuito 90 giorni
-   </span>
- </div>
  <ProductBundlePicker />
  </div>
  </div>

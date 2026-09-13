@@ -36,7 +36,7 @@ export default function ProductImageGallery() {
   return (
     <div className="space-y-3">
       {/* Main viewer */}
-      <div className="relative rounded-3xl overflow-hidden bg-gray-50 aspect-square shadow-xl select-none">
+      <div className="relative rounded-3xl overflow-hidden bg-gray-50 aspect-[4/3] md:aspect-square shadow-xl select-none">
         {current.type === 'video' ? (
           <video
             key={active}
@@ -143,12 +143,6 @@ export default function ProductImageGallery() {
             />
           )
         })}
-      </div>
-
-      {/* Stock badge */}
-      <div className="flex items-center gap-2 bg-white border border-red-100 rounded-full px-4 py-2 shadow-sm w-fit">
-        <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-        <span className="text-xs font-bold text-gray-800">{`Solo ${STOCK_NUMS[Math.floor(Date.now() / 86400000) % STOCK_NUMS.length]} pezzi rimasti`}</span>
       </div>
 
       {/* Thumbnails */}
