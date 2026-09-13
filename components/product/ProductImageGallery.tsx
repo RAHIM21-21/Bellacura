@@ -18,8 +18,8 @@ const media: MediaItem[] = [
   { type: 'image', src: '/images/routine-3passi.jpg',          alt: 'La tua routine BellaCura in 3 passi' },
   { type: 'image', src: '/images/body-map-bellacura.jpg',      alt: 'Zone in cui puoi usare BellaCura' },
   { type: 'image', src: '/images/massager-features.jpg',       alt: 'Massaggiatore 4-in-1 BellaCura — funzionalità' },
-  { type: 'image', src: '/images/g4-martina-branded.png',     alt: 'Prima e dopo — Martina C. · 1 Mese · 10 Minuti al giorno' },
-  { type: 'image', src: '/images/g5-francesca-branded.png',   alt: 'Prima e dopo — Francesca M. ★★★★★' },
+  { type: 'image', src: '/images/g4-martina-branded.jpg',     alt: 'Prima e dopo — Martina C. · 1 Mese · 10 Minuti al giorno' },
+  { type: 'image', src: '/images/g5-francesca-branded.jpg',   alt: 'Prima e dopo — Francesca M. ★★★★★' },
   { type: 'video', src: '/video/promo.mp4',                   alt: 'BellaCura in azione' },
 ]
 
