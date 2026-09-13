@@ -11,14 +11,13 @@ type MediaItem =
   | { type: 'video'; src: string; alt: string }
 
 const media: MediaItem[] = [
-  { type: 'image', src: '/images/render-spa-hero.jpg',  alt: 'BellaCura — dispositivo' },
-  { type: 'image', src: '/images/lifestyle-thigh.jpg',  alt: 'BellaCura in uso — trattamento coscia' },
-  { type: 'image', src: '/images/benefits-led.jpg',     alt: 'Riduce la cellulite · Migliora la circolazione · Terapia a luce rossa e blu' },
-  { type: 'image', src: '/images/g3-stat.jpg',         alt: '94% — pelle visibilmente più compatta dopo 3 settimane' },
-  { type: 'image', src: '/images/g4-martina.jpg',      alt: 'Prima e dopo — Martina C.' },
-  { type: 'image', src: '/images/g5-francesca.jpg',    alt: 'Prima e dopo — Francesca M.' },
-  { type: 'image', src: '/images/garanzia-pink-bg.jpg',alt: 'Garanzia rimborso 90 giorni — zero domande, zero burocrazia' },
-  { type: 'video', src: '/video/promo.mp4',            alt: 'BellaCura in azione' },
+  { type: 'image', src: '/images/render-spa-hero.jpg',        alt: 'BellaCura — dispositivo' },
+  { type: 'image', src: '/images/product-box-blue.jpg',       alt: 'BellaCura — kit completo con scatola e cavo USB' },
+  { type: 'image', src: '/images/lifestyle-black-seated.jpg', alt: 'BellaCura in uso — trattamento coscia e addome' },
+  { type: 'image', src: '/images/benefits-led.jpg',           alt: 'Riduce la cellulite · Migliora la circolazione · Terapia a luce rossa e blu' },
+  { type: 'image', src: '/images/g4-martina-branded.png',     alt: 'Prima e dopo — Martina C. · 1 Mese · 10 Minuti al giorno' },
+  { type: 'image', src: '/images/g5-francesca-branded.png',   alt: 'Prima e dopo — Francesca M. ★★★★★' },
+  { type: 'video', src: '/video/promo.mp4',                   alt: 'BellaCura in azione' },
 ]
 
 const BLUR = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQIAJQAlAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAcEAABAwUAAAAAAAAAAAAAAAAAAgMFAQQREkH/xAAVAQEBAAAAAAAAAAAAAAAAAAABBP/EABYRAQEBAAAAAAAAAAAAAAAAAAEAIf/aAAwDAQACEQMRAD8AsstMXzMhowlSqZ4AASrHL//Z"
