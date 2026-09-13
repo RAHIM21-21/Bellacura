@@ -11,17 +11,19 @@ type MediaItem =
   | { type: 'video'; src: string; alt: string }
 
 const media: MediaItem[] = [
-  { type: 'image', src: '/images/render-spa-hero.jpg',  alt: 'BellaCura — dispositivo' },
-  { type: 'image', src: '/images/lifestyle-thigh.jpg',  alt: 'BellaCura in uso — trattamento coscia' },
-  { type: 'image', src: '/images/benefits-led.jpg',     alt: 'Riduce la cellulite · Migliora la circolazione · Terapia a luce rossa e blu' },
-  { type: 'image', src: '/images/g3-stat.jpg',         alt: '94% — pelle visibilmente più compatta dopo 3 settimane' },
-  { type: 'image', src: '/images/g4-martina.jpg',      alt: 'Prima e dopo — Martina C.' },
-  { type: 'image', src: '/images/g5-francesca.jpg',    alt: 'Prima e dopo — Francesca M.' },
-  { type: 'image', src: '/images/garanzia-pink-bg.jpg',alt: 'Garanzia rimborso 90 giorni — zero domande, zero burocrazia' },
-  { type: 'video', src: '/video/promo.mp4',            alt: 'BellaCura in azione' },
+  { type: 'image', src: '/images/render-spa-hero.jpg',        alt: 'BellaCura — dispositivo' },
+  { type: 'image', src: '/images/product-box-blue.jpg',       alt: 'BellaCura — kit completo con scatola e cavo USB' },
+  { type: 'image', src: '/images/lifestyle-black-seated.jpg', alt: 'BellaCura in uso — trattamento coscia e addome' },
+  { type: 'image', src: '/images/benefits-led.jpg',           alt: 'Riduce la cellulite · Migliora la circolazione · Terapia a luce rossa e blu' },
+  { type: 'image', src: '/images/routine-3passi.jpg',          alt: 'La tua routine BellaCura in 3 passi' },
+  { type: 'image', src: '/images/body-map-bellacura.jpg',      alt: 'Zone in cui puoi usare BellaCura' },
+  { type: 'image', src: '/images/massager-features.jpg',       alt: 'Massaggiatore 4-in-1 BellaCura — funzionalità' },
+  { type: 'image', src: '/images/g4-martina-branded.png',     alt: 'Prima e dopo — Martina C. · 1 Mese · 10 Minuti al giorno' },
+  { type: 'image', src: '/images/g5-francesca-branded.png',   alt: 'Prima e dopo — Francesca M. ★★★★★' },
+  { type: 'video', src: '/video/promo.mp4',                   alt: 'BellaCura in azione' },
 ]
 
-const BLUR = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQIAJQAlAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAcEAABAwUAAAAAAAAAAAAAAAAAAgMFAQQREkH/xAAVAQEBAAAAAAAAAAAAAAAAAAABBP/EABYRAQEBAAAAAAAAAAAAAAAAAAEAIf/aAAwDAQACEQMRAD8AsstMXzMhowlSqZ4AASrHL//Z"
+const BLUR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGO48+oTAAVeArnwmq+HAAAAAElFTkSuQmCC"
 
 export default function ProductImageGallery() {
   const [active, setActive] = useState(0)
@@ -141,12 +143,6 @@ export default function ProductImageGallery() {
             />
           )
         })}
-      </div>
-
-      {/* Stock badge */}
-      <div className="flex items-center gap-2 bg-white border border-red-100 rounded-full px-4 py-2 shadow-sm w-fit">
-        <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-        <span className="text-xs font-bold text-gray-800">{`Solo ${STOCK_NUMS[Math.floor(Date.now() / 86400000) % STOCK_NUMS.length]} pezzi rimasti`}</span>
       </div>
 
       {/* Thumbnails */}
