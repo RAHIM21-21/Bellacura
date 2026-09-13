@@ -43,7 +43,6 @@ export default function ProductImageGallery() {
             src={current.src}
             className="w-full h-full object-contain"
             controls
-            autoPlay
             loop
             playsInline
             preload="metadata"

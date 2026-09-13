@@ -12,6 +12,7 @@ const videos = [
 function VideoCard({ src, label, eager }: { src: string; label: string; eager: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [muted, setMuted] = useState(true)
+  const [showPrompt, setShowPrompt] = useState(true)
   const [loaded, setLoaded] = useState(false)
   const srcAssigned = useRef(false)
 
@@ -59,6 +60,7 @@ function VideoCard({ src, label, eager }: { src: string; label: string; eager: b
     if (!videoRef.current) return
     videoRef.current.muted = !videoRef.current.muted
     setMuted(videoRef.current.muted)
+    setShowPrompt(false)
   }
 
   return (
@@ -80,6 +82,20 @@ function VideoCard({ src, label, eager }: { src: string; label: string; eager: b
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
         </div>
+      )}
+
+      {/* Tap-for-sound prompt — visible until first unmute */}
+      {muted && showPrompt && loaded && (
+        <button
+          onClick={toggleMute}
+          aria-label="Attiva audio"
+          className="absolute bottom-14 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-black/60 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full animate-pulse pointer-events-auto"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 shrink-0">
+            <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 001.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06zM17.78 9.22a.75.75 0 10-1.06 1.06L18.44 12l-1.72 1.72a.75.75 0 101.06 1.06l1.72-1.72 1.72 1.72a.75.75 0 101.06-1.06L20.56 12l1.72-1.72a.75.75 0 00-1.06-1.06l-1.72 1.72-1.72-1.72z" />
+          </svg>
+          Tocca per il suono
+        </button>
       )}
 
       <button
