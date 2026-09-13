@@ -125,19 +125,7 @@ export default function ProductPage() {
  <a href="#recensioni" className="text-gray-400 text-sm hover:text-[#457B9D] hover:underline cursor-pointer transition-colors">da 2.800+ recensioni verificate</a>
  </div>
  </div>
- <div className="space-y-2">
- {[
- 'Pelle più tonica — vibrazione, calore e pressione',
- 'Zero dolore, zero lividi — al contrario delle coppette',
- 'Gambe più leggere — migliora la circolazione',
- '10 min al giorno — nessun salone a €200',
- ].map((text) => (
- <div key={text} className="flex items-start gap-3">
- <svg className="w-4 h-4 mt-0.5 shrink-0 text-[#457B9D]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
- <span className="text-gray-700 text-sm">{text}</span>
- </div>
- ))}
- </div>
+
  <ProductBundlePicker />
  </div>
  </div>
