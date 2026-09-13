@@ -27,12 +27,12 @@ export default function SocialProofToast() {
  useEffect(() => {
    if (isCheckout) return
 
-   // First show after 6s
+   // First show after 25s
    const firstTimer = setTimeout(() => {
      setVisible(true)
      // Hide after 4s
      setTimeout(() => setVisible(false), 4000)
-   }, 6000)
+   }, 25000)
 
    // Then repeat every 18s
    const interval = setInterval(() => {
@@ -54,15 +54,15 @@ export default function SocialProofToast() {
        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
      }`}
    >
-     <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 flex items-center gap-3 max-w-xs">
-       <div className="w-10 h-10 rounded-full bg-[#DCEAF2] flex items-center justify-center text-xl shrink-0">
+     <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-2.5 md:p-4 flex items-center gap-2 md:gap-3 max-w-[220px] md:max-w-xs">
+       <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#DCEAF2] flex items-center justify-center text-base md:text-xl shrink-0">
          🛍️
        </div>
        <div>
-         <p className="text-sm font-semibold text-gray-900">
+         <p className="text-xs md:text-sm font-semibold text-gray-900">
            {p.name} da {p.city}
          </p>
-         <p className="text-xs text-gray-500">ha appena ordinato <strong>{p.product}</strong></p>
+         <p className="text-[10px] md:text-xs text-gray-500">ha appena ordinato <strong>{p.product}</strong></p>
          <div className="flex items-center gap-1 mt-1">
            {[...Array(5)].map((_, i) => <Star key={i} size={10} className="text-amber-400 fill-amber-400" />)}
            <span className="text-xs text-gray-400 ml-1">{p.time}</span>
