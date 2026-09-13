@@ -88,7 +88,6 @@ export default function ProductPage() {
  <h1 className="text-3xl font-extrabold text-gray-900 leading-tight">
  Massaggiatore Anticellulite 4 in 1™
  </h1>
- <p className="text-gray-500 text-base mt-1">Pelle più tonica e levigata — visibile in 14 giorni</p>
  </div>
  <div className="flex items-center gap-2">
  <div className="flex">
@@ -111,7 +110,6 @@ export default function ProductPage() {
  <h1 className="text-3xl font-extrabold text-gray-900 leading-tight">
  Massaggiatore Anticellulite 4 in 1™
  </h1>
- <p className="text-gray-500 text-base mt-1">Pelle più tonica e levigata — visibile in 14 giorni</p>
  </div>
  <div className="flex items-center gap-2">
  <div className="flex">
