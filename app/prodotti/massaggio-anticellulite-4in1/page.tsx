@@ -322,49 +322,11 @@ export default function ProductPage() {
  </div>
  </section>
 
- {/* IMAGE 1 — Routine */}
+ {/* IMAGES — back to back */}
  <section className="bg-white">
- <img
-   src="/images/routine-3passi.jpg"
-   alt="La tua routine BellaCura in 3 passi"
-   className="w-full block"
-   loading="lazy"
-   decoding="async"
- />
- <div className="py-8 md:py-12 px-4 text-center bg-white">
-   <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">La Tua Routine di 10 Minuti</h2>
-   <p className="text-gray-600 max-w-xl mx-auto text-base md:text-lg">
-     Progettata per levigare la pelle, ridurre la tensione e valorizzare la tua routine di cura quotidiana — in soli tre semplici passi.
-   </p>
- </div>
- </section>
-
- {/* IMAGE 2 — Massager features */}
- <section className="bg-white">
- <img
-   src="/images/massager-features.jpg"
-   alt="Massaggiatore 4-in-1 BellaCura — funzionalità"
-   className="w-full block"
-   loading="lazy"
-   decoding="async"
- />
- <div className="py-8 md:py-12 px-4 text-center bg-white">
-   <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Bellezza e Benessere in un Solo Tocco</h2>
-   <p className="text-gray-600 max-w-xl mx-auto text-base md:text-lg">
-     Pelle più tonica, gambe più leggere e sollievo quotidiano — dal comfort di casa tua.
-   </p>
- </div>
- </section>
-
- {/* IMAGE 3 — Body map */}
- <section className="bg-white">
- <img
-   src="/images/body-map-bellacura.jpg"
-   alt="Zone in cui puoi usare BellaCura"
-   className="w-full block"
-   loading="lazy"
-   decoding="async"
- />
+   <img src="/images/routine-3passi.jpg" alt="La tua routine BellaCura in 3 passi" className="w-full block" loading="lazy" decoding="async" />
+   <img src="/images/massager-features.jpg" alt="Massaggiatore 4-in-1 BellaCura — funzionalità" className="w-full block" loading="lazy" decoding="async" />
+   <img src="/images/body-map-bellacura.jpg" alt="Zone in cui puoi usare BellaCura" className="w-full block" loading="lazy" decoding="async" />
  </section>
 
  {/* COMPARISON VS — moved to end */}
