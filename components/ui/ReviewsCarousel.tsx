@@ -107,14 +107,17 @@ export default function ReviewsCarousel() {
           </button>
         </div>
 
-        {/* Progress dots */}
-        <div className="flex justify-center gap-1.5 mt-3">
+        {/* Progress dots — min 44px tap target via padding */}
+        <div className="flex justify-center gap-0 mt-3">
           {allReviews.map((_, i) => (
             <button
               key={i}
               onClick={() => setStart(i)}
-              className={`rounded-full transition-all ${i === start ? 'w-5 h-2 bg-[#457B9D]' : 'w-2 h-2 bg-[#DCEAF2]'}`}
-            />
+              aria-label={`Recensione ${i + 1}`}
+              className="p-2.5 focus:outline-none"
+            >
+              <span className={`block rounded-full transition-all ${i === start ? 'w-5 h-2 bg-[#457B9D]' : 'w-2 h-2 bg-[#DCEAF2]'}`} />
+            </button>
           ))}
         </div>
       </div>
