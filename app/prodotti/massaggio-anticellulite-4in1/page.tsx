@@ -159,13 +159,8 @@ export default function ProductPage() {
  </section>
 
  {/* WHATSAPP SOCIAL PROOF */}
- <section className="bg-white py-8 md:py-14">
+ <section className="bg-white py-6 md:py-10">
  <div className="max-w-5xl mx-auto px-4 sm:px-6">
-   <div className="text-center mb-6 md:mb-10">
-     <span className="inline-block bg-[#DCEAF2] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">💬 Risultati reali</span>
-     <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Le nostre clienti parlano</h2>
-     <p className="text-gray-500 text-sm">Ogni settimana riceviamo messaggi così — prima e dopo reali, nessun filtro</p>
-   </div>
    <div className="flex gap-3 overflow-x-auto pb-3 snap-x snap-mandatory md:grid md:grid-cols-4 md:overflow-visible md:pb-0">
      {[
        { src: '/images/review-wa-1.jpg', alt: 'Risultati cliente BellaCura 1' },
