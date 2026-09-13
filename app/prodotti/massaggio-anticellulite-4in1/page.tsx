@@ -314,7 +314,7 @@ export default function ProductPage() {
  beforeSrc="/images/prima-cellulite.jpg"
  afterSrc="/images/dopo-bellacura.jpg"
  beforeLabel="Prima"
- afterLabel="Dopo 90 giorni"
+ afterLabel="Dopo 14 giorni"
  alt="Risultati anticellulite BellaCura"
  aspectRatio="120%"
  />
