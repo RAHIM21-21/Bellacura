@@ -36,7 +36,7 @@ export default function ProductImageGallery() {
   return (
     <div className="space-y-3">
       {/* Main viewer */}
-      <div className="relative rounded-3xl overflow-hidden bg-gray-50 aspect-[4/3] md:aspect-square shadow-xl select-none">
+      <div className="relative rounded-3xl overflow-hidden bg-gray-50 aspect-square shadow-xl select-none">
         {current.type === 'video' ? (
           <video
             key={active}
