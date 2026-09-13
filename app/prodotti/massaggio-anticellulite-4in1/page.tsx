@@ -62,8 +62,8 @@ export default function ProductPage() {
   <link
     rel="preload"
     as="image"
-    href="/_next/image?url=%2Fimages%2Fg1-clean.jpg&w=828&q=75"
-    imageSrcSet="/_next/image?url=%2Fimages%2Fg1-clean.jpg&w=390&q=75 390w, /_next/image?url=%2Fimages%2Fg1-clean.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fg1-clean.jpg&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fg1-clean.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fg1-clean.jpg&w=1200&q=75 1200w"
+    href="/_next/image?url=%2Fimages%2Frender-spa-hero.jpg&w=828&q=75"
+    imageSrcSet="/_next/image?url=%2Fimages%2Frender-spa-hero.jpg&w=390&q=75 390w, /_next/image?url=%2Fimages%2Frender-spa-hero.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Frender-spa-hero.jpg&w=828&q=75 828w, /_next/image?url=%2Fimages%2Frender-spa-hero.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Frender-spa-hero.jpg&w=1200&q=75 1200w"
     imageSizes="(max-width: 768px) 100vw, 50vw"
   />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema_product) }} />
@@ -191,7 +191,7 @@ export default function ProductPage() {
  <div className="max-w-4xl mx-auto px-4 sm:px-6">
  <div className="text-center mb-6 md:mb-10">
  <span className="inline-block bg-white/10 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">✨ Risultati certificati</span>
- <h2 className="text-3xl font-extrabold text-white mb-2">I numeri parlano da soli</h2>
+ <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-2">I numeri parlano da soli</h2>
  <p className="text-white/70 text-sm">Sondaggio su 1.200+ clienti BellaCura (2024)</p>
  </div>
  <div className="grid md:grid-cols-3 gap-3 md:gap-6">
@@ -224,7 +224,7 @@ export default function ProductPage() {
  <section className="bg-white pt-4 pb-7 md:py-16">
  <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
  <span className="inline-block bg-[#DCEAF2] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">Vedi come funziona</span>
- <h2 className="text-3xl font-extrabold text-gray-900 mb-5 md:mb-8">
+ <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-5 md:mb-8">
  Risultati reali, routine semplice
  </h2>
  <VideoSection />
@@ -239,7 +239,7 @@ export default function ProductPage() {
  <div className="max-w-2xl mx-auto px-4 sm:px-6">
  <div className="text-center mb-6 md:mb-10">
  <span className="inline-block bg-[#DCEAF2] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2">FAQ</span>
- <h2 className="text-3xl font-extrabold text-gray-900">Domande frequenti</h2>
+ <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">Domande frequenti</h2>
  </div>
  <div className="space-y-3">
  {faqs.map((faq, i) => (
@@ -279,7 +279,7 @@ export default function ProductPage() {
      .press-logo:hover { opacity: 0.5; }
    `}</style>
    <div className="logo-track relative flex overflow-hidden">
-     <div className="logo-marquee flex items-center gap-12 whitespace-nowrap px-6">
+     <div className="logo-marquee flex items-center gap-8 whitespace-nowrap px-6">
        {[
          { src: '/images/logo-vogue.png',       alt: 'Vogue Italia',  h: 28 },
          { src: '/images/logo-marie-claire.png', alt: 'Marie Claire', h: 48 },
@@ -306,7 +306,7 @@ export default function ProductPage() {
  <section className="bg-white py-8 md:py-16">
  <div className="max-w-4xl mx-auto px-4 sm:px-6">
  <div className="text-center mb-6 md:mb-10">
- <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">Tonicità naturale</h2>
+ <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-2">Tonicità naturale</h2>
  <p className="text-gray-500 text-base md:text-lg">dopo sole 2 settimane di utilizzo quotidiano</p>
  </div>
  <div className="max-w-md mx-auto w-full px-0 sm:px-8">
