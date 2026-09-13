@@ -32,7 +32,7 @@ export default function SocialProofToast() {
      setVisible(true)
      // Hide after 4s
      setTimeout(() => setVisible(false), 4000)
-   }, 25000)
+   }, 35000)
 
    // Then repeat every 18s
    const interval = setInterval(() => {
