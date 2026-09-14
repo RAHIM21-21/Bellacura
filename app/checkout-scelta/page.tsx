@@ -34,7 +34,7 @@ function CheckoutSceltaInner() {
     e.preventDefault()
     setLoading(true)
     try {
-      await fetch('/api/notify-order', {
+      const res = await fetch('/api/notify-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -43,9 +43,13 @@ function CheckoutSceltaInner() {
           productPrice,
         }),
       })
-    } catch (_) {}
-    setLoading(false)
-    setStep('success')
+      const json = await res.json().catch(() => ({}))
+      setLoading(false)
+      window.location.href = `/grazie/?ref=${json.order_ref || ''}&nome=${encodeURIComponent(form.nome || '')}&ind=${encodeURIComponent(form.indirizzo || '')}&eid=${encodeURIComponent(json.event_id || '')}`
+    } catch (_) {
+      setLoading(false)
+      setStep('success')
+    }
   }
 
   return (

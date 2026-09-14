@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { sendCAPIEvent } from '@/lib/meta-capi'
 
 const OWNER_EMAIL = 'rahimeladnani21@outlook.com'
+
+function generateOrderRef(): string {
+  return `BC-${Date.now()}-${Math.random().toString(36).substring(2, 7).toUpperCase()}`
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -12,6 +17,24 @@ export async function POST(req: NextRequest) {
     if (!nome || !telefono || !indirizzo) {
       return NextResponse.json({ success: false, error: 'Dati mancanti' }, { status: 400 })
     }
+
+    const orderRef = generateOrderRef()
+    const eventId = `purchase_${orderRef}`
+    const priceNum = parseFloat(String(productPrice).replace(/[^0-9.]/g, '')) || 59.90
+
+    // Fire CAPI Purchase server-side
+    await sendCAPIEvent({
+      event_name: 'Purchase',
+      event_id: eventId,
+      event_source_url: 'https://bellacura-shop.it/grazie',
+      custom_data: {
+        value: priceNum,
+        currency: 'EUR',
+        content_name: productLabel || 'Massaggiatore Anticellulite 4 in 1',
+        content_ids: ['massaggiatore-4in1'],
+        content_type: 'product',
+      },
+    })
 
     await resend.emails.send({
       from: 'BellaCura Ordini <offerte@bellacura-shop.it>',
@@ -70,7 +93,7 @@ Il team BellaCura Italia`)}"
       `,
     })
 
-    return NextResponse.json({ success: true })
+    return NextResponse.json({ success: true, order_ref: orderRef, event_id: eventId })
   } catch (err) {
     console.error('notify-order error:', err)
     return NextResponse.json({ success: false, error: 'Email non inviata' }, { status: 500 })
