@@ -156,14 +156,12 @@ export default function ProductPage() {
    </div>
 
    {/* Screenshots grid */}
-   <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-6 md:overflow-visible md:pb-0">
+   <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-4 md:overflow-visible md:pb-0">
      {[
        { src: '/images/review-wa-1.jpg', alt: 'Risultati cliente BellaCura 1' },
        { src: '/images/review-wa-2.jpg', alt: 'Risultati cliente BellaCura 2' },
        { src: '/images/review-wa-3.jpg', alt: 'Risultati cliente BellaCura 3' },
-       { src: '/images/review-instagram-elena.jpg', alt: 'Recensione Instagram Elena' },
       { src: '/images/review-wa-4.jpg', alt: 'Risultati cliente BellaCura — WhatsApp' },
-      { src: '/images/review-wa-5.jpg', alt: 'Risultati cliente BellaCura — Instagram' },
      ].map(({ src, alt }) => (
        <div key={src} className="flex-none w-[72vw] md:w-auto snap-start group">
          <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-transform duration-200 group-hover:scale-[1.02] group-hover:shadow-xl" style={{ aspectRatio: '9/16' }}>
