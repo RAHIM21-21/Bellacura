@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { buildMetadata, productSchema, breadcrumbSchema, faqSchema, SITE_URL } from '@/lib/seo'
 import ProductBundlePicker from '@/components/product/ProductBundlePicker'
 import BeforeAfterSlider from '@/components/ui/BeforeAfterSlider'
@@ -166,12 +167,12 @@ export default function ProductPage() {
      ].map(({ src, alt }) => (
        <div key={src} className="flex-none w-[72vw] md:w-auto snap-start group">
          <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-transform duration-200 group-hover:scale-[1.02] group-hover:shadow-xl" style={{ aspectRatio: '9/16' }}>
-           <img
+           <Image
+             fill
              src={src}
              alt={alt}
-             loading="lazy"
-             decoding="async"
-             className="w-full h-full object-cover"
+             sizes="(max-width: 768px) 72vw, 20vw"
+             className="object-cover"
            />
          </div>
        </div>
@@ -323,9 +324,9 @@ export default function ProductPage() {
 
  {/* IMAGES — back to back */}
  <section className="bg-white">
-   <img src="/images/routine-3passi.jpg" alt="La tua routine BellaCura in 3 passi" width={1024} height={1024} className="w-full block" loading="lazy" decoding="async" />
-   <img src="/images/massager-features.jpg" alt="Massaggiatore 4-in-1 BellaCura — funzionalità" width={1024} height={1024} className="w-full block" loading="lazy" decoding="async" />
-   <img src="/images/body-map-bellacura.jpg" alt="Zone in cui puoi usare BellaCura" width={1024} height={1024} className="w-full block" loading="lazy" decoding="async" />
+   <Image src="/images/routine-3passi.jpg" alt="La tua routine BellaCura in 3 passi" width={1024} height={1024} className="w-full block" loading="lazy" />
+   <Image src="/images/massager-features.jpg" alt="Massaggiatore 4-in-1 BellaCura — funzionalità" width={1024} height={1024} className="w-full block" loading="lazy" />
+   <Image src="/images/body-map-bellacura.jpg" alt="Zone in cui puoi usare BellaCura" width={1024} height={1024} className="w-full block" loading="lazy" />
  </section>
 
  {/* COMPARISON VS — moved to end */}

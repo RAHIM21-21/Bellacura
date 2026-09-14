@@ -4,7 +4,7 @@ import { buildMetadata } from '@/lib/seo'
 import { CheckCircle2 } from 'lucide-react'
 
 export const metadata: Metadata = buildMetadata({
- title: 'Garanzia & Resi – 14 Giorni Soddisfatti o Rimborsati',
+ title: 'Garanzia & Resi – 90 Giorni Soddisfatti o Rimborsati',
  description: 'BellaCura garantisce il rimborso completo entro 90 giorni. Reso gratuito, nessuna domanda. Scopri la nostra politica di garanzia.',
  path: '/garanzia/',
 })
