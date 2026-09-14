@@ -43,7 +43,7 @@ export async function sendCAPIEvent(event: CAPIEvent) {
       body: JSON.stringify(payload),
     })
     const json = await res.json()
-    if (!res.ok) console.error('CAPI error:', json)
+    if (!res.ok) console.error('CAPI error full:', JSON.stringify(json))
     else console.log('CAPI sent:', event.event_name, event.event_id)
   } catch (err) {
     console.error('CAPI fetch failed:', err)
