@@ -43,7 +43,7 @@ function CheckoutContent() {
       })
       const json = await res.json()
       if (json.success) {
-        window.location.href = `/grazie/?ref=${json.order_ref}`
+        window.location.href = `/grazie/?ref=${json.order_ref}&nome=${encodeURIComponent(data.nome)}&ind=${encodeURIComponent(data.indirizzo)}`
       } else {
         setError(json.error || 'Si è verificato un errore. Riprova.')
       }
