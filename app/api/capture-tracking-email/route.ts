@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: FROM_SENDER,
       to: email,
-      replyTo: OWNER_EMAIL,
+      reply_to: OWNER_EMAIL,
       subject: `${firstName ? `Ciao ${firstName}` : 'Ciao'} 👋 — Conferma il tuo indirizzo BellaCura`,
       html: `
         <!DOCTYPE html>
