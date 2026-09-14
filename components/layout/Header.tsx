@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 // branded SVGs inline
@@ -45,7 +46,7 @@ export default function Header()
  <div className="container-tight flex items-center justify-between h-16">
  {/* Logo */}
  <Link href="/" className="flex items-center">
- <img src="/images/bellacura-logo.png" alt="BellaCura" width={175} height={44} style={{height: 44, width: "auto"}} />
+ <Image src="/images/bellacura-logo.png" alt="BellaCura" width={175} height={44} style={{height: 44, width: "auto"}} priority />
  </Link>
 
  {/* Desktop nav */}

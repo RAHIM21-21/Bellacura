@@ -191,7 +191,7 @@
 .countdown-label {
   font-family: var(--font-montserrat), sans-serif;
   font-size: 0.5rem;
-  color: var(--blue-mid);
+  color: var(--navy);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-top: 3px;
