@@ -256,6 +256,26 @@ export default function ProductPage() {
  </div>
  </section>
 
+
+ {/* FERMEZZA NATURALE — slider, no heading text, no checklist */}
+ <section className="bg-white py-8 md:py-16">
+ <div className="max-w-4xl mx-auto px-4 sm:px-6">
+ <div className="text-center mb-6 md:mb-10">
+ <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-2">Tonicità naturale</h2>
+ <p className="text-gray-500 text-base md:text-lg">dopo sole 2 settimane di utilizzo quotidiano</p>
+ </div>
+ <div className="max-w-md mx-auto w-full px-0 sm:px-8">
+ <BeforeAfterSlider
+ beforeSrc="/images/prima-cellulite.jpg"
+ afterSrc="/images/dopo-bellacura.jpg"
+ beforeLabel="Prima"
+ afterLabel="Dopo 14 giorni"
+ alt="Risultati anticellulite BellaCura"
+ aspectRatio="120%"
+ />
+ </div>
+ </div>
+ </section>
  {/* COME VISTO SU */}
  <section className="py-6 md:py-10 overflow-hidden" style={{background: 'linear-gradient(180deg, #ffffff 0%, #DCEAF2 100%)'}}>
    <div className="flex items-center gap-4 max-w-4xl mx-auto px-6 mb-4 md:mb-8">
@@ -299,26 +319,6 @@ export default function ProductPage() {
        ))}
      </div>
    </div>
- </section>
-
- {/* FERMEZZA NATURALE — slider, no heading text, no checklist */}
- <section className="bg-white py-8 md:py-16">
- <div className="max-w-4xl mx-auto px-4 sm:px-6">
- <div className="text-center mb-6 md:mb-10">
- <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-2">Tonicità naturale</h2>
- <p className="text-gray-500 text-base md:text-lg">dopo sole 2 settimane di utilizzo quotidiano</p>
- </div>
- <div className="max-w-md mx-auto w-full px-0 sm:px-8">
- <BeforeAfterSlider
- beforeSrc="/images/prima-cellulite.jpg"
- afterSrc="/images/dopo-bellacura.jpg"
- beforeLabel="Prima"
- afterLabel="Dopo 14 giorni"
- alt="Risultati anticellulite BellaCura"
- aspectRatio="120%"
- />
- </div>
- </div>
  </section>
 
  {/* IMAGES — back to back */}
