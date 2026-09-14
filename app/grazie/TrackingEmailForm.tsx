@@ -1,16 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Package } from 'lucide-react'
-
-const PIXEL_ID = '1055883607362457'
-
-async function sha256(message: string): Promise<string> {
-  const msgBuffer = new TextEncoder().encode(message)
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer)
-  const hashArray = Array.from(new Uint8Array(hashBuffer))
-  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('')
-}
 
 export default function TrackingEmailForm({ orderRef }: { orderRef?: string }) {
   const [email, setEmail] = useState('')
@@ -22,21 +13,11 @@ export default function TrackingEmailForm({ orderRef }: { orderRef?: string }) {
     setStatus('loading')
 
     try {
-      // 1. Save email via API (sends notification to owner + confirmation to customer)
       await fetch('/api/capture-tracking-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: email.trim().toLowerCase(), order_ref: orderRef }),
       })
-
-      // 2. Re-initialize pixel with hashed email for advanced matching
-      // This retroactively improves match quality for the Purchase event already fired.
-      // No second event needed — firing Lead or Purchase here would duplicate or contradict it.
-      const hashed = await sha256(email.trim().toLowerCase())
-      if (typeof window !== 'undefined' && typeof (window as any).fbq === 'function') {
-        ;(window as any).fbq('init', PIXEL_ID, { em: hashed })
-      }
-
       setStatus('done')
     } catch {
       setStatus('error')
