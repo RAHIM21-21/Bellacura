@@ -29,11 +29,12 @@ export default function TrackingEmailForm({ orderRef }: { orderRef?: string }) {
         body: JSON.stringify({ email: email.trim().toLowerCase(), order_ref: orderRef }),
       })
 
-      // 2. Update Meta Pixel advanced matching with hashed email
+      // 2. Re-initialize pixel with hashed email for advanced matching
+      // This retroactively improves match quality for the Purchase event already fired.
+      // No second event needed — firing Lead or Purchase here would duplicate or contradict it.
       const hashed = await sha256(email.trim().toLowerCase())
       if (typeof window !== 'undefined' && typeof (window as any).fbq === 'function') {
         ;(window as any).fbq('init', PIXEL_ID, { em: hashed })
-        ;(window as any).fbq('track', 'Lead', { content_name: 'tracking_request' })
       }
 
       setStatus('done')
