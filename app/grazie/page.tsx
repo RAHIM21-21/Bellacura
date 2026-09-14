@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { buildMetadata } from '@/lib/seo'
+import PurchasePixel from './PurchasePixel'
 
 export const metadata: Metadata = buildMetadata({
  title: 'Grazie per il tuo ordine!',
@@ -13,6 +14,7 @@ export const metadata: Metadata = buildMetadata({
 function GrazieContent() {
  return (
  <div className="min-h-screen bg-white flex items-center justify-center py-16 px-4">
+      <PurchasePixel />
  <div className="max-w-lg w-full text-center">
  <div className="text-7xl mb-6"></div>
  <h1 className="font-sans text-4xl text-gray-900 mb-4">
