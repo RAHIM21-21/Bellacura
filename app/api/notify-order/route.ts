@@ -23,10 +23,19 @@ export async function POST(req: NextRequest) {
     const priceNum = parseFloat(String(productPrice).replace(/[^0-9.]/g, '')) || 59.90
 
     // Fire CAPI Purchase server-side
+    const clientIp = req.headers.get('x-forwarded-for')?.split(',')[0].trim()
+      || req.headers.get('x-real-ip')
+      || undefined
+    const clientUserAgent = req.headers.get('user-agent') || undefined
+
     await sendCAPIEvent({
       event_name: 'Purchase',
       event_id: eventId,
       event_source_url: 'https://bellacura-shop.it/grazie',
+      user_data: {
+        client_ip_address: clientIp,
+        client_user_agent: clientUserAgent,
+      },
       custom_data: {
         value: priceNum,
         currency: 'EUR',
