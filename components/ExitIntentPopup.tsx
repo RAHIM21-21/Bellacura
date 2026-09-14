@@ -76,14 +76,19 @@ export default function ExitIntentPopup() {
     e.preventDefault()
     if (!email) return
     setStatus('loading')
+    const eventId = `lead_${Date.now()}_${Math.random().toString(36).slice(2)}`
     try {
       const res = await fetch('/api/capture-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'exit_popup' }),
+        body: JSON.stringify({ email, source: 'exit_popup', eventId }),
       })
       if (res.ok) {
         setStatus('success')
+        // Fire browser pixel Lead event (deduplicated with CAPI via eventId)
+        if (typeof window !== 'undefined' && (window as unknown as { fbq?: Function }).fbq) {
+          (window as unknown as { fbq: Function }).fbq('track', 'Lead', {}, { eventID: eventId })
+        }
       } else {
         setStatus('error')
       }

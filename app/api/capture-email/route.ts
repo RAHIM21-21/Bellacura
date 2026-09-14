@@ -1,16 +1,35 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import crypto from 'crypto'
+import { sendCAPIEvent } from '@/lib/meta-capi'
 
 const OWNER_EMAIL = 'rahimeladnani21@outlook.com'
 const FROM_SENDER = 'BellaCura <offerte@bellacura-shop.it>'
 
 export async function POST(req: NextRequest) {
   try {
-    const { email, source = 'exit_popup' } = await req.json()
+    const { email, source = 'exit_popup', eventId: clientEventId } = await req.json()
+    const eventId = clientEventId || `lead_${Date.now()}_${Math.random().toString(36).slice(2)}`
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: 'Email non valida' }, { status: 400 })
     }
+
+    // Fire CAPI Lead event (server-side, deduplicated with browser pixel via eventId)
+    const hashedEmail = crypto.createHash('sha256').update(email.trim().toLowerCase()).digest('hex')
+    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || req.headers.get('x-real-ip') || undefined
+    const ua = req.headers.get('user-agent') || undefined
+    await sendCAPIEvent({
+      event_name: 'Lead',
+      event_id: eventId,
+      event_source_url: 'https://www.bellacura-shop.it/prodotti/massaggio-anticellulite-4in1',
+      user_data: {
+        em: [hashedEmail],
+        ...(ip && { client_ip_address: ip }),
+        ...(ua && { client_user_agent: ua }),
+      },
+      custom_data: { content_name: source },
+    })
 
     const resend = new Resend(process.env.RESEND_API_KEY)
 
