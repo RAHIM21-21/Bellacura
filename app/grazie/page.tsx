@@ -3,6 +3,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { buildMetadata } from '@/lib/seo'
 import PurchasePixel from './PurchasePixel'
+import TrackingEmailForm from './TrackingEmailForm'
 
 export const metadata: Metadata = buildMetadata({
  title: 'Grazie per il tuo ordine!',
@@ -11,12 +12,12 @@ export const metadata: Metadata = buildMetadata({
  noIndex: true, // no index — not a page we want Google to crawl
 })
 
-function GrazieContent() {
+function GrazieContent({ orderRef }: { orderRef?: string }) {
  return (
  <div className="min-h-screen bg-white flex items-center justify-center py-16 px-4">
       <PurchasePixel />
  <div className="max-w-lg w-full text-center">
- <div className="text-7xl mb-6"></div>
+ <div className="text-7xl mb-6">🎉</div>
  <h1 className="font-sans text-4xl text-gray-900 mb-4">
  Grazie per il tuo ordine!
  </h1>
@@ -25,7 +26,7 @@ function GrazieContent() {
  Il corriere ti contatterà per fissare la consegna in <strong>2-4 giorni lavorativi</strong>.
  </p>
 
- <div className="card mb-8 text-left">
+ <div className="card mb-6 text-left">
  <h2 className="font-semibold text-gray-900 mb-4">Cosa succede adesso?</h2>
  <ol className="space-y-3">
  {[
@@ -44,6 +45,10 @@ function GrazieContent() {
  </ol>
  </div>
 
+ <div className="mb-8">
+   <TrackingEmailForm orderRef={orderRef} />
+ </div>
+
  <div className="space-y-3">
  <Link href="/" className="btn-primary w-full justify-center">
  Torna alla Home
@@ -57,10 +62,15 @@ function GrazieContent() {
  )
 }
 
-export default function GraziePage() {
- return (
- <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Caricamento...</div>}>
- <GrazieContent />
- </Suspense>
- )
+export default function GraziePage({
+  searchParams,
+}: {
+  searchParams?: { ref?: string }
+}) {
+  const orderRef = searchParams?.ref
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Caricamento...</div>}>
+      <GrazieContent orderRef={orderRef} />
+    </Suspense>
+  )
 }
