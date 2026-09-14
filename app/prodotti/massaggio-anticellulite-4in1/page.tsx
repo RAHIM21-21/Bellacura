@@ -5,7 +5,6 @@ import { buildMetadata, productSchema, breadcrumbSchema, faqSchema, SITE_URL } f
 import ProductBundlePicker from '@/components/product/ProductBundlePicker'
 import BeforeAfterSlider from '@/components/ui/BeforeAfterSlider'
 import ProductImageGallery from '@/components/product/ProductImageGallery'
-import ReviewsCarousel from '@/components/ui/ReviewsCarousel'
 import StickyOrderButton from '@/components/product/StickyOrderButton'
 import VideoSection from '@/components/product/VideoSection'
 import CountdownTimer from '@/components/home/CountdownTimer'
@@ -132,7 +131,7 @@ export default function ProductPage() {
  </section>
 
  {/* WHATSAPP SOCIAL PROOF */}
- <section className="py-10 md:py-16" style={{background: 'linear-gradient(180deg, #EEF6FB 0%, #ffffff 100%)'}}>
+ <section id="recensioni" className="py-10 md:py-16" style={{background: 'linear-gradient(180deg, #EEF6FB 0%, #ffffff 100%)'}}>
  <div className="max-w-5xl mx-auto px-4 sm:px-6">
 
    {/* Header */}
@@ -331,9 +330,6 @@ export default function ProductPage() {
 
  {/* COMPARISON VS — moved to end */}
  <ComparisonVS />
-
- {/* REVIEWS */}
- <div id="recensioni"><ReviewsCarousel /></div>
 
  {/* Fixed sticky CTA */}
  <div className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 shadow-2xl">
