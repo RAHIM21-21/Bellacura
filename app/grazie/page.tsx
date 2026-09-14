@@ -16,16 +16,18 @@ function GrazieContent({
   orderRef,
   nome,
   indirizzo,
+  eventId,
 }: {
   orderRef?: string
   nome?: string
   indirizzo?: string
+  eventId?: string
 }) {
   const firstName = nome ? nome.split(' ')[0] : null
 
   return (
     <div className="min-h-screen bg-[#F0F6FB] flex flex-col items-center justify-start py-10 px-4">
-      <PurchasePixel />
+      <PurchasePixel eventId={eventId} />
 
       {/* Header */}
       <div className="w-full max-w-md">
@@ -108,7 +110,7 @@ function GrazieContent({
 export default function GraziePage({
   searchParams,
 }: {
-  searchParams?: { ref?: string; nome?: string; ind?: string }
+  searchParams?: { ref?: string; nome?: string; ind?: string; eid?: string }
 }) {
   return (
     <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-[#457B9D]">Caricamento...</div>}>
@@ -116,6 +118,7 @@ export default function GraziePage({
         orderRef={searchParams?.ref}
         nome={searchParams?.nome}
         indirizzo={searchParams?.ind}
+        eventId={searchParams?.eid}
       />
     </Suspense>
   )

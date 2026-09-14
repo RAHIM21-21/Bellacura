@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { sendCAPIEvent } from '@/lib/meta-capi'
 
 const OWNER_EMAIL = 'rahimeladnani21@outlook.com'
 
@@ -26,6 +27,21 @@ export async function POST(req: NextRequest) {
 
     const product = PRODUCTS[prodotto] || PRODUCTS['massaggio-4in1']
     const orderRef = generateOrderRef()
+    const eventId = `purchase_${orderRef}`
+
+    // Fire CAPI Purchase server-side (deduplicates with browser pixel via event_id)
+    await sendCAPIEvent({
+      event_name: 'Purchase',
+      event_id: eventId,
+      event_source_url: 'https://bellacura-shop.it/grazie',
+      custom_data: {
+        value: product.price,
+        currency: 'EUR',
+        content_name: product.name,
+        content_ids: [prodotto || 'massaggio-4in1'],
+        content_type: 'product',
+      },
+    })
 
     await resend.emails.send({
       from: 'BellaCura Ordini <offerte@bellacura-shop.it>',
@@ -83,7 +99,7 @@ Il team BellaCura Italia`)}"
       `,
     })
 
-    return NextResponse.json({ success: true, order_ref: orderRef })
+    return NextResponse.json({ success: true, order_ref: orderRef, event_id: eventId })
   } catch (err) {
     console.error('Order API error:', err)
     return NextResponse.json({ success: false, error: 'Errore del server. Riprova.' }, { status: 500 })
