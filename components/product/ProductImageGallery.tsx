@@ -24,7 +24,7 @@ const media: MediaItem[] = [
 
 const BLUR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGO48+oTAAVeArnwmq+HAAAAAElFTkSuQmCC"
 
-export default function ProductImageGallery() {
+export default function ProductImageGallery({ badge }: { badge?: { line1: string; line2: string } } = {}) {
   const [active, setActive] = useState(0)
   const total = media.length
 
@@ -83,9 +83,9 @@ export default function ProductImageGallery() {
               pointerEvents: 'none',
             }}
           >
-            <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', opacity: 0.85 }}>Garanzia</span>
+            <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', opacity: 0.85 }}>{badge?.line1 ?? 'Garanzia'}</span>
             <span style={{ fontSize: 17, fontWeight: 800, lineHeight: 1 }}>90</span>
-            <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', opacity: 0.85 }}>giorni</span>
+            <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', opacity: 0.85 }}>{badge?.line2 ?? 'giorni'}</span>
           </div>
         )}
 
