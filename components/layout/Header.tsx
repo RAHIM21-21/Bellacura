@@ -20,10 +20,20 @@ const tickerMessages = [
  '✅ Nessuna carta di credito richiesta',
 ]
 
+const tickerMessagesNL = [
+ '🚚 GRATIS Express verzending vanuit ons Italiaans magazijn',
+ '🔒 90 Dagen tevredenheidsgarantie — geen vragen',
+ '⭐ Meer dan 2.800+ tevreden klanten',
+ '💳 Veilig betalen met iDEAL, Visa & Mastercard',
+ '⚡ Levering in 3–5 werkdagen',
+ '✅ Directe betaling — geen verborgen kosten',
+]
+
 export default function Header()
 {
   const pathname = usePathname()
   if (pathname?.startsWith('/checkout')) return null
+  const isNL = pathname?.startsWith('/nl')
  const [open, setOpen] = useState(false)
 
  return (
@@ -32,7 +42,7 @@ export default function Header()
  <div className="text-sm py-2 overflow-hidden" style={{background: '#DCEAF2', color: '#1D3557'}}>
  <div className="ticker-wrapper">
  <div className="ticker-track">
- {[...tickerMessages, ...tickerMessages].map((msg, i) => (
+ {[...(isNL ? tickerMessagesNL : tickerMessages), ...(isNL ? tickerMessagesNL : tickerMessages)].map((msg, i) => (
  <span key={i} className="ticker-item">
  {msg}
  <span className="ticker-sep">·</span>

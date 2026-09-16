@@ -9,7 +9,7 @@ const CHECKOUT_DOUBLE = 'https://bellacura-shop.myshopify.com/cart/4823864960630
 const bundles = [
   {
     id: 'single',
-    label: 'BellaCura Anti-Cellulite Massager',
+    label: 'BellaCura Anti-Cellulitis Massager',
     subtitle: 'Cupping + warmte + vibratie + rood licht',
     tag: 'BESTSELLER',
     tagColor: 'bg-red-600',
@@ -34,7 +34,7 @@ const bundles = [
 ]
 
 const freeGifts = [
-  { name: 'Anti-Cellulite Gids PDF', value: '€19,90' },
+  { name: 'Anti-Cellulitis Gids PDF', value: '€19,90' },
   { name: 'Gratis Expresverzending vanuit Italië', value: '€4,90' },
   { name: 'Detox Voedingsschema', value: '€14,90' },
 ]
