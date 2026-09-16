@@ -15,7 +15,7 @@ const media: MediaItem[] = [
   { type: 'image', src: '/images/product-green-box.jpg',     alt: 'BellaCura — kit completo con scatola e accessori' },
   { type: 'image', src: '/images/lifestyle-green-knee.jpg',  alt: 'BellaCura in uso — trattamento coscia' },
   { type: 'image', src: '/images/massager-features-v2.jpg',  alt: 'Massaggiatore 4-in-1 BellaCura — funzionalità' },
-  { type: 'image', src: '/images/body-map-bellacura.jpg',    alt: 'Zone in cui puoi usare BellaCura' },
+  { type: 'image', src: '/images/body-map-bellacura-v2.jpg',    alt: 'Zone in cui puoi usare BellaCura' },
   { type: 'image', src: '/images/routine-3passi-v2.jpg',     alt: 'La tua routine BellaCura in 3 passi' },
   { type: 'image', src: '/images/g4-martina-branded.jpg',    alt: 'Prima e dopo — Martina C. · 1 Mese · 10 Minuti al giorno' },
   { type: 'image', src: '/images/g5-francesca-branded.jpg',  alt: 'Prima e dopo — Francesca M. ★★★★★' },
