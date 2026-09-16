@@ -19,7 +19,7 @@ const media: MediaItem[] = [
   { type: 'image', src: '/images/routine-3passi-v2.jpg',     alt: 'La tua routine BellaCura in 3 passi' },
   { type: 'image', src: '/images/g4-martina-branded.jpg',    alt: 'Prima e dopo — Martina C. · 1 Mese · 10 Minuti al giorno' },
   { type: 'image', src: '/images/g5-francesca-branded.jpg',  alt: 'Prima e dopo — Francesca M. ★★★★★' },
-  { type: 'video', src: '/video/promo.mp4',                  alt: 'BellaCura in azione' },
+  { type: 'video', src: '/video/promo-v2.mp4',               alt: 'BellaCura in azione' },
 ]
 
 const BLUR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGO48+oTAAVeArnwmq+HAAAAAElFTkSuQmCC"
