@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-export const SITE_URL = 'https://bellacura.it'
+export const SITE_URL = 'https://www.bellacura-shop.it'
 export const SITE_NAME = 'BellaCura'
 export const SITE_DESCRIPTION =
   'BellaCura – prodotti di benessere e cura del corpo per la donna. Massaggiatori anticellulite, cura della pelle e molto altro. Pagamento alla consegna disponibile.'
