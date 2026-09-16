@@ -7,12 +7,12 @@ const bundles = [
   {
     id: 'single',
     label: 'BellaCura Massaggiatore',
-    subtitle: 'Vibrazione + calore 45°C + 4 testine',
+    subtitle: 'Pressione negativa + calore + luce rossa',
     tag: 'PIÙ VENDUTO',
     tagColor: 'bg-red-600',
-    price: 59.90,
+    price: 49.99,
     originalPrice: 119.00,
-    savings: 'Risparmi €59,10',
+    savings: 'Risparmi €69,01',
     perUnit: null,
     popular: false,
   },
@@ -71,7 +71,7 @@ export default function ProductBundlePicker() {
                 {bundle.tag}
               </span>
               <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden shrink-0 shadow-sm">
-                <Image src="/images/render-spa-hero.jpg" alt="BellaCura" fill className="object-cover" />
+                <Image src="/images/product-green-hero.jpg" alt="BellaCura" fill className="object-cover" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-bold text-gray-900 text-sm leading-tight">{bundle.label}</p>

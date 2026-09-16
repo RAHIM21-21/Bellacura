@@ -11,16 +11,15 @@ type MediaItem =
   | { type: 'video'; src: string; alt: string }
 
 const media: MediaItem[] = [
-  { type: 'image', src: '/images/render-spa-hero.jpg',        alt: 'BellaCura — dispositivo' },
-  { type: 'image', src: '/images/product-box-blue.jpg',       alt: 'BellaCura — kit completo con scatola e cavo USB' },
-  { type: 'image', src: '/images/lifestyle-black-seated.jpg', alt: 'BellaCura in uso — trattamento coscia e addome' },
-  { type: 'image', src: '/images/benefits-led.jpg',           alt: 'Riduce la cellulite · Migliora la circolazione · Terapia a luce rossa e blu' },
-  { type: 'image', src: '/images/routine-3passi.jpg',          alt: 'La tua routine BellaCura in 3 passi' },
-  { type: 'image', src: '/images/body-map-bellacura.jpg',      alt: 'Zone in cui puoi usare BellaCura' },
-  { type: 'image', src: '/images/massager-features.jpg',       alt: 'Massaggiatore 4-in-1 BellaCura — funzionalità' },
-  { type: 'image', src: '/images/g4-martina-branded.jpg',     alt: 'Prima e dopo — Martina C. · 1 Mese · 10 Minuti al giorno' },
-  { type: 'image', src: '/images/g5-francesca-branded.jpg',   alt: 'Prima e dopo — Francesca M. ★★★★★' },
-  { type: 'video', src: '/video/promo.mp4',                   alt: 'BellaCura in azione' },
+  { type: 'image', src: '/images/product-green-hero.jpg',    alt: 'BellaCura — dispositivo massaggiatore' },
+  { type: 'image', src: '/images/product-green-box.jpg',     alt: 'BellaCura — kit completo con scatola e accessori' },
+  { type: 'image', src: '/images/lifestyle-green-knee.jpg',  alt: 'BellaCura in uso — trattamento coscia' },
+  { type: 'image', src: '/images/massager-features-v2.jpg',  alt: 'Massaggiatore 4-in-1 BellaCura — funzionalità' },
+  { type: 'image', src: '/images/body-map-bellacura.jpg',    alt: 'Zone in cui puoi usare BellaCura' },
+  { type: 'image', src: '/images/routine-3passi-v2.jpg',     alt: 'La tua routine BellaCura in 3 passi' },
+  { type: 'image', src: '/images/g4-martina-branded.jpg',    alt: 'Prima e dopo — Martina C. · 1 Mese · 10 Minuti al giorno' },
+  { type: 'image', src: '/images/g5-francesca-branded.jpg',  alt: 'Prima e dopo — Francesca M. ★★★★★' },
+  { type: 'video', src: '/video/promo.mp4',                  alt: 'BellaCura in azione' },
 ]
 
 const BLUR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGO48+oTAAVeArnwmq+HAAAAAElFTkSuQmCC"
