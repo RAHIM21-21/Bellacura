@@ -47,7 +47,7 @@ const faqs = [
   },
   {
     question: 'Is het de moeite waard vergeleken met een schoonheidssalon?',
-    answer: 'Een enkele anti-cellulitis behandeling in een salon kost gemiddeld €60–€100. Met BellaCura betaal je eenmalig €59,95 en heb je onbeperkt behandelingen thuis, wanneer jij wilt. Veel klanten besparen honderden euro\'s per jaar.',
+    answer: 'Een enkele anti-cellulitis behandeling in een salon kost gemiddeld €60–€100. Met BellaCura betaal je eenmalig €59,99 en heb je onbeperkt behandelingen thuis, wanneer jij wilt. Veel klanten besparen honderden euro\'s per jaar.',
   },
   {
     question: 'Is het veilig voor de gevoelige huid?',
@@ -65,7 +65,7 @@ export default function ProductPageNL() {
     name: 'BellaCura Anti-Cellulitis Massager 4-in-1',
     description: 'Professioneel anti-cellulitis massager met cupping, warmte 45°C, rood licht en 5 intensiteitsniveaus. Waterbestendig IPX7.',
     image: '/images/product-green-hero.jpg',
-    price: 59.95,
+    price: 59.99,
     sku: 'BC-MASS-4IN1-NL',
     reviews: [],
   })
@@ -344,7 +344,7 @@ export default function ProductPageNL() {
           <div className="flex items-center gap-4">
             <div className="text-right">
               <span className="text-gray-400 line-through text-sm">€119,00</span>
-              <span className="font-extrabold text-gray-900 text-xl ml-2">€59,95</span>
+              <span className="font-extrabold text-gray-900 text-xl ml-2">€59,99</span>
             </div>
             <StickyOrderButtonNL desktop />
           </div>

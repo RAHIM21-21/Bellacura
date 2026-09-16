@@ -13,7 +13,7 @@ const bundles = [
     subtitle: 'Cupping + warmte + vibratie + rood licht',
     tag: 'BESTSELLER',
     tagColor: 'bg-red-600',
-    price: 59.95,
+    price: 59.99,
     originalPrice: 119.00,
     savings: 'Bespaar €59,05',
     perUnit: null,

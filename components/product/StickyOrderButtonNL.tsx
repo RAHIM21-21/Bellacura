@@ -24,7 +24,7 @@ export default function StickyOrderButtonNL({ desktop = false, href }: { desktop
         <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 leading-none mb-0.5">BellaCura®</p>
         <div className="flex items-baseline gap-1.5">
           <span className="text-gray-400 line-through text-xs">€119,00</span>
-          <span className="font-extrabold text-gray-900 text-lg leading-none">€59,95</span>
+          <span className="font-extrabold text-gray-900 text-lg leading-none">€59,99</span>
         </div>
       </div>
       {/* Right: CTA button */}
