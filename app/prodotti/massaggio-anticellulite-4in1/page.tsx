@@ -37,7 +37,7 @@ const faqs = [
  { question: 'Quanto dura la batteria?', answer: 'Con una singola carica di circa 2 ore tramite USB-C, il massaggiatore offre fino a 90 minuti di utilizzo continuativo. Puoi ricaricarlo ogni sera e averlo sempre pronto per la tua routine.' },
  { question: 'Come funziona il pagamento alla consegna?', answer: 'Scegli "Pagamento alla consegna" al checkout. Il corriere consegna il prodotto a casa tua in 24-48 ore e paghi direttamente a lui in contanti al momento della ricezione.' },
  { question: 'Posso restituire il prodotto se non sono soddisfatta?', answer: 'Assolutamente sì. Hai 90 giorni dalla ricezione per restituire il prodotto per qualsiasi motivo. Il reso è completamente gratuito e rimborsiamo il 100% dell\'importo pagato.' },
- { question: 'Vale la pena rispetto a un salone estetico?', answer: 'Un singolo trattamento anticellulite in salone costa in media €60–€100. Con BellaCura paghi €49,99 una sola volta e hai i trattamenti illimitati a casa tua, quando vuoi, per sempre. Molte nostre clienti risparmiano centinaia di euro ogni anno.' },
+ { question: 'Vale la pena rispetto a un salone estetico?', answer: 'Un singolo trattamento anticellulite in salone costa in media €60–€100. Con BellaCura paghi €59,99 una sola volta e hai i trattamenti illimitati a casa tua, quando vuoi, per sempre. Molte nostre clienti risparmiano centinaia di euro ogni anno.' },
  { question: 'È sicuro per la pelle sensibile?', answer: 'Sì. La luce rossa e il calore a infrarossi sono tecnologie dolci usate anche in ambito medico-estetico. Inizia con la vibrazione più bassa e aumenta gradualmente. In caso di patologie cutanee, consulta il tuo medico prima dell\'uso.' },
 ]
 
@@ -49,7 +49,7 @@ export default function ProductPage() {
  name: 'BellaCura Massaggiatore Anticellulite 4 in 1',
  description: 'Massaggiatore anticellulite professionale con vibrazione profonda, riscaldamento a infrarossi 45°C, luce rossa e 5 livelli di intensità. Impermeabile IPX7.',
  image: '/images/product-green-hero.jpg',
- price: 49.99, sku: 'BC-MASS-4IN1', reviews,
+ price: 59.99, sku: 'BC-MASS-4IN1', reviews,
  })
  const schema_breadcrumb = breadcrumbSchema([
  { name: 'Home', url: SITE_URL + '/' },
@@ -350,7 +350,7 @@ export default function ProductPage() {
  <div className="flex items-center gap-4">
  <div className="text-right">
  <span className="text-gray-400 line-through text-sm">€119,00</span>
- <span className="font-extrabold text-gray-900 text-xl ml-2">€49,99</span>
+ <span className="font-extrabold text-gray-900 text-xl ml-2">€59,99</span>
  </div>
  <StickyOrderButton desktop />
  </div>
