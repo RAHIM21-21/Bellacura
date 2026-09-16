@@ -24,7 +24,7 @@ const media: MediaItem[] = [
 
 const BLUR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGO48+oTAAVeArnwmq+HAAAAAElFTkSuQmCC"
 
-export default function ProductImageGallery({ badge }: { badge?: { line1: string; line2: string } } = {}) {
+export default function ProductImageGallery({ badge }: { badge?: { line1: string; line2: string } }) {
   const [active, setActive] = useState(0)
   const total = media.length
 
