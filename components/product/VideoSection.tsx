@@ -4,6 +4,8 @@ import { useRef, useState, useEffect } from 'react'
 
 const videos = [
   { src: '/video/promo-v2.mp4', label: 'BellaCura in azione', eager: true },
+  { src: '/video/ad1.mp4',      label: 'Risultati reali',     eager: false },
+  { src: '/video/ad2.mp4',      label: 'Come funziona',       eager: false },
 ]
 
 function VideoCard({ src, label, eager }: { src: string; label: string; eager: boolean }) {
