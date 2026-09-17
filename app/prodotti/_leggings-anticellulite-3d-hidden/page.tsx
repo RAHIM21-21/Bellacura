@@ -337,7 +337,7 @@ export default function LeggingsPage() {
  >
  <span className="text-5xl">‍</span>
  <div>
- <p className="font-bold text-gray-900">Massaggiatore Anticellulite 4 in 1</p>
+ <p className="font-bold text-gray-900">BellaCura Massaggiatore Anticellulite</p>
  <p className="text-sm text-gray-500 mb-1">Vibrazione profonda + calore 45°C · 15 min/giorno</p>
  <span className="badge">€39,90 – Scopri →</span>
  </div>

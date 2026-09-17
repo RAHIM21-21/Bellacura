@@ -89,7 +89,7 @@ export default function ArticoloCellulite() {
  Come eseguirlo correttamente: applica una crema anticellulite sulla zona da trattare,
  poi lavora con movimenti circolari dal basso verso l'alto per 10 minuti al giorno.
  Dopo 10-14 giorni di utilizzo costante noterai una riduzione visibile della pelle a buccia d'arancia.`,
- tip: 'Il massaggiatore BellaCura 4 in 1 combina vibrazione, calore a infrarossi e 4 testine specifiche per ogni zona del corpo.',
+ tip: 'Il massaggiatore BellaCura combina vibrazione, calore a infrarossi e 4 testine specifiche per ogni zona del corpo.',
  },
  {
  num: '2',
@@ -185,7 +185,7 @@ export default function ArticoloCellulite() {
  <div className="mt-12 bg-gradient-to-br from-[#1D3557] to-[#457B9D] rounded-3xl p-8 text-white text-center">
  <h2 className="font-sans text-2xl mb-3">Pronta a iniziare il tuo percorso?</h2>
  <p className="text-[#D6EAF0] mb-6">
- Il Massaggiatore Anticellulite 4 in 1 di BellaCura combina tutti e 7 i metodi in un unico dispositivo.
+ Il BellaCura Massaggiatore Anticellulite di BellaCura combina tutti e 7 i metodi in un unico dispositivo.
  </p>
  <Link
  href="/prodotti/massaggio-anticellulite-4in1/"

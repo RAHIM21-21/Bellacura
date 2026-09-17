@@ -70,7 +70,7 @@ export default function GaranziaPage() {
  <h2 className="font-sans text-gray-900 mb-4">Pronta ad ordinare senza rischi?</h2>
  <p className="text-gray-600 mb-6">Paga alla consegna, reso gratuito 90 giorni. Zero rischi.</p>
  <div className="flex flex-col sm:flex-row gap-4 justify-center">
- <Link href="/prodotti/massaggio-anticellulite-4in1/" className="btn-primary">Massaggiatore 4 in 1</Link>
+ <Link href="/prodotti/massaggio-anticellulite-4in1/" className="btn-primary">Massaggiatore Anticellulite</Link>
  <Link href="/prodotti/leggings-anticellulite-3d/" className="btn-secondary">Leggings 3D</Link>
  </div>
  </div>

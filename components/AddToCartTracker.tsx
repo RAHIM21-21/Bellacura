@@ -15,7 +15,7 @@ export default function AddToCartTracker() {
           fbq('track', 'AddToCart', {
             value: 59.90,
             currency: 'EUR',
-            content_name: 'Massaggiatore Anticellulite 4 in 1',
+            content_name: 'BellaCura Massaggiatore Anticellulite',
             content_ids: ['massaggiatore-4in1'],
             content_type: 'product',
           })

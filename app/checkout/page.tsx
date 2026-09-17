@@ -14,7 +14,7 @@ type FormData = {
 
 const PRODUCT_INFO = {
   'massaggio-4in1': {
-    name: 'Massaggiatore Anticellulite 4 in 1',
+    name: 'BellaCura Massaggiatore Anticellulite',
     price: 59.90,
     originalPrice: 79.90,
     image: '‍',

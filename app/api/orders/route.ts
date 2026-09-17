@@ -10,7 +10,7 @@ function generateOrderRef(): string {
 
 const PRODUCTS: Record<string, { name: string; price: number }> = {
   'massaggio-4in1': {
-    name: 'BellaCura Massaggiatore Anticellulite 4 in 1',
+    name: 'BellaCura Massaggiatore Anticellulite',
     price: 59.90,
   },
 }
@@ -83,7 +83,7 @@ export async function POST(req: NextRequest) {
               <p style="margin: 0 0 10px; font-size: 13px; color: #6b7280;">Invia conferma WhatsApp al cliente:</p>
               <a href="https://wa.me/${telefono.replace(/\D/g, '')}?text=${encodeURIComponent(`Ciao ${nome}! 👋
 
-Abbiamo ricevuto il tuo ordine per il Massaggiatore Anticellulite 4 in 1 — €${product.price.toFixed(2)} pagamento alla consegna.
+Abbiamo ricevuto il tuo ordine per il BellaCura Massaggiatore Anticellulite — €${product.price.toFixed(2)} pagamento alla consegna.
 
 Spediamo entro oggi/domani e riceverai il pacco in 24–48 ore all'indirizzo: ${indirizzo}.
 

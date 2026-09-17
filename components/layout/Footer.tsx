@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 
 const footerLinks = {
  prodotti: [
- { href: '/prodotti/massaggio-anticellulite-4in1/', label: 'Massaggiatore Anticellulite 4 in 1' },
+ { href: '/prodotti/massaggio-anticellulite-4in1/', label: 'BellaCura Massaggiatore Anticellulite' },
   ],
  aiuto: [
  { href: '/come-ordinare/', label: 'Come Ordinare' },

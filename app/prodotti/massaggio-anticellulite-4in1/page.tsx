@@ -12,7 +12,7 @@ import ComparisonVS from '@/components/product/ComparisonVS'
 
 export const metadata: Metadata = {
  ...buildMetadata({
- title: 'Massaggiatore Anticellulite 4 in 1 – Pelle Più Tonica in 14 Giorni',
+ title: 'BellaCura Massaggiatore Anticellulite – Pelle Più Tonica in 14 Giorni',
  description:
  'Il massaggiatore anticellulite professionale più venduto in Italia. Vibrazione + calore 45°C + luce rossa. Risultati visibili in 2 settimane. Paga alla consegna. Spedizione 24-48h GRATIS.',
  path: '/prodotti/massaggio-anticellulite-4in1/',
@@ -32,7 +32,7 @@ const reviews = [
 ]
 
 const faqs = [
- { question: 'Come funziona il massaggiatore anticellulite 4 in 1?', answer: 'Combina 4 tecnologie: vibrazione profonda ad alta frequenza, riscaldamento a 45°C, luce rossa e pressione meccanica. Insieme stimolano la circolazione, drenano i liquidi in eccesso e riducono visibilmente la cellulite.' },
+ { question: 'Come funziona il massaggiatore anticellulite BellaCura?', answer: 'Combina 4 tecnologie: vibrazione profonda ad alta frequenza, riscaldamento a 45°C, luce rossa e pressione meccanica. Insieme stimolano la circolazione, drenano i liquidi in eccesso e riducono visibilmente la cellulite.' },
  { question: 'In quanto tempo si vedono i risultati?', answer: 'La maggior parte delle clienti nota miglioramenti già dopo 7-10 giorni di utilizzo regolare (10 minuti al giorno). Risultati significativi dopo 4-6 settimane.' },
  { question: 'Quanto dura la batteria?', answer: 'Con una singola carica di circa 2 ore tramite USB-C, il massaggiatore offre fino a 90 minuti di utilizzo continuativo. Puoi ricaricarlo ogni sera e averlo sempre pronto per la tua routine.' },
  { question: 'Come funziona il pagamento alla consegna?', answer: 'Scegli "Pagamento alla consegna" al checkout. Il corriere consegna il prodotto a casa tua in 24-48 ore e paghi direttamente a lui in contanti al momento della ricezione.' },
@@ -46,14 +46,14 @@ const dailyStock = STOCK_NUMS[Math.floor(Date.now() / 86400000) % STOCK_NUMS.len
 
 export default function ProductPage() {
  const schema_product = productSchema({
- name: 'BellaCura Massaggiatore Anticellulite 4 in 1',
+ name: 'BellaCura Massaggiatore Anticellulite',
  description: 'Massaggiatore anticellulite professionale con vibrazione profonda, riscaldamento a infrarossi 45°C, luce rossa e 5 livelli di intensità. Impermeabile IPX7.',
  image: '/images/product-green-hero.jpg',
  price: 59.99, sku: 'BC-MASS-4IN1', reviews,
  })
  const schema_breadcrumb = breadcrumbSchema([
  { name: 'Home', url: SITE_URL + '/' },
- { name: 'Massaggiatore Anticellulite 4 in 1', url: SITE_URL + '/prodotti/massaggio-anticellulite-4in1/' },
+ { name: 'BellaCura Massaggiatore Anticellulite', url: SITE_URL + '/prodotti/massaggio-anticellulite-4in1/' },
  ])
  const schema_faq = faqSchema(faqs)
 
@@ -86,7 +86,7 @@ export default function ProductPage() {
  <div>
  <p className="text-[#1D3557] text-xs font-bold uppercase tracking-widest mb-1">BellaCura® Original</p>
  <h1 className="text-3xl font-extrabold text-gray-900 leading-tight">
- Massaggiatore Anticellulite 4 in 1™
+ BellaCura Massaggiatore Anticellulite™
  </h1>
  </div>
  <div className="flex items-center gap-2">
@@ -108,7 +108,7 @@ export default function ProductPage() {
  <div>
  <p className="text-[#1D3557] text-xs font-bold uppercase tracking-widest mb-1">BellaCura® Original</p>
  <h1 className="text-3xl font-extrabold text-gray-900 leading-tight">
- Massaggiatore Anticellulite 4 in 1™
+ BellaCura Massaggiatore Anticellulite™
  </h1>
  </div>
  <div className="flex items-center gap-2">
@@ -324,7 +324,7 @@ export default function ProductPage() {
 
  {/* IMAGES — back to back */}
  <section className="bg-white">
-   <Image src="/images/massager-features-v2.jpg" alt="Massaggiatore 4-in-1 BellaCura — funzionalità" width={1024} height={1024} className="w-full block" loading="lazy" />
+   <Image src="/images/massager-features-v2.jpg" alt="BellaCura Massaggiatore Anticellulite — funzionalità" width={1024} height={1024} className="w-full block" loading="lazy" />
    <Image src="/images/body-map-bellacura-v2.jpg" alt="Zone in cui puoi usare BellaCura" width={1024} height={1024} className="w-full block" loading="lazy" />
    <Image src="/images/routine-3passi-v2.jpg" alt="La tua routine BellaCura in 3 passi" width={1024} height={1024} className="w-full block" loading="lazy" />
  </section>
@@ -337,7 +337,7 @@ export default function ProductPage() {
  <StickyOrderButton />
  <div className="hidden md:flex items-center justify-between max-w-6xl mx-auto px-6 py-3 gap-6">
  <div className="flex items-center gap-4">
- <span className="font-extrabold text-gray-900 text-base">Massaggiatore Anticellulite 4 in 1™</span>
+ <span className="font-extrabold text-gray-900 text-base">BellaCura Massaggiatore Anticellulite™</span>
  <div className="flex items-center gap-1">
  {[...Array(5)].map((_, i) => (
  <svg key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" viewBox="0 0 20 20">

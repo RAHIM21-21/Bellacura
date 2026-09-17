@@ -53,7 +53,7 @@ function GrazieContent({
           </div>
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-semibold text-[#1D3557]">Massaggiatore Anticellulite 4 in 1</p>
+              <p className="text-sm font-semibold text-[#1D3557]">BellaCura Massaggiatore Anticellulite</p>
               <p className="text-xs text-gray-400 mt-0.5">Pagamento alla consegna · 1 pz</p>
             </div>
             <span className="text-lg font-bold text-[#1D3557]">€59,90</span>

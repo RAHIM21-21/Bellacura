@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { CheckCircle2, ChevronLeft, Shield, Truck, RotateCcw, Star } from 'lucide-react'
 
 const SHOPIFY_URL = 'https://bellacura-shop.myshopify.com/cart/48232541651102:1?checkout'
-const PRODUCT_LABEL = 'Massaggiatore 4 in 1 × 1'
+const PRODUCT_LABEL = 'Massaggiatore Anticellulite × 1'
 const PRODUCT_PRICE = '€54,00'
 const ORIGINAL_PRICE = '€59,90'
 

@@ -63,7 +63,7 @@ export async function POST(req: NextRequest) {
             <div style="background:#ffffff;border:1px solid #DCEAF2;border-top:none;border-radius:0 0 16px 16px;padding:32px;">
 
               <p style="margin:0 0 20px;color:#374151;font-size:15px;line-height:1.7;">
-                Abbiamo ricevuto il tuo ordine per il <strong>Massaggiatore Anticellulite 4 in 1</strong> — <strong>€59,90 pagamento alla consegna</strong>.
+                Abbiamo ricevuto il tuo ordine per il <strong>BellaCura Massaggiatore Anticellulite</strong> — <strong>€59,90 pagamento alla consegna</strong>.
               </p>
 
               <p style="margin:0 0 20px;color:#374151;font-size:15px;line-height:1.7;">

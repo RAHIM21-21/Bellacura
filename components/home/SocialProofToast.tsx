@@ -5,14 +5,14 @@ import { usePathname } from 'next/navigation'
 import { Star } from 'lucide-react'
 
 const purchases = [
- { name: 'Martina', city: 'Milano', product: 'Massaggiatore 4 in 1', time: '2 minuti fa' },
- { name: 'Giulia', city: 'Roma', product: 'Massaggiatore 4 in 1', time: '5 minuti fa' },
- { name: 'Alessia', city: 'Napoli', product: 'Massaggiatore 4 in 1', time: '8 minuti fa' },
- { name: 'Sofia', city: 'Torino', product: 'Massaggiatore 4 in 1', time: '12 minuti fa' },
- { name: 'Laura', city: 'Firenze', product: 'Massaggiatore 4 in 1', time: '3 minuti fa' },
- { name: 'Valentina', city: 'Bologna', product: 'Massaggiatore 4 in 1', time: '7 minuti fa' },
- { name: 'Francesca', city: 'Venezia', product: 'Massaggiatore 4 in 1', time: '15 minuti fa' },
- { name: 'Chiara', city: 'Palermo', product: 'Massaggiatore 4 in 1', time: '1 minuto fa' },
+ { name: 'Martina', city: 'Milano', product: 'Massaggiatore Anticellulite', time: '2 minuti fa' },
+ { name: 'Giulia', city: 'Roma', product: 'Massaggiatore Anticellulite', time: '5 minuti fa' },
+ { name: 'Alessia', city: 'Napoli', product: 'Massaggiatore Anticellulite', time: '8 minuti fa' },
+ { name: 'Sofia', city: 'Torino', product: 'Massaggiatore Anticellulite', time: '12 minuti fa' },
+ { name: 'Laura', city: 'Firenze', product: 'Massaggiatore Anticellulite', time: '3 minuti fa' },
+ { name: 'Valentina', city: 'Bologna', product: 'Massaggiatore Anticellulite', time: '7 minuti fa' },
+ { name: 'Francesca', city: 'Venezia', product: 'Massaggiatore Anticellulite', time: '15 minuti fa' },
+ { name: 'Chiara', city: 'Palermo', product: 'Massaggiatore Anticellulite', time: '1 minuto fa' },
 ]
 
 const CHECKOUT_PATHS = ['/checkout-scelta', '/checkout', '/grazie']

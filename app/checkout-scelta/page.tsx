@@ -15,7 +15,7 @@ function CheckoutSceltaInner() {
   const searchParams = useSearchParams()
   const isDouble = searchParams.get('bundle') === 'double'
   const SHOPIFY_URL = isDouble ? SHOPIFY_URL_DOUBLE : SHOPIFY_URL_SINGLE
-  const productLabel = isDouble ? 'Massaggiatore 4 in 1 × 2' : 'Massaggiatore 4 in 1 × 1'
+  const productLabel = isDouble ? 'Massaggiatore Anticellulite × 2' : 'Massaggiatore Anticellulite × 1'
   const productPrice = isDouble ? '€99,90' : '€59,90'
   const originalPrice = isDouble ? '€238,00' : '€119,00'
 

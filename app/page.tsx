@@ -8,7 +8,7 @@ import ReviewsCarousel from '@/components/ui/ReviewsCarousel'
 import BodyMap from '@/components/home/BodyMap'
 
 export const metadata: Metadata = buildMetadata({
- title: 'BellaCura – Massaggiatore Anticellulite 4 in 1 | Spedizione 24-48h',
+ title: 'BellaCura – BellaCura Massaggiatore Anticellulite | Spedizione 24-48h',
  description:
  'Il massaggiatore anticellulite professionale più venduto in Italia. Risultati visibili in 2 settimane. Pagamento alla consegna. Spedizione in 24-48 ore.',
  path: '/',
@@ -93,7 +93,7 @@ export default function HomePage() {
  </h1>
 
  <p className="text-lg text-gray-600 mb-6 leading-relaxed">
- Il massaggiatore professionale 4 in 1 che stai cercando. Usalo 10 minuti al giorno
+ Il massaggiatore anticellulite professionale che stai cercando. Usalo 10 minuti al giorno
  e vedi la differenza dalla seconda settimana.
  </p>
 
@@ -148,7 +148,7 @@ export default function HomePage() {
  {/* RIGHT – product visual */}
  <div className="relative flex items-center justify-center">
  <div className="w-full max-w-sm aspect-square rounded-3xl bg-gradient-to-br from-[#D6EAF0] to-[#A8DADC] shadow-2xl shadow-[#D6EAF0] overflow-hidden">
- <img src="/images/massaggiatore-bellacura.jpg" alt="BellaCura Massaggiatore Anticellulite 4 in 1" className="w-full h-full object-cover" />
+ <img src="/images/massaggiatore-bellacura.jpg" alt="BellaCura Massaggiatore Anticellulite" className="w-full h-full object-cover" />
  </div>
 
  {/* Floating badge – delivery */}
@@ -221,7 +221,7 @@ export default function HomePage() {
  <div className="text-center mb-12">
  <span className="badge mb-3"> Best Seller #1 in Italia</span>
  <h2 className="text-3xl sm:text-4xl font-sans text-gray-900 mb-4">
- Massaggiatore Anticellulite 4 in 1
+ BellaCura Massaggiatore Anticellulite
  </h2>
  <p className="text-gray-600 text-lg max-w-2xl mx-auto">
  Vibrazione profonda + pressione + calore + drenaggio. Tutto in un unico dispositivo.

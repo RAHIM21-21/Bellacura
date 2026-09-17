@@ -44,7 +44,7 @@ export default function BodyMap() {
         <div className="text-center mb-4">
           <div className="badge mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-[#1D3557] inline-block mr-2" />
-            Massaggiatore 4 in 1™
+            Massaggiatore Anticellulite™
           </div>
           <h2 className="font-sans italic text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900">
             Una sola tecnologia.<br />Tutto il tuo corpo.

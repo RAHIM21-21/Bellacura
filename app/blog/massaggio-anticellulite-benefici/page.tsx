@@ -92,7 +92,7 @@ export default function ArticoloMassaggio() {
  },
  {
  title: 'Massaggio a Vibrazione (con Dispositivo)',
- desc: 'Il più efficace. La vibrazione meccanica penetra nei tessuti profondi, impossibile da replicare manualmente. Un dispositivo professionale come il BellaCura 4 in 1 combina vibrazione, calore e pressione per risultati ottimali.',
+ desc: 'Il più efficace. La vibrazione meccanica penetra nei tessuti profondi, impossibile da replicare manualmente. Un dispositivo professionale come il BellaCura combina vibrazione, calore e pressione per risultati ottimali.',
  intensity: 'Profonda',
  },
  ].map((t) => (
@@ -150,7 +150,7 @@ export default function ArticoloMassaggio() {
  <div className="mt-12 bg-gradient-to-br from-[#1D3557] to-[#457B9D] rounded-3xl p-8 text-white text-center">
  <h2 className="font-sans text-2xl mb-3">Inizia il tuo trattamento oggi</h2>
  <p className="text-[#D6EAF0] mb-6">
- Il Massaggiatore 4 in 1 di BellaCura è progettato per eseguire tutte e 3 le tecniche in modo semplice, a casa tua.
+ Il Massaggiatore Anticellulite di BellaCura è progettato per eseguire tutte e 3 le tecniche in modo semplice, a casa tua.
  </p>
  <Link
  href="/prodotti/massaggio-anticellulite-4in1/"
