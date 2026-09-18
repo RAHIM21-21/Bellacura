@@ -3,9 +3,13 @@
 import { useRef, useState, useEffect } from 'react'
 
 const videos = [
-  { src: '/video/promo-v2.mp4', label: 'BellaCura in azione', eager: true },
-  { src: '/video/ad3.mp4',      label: 'Come funziona',       eager: false },
-  { src: '/video/ad4.mp4',      label: 'Testimonianza',        eager: false },
+  { src: '/video/ad1.mp4', label: 'BellaCura in azione',   eager: true  },
+  { src: '/video/ad2.mp4', label: 'Come funziona',         eager: false },
+  { src: '/video/ad3.mp4', label: 'Testimonianza',         eager: false },
+  { src: '/video/ad4.mp4', label: 'Risultati reali',       eager: false },
+  { src: '/video/ad5.mp4', label: 'Prima e dopo',          eager: false },
+  { src: '/video/ad6.mp4', label: 'Come si usa',           eager: false },
+  { src: '/video/ad7.mp4', label: 'BellaCura — la scelta', eager: false },
 ]
 
 function VideoCard({ src, label, eager }: { src: string; label: string; eager: boolean }) {
