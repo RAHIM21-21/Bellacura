@@ -20,17 +20,32 @@ function CheckoutSceltaInner() {
   const originalPrice = isDouble ? '€238,00' : '€119,00'
 
   // Fire AddToCart pixel event when user lands on this page
+  // Small delay ensures the Meta Pixel script has initialized window.fbq
   useEffect(() => {
-    const fbq = (window as any).fbq
-    if (fbq) {
-      fbq('track', 'AddToCart', {
-        value: isDouble ? 99.90 : 59.90,
-        currency: 'EUR',
-        content_name: 'BellaCura Massaggiatore Anticellulite',
-        content_ids: ['massaggiatore-4in1'],
-        content_type: 'product',
-      })
+    const fire = () => {
+      const fbq = (window as any).fbq
+      if (fbq) {
+        fbq('track', 'AddToCart', {
+          value: isDouble ? 99.90 : 59.90,
+          currency: 'EUR',
+          content_name: 'BellaCura Massaggiatore Anticellulite',
+          content_ids: ['massaggiatore-4in1'],
+          content_type: 'product',
+        })
+      }
     }
+    // Wait 800ms for fbq to initialize, then retry every 200ms up to 5 times
+    let attempts = 0
+    const interval = setInterval(() => {
+      attempts++
+      if ((window as any).fbq) {
+        fire()
+        clearInterval(interval)
+      } else if (attempts >= 5) {
+        clearInterval(interval)
+      }
+    }, 200)
+    return () => clearInterval(interval)
   }, [isDouble])
 
   const isCod = searchParams.get('cod') === '1'
