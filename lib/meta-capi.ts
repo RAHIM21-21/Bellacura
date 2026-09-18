@@ -1,4 +1,4 @@
-const PIXEL_ID = '1055883607362457'
+const PIXEL_ID = '' // TODO: set new pixel ID
 const CAPI_URL = `https://graph.facebook.com/v20.0/${PIXEL_ID}/events`
 
 interface CAPIEvent {
