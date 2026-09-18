@@ -84,6 +84,7 @@ export default function ProductImageGallery({ badge }: { badge?: { line1: string
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
             priority={active === 0}
+            fetchPriority={active === 0 ? 'high' : 'auto'}
             placeholder="blur"
             blurDataURL={BLUR}
           />
