@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 import Image from 'next/image'
 
@@ -14,7 +14,7 @@ const media: MediaItem[] = [
   { type: 'image', src: '/images/product-green-hero.jpg',    alt: 'BellaCura — dispositivo massaggiatore' },
   { type: 'image', src: '/images/product-green-box.jpg',     alt: 'BellaCura — kit completo con scatola e accessori' },
   { type: 'image', src: '/images/lifestyle-green-knee.jpg',  alt: 'BellaCura in uso — trattamento coscia' },
-  { type: 'image', src: '/images/massager-features-v2.jpg',  alt: 'Massaggiatore 4-in-1 BellaCura — funzionalità' },
+  { type: 'image', src: '/images/massager-features-v2.jpg',  alt: 'BellaCura Massaggiatore Anticellulite — funzionalità' },
   { type: 'image', src: '/images/body-map-bellacura-v2.jpg',    alt: 'Zone in cui puoi usare BellaCura' },
   { type: 'image', src: '/images/routine-3passi-v2.jpg',     alt: 'La tua routine BellaCura in 3 passi' },
   { type: 'image', src: '/images/g4-martina-branded.jpg',    alt: 'Prima e dopo — Martina C. · 1 Mese · 10 Minuti al giorno' },
@@ -26,26 +26,55 @@ const BLUR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1Pe
 
 export default function ProductImageGallery({ badge }: { badge?: { line1: string; line2: string } }) {
   const [active, setActive] = useState(0)
+  const [muted, setMuted] = useState(true)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const total = media.length
 
   const goTo = (i: number) => setActive(Math.max(0, Math.min(total - 1, i)))
 
   const current = media[active]
 
+  const toggleMute = () => {
+    if (!videoRef.current) return
+    videoRef.current.muted = !videoRef.current.muted
+    setMuted(videoRef.current.muted)
+  }
+
   return (
     <div className="space-y-3">
       {/* Main viewer */}
       <div className="relative rounded-3xl overflow-hidden bg-gray-50 aspect-square shadow-xl select-none">
         {current.type === 'video' ? (
-          <video
-            key={active}
-            src={current.src}
-            className="w-full h-full object-contain"
-            controls
-            loop
-            playsInline
-            preload="metadata"
-          />
+          <div className="relative w-full h-full">
+            <video
+              ref={videoRef}
+              key={active}
+              src={current.src}
+              className="w-full h-full object-contain"
+              autoPlay
+              loop
+              playsInline
+              muted
+              preload="auto"
+            />
+            {/* Mute/unmute button */}
+            <button
+              onClick={toggleMute}
+              aria-label={muted ? 'Attiva audio' : 'Disattiva audio'}
+              className="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white transition-all hover:bg-black/70 focus:outline-none focus:ring-2 focus:ring-white/60"
+            >
+              {muted ? (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                  <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 001.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06zM17.78 9.22a.75.75 0 10-1.06 1.06L18.44 12l-1.72 1.72a.75.75 0 101.06 1.06l1.72-1.72 1.72 1.72a.75.75 0 101.06-1.06L20.56 12l1.72-1.72a.75.75 0 00-1.06-1.06l-1.72 1.72-1.72-1.72z" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                  <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 001.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06zM18.584 5.106a.75.75 0 011.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 11-1.06-1.06 8.25 8.25 0 000-11.668.75.75 0 010-1.06z" />
+                  <path d="M15.932 7.757a.75.75 0 011.061 0 6 6 0 010 8.486.75.75 0 01-1.06-1.061 4.5 4.5 0 000-6.364.75.75 0 010-1.061z" />
+                </svg>
+              )}
+            </button>
+          </div>
         ) : (
           <Image
             key={active}
