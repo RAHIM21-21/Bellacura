@@ -8,7 +8,7 @@ const videos = [
   { src: '/video/ad3.mp4', label: 'Testimonianza',         eager: false },
   { src: '/video/ad4.mp4', label: 'Risultati reali',       eager: false },
   { src: '/video/ad5.mp4', label: 'Prima e dopo',          eager: false },
-  { src: '/video/ad6.mp4', label: 'Come si usa',           eager: false },
+  { src: '/video/ad6-v2.mp4', label: 'Come si usa',           eager: false },
   { src: '/video/ad7.mp4', label: 'BellaCura — la scelta', eager: false },
 ]
 
