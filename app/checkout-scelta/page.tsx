@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, Suspense } from 'react'
+import { useState, Suspense, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -18,6 +18,20 @@ function CheckoutSceltaInner() {
   const productLabel = isDouble ? 'Massaggiatore Anticellulite × 2' : 'Massaggiatore Anticellulite × 1'
   const productPrice = isDouble ? '€99,90' : '€59,90'
   const originalPrice = isDouble ? '€238,00' : '€119,00'
+
+  // Fire AddToCart pixel event when user lands on this page
+  useEffect(() => {
+    const fbq = (window as any).fbq
+    if (fbq) {
+      fbq('track', 'AddToCart', {
+        value: isDouble ? 99.90 : 59.90,
+        currency: 'EUR',
+        content_name: 'BellaCura Massaggiatore Anticellulite',
+        content_ids: ['massaggiatore-4in1'],
+        content_type: 'product',
+      })
+    }
+  }, [isDouble])
 
   const isCod = searchParams.get('cod') === '1'
   const [step, setStep] = useState<Step>('form')
