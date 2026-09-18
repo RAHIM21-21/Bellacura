@@ -7,6 +7,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import CrispChat from '@/components/CrispChat'
 import MicrosoftClarity from '@/components/MicrosoftClarity'
+import MetaPixel from '@/components/MetaPixel'
 import AddToCartTracker from '@/components/AddToCartTracker'
 
 // Montserrat — primary typeface for all UI, headings and body
@@ -73,6 +74,7 @@ export default function RootLayout({
         <CrispChat />
         <MicrosoftClarity />
         <AddToCartTracker />
+        <MetaPixel />
       </body>
     </html>
   )
