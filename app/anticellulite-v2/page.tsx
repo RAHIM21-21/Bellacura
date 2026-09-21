@@ -33,7 +33,7 @@ const BULLETS = [
 export default function V2Page() {
   return (
     <>
-      <StickyOrderButton checkoutUrl="/checkout-scelta/?bundle=single" />
+      <StickyOrderButton />
 
       {/* ANNOUNCEMENT BAR */}
       <div className="py-2.5 px-4 bg-[#1D3557] text-center">
