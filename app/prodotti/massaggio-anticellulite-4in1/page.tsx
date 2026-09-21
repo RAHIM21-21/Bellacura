@@ -1,3 +1,4 @@
+import TrustpilotSection from '@/components/ui/TrustpilotSection'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -181,8 +182,11 @@ export default function ProductPage() {
 
    {/* Footer note */}
    <p className="text-center text-xs text-gray-400 mt-6">📱 Screenshot originali ricevuti su WhatsApp e Instagram — pubblicati con il consenso delle clienti</p>
- </div>
- </section>
+  </div>
+</section>
+
+<section className="bg-white py-10 md:py-14"><div className="max-w-5xl mx-auto px-4 sm:px-6"><TrustpilotSection /></div></section>
+
 
 
 
