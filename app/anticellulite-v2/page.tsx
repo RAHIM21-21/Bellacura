@@ -2,8 +2,6 @@ import type { Metadata } from 'next'
 import ProductImageGallery from '@/components/product/ProductImageGallery'
 import ProductBundlePicker from '@/components/product/ProductBundlePicker'
 import StickyOrderButton from '@/components/product/StickyOrderButton'
-import Link from 'next/link'
-import { SITE_URL } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'BellaCura — Pelle più liscia e tonica dal primo utilizzo',
