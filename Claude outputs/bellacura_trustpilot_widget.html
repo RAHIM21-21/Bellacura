@@ -1,0 +1,762 @@
+<!-- ═══════════════════════════════════════════
+     BELLACURA — Trustpilot Reviews Section
+     Drop this block wherever you want it on bellacura-shop.it
+     Add the <link> for Inter (Google Fonts) if not already loaded:
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+════════════════════════════════════════════ -->
+
+<style>
+.tp-section {
+  margin: 56px 0 0;
+  padding: 40px 0 0;
+  border-top: 2px solid var(--line);
+}
+.tp-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.tp-header h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(19px, 4vw, 24px);
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  text-align: center;
+  text-wrap: balance;
+}
+.tp-aggregate {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  color: var(--text2);
+}
+.tp-agg-stars {
+  display: flex;
+  gap: 2px;
+}
+.tp-agg-stars span {
+  width: 20px; height: 20px;
+  background: #00b67a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+.tp-agg-stars span.half {
+  background: linear-gradient(90deg, #00b67a 50%, #dcdce6 50%);
+}
+.tp-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+  /* bleed to edges on mobile */
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.tp-cards::-webkit-scrollbar { display: none; }
+.tp-card {
+  background: #FFFFFF;
+  border: 1px solid #EBECEF;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0px 2px 12px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* carousel sizing */
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+.tp-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.tp-avatar-wrap {
+  position: relative;
+  width: 62px;
+  height: 65px;
+  flex-shrink: 0;
+}
+.tp-avatar {
+  width: 62px; height: 62px;
+  border-radius: 50%;
+  background: #FF3722;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+}
+.tp-avatar-badge {
+  position: absolute;
+  left: 36px;
+  top: 39px;
+  width: 26px; height: 26px;
+  background: #FFFFFF;
+  border: 1px solid #EBECEF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tp-reviewer {
+  flex: 1;
+  padding-top: 2px;
+}
+.tp-reviewer-nameline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+.tp-reviewer-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.3;
+}
+.tp-su-invito {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #219653;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #219653;
+  white-space: nowrap;
+}
+.tp-verified {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: #219653;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.tp-card-stars {
+  display: flex;
+  gap: 2.57px;
+}
+.tp-card-stars span {
+  width: 24px; height: 24px;
+  background: #219653;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+.tp-card-date {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.6);
+}
+.tp-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.tp-card-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(0,0,0,0.6);
+  margin: 0;
+  line-height: 1.4;
+}
+.tp-card-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.6);
+  line-height: 1.6;
+  margin: 0;
+}
+.tp-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--text3);
+}
+</style>
+
+  <!-- ════════ TRUSTPILOT REVIEWS ════════ -->
+  <section class="tp-section">
+    <div class="tp-header">
+      <h2>Cosa dice Trustpilot</h2>
+      <!-- Trustpilot logo -->
+      <!-- Trustpilot logo — pure SVG, transparent background -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 102" style="height:56px;width:auto;max-width:100%;display:block;" role="img" aria-label="Trustpilot">
+        <!-- Star: outer=51px radius, inner=19.5px, center=(53.67,51) -->
+        <polygon points="53.67,0 65.12,35.24 102.18,35.24 72.20,57.02 83.65,92.26 53.67,70.48 23.69,92.26 35.14,57.02 5.16,35.24 42.22,35.24" fill="#00B67A"/>
+        <!-- Shadow: thin diagonal sliver between bottom-inner (Q3) and right-inner (Q2) -->
+        <polygon points="53.67,70.48 72.20,57.02 76,68" fill="#005128"/>
+        <!-- Wordmark: vertically centred -->
+        <text x="120" y="76" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="70" font-weight="700" fill="#191919" letter-spacing="-1.5">Trustpilot</text>
+      </svg>
+      <!-- Aggregate rating -->
+      <div class="tp-aggregate">
+        <div class="tp-agg-stars">
+          <span><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+          <span><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+          <span><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+          <span><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+          <span style="background:linear-gradient(90deg,#00b67a 80%,#dcdce6 80%);"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <strong>4,8 su 5</strong> &nbsp;·&nbsp; Recensioni verificate
+      </div>
+    </div>
+
+    <div class="tp-cards">
+
+      <!-- Review 1, Francesca M. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar">FR</div>
+            <!-- Small Trustpilot badge bottom-right of avatar -->
+            <div class="tp-avatar-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14">
+                <polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/>
+                <polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/>
+              </svg>
+            </div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Francesca</span>
+              <span class="tp-su-invito">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Su invito
+              </span>
+            </div>
+            <div class="tp-card-date">12 mar 2026</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Non ho mai visto le mie gambe così lisce!</p>
+          <p class="tp-card-body">Sinceramente ero un po' scettica all'inizio, ma dopo averlo usato con costanza ho notato davvero una bella differenza. La pelle è molto più liscia e uniforme e anche l'aspetto della cellulite è migliorato tantissimo 😍 Sono davvero soddisfatta dell'acquisto!</p>
+        </div>
+      </div>
+
+      <!-- Review 2, Valentina C. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#8E44AD">VA</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Valentina</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">18 feb 2026</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Finalmente qualcosa che funziona davvero!</p>
+          <p class="tp-card-body">Ho 38 anni e combatto la cellulite da quando ne ho 22. Ho provato di tutto, creme costose, fanghi, persino qualche seduta in cabina estetica, ma niente ha mai fatto quello che fa questo dispositivo. Dopo tre settimane di uso quotidiano, le cosce sono già visibilmente diverse, la pelle è più soda e la buccia d'arancia si vede molto meno. Continuerò ad usarlo!</p>
+        </div>
+      </div>
+
+      <!-- Review 3, Giulia R. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#2980B9">GI</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Giulia</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">4 gen 2026</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Il mio rituale serale preferito 🥰</p>
+          <p class="tp-card-body">L'ho preso su consiglio di un'amica che lo usa da mesi e devo dire che avevo ragione a fidarmi. Lo uso ogni sera per circa 15 minuti prima di dormire, è diventato quasi meditativo! La pelle delle gambe è diventata molto più liscia e tonica. Non pensavo che un dispositivo domestico potesse dare questi risultati onestamente.</p>
+        </div>
+      </div>
+
+      <!-- Review 4, Martina B. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#FF3722">MA</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Martina</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">22 mar 2026</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Scettica all'inizio, convinta adesso</p>
+          <p class="tp-card-body">Quando l'ho comprato non mi aspettavo grandi cose, avevo già perso fiducia in tutti questi gadget. Invece dopo 5 settimane devo ricredermi, le gambe sono visibilmente più lisce e soprattutto la pelle è più elastica al tatto. Mia sorella me lo ha già rubato 😂 dovrò ordinarne un altro.</p>
+        </div>
+      </div>
+
+      <!-- Review 5, Alessia T. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#16A085">AL</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Alessia</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">8 dic 2025</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Ottima qualità, risultati reali</p>
+          <p class="tp-card-body">Si capisce subito che è un prodotto serio. Lo uso da sei settimane e i risultati si vedono soprattutto sulle cosce dove avevo la cellulite più concentrata. La batteria dura tantissimo, il dispositivo è comodo da tenere in mano e non fa rumore eccessivo. Soddisfatta al 100%!</p>
+        </div>
+      </div>
+
+      <!-- Review 6, Chiara F. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#D35400">CH</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Chiara</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">14 feb 2026</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Il regalo a me stessa che vale ogni centesimo</p>
+          <p class="tp-card-body">Me lo sono regalata per San Valentino e mi ha già ripagata abbondantemente! Uso la funzione di calore e quella delle microcorrenti in combinazione e la differenza sulla pelle è notevole. Faccio sport regolarmente ma la cellulite ce l'avevo comunque, adesso finalmente si nota molto meno. Molto soddisfatta 💪</p>
+        </div>
+      </div>
+
+      <!-- Review 7, Sara L. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#27AE60">SA</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Sara</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">2 nov 2025</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Ci vuole costanza ma i risultati arrivano</p>
+          <p class="tp-card-body">Attenzione: non aspettatevi miracoli in una settimana. Bisogna usarlo con regolarità. Io lo uso a giorni alterni da quasi due mesi e adesso vedo davvero una bella differenza. La pelle è più compatta e la cellulite sulle natiche è migliorata tantissimo. Serve pazienza ma funziona, questo è certo!</p>
+        </div>
+      </div>
+
+      <!-- Review 8, Ilaria M. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#8E44AD">IL</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Ilaria</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">19 mar 2026</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Prodotto professionale per uso casalingo</p>
+          <p class="tp-card-body">Faccio l'estetista e so riconoscere un buon dispositivo quando lo vedo. Questo ha una qualità che raramente trovo nei prodotti consumer. I quattro meccanismi d'azione combinati fanno davvero la differenza rispetto ai massaggiatori singoli. Lo consiglio alle mie clienti come mantenimento tra un trattamento e l'altro in cabina.</p>
+        </div>
+      </div>
+
+      <!-- Review 9, Laura P. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#C0392B">LA</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Laura</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">27 gen 2026</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Non riesco a immaginarmi la beauty routine senza</p>
+          <p class="tp-card-body">Ormai è diventato indispensabile. Lo uso ogni sera e mi rilasso mentre mi prendo cura delle gambe. I risultati sono arrivati gradualmente ma in modo davvero evidente, dopo sei settimane ho fatto una foto comparativa e la differenza è impressionante. Consiglio vivamente a tutte!</p>
+        </div>
+      </div>
+
+      <!-- Review 10, Roberta S. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#2980B9">RO</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Roberta</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">5 feb 2026</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Finalmente mi rimetto il costume con meno ansia</p>
+          <p class="tp-card-body">Ho sempre vissuto il mare con un po' di disagio per via della cellulite. Quest'anno ho iniziato ad usare BellaCura con largo anticipo e devo dire che mi sento molto più a mio agio. Le gambe sono più lisce e la pelle ha un aspetto completamente diverso rispetto all'anno scorso. Grazie! 🌊</p>
+        </div>
+      </div>
+
+      <!-- Review 11, Federica N. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#F39C12">FE</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Federica</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">11 dic 2025</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Il regalo di Natale perfetto per le amiche</p>
+          <p class="tp-card-body">L'ho comprato per me e poi ne ho presi altri tre come regali di Natale per le mie amiche. Tutte entusiaste! È un prodotto che si vede che è di qualità, la confezione è bella e il dispositivo è solido. I risultati parlano da soli. Lo consiglio senza riserve a chiunque.</p>
+        </div>
+      </div>
+
+      <!-- Review 12, Claudia V. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#16A085">CL</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Claudia</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">8 mar 2026</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Pelle trasformata in quattro settimane</p>
+          <p class="tp-card-body">Quattro settimane fa ho iniziato il mio percorso con BellaCura e oggi posso dire con certezza che la mia pelle non è più quella di prima. Le gambe sono lisce, la cellulite si vede pochissimo e mi sento molto più sicura di me stessa. È diventato il mio momento di cura personale preferito della giornata ❤️</p>
+        </div>
+      </div>
+
+      <!-- Review 13, Elena G. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#D35400">EL</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Elena</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">30 ott 2025</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Meglio dei trattamenti in cabina estetica</p>
+          <p class="tp-card-body">Ho speso una fortuna in cabina estetica negli ultimi anni per trattamenti anticellulite. Questo dispositivo, usato a casa con costanza, mi ha dato risultati superiori a qualsiasi trattamento professionale che abbia mai fatto. Sono senza parole. Qualità davvero eccezionale, non me lo aspettavo.</p>
+        </div>
+      </div>
+
+      <!-- Review 14, Paola D. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#8E44AD">PA</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Paola</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">15 gen 2026</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Ottimo anche per il recupero muscolare</p>
+          <p class="tp-card-body">Lo uso principalmente sulle gambe e sulle braccia. Per la cellulite funziona benissimo, ma voglio segnalare anche che è ottimo per allentare la tensione muscolare dopo l'allenamento in palestra. Due benefici in uno solo! Un acquisto davvero intelligente che consiglio a tutte le sportive.</p>
+        </div>
+      </div>
+
+      <!-- Review 15, Monica A. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#C0392B">MO</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Monica</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">23 feb 2026</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Dopo due gravidanze mi riapproprio del mio corpo</p>
+          <p class="tp-card-body">Dopo due gravidanze la cellulite aveva preso il sopravvento e facevo fatica a ritrovare la mia forma. BellaCura mi ha aiutata tantissimo, non solo per i risultati estetici, ma anche per la sensazione quotidiana di prendermi cura di me stessa. Sono davvero molto grata 🙏</p>
+        </div>
+      </div>
+
+      <!-- Review 16, Cristina E. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#27AE60">CR</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Cristina</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">1 mar 2026</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Un acquisto che rifarei mille volte</p>
+          <p class="tp-card-body">Ho aspettato prima di scrivere la recensione perché volevo essere sicura dei risultati. Eccomi qui dopo due mesi: la cellulite è notevolmente ridotta, la pelle è più soda e mi sento bene. Nessun rimpianto, solo tanta soddisfazione. Grazie mille BellaCura, continuate così!</p>
+        </div>
+      </div>
+
+      <!-- Review 17, Silvia C. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#F39C12">SI</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Silvia</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">20 nov 2025</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Funziona davvero, parola di scettica</p>
+          <p class="tp-card-body">Sono una che non crede ai miracoli e tantomeno ai dispositivi 'rivoluzionari' che si trovano online. Ma questa volta mi sbagliavo di grosso. I risultati sono reali, visibili e persistenti. La cellulite sulle cosce è dimezzata in due mesi di uso regolare. Sono genuinamente stupita.</p>
+        </div>
+      </div>
+
+      <!-- Review 18, Daniela R. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#2980B9">DA</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Daniela</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">7 dic 2025</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Il miglior investimento beauty degli ultimi anni</p>
+          <p class="tp-card-body">Ho 45 anni e la mia pelle aveva bisogno di qualcosa di serio. BellaCura è stata una vera rivelazione: la pelle è più elastica, più giovane, e la cellulite che avevo da anni si è ridotta in modo significativo. Spendo meno in trattamenti estetici e ho risultati nettamente migliori. Consigliatissimo!</p>
+        </div>
+      </div>
+
+      <!-- Review 19, Annalisa M. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#16A085">AN</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Annalisa</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">12 feb 2026</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Non ho altro da aggiungere se non: perfetto</p>
+          <p class="tp-card-body">Semplice da usare, efficace, di ottima qualità. Ho visto i primi miglioramenti già in 3 settimane e dopo 2 mesi la pelle delle gambe è completamente trasformata. Non avrei potuto chiedere di meglio. Sono felicissima di questo acquisto e lo consiglio a tutte senza esitazione 😊</p>
+        </div>
+      </div>
+
+      <!-- Review 20, Teresa B. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#D35400">TE</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Teresa</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">10 gen 2026</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Mio marito mi ha chiesto cosa stava succedendo alle mie gambe 😂</p>
+          <p class="tp-card-body">Questa è la miglior recensione che posso fare: mio marito, che non nota MAI niente, mi ha chiesto spontaneamente se avessi fatto qualcosa alle gambe perché sembrano diverse. Questo dice tutto. BellaCura funziona e i risultati si vedono anche agli occhi di chi non ti sta nemmeno guardando apposta!</p>
+        </div>
+      </div>
+
+      <!-- Review 21, Noemi F. -->
+      <div class="tp-card">
+        <div class="tp-card-top">
+          <div class="tp-avatar-wrap">
+            <div class="tp-avatar" style="background:#8E44AD">NO</div>
+            <div class="tp-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102" width="14" height="14"><polygon points="51,0 61.69,33.54 97.05,33.54 68.68,54.22 79.37,87.76 51,67.08 22.63,87.76 33.32,54.22 4.95,33.54 40.31,33.54" fill="#219653"/><polygon points="51,67.08 68.68,54.22 72,64" fill="#0D5E30"/></svg></div>
+          </div>
+          <div class="tp-reviewer">
+            <div class="tp-reviewer-nameline">
+              <span class="tp-reviewer-name">Noemi</span>
+              <span class="tp-su-invito"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#219653" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Su invito</span>
+            </div>
+            <div class="tp-card-date">15 mar 2026</div>
+          </div>
+        </div>
+        <div class="tp-card-stars">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        </div>
+        <div class="tp-card-text">
+          <p class="tp-card-title">Meglio di qualsiasi crema anticellulite abbia mai provato</p>
+          <p class="tp-card-body">Ho speso cifre ridicole in creme anticellulite negli anni, alcune davvero costosissime. Nessuna mi ha mai dato quello che mi ha dato questo dispositivo in sei settimane. La pelle è davvero cambiata, non solo superficialmente. Continuate così, avete fatto qualcosa di veramente eccezionale.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tp-footer">
+      <svg width="14" height="14" viewBox="0 0 512 512" fill="none"><polygon points="256,20 317,185 490,185 352,290 400,460 256,360 112,460 160,290 22,185 195,185" fill="#00b67a"/></svg>
+      Recensioni raccolte e verificate su Trustpilot
+    </div>
+  </section>

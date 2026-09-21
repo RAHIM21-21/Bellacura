@@ -185,7 +185,7 @@ export default function ProductPage() {
   </div>
 </section>
 
-<section className="bg-white py-10 md:py-14"><div className="max-w-5xl mx-auto px-4 sm:px-6"><TrustpilotSection /></div></section>
+<section className="bg-white py-6 md:py-10"><div className="max-w-5xl mx-auto px-4 sm:px-6"><TrustpilotSection /></div></section>
 
 
 

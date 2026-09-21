@@ -121,9 +121,9 @@ const reviews: ReviewCardProps[] = [
 
 export default function TrustpilotSection() {
   return (
-    <section style={{ margin: '48px 0 0', padding: '40px 0 0', borderTop: '1px solid #e5e7eb' }}>
+    <section style={{ margin: 0, padding: 0 }}>
       {/* Header */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12, marginBottom: 28, paddingInline: 20 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, marginBottom: 16, paddingInline: 16 }}>
         <h2 style={{
           fontFamily: '\'Playfair Display\', Georgia, serif',
           fontSize: 'clamp(19px, 4vw, 24px)',
