@@ -7,7 +7,7 @@ const bundles = [
   {
     id: 'single',
     label: 'BellaCura Massaggiatore',
-    subtitle: 'Pressione negativa + calore + luce rossa',
+    subtitle: 'Pressione negativa + calore + luce rossa + luce blu',
     tag: 'PIÙ VENDUTO',
     tagColor: 'bg-red-600',
     price: 59.99,

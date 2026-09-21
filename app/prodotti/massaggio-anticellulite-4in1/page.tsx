@@ -15,7 +15,7 @@ export const metadata: Metadata = {
  ...buildMetadata({
  title: 'BellaCura Massaggiatore Anticellulite – Pelle Più Tonica in 14 Giorni',
  description:
- 'Il massaggiatore anticellulite professionale più venduto in Italia. Vibrazione + calore 45°C + luce rossa. Risultati visibili in 2 settimane. Paga alla consegna. Spedizione 24-48h GRATIS.',
+ 'Il massaggiatore anticellulite professionale più venduto in Italia. Vibrazione + calore 45°C + luce rossa + luce blu. Risultati visibili in 4 settimane. Paga alla consegna. Spedizione 24-48h GRATIS.',
  path: '/prodotti/massaggio-anticellulite-4in1/',
  ogImage: `${SITE_URL}/images/product-green-hero.jpg`,
  }),
@@ -33,13 +33,13 @@ const reviews = [
 ]
 
 const faqs = [
- { question: 'Come funziona il massaggiatore anticellulite BellaCura?', answer: 'Combina 4 tecnologie: vibrazione profonda ad alta frequenza, riscaldamento a 45°C, luce rossa e pressione meccanica. Insieme stimolano la circolazione, drenano i liquidi in eccesso e riducono visibilmente la cellulite.' },
+ { question: 'Come funziona il massaggiatore anticellulite BellaCura?', answer: 'Combina 4 tecnologie: ventosa a pressione variabile, calore profondo 40–45°C, luce rossa 630–660nm e luce blu 415–430nm. Insieme sciolgono le aderenze fibrose, stimolano la microcircolazione, attivano il collagene e riducono l'infiammazione cronica che alimenta la cellulite.' },
  { question: 'In quanto tempo si vedono i risultati?', answer: 'La maggior parte delle clienti nota miglioramenti già dopo 7-10 giorni di utilizzo regolare (10 minuti al giorno). Risultati significativi dopo 4-6 settimane.' },
  { question: 'Quanto dura la batteria?', answer: 'Con una singola carica di circa 2 ore tramite USB-C, il massaggiatore offre fino a 90 minuti di utilizzo continuativo. Puoi ricaricarlo ogni sera e averlo sempre pronto per la tua routine.' },
  { question: 'Come funziona il pagamento alla consegna?', answer: 'Scegli "Pagamento alla consegna" al checkout. Il corriere consegna il prodotto a casa tua in 24-48 ore e paghi direttamente a lui in contanti al momento della ricezione.' },
  { question: 'Posso restituire il prodotto se non sono soddisfatta?', answer: 'Assolutamente sì. Hai 90 giorni dalla ricezione per restituire il prodotto per qualsiasi motivo. Il reso è completamente gratuito e rimborsiamo il 100% dell\'importo pagato.' },
  { question: 'Vale la pena rispetto a un salone estetico?', answer: 'Un singolo trattamento anticellulite in salone costa in media €60–€100. Con BellaCura paghi €59,99 una sola volta e hai i trattamenti illimitati a casa tua, quando vuoi, per sempre. Molte nostre clienti risparmiano centinaia di euro ogni anno.' },
- { question: 'È sicuro per la pelle sensibile?', answer: 'Sì. La luce rossa e il calore a infrarossi sono tecnologie dolci usate anche in ambito medico-estetico. Inizia con la vibrazione più bassa e aumenta gradualmente. In caso di patologie cutanee, consulta il tuo medico prima dell\'uso.' },
+ { question: 'È sicuro per la pelle sensibile?', answer: 'Sì. La luce rossa, la luce blu e il calore a infrarossi sono tecnologie dolci usate anche in ambito medico-estetico. Inizia con la vibrazione più bassa e aumenta gradualmente. In caso di patologie cutanee, consulta il tuo medico prima dell\'uso.' },
 ]
 
 const STOCK_NUMS = [5, 6, 7, 8, 9]
@@ -48,7 +48,7 @@ const dailyStock = STOCK_NUMS[Math.floor(Date.now() / 86400000) % STOCK_NUMS.len
 export default function ProductPage() {
  const schema_product = productSchema({
  name: 'BellaCura Massaggiatore Anticellulite',
- description: 'Massaggiatore anticellulite professionale con vibrazione profonda, riscaldamento a infrarossi 45°C, luce rossa e 5 livelli di intensità. Impermeabile IPX7.',
+ description: 'Massaggiatore anticellulite professionale con ventosa a pressione variabile, calore profondo 40–45°C, luce rossa 630–660nm, luce blu 415–430nm e 5 livelli di intensità. Impermeabile IPX7.',
  image: '/images/product-green-hero.jpg',
  price: 59.99, sku: 'BC-MASS-4IN1', reviews,
  })
@@ -98,7 +98,7 @@ export default function ProductPage() {
  </svg>
  ))}
  </div>
- <span className="font-bold text-gray-900">4.9/5.0</span>
+ <span className="font-bold text-gray-900">4.8/5.0</span>
  <a href="#recensioni" className="text-gray-400 text-sm hover:text-[#457B9D] hover:underline cursor-pointer transition-colors">da 2.800+ recensioni verificate</a>
  </div>
  </div>
@@ -120,7 +120,7 @@ export default function ProductPage() {
  </svg>
  ))}
  </div>
- <span className="font-bold text-gray-900">4.9/5.0</span>
+ <span className="font-bold text-gray-900">4.8/5.0</span>
  <a href="#recensioni" className="text-gray-400 text-sm hover:text-[#457B9D] hover:underline cursor-pointer transition-colors">da 2.800+ recensioni verificate</a>
  </div>
  </div>
@@ -151,7 +151,7 @@ export default function ProductPage() {
            </svg>
          ))}
        </div>
-       <span className="font-bold text-gray-900 text-sm">4.9/5</span>
+       <span className="font-bold text-gray-900 text-sm">4.8/5</span>
        <span className="text-gray-400 text-sm">· 2.800+ clienti soddisfatte</span>
      </div>
    </div>
@@ -200,7 +200,7 @@ export default function ProductPage() {
  </div>
  <div className="grid md:grid-cols-3 gap-3 md:gap-6">
  {[
- { pct: 92, label: '92%', text: 'Riduzione visibile della cellulite già dalla prima settimana.' },
+ { pct: 85, label: '85%', text: 'Miglioramento visibile della texture cutanea entro la quarta settimana.' },
  { pct: 89, label: '89%', text: 'Pelle più liscia e gambe più leggere dopo soli 30 giorni.' },
  { pct: 94, label: '94%', text: 'Sollievo muscolare percepito dopo ogni sessione di massaggio.' },
  ].map(({ pct, label, text }) => {
@@ -395,7 +395,7 @@ export default function ProductPage() {
        <span>🔒 Pagamento 100% sicuro</span>
        <span>📦 Spedizione gratuita</span>
        <span>↩️ Reso gratuito entro 90 giorni</span>
-       <span>⚡ Consegna in 2–4 giorni</span>
+       <span>⚡ Consegna in 24–48 ore</span>
      </div>
 
      {/* Social proof micro */}
@@ -417,7 +417,7 @@ export default function ProductPage() {
  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
  </svg>
  ))}
- <span className="text-xs text-gray-500 ml-1">4.9 · 2.800+ recensioni</span>
+ <span className="text-xs text-gray-500 ml-1">4.8 · 2.800+ recensioni</span>
  </div>
  </div>
  <div className="flex items-center gap-4">
