@@ -33,7 +33,7 @@ const reviews = [
 ]
 
 const faqs = [
- { question: 'Come funziona il massaggiatore anticellulite BellaCura?', answer: 'Combina 4 tecnologie: ventosa a pressione variabile, calore profondo 40–45°C, luce rossa 630–660nm e luce blu 415–430nm. Insieme sciolgono le aderenze fibrose, stimolano la microcircolazione, attivano il collagene e riducono l'infiammazione cronica che alimenta la cellulite.' },
+ { question: 'Come funziona il massaggiatore anticellulite BellaCura?', answer: 'Combina 4 tecnologie: ventosa a pressione variabile, calore profondo 40–45°C, luce rossa 630–660nm e luce blu 415–430nm. Insieme sciolgono le aderenze fibrose, stimolano la microcircolazione, attivano il collagene e riducono l’infiammazione cronica che alimenta la cellulite.' },
  { question: 'In quanto tempo si vedono i risultati?', answer: 'La maggior parte delle clienti nota miglioramenti già dopo 7-10 giorni di utilizzo regolare (10 minuti al giorno). Risultati significativi dopo 4-6 settimane.' },
  { question: 'Quanto dura la batteria?', answer: 'Con una singola carica di circa 2 ore tramite USB-C, il massaggiatore offre fino a 90 minuti di utilizzo continuativo. Puoi ricaricarlo ogni sera e averlo sempre pronto per la tua routine.' },
  { question: 'Come funziona il pagamento alla consegna?', answer: 'Scegli "Pagamento alla consegna" al checkout. Il corriere consegna il prodotto a casa tua in 24-48 ore e paghi direttamente a lui in contanti al momento della ricezione.' },
