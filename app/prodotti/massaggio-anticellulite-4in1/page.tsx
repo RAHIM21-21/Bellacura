@@ -336,6 +336,75 @@ export default function ProductPage() {
  {/* COMPARISON VS — moved to end */}
  <ComparisonVS />
 
+
+ {/* FINAL CTA — 90-day guarantee */}
+ <section style={{background: 'linear-gradient(160deg, #0f2744 0%, #1D3557 60%, #1a4a6e 100%)'}} className="py-14 md:py-24">
+   <div className="max-w-2xl mx-auto px-5 sm:px-8 text-center">
+
+     {/* Shield badge */}
+     <div className="flex justify-center mb-5">
+       <div style={{background: 'rgba(255,255,255,0.08)', borderRadius: '50%', width: 72, height: 72, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1.5px solid rgba(255,255,255,0.15)'}}>
+         <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+           <polyline points="9 12 11 14 15 10" stroke="white" strokeWidth="2"/>
+         </svg>
+       </div>
+     </div>
+
+     <span style={{color: 'rgba(255,255,255,0.5)', fontSize: 11, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', display: 'block', marginBottom: 12}}>Zero rischi</span>
+
+     <h2 style={{color: '#fff', fontSize: 'clamp(26px, 6vw, 40px)', fontWeight: 800, lineHeight: 1.2, marginBottom: 16}}>
+       90 giorni per decidere.<br/>
+       <span style={{color: '#7FD4B0'}}>O rimborso totale.</span>
+     </h2>
+
+     <p style={{color: 'rgba(255,255,255,0.65)', fontSize: 'clamp(15px, 3.5vw, 18px)', lineHeight: 1.6, marginBottom: 28, maxWidth: 480, marginLeft: 'auto', marginRight: 'auto'}}>
+       Ordina oggi. Se non vedi risultati entro 90 giorni ti rimborsiamo il <strong style={{color: '#fff'}}>100% dell&apos;importo</strong> — reso gratuito, nessuna domanda.
+     </p>
+
+     {/* Price block */}
+     <div style={{marginBottom: 24, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, flexWrap: 'wrap'}}>
+       <span style={{color: 'rgba(255,255,255,0.35)', textDecoration: 'line-through', fontSize: 20}}>€119,00</span>
+       <span style={{color: '#fff', fontWeight: 900, fontSize: 'clamp(32px, 8vw, 46px)'}}>€59,99</span>
+       <span style={{background: '#E63946', color: '#fff', fontWeight: 800, fontSize: 12, padding: '4px 10px', borderRadius: 20}}>−50%</span>
+     </div>
+
+     {/* CTA Button */}
+     <a
+       href="/checkout-scelta/?bundle=single"
+       style={{
+         display: 'inline-block',
+         background: '#fff',
+         color: '#1D3557',
+         fontWeight: 800,
+         fontSize: 'clamp(15px, 3.5vw, 18px)',
+         padding: '16px 36px',
+         borderRadius: 50,
+         textDecoration: 'none',
+         boxShadow: '0 8px 32px rgba(0,0,0,0.25)',
+         letterSpacing: 0.3,
+         marginBottom: 28,
+         transition: 'transform 0.15s',
+       }}
+     >
+       Ordina ora — Spedizione gratuita 🚚
+     </a>
+
+     {/* Trust badges */}
+     <div style={{display: 'flex', flexWrap: 'wrap', gap: '10px 20px', justifyContent: 'center', color: 'rgba(255,255,255,0.5)', fontSize: 13}}>
+       <span>🔒 Pagamento 100% sicuro</span>
+       <span>📦 Spedizione gratuita</span>
+       <span>↩️ Reso gratuito entro 90 giorni</span>
+       <span>⚡ Consegna in 2–4 giorni</span>
+     </div>
+
+     {/* Social proof micro */}
+     <p style={{color: 'rgba(255,255,255,0.3)', fontSize: 12, marginTop: 20}}>
+       Unisciti a <strong style={{color: 'rgba(255,255,255,0.5)'}}>2.800+ clienti</strong> che hanno già scelto BellaCura
+     </p>
+   </div>
+ </section>
+
  {/* Fixed sticky CTA */}
  <div className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 shadow-2xl">
  <StickyOrderButton />
