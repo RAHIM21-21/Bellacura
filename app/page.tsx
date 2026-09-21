@@ -5,6 +5,7 @@ import { buildMetadata } from '@/lib/seo'
 import { Star, Truck, RotateCcw, Shield, ChevronRight, CheckCircle2 } from 'lucide-react'
 import CountdownTimer from '@/components/home/CountdownTimer'
 import ReviewsCarousel from '@/components/ui/ReviewsCarousel'
+import TrustpilotSection from '@/components/ui/TrustpilotSection'
 import BodyMap from '@/components/home/BodyMap'
 
 export const metadata: Metadata = buildMetadata({
@@ -339,7 +340,9 @@ export default function HomePage() {
  {/* PHOTO REVIEWS */}
       <ReviewsCarousel />
 
- {/* FINAL CTA */}
+ <TrustpilotSection />
+
+      {/* FINAL CTA */}
  <section className="section bg-[#1D3557] text-white text-center">
  <div className="container-tight max-w-2xl">
  <span className="inline-block bg-white/20 text-white text-sm font-bold px-4 py-1 rounded-full mb-4">
