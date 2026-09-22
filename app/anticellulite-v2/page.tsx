@@ -66,10 +66,23 @@ function VerifiedBadge() {
 }
 
 function StatCircle({ pct, label }: { pct: string; label: React.ReactNode }) {
+  const num = parseFloat(pct)
+  const r = 30
+  const circ = 2 * Math.PI * r
+  const dash = (num / 100) * circ
   return (
-    <div className="flex items-center gap-4">
-      <div className="shrink-0 w-16 h-16 rounded-full border-4 border-[#1D3557] flex items-center justify-center bg-white">
-        <span className="text-sm font-black text-[#1D3557]">{pct}</span>
+    <div className="flex items-center gap-4 bg-[#EEF4FB] rounded-2xl px-4 py-3">
+      <div className="shrink-0 relative w-16 h-16">
+        <svg width="64" height="64" viewBox="0 0 64 64" style={{ transform: 'rotate(-90deg)' }}>
+          <circle cx="32" cy="32" r={r} fill="none" stroke="#D6E4F0" strokeWidth="5" />
+          <circle
+            cx="32" cy="32" r={r} fill="none"
+            stroke="#1D3557" strokeWidth="5"
+            strokeLinecap="round"
+            strokeDasharray={`${dash} ${circ}`}
+          />
+        </svg>
+        <span className="absolute inset-0 flex items-center justify-center text-sm font-black text-[#1D3557]">{pct}</span>
       </div>
       <p className="text-sm text-gray-700 leading-snug">{label}</p>
     </div>
@@ -345,7 +358,7 @@ export default function V2Page() {
             </div>
           </div>
           {/* 2x2 stat grid with circular badges */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
             <StatCircle pct="89%" label={<>Ha notato la pelle <strong>visibilmente pi&#xf9; liscia</strong> e tonica</>} />
             <StatCircle pct="93%" label={<>Ha riferito cosce <strong>pi&#xf9; compatte e modellate</strong></>} />
             <StatCircle pct="94%" label={<>Ha confermato che il trattamento &#xe8; <strong>completamente indolore</strong></>} />
