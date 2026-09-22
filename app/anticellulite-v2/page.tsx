@@ -310,7 +310,7 @@ export default function V2Page() {
       { img: '/images/before-after-10.png', alt: 'Prima e dopo BellaCura - glutei', title: 'GLUTEI COMPLETAMENTE SODI',
         quote: '"Risultati che superano ogni aspettativa. Consiglio a tutte le mie amiche!"', name: 'Paola B.', age: 42 },
       { img: '/images/before-after-11.png', alt: 'Prima e dopo BellaCura - gambe posteriori', title: 'TRASFORMAZIONE TOTALE',
-        quote: '"Ho provato tanti prodotti ma BellaCura è l'unico che ha davvero funzionato per me."', name: 'Anna M.', age: 45 },
+        quote: '"Ho provato tanti prodotti ma BellaCura è l’unico che ha davvero funzionato per me."', name: 'Anna M.', age: 45 },
       ].map((card, i) => (
             <div
               key={i}
