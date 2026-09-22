@@ -354,7 +354,7 @@ export default function V2Page() {
               </p>
             </div>
             <div className="relative rounded-3xl overflow-hidden h-72 md:h-80 shadow-xl">
-              <Image src="/images/lifestyle-black-seated.jpg" alt="BellaCura in uso" fill className="object-cover" />
+              <Image src="/images/lifestyle-tech-seated.jpg" alt="BellaCura in uso" fill className="object-cover" />
             </div>
           </div>
           {/* 2x2 stat grid with circular badges */}
