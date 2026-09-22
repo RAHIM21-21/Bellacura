@@ -239,9 +239,12 @@ export default function V2Page() {
         </h2>
       </section>
 
-      {/* 4. BEFORE/AFTER REVIEW CARDS (6) */}
-      <section className="bg-white pb-14 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {/* 4. BEFORE/AFTER SCROLL CAROUSEL (3:4 full-size) */}
+      <section className="bg-white pb-14">
+        <div
+          className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4"
+          style={{ scrollbarWidth: 'none', paddingLeft: 16, paddingRight: 16 }}
+        >
           {[
             {
               img: '/images/before-after-1.png',
@@ -292,9 +295,19 @@ export default function V2Page() {
               age: 38,
             },
           ].map((card, i) => (
-            <div key={i} className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-              <div className="relative h-64 w-full">
-                <Image src={card.img} alt={card.alt} fill className="object-cover" />
+            <div
+              key={i}
+              className="flex-none snap-start border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm"
+              style={{ width: 'min(88vw, 340px)' }}
+            >
+              <div className="relative w-full" style={{ aspectRatio: '3/4' }}>
+                <Image
+                  src={card.img}
+                  alt={card.alt}
+                  fill
+                  sizes="(max-width: 768px) 88vw, 340px"
+                  className="object-cover"
+                />
               </div>
               <div className="p-4 space-y-2">
                 <h3 className="font-black text-gray-900 text-sm tracking-wide">{card.title}</h3>
@@ -308,6 +321,8 @@ export default function V2Page() {
             </div>
           ))}
         </div>
+        {/* dot hints */}
+        <p className="text-center text-xs text-gray-400 mt-2">← scorri per vedere tutte le trasformazioni →</p>
       </section>
 
       {/* 5. PROFESSIONAL TECHNOLOGY */}
