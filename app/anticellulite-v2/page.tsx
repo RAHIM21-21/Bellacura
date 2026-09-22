@@ -238,31 +238,55 @@ export default function V2Page() {
         </h2>
       </section>
 
-      {/* 4. BEFORE/AFTER REVIEW CARDS (3) */}
+      {/* 4. BEFORE/AFTER REVIEW CARDS (6) */}
       <section className="bg-white pb-14 px-4">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {[
             {
-              img: '/images/g4-martina-branded.jpg',
-              alt: 'Prima e dopo Martina',
-              title: 'RISULTATI VISIBILI RAPIDAMENTE',
-              quote: '"Non immaginavo un risultato cos&#xec; netto in cos&#xec; poco tempo. La texture &#xe8; completamente cambiata. Sono sulla mia seconda settimana e non riesco a smettere."',
-              name: 'Martina C.',
-              age: 34,
+              img: '/images/before-after-1.png',
+              alt: 'Prima e dopo cellulite cosce',
+              title: 'COSCE COMPLETAMENTE TRASFORMATE',
+              quote: '"In 4 settimane di utilizzo quotidiano ho visto più risultati che in anni di creme e trattamenti estetici. Le mie cosce sono finalmente lisce."',
+              name: 'Giulia R.',
+              age: 36,
             },
             {
-              img: '/images/g5-francesca-branded.jpg',
-              alt: 'Prima e dopo Francesca',
-              title: 'INCREDIBILE!',
-              quote: '"Usavo creme ogni giorno da anni senza risultati. Con BellaCura ho visto in 3 settimane quello che le creme non mi hanno mai dato in 10 anni."',
-              name: 'Francesca M.',
-              age: 42,
+              img: '/images/before-after-2.png',
+              alt: 'Prima e dopo glutei cellulite',
+              title: 'PELLE TONICA, ZERO BUCCIA D’ARANCIA',
+              quote: '"Non ci credevo, ma i risultati sui glutei sono stati incredibili. La pelle è tornata liscia e compatta come quando avevo vent’anni."',
+              name: 'Sara M.',
+              age: 41,
+            },
+            {
+              img: '/images/before-after-3.png',
+              alt: 'Prima e dopo schiena cellulite',
+              title: 'TRASFORMAZIONE TOTALE IN 6 SETTIMANE',
+              quote: '"Ho usato BellaCura sulla schiena e sui fianchi ogni sera. I cambiamenti sono stati progressivi ma costanti. Adesso sono orgogliosa di ciò che vedo allo specchio."',
+              name: 'Alessia T.',
+              age: 33,
+            },
+            {
+              img: '/images/before-after-4.png',
+              alt: 'Prima e dopo cellulite schiena cosce',
+              title: 'RISULTATI CHE PARLANO DA SOLI',
+              quote: '"Senza dieta, senza cambiare nulla nella mia routine. Solo BellaCura 15 minuti al giorno. La differenza è visibilissima e le mie amiche me lo chiedono in continuazione."',
+              name: 'Valentina C.',
+              age: 44,
+            },
+            {
+              img: '/images/before-after-5.png',
+              alt: 'Prima e dopo cellulite glutei cosce',
+              title: 'IL COSTUME NON FA PIÙ PAURA',
+              quote: '"Quest’estate ho indossato il bikini per la prima volta da anni. BellaCura mi ha ridato la fiducia che avevo perso. I risultati sui glutei e sulle cosce sono stati stupefacenti."',
+              name: 'Francesca L.',
+              age: 39,
             },
             {
               img: '/images/review-instagram-elena.jpg',
-              alt: 'Recensione Elena',
+              alt: 'Recensione Elena B.',
               title: 'UN MIRACOLO A CASA TUA',
-              quote: '"Dopo sole poche sessioni, la mia pelle sembrava completamente diversa. Pi&#xf9; liscia, pi&#xf9; tonica. Non lo abbandonerei mai."',
+              quote: '"Dopo sole poche sessioni, la mia pelle sembrava completamente diversa. Più liscia, più tonica. Non lo abbandonerei mai."',
               name: 'Elena B.',
               age: 38,
             },
@@ -347,20 +371,43 @@ export default function V2Page() {
         </div>
       </section>
 
-      {/* 7. TEXT REVIEW CARDS (4) */}
+      {/* 7. TEXT REVIEW CARDS (4) — Trustpilot */}
       <section className="bg-white pb-14 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { title: 'La Migliore Pelle di Sempre', quote: '"Idratante, rassodante, modellante dall&#x27;interno. Non tornerei mai pi&#xf9; alle creme."', name: 'Laura W.', age: 45 },
-            { title: 'Risultati Pro, Senza Clinica!', quote: '"Mi risparmia tempo e denaro rispetto ai trattamenti estetici che costavano 10 volte tanto."', name: 'Olivia S.', age: 38 },
-            { title: 'Pelle Tonica Senza Filler!', quote: '"Finalmente un metodo migliore per avere una pelle pi&#xf9; giovane senza procedure invasive."', name: 'Samantha J.', age: 58 },
-            { title: 'Pelle Perfetta, Zero Dolore!', quote: '"Con BellaCura in 4 settimane ho ottenuto ci&#xf2; che non avevo mai ottenuto prima."', name: 'Madison T.', age: 32 },
+            {
+              title: 'Non ho mai visto le mie gambe così lisce!',
+              quote: 'Ero scettica all’inizio, ma dopo averlo usato con costanza ho notato davvero una bella differenza. La pelle è molto più liscia e uniforme e anche l’aspetto della cellulite è migliorato tantissimo.',
+              name: 'Francesca',
+              date: '12 mar 2026',
+            },
+            {
+              title: 'Finalmente qualcosa che funziona davvero!',
+              quote: 'Ho 38 anni e combatto la cellulite da quando ne ho 22. Ho provato di tutto. Dopo tre settimane di uso quotidiano, le cosce sono già visibilmente diverse, la pelle è più soda e la buccia d’arancia si vede molto meno.',
+              name: 'Valentina',
+              date: '18 feb 2026',
+            },
+            {
+              title: 'Scettica all’inizio, convinta adesso',
+              quote: 'Quando l’ho comprato non mi aspettavo grandi cose, avevo già perso fiducia in tutti questi gadget. Invece dopo 5 settimane devo ricredermi, le gambe sono visibilmente più lisce. Mia sorella me lo ha già rubato!',
+              name: 'Martina',
+              date: '22 mar 2026',
+            },
+            {
+              title: 'Non riesco a immaginarmi la routine senza',
+              quote: 'Ormai è diventato indispensabile. Lo uso ogni sera e mi rilasso mentre mi prendo cura delle gambe. Dopo sei settimane ho fatto una foto comparativa e la differenza è impressionante.',
+              name: 'Laura',
+              date: '27 gen 2026',
+            },
           ].map((r, i) => (
-            <div key={i} className="border border-gray-200 rounded-2xl p-4 space-y-2 bg-white shadow-sm">
+            <div key={i} className="border border-gray-200 rounded-2xl p-4 space-y-2 bg-white shadow-sm flex flex-col">
               <Stars n={5} size={3} />
               <p className="font-black text-gray-900 text-sm leading-tight">{r.title}</p>
-              <p className="text-xs text-gray-600 leading-relaxed italic" dangerouslySetInnerHTML={{ __html: r.quote }} />
-              <p className="text-xs font-bold text-gray-500">{r.name} | {r.age}</p>
+              <p className="text-xs text-gray-600 leading-relaxed italic flex-1">{r.quote}</p>
+              <div className="flex items-center justify-between pt-1">
+                <p className="text-xs font-bold text-gray-700">{r.name}</p>
+                <span className="text-xs text-gray-400">{r.date}</span>
+              </div>
             </div>
           ))}
         </div>
