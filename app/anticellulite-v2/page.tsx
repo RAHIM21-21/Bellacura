@@ -248,7 +248,7 @@ export default function V2Page() {
       {/* 3. SOCIAL PROOF HEADER */}
       <section className="bg-white py-12 text-center px-4 border-t border-gray-100">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-          5.000+ Trasformazioni della Pelle
+          800+ Trasformazioni!
         </h2>
       </section>
 
@@ -307,7 +307,19 @@ export default function V2Page() {
               name: 'Elena B.',
               age: 38,
             },
-          ].map((card, i) => (
+                { img: '/images/before-after-6.png', alt: 'Prima e dopo BellaCura - cosce', title: 'COSCE VISIBILMENTE CAMBIATE',
+        quote: '"Non ci credevo ma dopo 3 settimane la differenza è evidente. Pelle molto più liscia!"', name: 'Martina G.', age: 29 },
+      { img: '/images/before-after-7.png', alt: 'Prima e dopo BellaCura - gambe posteriori', title: 'GAMBE POSTERIORI TRASFORMATE',
+        quote: '"Finalmente riesco a indossare i pantaloncini corti con fiducia. Risultati incredibili!"', name: 'Chiara F.', age: 37 },
+      { img: '/images/before-after-8.png', alt: 'Prima e dopo BellaCura - cosce anteriori', title: 'COSCE ANTERIORI SODE',
+        quote: '"In solo un mese ho visto una trasformazione che non avrei mai immaginato possibile."', name: 'Laura P.', age: 32 },
+      { img: '/images/before-after-9.png', alt: 'Prima e dopo BellaCura - profilo gambe', title: 'PROFILO GAMBE RIDEFINITO',
+        quote: '"Le mie gambe non si erano mai sentite così compatte e toniche. Sono entusiasta!"', name: 'Sofia R.', age: 35 },
+      { img: '/images/before-after-10.png', alt: 'Prima e dopo BellaCura - glutei', title: 'GLUTEI COMPLETAMENTE SODI',
+        quote: '"Risultati che superano ogni aspettativa. Consiglio a tutte le mie amiche!"', name: 'Paola B.', age: 42 },
+      { img: '/images/before-after-11.png', alt: 'Prima e dopo BellaCura - gambe posteriori', title: 'TRASFORMAZIONE TOTALE',
+        quote: '"Ho provato tanti prodotti ma BellaCura è l'unico che ha davvero funzionato per me."', name: 'Anna M.', age: 45 },
+      ].map((card, i) => (
             <div
               key={i}
               className="flex-none snap-start border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm"
