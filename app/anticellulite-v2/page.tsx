@@ -3,6 +3,7 @@ import Image from 'next/image'
 import ProductImageGallery from '@/components/product/ProductImageGallery'
 import ProductBundlePicker from '@/components/product/ProductBundlePicker'
 import StickyOrderButton from '@/components/product/StickyOrderButton'
+import TrustpilotSection from '@/components/ui/TrustpilotSection'
 
 export const metadata: Metadata = {
   title: 'BellaCura — Pelle più liscia e tonica dal primo utilizzo',
@@ -371,48 +372,55 @@ export default function V2Page() {
         </div>
       </section>
 
-      {/* 7. TEXT REVIEW CARDS (4) — Trustpilot */}
-      <section className="bg-white pb-14 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            {
-              title: 'Non ho mai visto le mie gambe così lisce!',
-              quote: 'Ero scettica all’inizio, ma dopo averlo usato con costanza ho notato davvero una bella differenza. La pelle è molto più liscia e uniforme e anche l’aspetto della cellulite è migliorato tantissimo.',
-              name: 'Francesca',
-              date: '12 mar 2026',
-            },
-            {
-              title: 'Finalmente qualcosa che funziona davvero!',
-              quote: 'Ho 38 anni e combatto la cellulite da quando ne ho 22. Ho provato di tutto. Dopo tre settimane di uso quotidiano, le cosce sono già visibilmente diverse, la pelle è più soda e la buccia d’arancia si vede molto meno.',
-              name: 'Valentina',
-              date: '18 feb 2026',
-            },
-            {
-              title: 'Scettica all’inizio, convinta adesso',
-              quote: 'Quando l’ho comprato non mi aspettavo grandi cose, avevo già perso fiducia in tutti questi gadget. Invece dopo 5 settimane devo ricredermi, le gambe sono visibilmente più lisce. Mia sorella me lo ha già rubato!',
-              name: 'Martina',
-              date: '22 mar 2026',
-            },
-            {
-              title: 'Non riesco a immaginarmi la routine senza',
-              quote: 'Ormai è diventato indispensabile. Lo uso ogni sera e mi rilasso mentre mi prendo cura delle gambe. Dopo sei settimane ho fatto una foto comparativa e la differenza è impressionante.',
-              name: 'Laura',
-              date: '27 gen 2026',
-            },
-          ].map((r, i) => (
-            <div key={i} className="border border-gray-200 rounded-2xl p-4 space-y-2 bg-white shadow-sm flex flex-col">
-              <Stars n={5} size={3} />
-              <p className="font-black text-gray-900 text-sm leading-tight">{r.title}</p>
-              <p className="text-xs text-gray-600 leading-relaxed italic flex-1">{r.quote}</p>
-              <div className="flex items-center justify-between pt-1">
-                <p className="text-xs font-bold text-gray-700">{r.name}</p>
-                <span className="text-xs text-gray-400">{r.date}</span>
-              </div>
-            </div>
-          ))}
+      {/* 7. TRUSTPILOT REVIEWS — all 21 */}
+      <section className="bg-white py-10 px-4">
+        <div className="max-w-6xl mx-auto">
+          <TrustpilotSection />
         </div>
       </section>
 
+      {/* 7b. WHATSAPP REVIEWS */}
+      <section className="py-10 md:py-16 px-4" style={{background: 'linear-gradient(180deg, #EEF6FB 0%, #ffffff 100%)'}}>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8 md:mb-12">
+            <span className="inline-flex items-center gap-1.5 bg-white border border-[#A8DADC] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4 shadow-sm">
+              <svg className="w-3.5 h-3.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+              </svg>
+              Risultati verificati
+            </span>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">Le ultime recensioni</h2>
+            <div className="flex items-center justify-center gap-2 mt-3">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <span className="font-bold text-gray-900 text-sm">4.8/5</span>
+              <span className="text-gray-400 text-sm">· 2.800+ donne soddisfatte</span>
+            </div>
+          </div>
+          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-6 md:overflow-visible md:pb-0">
+            {[
+              { src: '/images/review-wa-1.jpg', alt: 'Risultati cliente BellaCura 1' },
+              { src: '/images/review-wa-2.jpg', alt: 'Risultati cliente BellaCura 2' },
+              { src: '/images/review-wa-3.jpg', alt: 'Risultati cliente BellaCura 3' },
+              { src: '/images/review-wa-4.jpg', alt: 'Risultati cliente BellaCura — WhatsApp' },
+              { src: '/images/review-wa-6.jpg', alt: 'Risultati cliente BellaCura — WhatsApp' },
+              { src: '/images/review-wa-7.jpg', alt: 'Risultati cliente BellaCura — Prima e Dopo' },
+            ].map(({ src, alt }) => (
+              <div key={src} className="flex-none w-[72vw] md:w-auto snap-start group">
+                <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-transform duration-200 group-hover:scale-[1.02] group-hover:shadow-xl" style={{ aspectRatio: '9/16' }}>
+                  <Image fill src={src} alt={alt} sizes="(max-width: 768px) 72vw, 20vw" className="object-cover" />
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-xs text-gray-400 mt-6">📱 Screenshot originali ricevuti su WhatsApp e Instagram — pubblicati con il consenso delle clienti</p>
+        </div>
+      </section>
       {/* 8. THE POWERFUL DUAL-ACTION SYSTEM */}
       <section className="bg-[#F8F8F8] py-14 px-4">
         <div className="max-w-6xl mx-auto">
