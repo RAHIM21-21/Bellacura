@@ -340,59 +340,110 @@ export default function V2Page() {
         <p className="text-center text-xs text-gray-400 mt-2">← scorri per vedere tutte le trasformazioni →</p>
       </section>
 
-      {/* 5. PROFESSIONAL TECHNOLOGY */}
-      <section className="bg-[#F8F8F8]">
-        {/* Full-bleed product image — edge-to-edge on mobile */}
-        <div className="relative w-full bg-white" style={{ aspectRatio: '4/3' }}>
-          <Image
-            src="/images/tech-product-hero.jpg"
-            alt="Massaggiatore 4-in-1 BellaCura"
-            fill
-            className="object-contain"
-          />
-        </div>
-
-        <div className="max-w-6xl mx-auto px-4 pt-10 pb-14">
-          {/* Dermatologically proven headline */}
-          <div className="text-center mb-8">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2">✔ Dermatologicamente Provato</p>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight">
-              La Tecnologia Professionale <strong>Ora a Casa Tua</strong>
-            </h2>
+      {/* 5A. AUTHORITY — DERMATOLOGICALLY PROVEN */}
+      <section className="bg-white py-10 px-4">
+        <div className="max-w-xl mx-auto">
+          {/* Badge */}
+          <div className="flex justify-center mb-5">
+            <span className="inline-flex items-center gap-1.5 bg-[#EAF2FB] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
+              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
+              Dermatologicamente Provato
+            </span>
           </div>
 
-          {/* Authority figure quote */}
-          <div className="bg-white rounded-2xl border border-[#D6E4F0] p-5 shadow-sm mb-10">
-            <p className="text-xs font-semibold uppercase tracking-wider text-[#1D3557] mb-3">Ecco cosa dice la Dott.ssa Giulia Ferraro:</p>
-            <div className="flex gap-4 items-start">
-              <div className="shrink-0 w-14 h-14 rounded-full overflow-hidden border-2 border-[#1D3557]">
-                <Image src="/images/dr-ferraro.png" alt="Dott.ssa Giulia Ferraro" width={56} height={56} className="object-cover w-full h-full" />
+          {/* Headline */}
+          <h2 className="text-center text-xl font-extrabold text-gray-900 leading-tight mb-6">
+            Ecco cosa dice la specialista<br/>
+            <span className="text-[#1D3557]">che ha valutato BellaCura</span>
+          </h2>
+
+          {/* Doctor card */}
+          <div className="bg-[#F8FBFF] border border-[#D6E4F0] rounded-2xl p-5 shadow-sm">
+            {/* Doctor identity */}
+            <div className="flex items-center gap-3 mb-4">
+              <div className="shrink-0 w-16 h-16 rounded-full overflow-hidden border-2 border-[#1D3557] shadow-sm">
+                <Image src="/images/dr-ferraro.png" alt="Dott.ssa Elena Marchetti" width={64} height={64} className="object-cover w-full h-full" />
               </div>
-              <div className="space-y-2">
-                <p className="text-sm text-gray-700 leading-relaxed italic">
-                  &ldquo;La combinazione di pressione negativa, calore terapeutico e luce rossa è la stessa tecnologia che utilizziamo in studio. Agisce in profondità sul tessuto connettivo, migliora la microcircolazione e riduce visibilmente la cellulite già dopo le prime sedute. Avere questo in un dispositivo domiciliare è un salto di qualità reale per le pazienti.&rdquo;
-                </p>
-                <div>
-                  <p className="text-sm font-bold text-gray-900">Dott.ssa Giulia Ferraro</p>
-                  <p className="text-xs text-gray-500">Dermatologa — Consulente Scientifica BellaCura · Specializzata in Tessuto Adiposo &amp; Cellulite Strutturale</p>
-                </div>
+              <div>
+                <p className="font-extrabold text-gray-900 text-sm leading-tight">Dott.ssa Elena Marchetti</p>
+                <p className="text-xs text-[#1D3557] font-semibold leading-tight mt-0.5">Dermatologa</p>
+                <p className="text-xs text-gray-500 leading-tight">Specializzata in anatomia del tessuto adiposo</p>
+              </div>
+            </div>
+            {/* Quote */}
+            <div className="relative">
+              <svg className="w-7 h-7 text-[#D6E4F0] absolute -top-1 -left-1" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+              <p className="text-sm text-gray-700 leading-relaxed italic pl-6">
+                La combinazione di pressione negativa, calore terapeutico e luce rossa è la stessa tecnologia che utilizziamo in studio. Agisce in profondità sul tessuto connettivo, migliora la microcircolazione e riduce visibilmente la cellulite già dopo le prime sedute. Avere questo in un dispositivo domiciliare è un salto di qualità reale per le pazienti.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5B. HOW IT WORKS */}
+      <section className="bg-[#F8F8F8] py-10">
+        <div className="max-w-6xl mx-auto">
+
+          {/* Mobile: copy first, then full-bleed image */}
+          {/* Desktop: image left, bullets right — achieved with flex-col + md:flex-row */}
+          <div className="flex flex-col md:flex-row md:items-center md:gap-12">
+
+            {/* Copy — always first on mobile */}
+            <div className="px-4 mb-8 md:mb-0 md:flex-1 md:order-2">
+              <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2">Come funziona</p>
+              <h2 className="text-2xl font-extrabold text-gray-900 leading-tight mb-2">
+                La Tecnologia Professionale<br/>
+                <span className="text-[#1D3557]">Ora a Casa Tua</span>
+              </h2>
+              <p className="text-gray-500 text-sm mb-6">
+                Per anni, i trattamenti anticellulite efficaci erano riservati a centri estetici da 150€+ a sessione. BellaCura porta la stessa scienza direttamente a casa tua.
+              </p>
+
+              {/* Feature bullets */}
+              <ul className="space-y-3">
+                {[
+                  { icon: '🔴', title: 'Luce Rossa & Blu Terapeutica', desc: 'Stimola il collagene in profondità e combatte i batteri cutanei per una pelle più compatta e luminosa.' },
+                  { icon: '💨', title: 'Suzione & Vacuum Anticellulite', desc: 'Pressione negativa che rompe i noduli adiposi e riattiva la microcircolazione linfatica.' },
+                  { icon: '🔥', title: 'Calore Terapeutico 42°C', desc: 'Scioglie il grasso localizzato e potenzia l'assorbimento degli attivi topici fino al 300%.' },
+                  { icon: '💆', title: 'Massaggio Rotante 360°', desc: 'Tonifica e rilassa il tessuto muscolare in superficie, riducendo gonfiore e ritenzione idrica.' },
+                ].map((f) => (
+                  <li key={f.title} className="flex gap-3 items-start">
+                    <span className="text-xl leading-none mt-0.5">{f.icon}</span>
+                    <div>
+                      <p className="text-sm font-bold text-gray-900">{f.title}</p>
+                      <p className="text-xs text-gray-500 leading-relaxed">{f.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Image — below copy on mobile (full-bleed), left on desktop */}
+            <div className="md:order-1 md:flex-1 md:rounded-3xl md:overflow-hidden md:shadow-xl">
+              {/* Mobile: true edge-to-edge */}
+              <div className="relative w-full bg-white md:hidden" style={{ aspectRatio: '4/3' }}>
+                <Image
+                  src="/images/tech-product-hero.jpg"
+                  alt="Massaggiatore 4-in-1 BellaCura"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              {/* Desktop: contained in rounded card */}
+              <div className="relative hidden md:block bg-white rounded-3xl overflow-hidden h-[420px] shadow-xl">
+                <Image
+                  src="/images/tech-product-hero.jpg"
+                  alt="Massaggiatore 4-in-1 BellaCura"
+                  fill
+                  className="object-contain p-4"
+                />
               </div>
             </div>
           </div>
 
-          {/* How it works copy */}
-          <div className="space-y-3 mb-10">
-            <p className="text-sm font-semibold uppercase tracking-wider text-[#1D3557]">Come funziona</p>
-            <p className="text-gray-800 font-semibold text-base">
-              Per anni, i trattamenti anticellulite efficaci erano riservati a centri estetici da 150€+ a sessione. Non più.
-            </p>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              BellaCura porta questa tecnologia direttamente a casa tua, con la stessa scienza in un dispositivo comodo, facile da usare e 10 volte più economico.
-            </p>
-          </div>
-
-          {/* 2x2 stat grid with circular badges */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* 2x2 stat grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 mt-10">
             <StatCircle pct="89%" label={<>Ha notato la pelle <strong>visibilmente pi&#xf9; liscia</strong> e tonica</>} />
             <StatCircle pct="93%" label={<>Ha riferito cosce <strong>pi&#xf9; compatte e modellate</strong></>} />
             <StatCircle pct="94%" label={<>Ha confermato che il trattamento &#xe8; <strong>completamente indolore</strong></>} />
