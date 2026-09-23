@@ -460,10 +460,17 @@ export default function V2Page() {
 
           {/* 2x2 stat grid */}
           <div className="grid grid-cols-2 gap-3">
-            <StatCircle pct="89%" label={<>Ha notato la pelle <strong>visibilmente più liscia</strong> e tonica</>} />
-            <StatCircle pct="93%" label={<>Ha riferito cosce <strong>più compatte e modellate</strong></>} />
-            <StatCircle pct="94%" label={<>Ha confermato che il trattamento è <strong>completamente indolore</strong></>} />
-            <StatCircle pct="96%" label={<>Ha riportato un aspetto <strong>più giovane e sano</strong> della pelle</>} />
+            {[
+              { pct: '89%', desc: 'Ha notato la pelle visibilmente più liscia e tonica' },
+              { pct: '93%', desc: 'Ha riferito cosce più compatte e modellate' },
+              { pct: '94%', desc: 'Ha confermato che il trattamento è completamente indolore' },
+              { pct: '96%', desc: 'Ha riportato un aspetto più giovane e sano della pelle' },
+            ].map((s) => (
+              <div key={s.pct} className="bg-white/5 border border-white/10 rounded-2xl px-4 py-5 flex flex-col gap-1.5 text-center">
+                <span className="text-3xl font-black text-[#7EB3D4] leading-none">{s.pct}</span>
+                <p className="text-xs text-[#8AACCA] leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
