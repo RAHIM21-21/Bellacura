@@ -14,7 +14,7 @@ export default function MetaPixel() {
       {/* Stub — runs before hydration, makes window.fbq available immediately */}
       <Script
         id="meta-pixel-stub"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
