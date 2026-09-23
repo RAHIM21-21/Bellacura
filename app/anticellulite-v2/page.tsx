@@ -369,7 +369,7 @@ export default function V2Page() {
               </p>
               <div>
                 <p className="text-sm font-bold text-gray-900">Dott.ssa Giulia Ferraro</p>
-                <p className="text-xs text-gray-500">Medico Estetico &amp; Specialista in Medicina Anti-Aging — Milano</p>
+                <p className="text-xs text-gray-500">Dermatologa — Specializzata in Anatomia del Tessuto Adiposo &amp; Cellulite Strutturale</p>
               </div>
             </div>
           </div>
