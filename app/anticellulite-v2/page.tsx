@@ -353,8 +353,8 @@ export default function V2Page() {
 
           {/* Headline */}
           <h2 className="text-center text-xl font-extrabold text-gray-900 leading-tight mb-6">
-            Ecco cosa dice la specialista<br/>
-            <span className="text-[#1D3557]">che ha valutato BellaCura</span>
+            Una dermatologa specializzata in cellulite strutturale<br/>
+            <span className="text-[#1D3557]">ha esaminato BellaCura. Ecco il suo verdetto.</span>
           </h2>
 
           {/* Doctor card */}
