@@ -243,7 +243,7 @@ export default function V2Page() {
         >
           {[
             {
-              img: '/images/before-after-1.jpg',
+              img: '/images/before-after-1.png',
               alt: 'Prima e dopo cellulite cosce',
               title: 'COSCE COMPLETAMENTE TRASFORMATE',
               quote: '"In 4 settimane di utilizzo quotidiano ho visto più risultati che in anni di creme e trattamenti estetici. Le mie cosce sono finalmente lisce."',
@@ -251,7 +251,7 @@ export default function V2Page() {
               age: 36,
             },
             {
-              img: '/images/before-after-2.jpg',
+              img: '/images/before-after-2.png',
               alt: 'Prima e dopo glutei cellulite',
               title: 'PELLE TONICA, ZERO BUCCIA D’ARANCIA',
               quote: '"Non ci credevo, ma i risultati sui glutei sono stati incredibili. La pelle è tornata liscia e compatta come quando avevo vent’anni."',
@@ -259,7 +259,7 @@ export default function V2Page() {
               age: 41,
             },
             {
-              img: '/images/before-after-3.jpg',
+              img: '/images/before-after-3.png',
               alt: 'Prima e dopo schiena cellulite',
               title: 'TRASFORMAZIONE TOTALE IN 6 SETTIMANE',
               quote: '"Ho usato BellaCura sulla schiena e sui fianchi ogni sera. I cambiamenti sono stati progressivi ma costanti. Adesso sono orgogliosa di ciò che vedo allo specchio."',
@@ -267,7 +267,7 @@ export default function V2Page() {
               age: 33,
             },
             {
-              img: '/images/before-after-4.jpg',
+              img: '/images/before-after-4.png',
               alt: 'Prima e dopo cellulite schiena cosce',
               title: 'RISULTATI CHE PARLANO DA SOLI',
               quote: '"Senza dieta, senza cambiare nulla nella mia routine. Solo BellaCura 15 minuti al giorno. La differenza è visibilissima e le mie amiche me lo chiedono in continuazione."',
@@ -275,24 +275,24 @@ export default function V2Page() {
               age: 44,
             },
             {
-              img: '/images/before-after-5.jpg',
+              img: '/images/before-after-5.png',
               alt: 'Prima e dopo cellulite glutei cosce',
               title: 'IL COSTUME NON FA PIÙ PAURA',
               quote: '"Quest’estate ho indossato il bikini per la prima volta da anni. BellaCura mi ha ridato la fiducia che avevo perso. I risultati sui glutei e sulle cosce sono stati stupefacenti."',
               name: 'Francesca L.',
               age: 39,
             },
-                { img: '/images/before-after-6.jpg', alt: 'Prima e dopo BellaCura - cosce', title: 'COSCE VISIBILMENTE CAMBIATE',
+                { img: '/images/before-after-6.png', alt: 'Prima e dopo BellaCura - cosce', title: 'COSCE VISIBILMENTE CAMBIATE',
         quote: '"Non ci credevo ma dopo 3 settimane la differenza è evidente. Pelle molto più liscia!"', name: 'Martina G.', age: 29 },
-      { img: '/images/before-after-7.jpg', alt: 'Prima e dopo BellaCura - gambe posteriori', title: 'GAMBE POSTERIORI TRASFORMATE',
+      { img: '/images/before-after-7.png', alt: 'Prima e dopo BellaCura - gambe posteriori', title: 'GAMBE POSTERIORI TRASFORMATE',
         quote: '"Finalmente riesco a indossare i pantaloncini corti con fiducia. Risultati incredibili!"', name: 'Chiara F.', age: 37 },
-      { img: '/images/before-after-8.jpg', alt: 'Prima e dopo BellaCura - cosce anteriori', title: 'COSCE ANTERIORI SODE',
+      { img: '/images/before-after-8.png', alt: 'Prima e dopo BellaCura - cosce anteriori', title: 'COSCE ANTERIORI SODE',
         quote: '"In solo un mese ho visto una trasformazione che non avrei mai immaginato possibile."', name: 'Laura P.', age: 32 },
-      { img: '/images/before-after-9.jpg', alt: 'Prima e dopo BellaCura - profilo gambe', title: 'PROFILO GAMBE RIDEFINITO',
+      { img: '/images/before-after-9.png', alt: 'Prima e dopo BellaCura - profilo gambe', title: 'PROFILO GAMBE RIDEFINITO',
         quote: '"Le mie gambe non si erano mai sentite così compatte e toniche. Sono entusiasta!"', name: 'Sofia R.', age: 35 },
-      { img: '/images/before-after-10.jpg', alt: 'Prima e dopo BellaCura - glutei', title: 'GLUTEI COMPLETAMENTE SODI',
+      { img: '/images/before-after-10.png', alt: 'Prima e dopo BellaCura - glutei', title: 'GLUTEI COMPLETAMENTE SODI',
         quote: '"Risultati che superano ogni aspettativa. Consiglio a tutte le mie amiche!"', name: 'Paola B.', age: 42 },
-      { img: '/images/before-after-11.jpg', alt: 'Prima e dopo BellaCura - gambe posteriori', title: 'TRASFORMAZIONE TOTALE',
+      { img: '/images/before-after-11.png', alt: 'Prima e dopo BellaCura - gambe posteriori', title: 'TRASFORMAZIONE TOTALE',
         quote: '"Ho provato tanti prodotti ma BellaCura è l’unico che ha davvero funzionato per me."', name: 'Anna M.', age: 45 },
       ].map((card, i) => (
             <div
@@ -347,7 +347,7 @@ export default function V2Page() {
             {/* Doctor identity */}
             <div className="flex items-center gap-3 mb-4">
               <div className="shrink-0 w-16 h-16 rounded-full overflow-hidden border-2 border-[#1D3557] shadow-sm">
-                <Image src="/images/dr-ferraro.jpg" alt="Dott.ssa Elena Marchetti" width={64} height={64} className="object-cover w-full h-full" />
+                <Image src="/images/dr-ferraro.png" alt="Dott.ssa Elena Marchetti" width={64} height={64} className="object-cover w-full h-full" />
               </div>
               <div>
                 <p className="font-extrabold text-gray-900 text-sm leading-tight">Dott.ssa Elena Marchetti</p>
