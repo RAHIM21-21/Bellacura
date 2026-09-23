@@ -552,7 +552,7 @@ export default function V2Page() {
                 badge: 'Uso quotidiano',
                 badgeColor: 'bg-[#EAF2FB] text-[#1D3557]',
                 title: 'La cellulite inizia a cedere',
-                desc: 'La buccia d'arancia diventa meno visibile. La circolazione migliora, la ritenzione idrica si riduce e le gambe appaiono più leggere.',
+                desc: "La buccia d'arancia diventa meno visibile. La circolazione migliora, la ritenzione idrica si riduce e le gambe appaiono più leggere.",
               },
               {
                 time: 'Mese 1',
