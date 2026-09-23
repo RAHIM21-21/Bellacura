@@ -360,8 +360,8 @@ export default function V2Page() {
           </div>
           {/* Authority figure quote */}
           <div className="bg-white rounded-2xl border border-[#D6E4F0] p-5 flex gap-4 items-start shadow-sm mb-8">
-            <div className="shrink-0 w-14 h-14 rounded-full bg-[#1D3557] flex items-center justify-center text-white font-extrabold text-lg select-none">
-              DR
+            <div className="shrink-0 w-14 h-14 rounded-full overflow-hidden border-2 border-[#1D3557]">
+              <Image src="/images/dr-ferraro.png" alt="Dott.ssa Giulia Ferraro" width={56} height={56} className="object-cover w-full h-full" />
             </div>
             <div className="space-y-1">
               <p className="text-sm text-gray-700 leading-relaxed italic">
@@ -369,7 +369,7 @@ export default function V2Page() {
               </p>
               <div>
                 <p className="text-sm font-bold text-gray-900">Dott.ssa Giulia Ferraro</p>
-                <p className="text-xs text-gray-500">Dermatologa — Specializzata in Anatomia del Tessuto Adiposo &amp; Cellulite Strutturale</p>
+                <p className="text-xs text-gray-500">Dermatologa — Consulente Scientifica BellaCura · Specializzata in Tessuto Adiposo &amp; Cellulite Strutturale</p>
               </div>
             </div>
           </div>
