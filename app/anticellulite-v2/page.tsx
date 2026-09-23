@@ -678,7 +678,7 @@ export default function V2Page() {
               },
               {
                 q: "È doloroso o fastidioso da usare?",
-                a: "No. Il dispositivo ha 3 livelli di intensità che puoi regolare in base alla tua sensibilità e alla zona trattata. La maggior parte delle clienti descrive la sensazione come un massaggio intenso e rilassante, simile a quello che si riceve in un centro benessere. Il calore terapeutico è piacevole — mai bruciante. Si consiglia di iniziare all’intensità minima e aumentare gradualmente.",
+                a: "No. Il dispositivo ha 12 livelli di intensità che puoi regolare in base alla tua sensibilità e alla zona trattata. La maggior parte delle clienti descrive la sensazione come un massaggio intenso e rilassante, simile a quello che si riceve in un centro benessere. Il calore terapeutico è piacevole — mai bruciante. Si consiglia di iniziare all’intensità minima e aumentare gradualmente.",
               },
               {
                 q: "Ho la cellulite molto grave. Può aiutarmi comunque?",
