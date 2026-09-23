@@ -19,19 +19,6 @@ function CheckoutSceltaInner() {
   const productPrice = isDouble ? '€99,90' : '€59,90'
   const originalPrice = isDouble ? '€238,00' : '€119,00'
 
-  // Fire AddToCart — fbq stub is available from beforeInteractive so this
-  // always queues correctly even before fbevents.js finishes loading
-  useEffect(() => {
-    const fbq = (window as any).fbq
-    if (fbq) {
-        value: isDouble ? 99.90 : 59.90,
-        currency: 'EUR',
-        content_name: 'BellaCura Massaggiatore Anticellulite',
-        content_ids: ['massaggiatore-4in1'],
-        content_type: 'product',
-      })
-    }
-  }, [isDouble])
 
   const isCod = searchParams.get('cod') === '1'
   const [step, setStep] = useState<Step>('form')
