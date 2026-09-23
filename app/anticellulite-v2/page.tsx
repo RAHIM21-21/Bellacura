@@ -358,6 +358,22 @@ export default function V2Page() {
               <Image src="/images/lifestyle-tech-seated.jpg" alt="BellaCura in uso" fill className="object-cover" />
             </div>
           </div>
+          {/* Authority figure quote */}
+          <div className="bg-white rounded-2xl border border-[#D6E4F0] p-5 flex gap-4 items-start shadow-sm mb-8">
+            <div className="shrink-0 w-14 h-14 rounded-full bg-[#1D3557] flex items-center justify-center text-white font-extrabold text-lg select-none">
+              DR
+            </div>
+            <div className="space-y-1">
+              <p className="text-sm text-gray-700 leading-relaxed italic">
+                &ldquo;La combinazione di pressione negativa, calore terapeutico e luce rossa è la stessa tecnologia che utilizziamo in studio. Agisce in profondità sul tessuto connettivo, migliora la microcircolazione e riduce visibilmente la cellulite già dopo le prime sedute. Avere questo in un dispositivo domiciliare è un salto di qualità reale per le pazienti.&rdquo;
+              </p>
+              <div>
+                <p className="text-sm font-bold text-gray-900">Dott.ssa Giulia Ferraro</p>
+                <p className="text-xs text-gray-500">Medico Estetico &amp; Specialista in Medicina Anti-Aging — Milano</p>
+              </div>
+            </div>
+          </div>
+
           {/* 2x2 stat grid with circular badges */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
             <StatCircle pct="89%" label={<>Ha notato la pelle <strong>visibilmente pi&#xf9; liscia</strong> e tonica</>} />
