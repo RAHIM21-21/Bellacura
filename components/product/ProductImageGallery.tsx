@@ -112,7 +112,7 @@ export default function ProductImageGallery({ badge }: { badge?: { line1: string
             }}
           >
             <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', opacity: 0.85 }}>{badge?.line1 ?? 'Garanzia'}</span>
-            <span style={{ fontSize: 17, fontWeight: 800, lineHeight: 1 }}>90</span>
+            <span style={{ fontSize: 17, fontWeight: 800, lineHeight: 1 }}>30</span>
             <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', opacity: 0.85 }}>{badge?.line2 ?? 'giorni'}</span>
           </div>
         )}
