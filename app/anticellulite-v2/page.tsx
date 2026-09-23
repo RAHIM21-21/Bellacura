@@ -140,11 +140,8 @@ export default function V2Page() {
 
           <div className="grid md:grid-cols-[1fr_420px] gap-4 md:gap-10 items-start">
 
-            {/* LEFT: Gallery with Bestseller badge */}
+            {/* LEFT: Gallery */}
             <div className="relative">
-              <div className="absolute top-3 left-3 z-30 bg-[#1D3557] text-white text-[11px] font-black uppercase tracking-widest px-3 py-1.5 rounded-lg shadow-md">
-                Bestseller
-              </div>
               <ProductImageGallery />
             </div>
 
