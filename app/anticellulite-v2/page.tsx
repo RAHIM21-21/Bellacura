@@ -408,7 +408,7 @@ export default function V2Page() {
                     <path strokeLinecap="round" d="M4 12h16"/>
                   </svg>
                 ),
-                label: 'Vacuum Anticellulite',
+                label: 'Coppettazione',
                 sub: 'Pressione negativa',
                 desc: 'Rompe i noduli adiposi e riattiva la microcircolazione linfatica in profondità.',
               },
@@ -532,6 +532,19 @@ export default function V2Page() {
         </div>
       </section>
 
+      {/* MID-PAGE CTA STRIP */}
+      <section className="bg-[#EAF2FB] py-8 px-4">
+        <div className="max-w-sm mx-auto text-center space-y-3">
+          <p className="text-xs font-extrabold uppercase tracking-widest text-[#1D3557]">Inizia Oggi</p>
+          <a
+            href="/checkout-scelta/?bundle=single"
+            className="flex items-center justify-center gap-2 w-full bg-red-600 active:bg-red-700 text-white font-black text-base py-4 rounded-2xl shadow-lg shadow-red-200"
+          >
+            Ordina Ora — Spedizione Gratis &#x2192;
+          </a>
+          <p className="text-xs text-gray-500">&#x2713; Garanzia 30 giorni &nbsp;&middot;&nbsp; &#x2713; Pagamento alla consegna &nbsp;&middot;&nbsp; &#x2713; Spedizione 24&#x2013;48h</p>
+        </div>
+      </section>
       {/* CONFRONTO — BellaCura vs Creme vs Centro Estetico */}
       <section className="bg-[#F8F8F8] py-10 px-4">
         <div className="max-w-2xl mx-auto">
@@ -642,6 +655,19 @@ export default function V2Page() {
         </div>
       </section>
 
+      {/* MID-PAGE CTA STRIP */}
+      <section className="bg-[#EAF2FB] py-8 px-4">
+        <div className="max-w-sm mx-auto text-center space-y-3">
+          <p className="text-xs font-extrabold uppercase tracking-widest text-[#1D3557]">Inizia Oggi</p>
+          <a
+            href="/checkout-scelta/?bundle=single"
+            className="flex items-center justify-center gap-2 w-full bg-red-600 active:bg-red-700 text-white font-black text-base py-4 rounded-2xl shadow-lg shadow-red-200"
+          >
+            Ordina Ora — Spedizione Gratis &#x2192;
+          </a>
+          <p className="text-xs text-gray-500">&#x2713; Garanzia 30 giorni &nbsp;&middot;&nbsp; &#x2713; Pagamento alla consegna &nbsp;&middot;&nbsp; &#x2713; Spedizione 24&#x2013;48h</p>
+        </div>
+      </section>
       {/* 7. TRUSTPILOT REVIEWS — all 21 */}
       <section className="bg-white py-10 px-4">
         <div className="max-w-6xl mx-auto">
