@@ -95,20 +95,6 @@ export default function ProductBundlePicker() {
 
 
 
-
-      {/* Trust bar */}
-      <div className="grid grid-cols-3 gap-2 pt-2 border-t border-gray-100">
-        {[
-          { emoji: '🛡️', label: 'Garanzia 30 giorni' },
-          { emoji: '🚚', label: 'Spedizione Gratis' },
-          { emoji: '🔒', label: 'Pagamento Sicuro' },
-        ].map(({ emoji, label }) => (
-          <div key={label} className="flex flex-col items-center gap-1 text-center">
-            <span className="text-lg">{emoji}</span>
-            <span className="text-[10px] text-gray-500 font-medium leading-tight">{label}</span>
-          </div>
-        ))}
-      </div>
     </div>
   )
 }
