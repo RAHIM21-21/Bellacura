@@ -405,7 +405,7 @@ export default function V2Page() {
                 {[
                   { icon: '🔴', title: 'Luce Rossa & Blu Terapeutica', desc: 'Stimola il collagene in profondità e combatte i batteri cutanei per una pelle più compatta e luminosa.' },
                   { icon: '💨', title: 'Suzione & Vacuum Anticellulite', desc: 'Pressione negativa che rompe i noduli adiposi e riattiva la microcircolazione linfatica.' },
-                  { icon: '🔥', title: 'Calore Terapeutico 42°C', desc: 'Scioglie il grasso localizzato e potenzia l'assorbimento degli attivi topici fino al 300%.' },
+                  { icon: '🔥', title: 'Calore Terapeutico 42°C', desc: "Scioglie il grasso localizzato e potenzia l'assorbimento degli attivi topici fino al 300%." },
                   { icon: '💆', title: 'Massaggio Rotante 360°', desc: 'Tonifica e rilassa il tessuto muscolare in superficie, riducendo gonfiore e ritenzione idrica.' },
                 ].map((f) => (
                   <li key={f.title} className="flex gap-3 items-start">
