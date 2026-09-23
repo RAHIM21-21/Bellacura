@@ -462,7 +462,7 @@ export default function V2Page() {
           <h2 className="text-2xl font-extrabold text-gray-900 leading-tight mb-2 text-center">
             BellaCura funziona per te <span className="text-[#1D3557]">se hai...</span>
           </h2>
-          <p className="text-sm text-gray-500 mb-7 text-center">Oltre 47.000 donne hanno già trasformato la propria pelle. Ecco per chi è stato pensato:</p>
+          <p className="text-sm text-gray-500 mb-7 text-center">Oltre 2.800 donne hanno già trasformato la propria pelle. Ecco per chi è stato pensato:</p>
           <ul className="space-y-3">
             {[
               "Cellulite visibile su cosce, glutei o addome",
