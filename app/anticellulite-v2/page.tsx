@@ -441,6 +441,147 @@ export default function V2Page() {
         </div>
       </section>
 
+      {/* COME SI USA — 3 STEP ROUTINE */}
+      <section className="bg-[#0F2236]">
+        <div className="px-4 pt-8 pb-5 text-center">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#7EB3D4] mb-2">Semplice da usare</p>
+          <h2 className="text-2xl font-extrabold text-white leading-tight">
+            La Tua Routine BellaCura®
+            <span className="block text-[#7EB3D4]">in Soli 3 Passi</span>
+          </h2>
+        </div>
+        <div className="relative w-full" style={{ aspectRatio: '1/1' }}>
+          <Image src="/images/routine-3-passi.jpg" alt="Come usare BellaCura in 3 passi" fill className="object-cover" />
+        </div>
+      </section>
+
+      {/* PER CHI FUNZIONA */}
+      <section className="bg-white py-10 px-4">
+        <div className="max-w-xl mx-auto">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2 text-center">È fatto per te?</p>
+          <h2 className="text-2xl font-extrabold text-gray-900 leading-tight mb-2 text-center">
+            BellaCura funziona per te <span className="text-[#1D3557]">se hai...</span>
+          </h2>
+          <p className="text-sm text-gray-500 mb-7 text-center">Oltre 47.000 donne hanno già trasformato la propria pelle. Ecco per chi è stato pensato:</p>
+          <ul className="space-y-3">
+            {[
+              "Cellulite visibile su cosce, glutei o addome",
+              "Pelle a buccia d'arancia che non migliora con le creme",
+              "Ritenzione idrica e gambe pesanti dopo ore in piedi",
+              "Pelle flaccida dopo una dieta o una gravidanza",
+              "Poco tempo — vuoi risultati in 10 minuti al giorno",
+              "Non vuoi spendere 150€ a sessione in centro estetico",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3 bg-[#F8FBFF] rounded-xl px-4 py-3 border border-[#E2EDF8]">
+                <span className="shrink-0 w-5 h-5 rounded-full bg-[#1D3557] flex items-center justify-center mt-0.5">
+                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
+                </span>
+                <span className="text-sm text-gray-700 font-medium">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* CONFRONTO — BellaCura vs Creme vs Centro Estetico */}
+      <section className="bg-[#F8F8F8] py-10 px-4">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2 text-center">Perché BellaCura?</p>
+          <h2 className="text-2xl font-extrabold text-gray-900 leading-tight mb-2 text-center">
+            Non tutte le soluzioni <span className="text-[#1D3557]">sono uguali</span>
+          </h2>
+          <p className="text-sm text-gray-500 mb-7 text-center">Confronta tu stessa. I risultati parlano chiaro.</p>
+
+          <div className="overflow-x-auto -mx-2">
+            <table className="w-full min-w-[340px] text-sm border-collapse">
+              <thead>
+                <tr>
+                  <th className="text-left py-3 px-3 text-xs font-semibold text-gray-400 uppercase tracking-wide w-[34%]"></th>
+                  <th className="py-3 px-2 text-center text-xs font-semibold text-gray-400 uppercase tracking-wide w-[22%]">Creme</th>
+                  <th className="py-3 px-2 text-center text-xs font-semibold text-gray-400 uppercase tracking-wide w-[22%]">Centro<br/>Estetico</th>
+                  <th className="py-3 px-2 text-center w-[22%]">
+                    <span className="inline-block bg-[#1D3557] text-white text-xs font-bold uppercase tracking-wide px-2 py-1 rounded-lg">BellaCura®</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { label: 'Prezzo', creme: '20–50€/mese', centro: '150€+/sessione', bc: 'Una tantum' },
+                  { label: 'Tecnologia professionale', creme: '❌', centro: '✅', bc: '✅' },
+                  { label: 'Penetrazione in profondità', creme: '❌', centro: '✅', bc: '✅' },
+                  { label: 'Comodità a casa', creme: '✅', centro: '❌', bc: '✅' },
+                  { label: 'Risultati duraturi', creme: '❌', centro: '✅', bc: '✅' },
+                  { label: 'Tempo necessario', creme: '—', centro: '1h+ spostamento', bc: '10 min/giorno' },
+                ].map((row, i) => (
+                  <tr key={row.label} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F4F8FC]'}>
+                    <td className="py-3 px-3 text-xs font-semibold text-gray-700">{row.label}</td>
+                    <td className="py-3 px-2 text-center text-xs text-gray-500">{row.creme}</td>
+                    <td className="py-3 px-2 text-center text-xs text-gray-500">{row.centro}</td>
+                    <td className="py-3 px-2 text-center text-xs font-bold text-[#1D3557] bg-[#EAF2FB]">{row.bc}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* RISULTATI NEL TEMPO */}
+      <section className="bg-white py-10 px-4">
+        <div className="max-w-xl mx-auto">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2 text-center">Roadmap ai risultati</p>
+          <h2 className="text-2xl font-extrabold text-gray-900 leading-tight mb-2 text-center">
+            Quando inizierai <span className="text-[#1D3557]">a vedere la differenza?</span>
+          </h2>
+          <p className="text-sm text-gray-500 mb-8 text-center">I risultati variano da persona a persona, ma ecco cosa si aspettano in media le nostre clienti.</p>
+
+          <div className="relative pl-8">
+            {/* Vertical line */}
+            <div className="absolute left-3 top-2 bottom-2 w-0.5 bg-gradient-to-b from-[#1D3557] to-[#A8C5E0] rounded-full" />
+
+            {[
+              {
+                time: '1ª Sessione',
+                badge: 'Immediato',
+                badgeColor: 'bg-[#1D3557] text-white',
+                title: 'La pelle si sveglia',
+                desc: 'Calore e massaggio attivano subito la circolazione. La pelle appare più morbida al tatto e visibilmente più luminosa già dopo i primi minuti.',
+              },
+              {
+                time: 'Settimane 1–2',
+                badge: 'Uso quotidiano',
+                badgeColor: 'bg-[#EAF2FB] text-[#1D3557]',
+                title: 'La cellulite inizia a cedere',
+                desc: 'La buccia d'arancia diventa meno visibile. La circolazione migliora, la ritenzione idrica si riduce e le gambe appaiono più leggere.',
+              },
+              {
+                time: 'Mese 1',
+                badge: 'A giorni alterni',
+                badgeColor: 'bg-[#EAF2FB] text-[#1D3557]',
+                title: 'Trasformazione visibile',
+                desc: 'Cosce e glutei visibilmente più compatti e tonici. La pelle appare più giovane, più liscia e più soda. I risultati sono chiari anche agli altri.',
+              },
+              {
+                time: 'Mantenimento',
+                badge: '1–2x a settimana',
+                badgeColor: 'bg-[#F0F7FF] text-[#1D3557]',
+                title: 'Risultati permanenti',
+                desc: 'Una o due sessioni a settimana sono sufficienti per mantenere i risultati nel tempo. La tua pelle rimane compatta, tonica e giovane senza sforzo.',
+              },
+            ].map((step, i) => (
+              <div key={step.time} className="relative mb-8 last:mb-0">
+                {/* Dot */}
+                <div className="absolute -left-5 top-1 w-4 h-4 rounded-full bg-[#1D3557] border-2 border-white shadow" />
+                <span className={`inline-block text-xs font-bold px-2.5 py-0.5 rounded-full mb-1.5 ${step.badgeColor}`}>{step.badge}</span>
+                <p className="text-xs text-gray-400 mb-0.5">{step.time}</p>
+                <p className="text-base font-extrabold text-gray-900 mb-1">{step.title}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 7. TRUSTPILOT REVIEWS — all 21 */}
       <section className="bg-white py-10 px-4">
         <div className="max-w-6xl mx-auto">
