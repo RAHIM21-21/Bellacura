@@ -4,6 +4,7 @@ import ProductImageGallery from '@/components/product/ProductImageGallery'
 import ProductBundlePicker from '@/components/product/ProductBundlePicker'
 import StickyOrderButton from '@/components/product/StickyOrderButton'
 import TrustpilotSection from '@/components/ui/TrustpilotSection'
+import VideoCarousel from '@/components/product/VideoCarousel'
 
 export const metadata: Metadata = {
   title: 'BellaCura — Pelle più liscia e tonica dal primo utilizzo',
@@ -395,28 +396,7 @@ export default function V2Page() {
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8">
             Non sei sola. <strong>Storie di Donne Come Te.</strong>
           </h2>
-          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 -mx-4 px-4" style={{scrollbarWidth:'none'}}>
-            {[
-              '/video/ad6-v2.mp4',
-              '/video/ad5.mp4',
-              '/video/ad1.mp4',
-              '/video/ad2.mp4',
-              '/video/ad3.mp4',
-              '/video/ad4.mp4',
-              '/video/ad7.mp4',
-            ].map((src, i) => (
-              <div key={i} className="flex-none snap-start rounded-2xl overflow-hidden bg-gray-900 shadow-sm" style={{width:'42vw', maxWidth:'200px', aspectRatio:'9/16'}}>
-                <video
-                  src={src}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
+          <VideoCarousel />
         </div>
       </section>
 
