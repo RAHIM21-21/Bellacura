@@ -33,7 +33,7 @@ const FAQS = [
     a: 'Il dispositivo BellaCura, cavo USB-C, guida d\u2019uso illustrata e scheda dei protocolli per zona corporea.',
   },
   {
-    q: 'Garanzia 90 giorni soddisfatta o rimborsata',
+    q: 'Garanzia 30 giorni soddisfatta o rimborsata',
     a: 'Se entro 90 giorni non sei soddisfatta dei risultati, ti rimborsiamo l\u2019intero importo. Nessuna domanda, nessuna burocrazia. Contatta il nostro supporto e provvediamo al rimborso entro 3–5 giorni lavorativi.',
   },
   {
@@ -384,20 +384,23 @@ export default function V2Page() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { src: '/images/review-wa-1.jpg', label: 'Testimonianza 1' },
-              { src: '/images/review-wa-2.jpg', label: 'Testimonianza 2' },
-              { src: '/images/review-wa-3.jpg', label: 'Testimonianza 3' },
-              { src: '/images/review-wa-4.jpg', label: 'Testimonianza 4' },
-            ].map((v, i) => (
-              <div key={i} className="relative rounded-2xl overflow-hidden bg-gray-100 shadow-sm" style={{aspectRatio:'9/16'}}>
-                <Image src={v.src} alt={v.label} fill className="object-cover" />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/25">
-                  <div className="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center shadow-lg">
-                    <svg className="w-5 h-5 fill-[#1D3557] ml-0.5" viewBox="0 0 20 20">
-                      <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                    </svg>
-                  </div>
-                </div>
+              '/video/ad1.mp4',
+              '/video/ad2.mp4',
+              '/video/ad3.mp4',
+              '/video/ad4.mp4',
+              '/video/ad5.mp4',
+              '/video/ad6-v2.mp4',
+              '/video/ad7.mp4',
+            ].map((src, i) => (
+              <div key={i} className="relative rounded-2xl overflow-hidden bg-gray-900 shadow-sm" style={{aspectRatio:'9/16'}}>
+                <video
+                  src={src}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
               </div>
             ))}
           </div>
