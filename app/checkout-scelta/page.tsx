@@ -24,7 +24,6 @@ function CheckoutSceltaInner() {
   useEffect(() => {
     const fbq = (window as any).fbq
     if (fbq) {
-      fbq('track', 'AddToCart', {
         value: isDouble ? 99.90 : 59.90,
         currency: 'EUR',
         content_name: 'BellaCura Massaggiatore Anticellulite',
