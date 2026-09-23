@@ -343,23 +343,7 @@ export default function V2Page() {
       {/* 5. PROFESSIONAL TECHNOLOGY */}
       <section className="bg-[#F8F8F8] py-14 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-10 items-center mb-12">
-            <div className="space-y-4">
-              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight">
-                La Tecnologia Professionale <strong>Ora a Casa Tua</strong>
-              </h2>
-              <p className="text-gray-800 font-semibold text-base">
-                Per anni, i trattamenti anticellulite efficaci erano riservati a centri estetici da 150&#x20ac;+ a sessione. Non pi&#xf9;.
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                BellaCura porta questa tecnologia direttamente a casa tua, con la stessa scienza in un dispositivo comodo, facile da usare e 10 volte pi&#xf9; economico.
-              </p>
-            </div>
-            <div className="relative rounded-3xl overflow-hidden h-72 md:h-80 shadow-xl">
-              <Image src="/images/lifestyle-tech-seated.jpg" alt="BellaCura in uso" fill className="object-cover" />
-            </div>
-          </div>
-          {/* Authority figure quote */}
+            {/* Authority figure quote — FIRST */}
           <div className="bg-white rounded-2xl border border-[#D6E4F0] p-5 flex gap-4 items-start shadow-sm mb-8">
             <div className="shrink-0 w-14 h-14 rounded-full overflow-hidden border-2 border-[#1D3557]">
               <Image src="/images/dr-ferraro.png" alt="Dott.ssa Giulia Ferraro" width={56} height={56} className="object-cover w-full h-full" />
@@ -372,6 +356,24 @@ export default function V2Page() {
                 <p className="text-sm font-bold text-gray-900">Dott.ssa Giulia Ferraro</p>
                 <p className="text-xs text-gray-500">Dermatologa — Consulente Scientifica BellaCura · Specializzata in Tessuto Adiposo &amp; Cellulite Strutturale</p>
               </div>
+            </div>
+          </div>
+
+          {/* How it works */}
+          <div className="grid md:grid-cols-2 gap-10 items-center mb-12">
+            <div className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight">
+                La Tecnologia Professionale <strong>Ora a Casa Tua</strong>
+              </h2>
+              <p className="text-gray-800 font-semibold text-base">
+                Per anni, i trattamenti anticellulite efficaci erano riservati a centri estetici da 150&#x20ac;+ a sessione. Non pi&#xf9;.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                BellaCura porta questa tecnologia direttamente a casa tua, con la stessa scienza in un dispositivo comodo, facile da usare e 10 volte pi&#xf9; economico.
+              </p>
+            </div>
+            <div className="relative rounded-3xl overflow-hidden h-72 md:h-80 shadow-xl bg-[#E8EEF4] flex items-center justify-center">
+              <Image src="/images/tech-product-hero.jpg" alt="Massaggiatore 4-in-1 BellaCura" fill className="object-contain p-4" />
             </div>
           </div>
 
