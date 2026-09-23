@@ -387,10 +387,7 @@ export default function V2Page() {
 
           {/* Mobile: copy first, then full-bleed image */}
           {/* Desktop: image left, bullets right — achieved with flex-col + md:flex-row */}
-          <div className="flex flex-col md:flex-row md:items-center md:gap-12">
-
-            {/* Copy — always first on mobile */}
-            <div className="px-4 mb-8 md:mb-0 md:flex-1 md:order-2">
+          <div className="px-4">
               <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2">Come funziona</p>
               <h2 className="text-2xl font-extrabold text-gray-900 leading-tight mb-2">
                 La Tecnologia Professionale<br/>
@@ -418,29 +415,6 @@ export default function V2Page() {
                 ))}
               </ul>
             </div>
-
-            {/* Image — below copy on mobile (full-bleed), left on desktop */}
-            <div className="md:order-1 md:flex-1 md:rounded-3xl md:overflow-hidden md:shadow-xl">
-              {/* Mobile: true edge-to-edge */}
-              <div className="relative w-full bg-white md:hidden" style={{ aspectRatio: '4/3' }}>
-                <Image
-                  src="/images/tech-product-hero.jpg"
-                  alt="Massaggiatore 4-in-1 BellaCura"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              {/* Desktop: contained in rounded card */}
-              <div className="relative hidden md:block bg-white rounded-3xl overflow-hidden h-[420px] shadow-xl">
-                <Image
-                  src="/images/tech-product-hero.jpg"
-                  alt="Massaggiatore 4-in-1 BellaCura"
-                  fill
-                  className="object-contain p-4"
-                />
-              </div>
-            </div>
-          </div>
 
           {/* 2x2 stat grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 mt-10">
