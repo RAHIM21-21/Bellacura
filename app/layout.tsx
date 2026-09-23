@@ -50,7 +50,6 @@ export default function RootLayout({
         {/* Resource hints — connect early to third-party origins */}
         <link rel="preconnect" href="https://client.crisp.chat" />
         <link rel="preconnect" href="https://www.clarity.ms" />
-        <link rel="dns-prefetch" href="https://connect.facebook.net" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
