@@ -35,11 +35,11 @@ const FAQS = [
   },
   {
     q: 'Garanzia 30 giorni soddisfatta o rimborsata',
-    a: 'Se entro 90 giorni non sei soddisfatta dei risultati, ti rimborsiamo l\u2019intero importo. Nessuna domanda, nessuna burocrazia. Contatta il nostro supporto e provvediamo al rimborso entro 3–5 giorni lavorativi.',
+    a: 'Se entro 30 giorni non sei soddisfatta dei risultati, ti rimborsiamo l\u2019intero importo. Nessuna domanda, nessuna burocrazia. Contatta il nostro supporto e provvediamo al rimborso entro 3–5 giorni lavorativi.',
   },
   {
     q: 'Spedizione e resi',
-    a: 'Spedizione gratuita in tutta Italia con consegna in 24–48 ore. Pagamento alla consegna disponibile. I resi sono gratuiti entro 90 giorni.',
+    a: 'Spedizione gratuita in tutta Italia con consegna in 24–48 ore. Pagamento alla consegna disponibile. I resi sono gratuiti entro 30 giorni.',
   },
 ]
 
@@ -688,7 +688,7 @@ export default function V2Page() {
             {[
               {
                 q: "Funziona davvero o è solo marketing?",
-                a: "BellaCura utilizza tre tecnologie clinicamente validate, usate ogni giorno nei centri estetici professionali: vacuum therapy (pressione negativa), fototerapia LED a 660nm e calore terapeutico a 40°C. Queste non sono invenzioni pubblicitarie — sono protocolli medici documentati. La differenza è che BellaCura li porta in un dispositivo che puoi usare a casa. I risultati che vedi nelle nostre recensioni sono reali, fotografati dalle nostre clienti e pubblicati con il loro consenso.",
+                a: "BellaCura utilizza tre tecnologie clinicamente validate, usate ogni giorno nei centri estetici professionali: vacuum therapy (pressione negativa), fototerapia LED a 660nm e calore terapeutico a 42°C. Queste non sono invenzioni pubblicitarie — sono protocolli medici documentati. La differenza è che BellaCura li porta in un dispositivo che puoi usare a casa. I risultati che vedi nelle nostre recensioni sono reali, fotografati dalle nostre clienti e pubblicati con il loro consenso.",
               },
               {
                 q: "Quanto tempo ci vuole per vedere i risultati?",
