@@ -341,44 +341,58 @@ export default function V2Page() {
       </section>
 
       {/* 5. PROFESSIONAL TECHNOLOGY */}
-      <section className="bg-[#F8F8F8] py-14 px-4">
-        <div className="max-w-6xl mx-auto">
-            {/* Authority figure quote — FIRST */}
-          <div className="bg-white rounded-2xl border border-[#D6E4F0] p-5 flex gap-4 items-start shadow-sm mb-8">
-            <div className="shrink-0 w-14 h-14 rounded-full overflow-hidden border-2 border-[#1D3557]">
-              <Image src="/images/dr-ferraro.png" alt="Dott.ssa Giulia Ferraro" width={56} height={56} className="object-cover w-full h-full" />
-            </div>
-            <div className="space-y-1">
-              <p className="text-sm text-gray-700 leading-relaxed italic">
-                &ldquo;La combinazione di pressione negativa, calore terapeutico e luce rossa è la stessa tecnologia che utilizziamo in studio. Agisce in profondità sul tessuto connettivo, migliora la microcircolazione e riduce visibilmente la cellulite già dopo le prime sedute. Avere questo in un dispositivo domiciliare è un salto di qualità reale per le pazienti.&rdquo;
-              </p>
-              <div>
-                <p className="text-sm font-bold text-gray-900">Dott.ssa Giulia Ferraro</p>
-                <p className="text-xs text-gray-500">Dermatologa — Consulente Scientifica BellaCura · Specializzata in Tessuto Adiposo &amp; Cellulite Strutturale</p>
+      <section className="bg-[#F8F8F8]">
+        {/* Full-bleed product image — edge-to-edge on mobile */}
+        <div className="relative w-full bg-white" style={{ aspectRatio: '4/3' }}>
+          <Image
+            src="/images/tech-product-hero.jpg"
+            alt="Massaggiatore 4-in-1 BellaCura"
+            fill
+            className="object-contain"
+          />
+        </div>
+
+        <div className="max-w-6xl mx-auto px-4 pt-10 pb-14">
+          {/* Dermatologically proven headline */}
+          <div className="text-center mb-8">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2">✔ Dermatologicamente Provato</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight">
+              La Tecnologia Professionale <strong>Ora a Casa Tua</strong>
+            </h2>
+          </div>
+
+          {/* Authority figure quote */}
+          <div className="bg-white rounded-2xl border border-[#D6E4F0] p-5 shadow-sm mb-10">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#1D3557] mb-3">Ecco cosa dice la Dott.ssa Giulia Ferraro:</p>
+            <div className="flex gap-4 items-start">
+              <div className="shrink-0 w-14 h-14 rounded-full overflow-hidden border-2 border-[#1D3557]">
+                <Image src="/images/dr-ferraro.png" alt="Dott.ssa Giulia Ferraro" width={56} height={56} className="object-cover w-full h-full" />
+              </div>
+              <div className="space-y-2">
+                <p className="text-sm text-gray-700 leading-relaxed italic">
+                  &ldquo;La combinazione di pressione negativa, calore terapeutico e luce rossa è la stessa tecnologia che utilizziamo in studio. Agisce in profondità sul tessuto connettivo, migliora la microcircolazione e riduce visibilmente la cellulite già dopo le prime sedute. Avere questo in un dispositivo domiciliare è un salto di qualità reale per le pazienti.&rdquo;
+                </p>
+                <div>
+                  <p className="text-sm font-bold text-gray-900">Dott.ssa Giulia Ferraro</p>
+                  <p className="text-xs text-gray-500">Dermatologa — Consulente Scientifica BellaCura · Specializzata in Tessuto Adiposo &amp; Cellulite Strutturale</p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* How it works */}
-          <div className="grid md:grid-cols-2 gap-10 items-center mb-12">
-            <div className="space-y-4">
-              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight">
-                La Tecnologia Professionale <strong>Ora a Casa Tua</strong>
-              </h2>
-              <p className="text-gray-800 font-semibold text-base">
-                Per anni, i trattamenti anticellulite efficaci erano riservati a centri estetici da 150&#x20ac;+ a sessione. Non pi&#xf9;.
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                BellaCura porta questa tecnologia direttamente a casa tua, con la stessa scienza in un dispositivo comodo, facile da usare e 10 volte pi&#xf9; economico.
-              </p>
-            </div>
-            <div className="relative rounded-3xl overflow-hidden h-72 md:h-80 shadow-xl bg-[#E8EEF4] flex items-center justify-center">
-              <Image src="/images/tech-product-hero.jpg" alt="Massaggiatore 4-in-1 BellaCura" fill className="object-contain p-4" />
-            </div>
+          {/* How it works copy */}
+          <div className="space-y-3 mb-10">
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#1D3557]">Come funziona</p>
+            <p className="text-gray-800 font-semibold text-base">
+              Per anni, i trattamenti anticellulite efficaci erano riservati a centri estetici da 150€+ a sessione. Non più.
+            </p>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              BellaCura porta questa tecnologia direttamente a casa tua, con la stessa scienza in un dispositivo comodo, facile da usare e 10 volte più economico.
+            </p>
           </div>
 
           {/* 2x2 stat grid with circular badges */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <StatCircle pct="89%" label={<>Ha notato la pelle <strong>visibilmente pi&#xf9; liscia</strong> e tonica</>} />
             <StatCircle pct="93%" label={<>Ha riferito cosce <strong>pi&#xf9; compatte e modellate</strong></>} />
             <StatCircle pct="94%" label={<>Ha confermato che il trattamento &#xe8; <strong>completamente indolore</strong></>} />
