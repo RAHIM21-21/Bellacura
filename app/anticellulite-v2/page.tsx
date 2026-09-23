@@ -382,46 +382,103 @@ export default function V2Page() {
       </section>
 
       {/* 5B. HOW IT WORKS */}
-      <section className="bg-[#F8F8F8] py-10">
-        <div className="max-w-6xl mx-auto">
+      <section className="bg-[#0F2236] py-12 px-4">
+        <div className="max-w-xl mx-auto">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#7EB3D4] mb-2 text-center">Come funziona</p>
+          <h2 className="text-2xl font-extrabold text-white leading-tight mb-3 text-center">
+            La Tecnologia Professionale<br/>
+            <span className="text-[#7EB3D4]">Ora a Casa Tua</span>
+          </h2>
+          <p className="text-[#8AACCA] text-sm mb-8 text-center leading-relaxed">
+            Per anni riservata ai centri estetici da 150€+ a seduta. BellaCura porta la stessa scienza direttamente a casa tua.
+          </p>
 
-          {/* Mobile: copy first, then full-bleed image */}
-          {/* Desktop: image left, bullets right — achieved with flex-col + md:flex-row */}
-          <div className="px-4">
-              <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2">Come funziona</p>
-              <h2 className="text-2xl font-extrabold text-gray-900 leading-tight mb-2">
-                La Tecnologia Professionale<br/>
-                <span className="text-[#1D3557]">Ora a Casa Tua</span>
-              </h2>
-              <p className="text-gray-500 text-sm mb-6">
-                Per anni, i trattamenti anticellulite efficaci erano riservati a centri estetici da 150€+ a sessione. BellaCura porta la stessa scienza direttamente a casa tua.
-              </p>
-
-              {/* Feature bullets */}
-              <ul className="space-y-3">
-                {[
-                  { icon: '🔴', title: 'Luce Rossa & Blu Terapeutica', desc: 'Stimola il collagene in profondità e combatte i batteri cutanei per una pelle più compatta e luminosa.' },
-                  { icon: '💨', title: 'Suzione & Vacuum Anticellulite', desc: 'Pressione negativa che rompe i noduli adiposi e riattiva la microcircolazione linfatica.' },
-                  { icon: '🔥', title: 'Calore Terapeutico 42°C', desc: "Scioglie il grasso localizzato e potenzia l'assorbimento degli attivi topici fino al 300%." },
-                  { icon: '💆', title: 'Massaggio Rotante 360°', desc: 'Tonifica e rilassa il tessuto muscolare in superficie, riducendo gonfiore e ritenzione idrica.' },
-                ].map((f) => (
-                  <li key={f.title} className="flex gap-3 items-start">
-                    <span className="text-xl leading-none mt-0.5">{f.icon}</span>
-                    <div>
-                      <p className="text-sm font-bold text-gray-900">{f.title}</p>
-                      <p className="text-xs text-gray-500 leading-relaxed">{f.desc}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="grid grid-cols-2 gap-3 mb-10">
+            {[
+              {
+                num: '01',
+                accentBg: 'bg-red-500/15',
+                accentBorder: 'border-red-400/30',
+                iconColor: 'text-red-400',
+                icon: (
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}>
+                    <circle cx="12" cy="12" r="4" fill="currentColor" fillOpacity={0.25} stroke="none"/>
+                    <path strokeLinecap="round" d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                    <circle cx="12" cy="12" r="4" strokeLinecap="round"/>
+                  </svg>
+                ),
+                label: 'Luce Rossa & Blu',
+                sub: 'Fotobiomodulazione LED',
+                desc: 'Stimola il collagene in profondità e uniforma il tono cutaneo per una pelle più compatta.',
+              },
+              {
+                num: '02',
+                accentBg: 'bg-blue-400/15',
+                accentBorder: 'border-blue-400/30',
+                iconColor: 'text-blue-300',
+                icon: (
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3C8 3 4 7 4 12s4 9 8 9 8-4 8-9c0-3-1.5-5.5-4-7"/>
+                    <path strokeLinecap="round" d="M12 3c0 0 3 4 3 9s-3 9-3 9"/>
+                    <path strokeLinecap="round" d="M4 12h16"/>
+                  </svg>
+                ),
+                label: 'Vacuum Anticellulite',
+                sub: 'Pressione negativa',
+                desc: 'Rompe i noduli adiposi e riattiva la microcircolazione linfatica in profondità.',
+              },
+              {
+                num: '03',
+                accentBg: 'bg-orange-400/15',
+                accentBorder: 'border-orange-400/30',
+                iconColor: 'text-orange-300',
+                icon: (
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 2c0 6-5 8-5 13a5 5 0 0010 0c0-5-5-7-5-13z"/>
+                    <path strokeLinecap="round" d="M9 17c0 1.66 1.34 3 3 3"/>
+                  </svg>
+                ),
+                label: 'Calore 42°C',
+                sub: 'Termoterapia',
+                desc: "Scioglie il grasso localizzato e potenzia l’assorbimento degli attivi fino al 300%.",
+              },
+              {
+                num: '04',
+                accentBg: 'bg-purple-400/15',
+                accentBorder: 'border-purple-400/30',
+                iconColor: 'text-purple-300',
+                icon: (
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 12a8 8 0 1116 0A8 8 0 014 12z"/>
+                    <path strokeLinecap="round" d="M12 8v4l3 3"/>
+                    <path strokeLinecap="round" d="M9 12a3 3 0 106 0 3 3 0 00-6 0z" fill="currentColor" fillOpacity={0.2} stroke="none"/>
+                  </svg>
+                ),
+                label: 'Massaggio 360°',
+                sub: 'Drenaggio attivo',
+                desc: 'Tonifica il tessuto muscolare, riduce gonfiore e ritenzione idrica visibilmente.',
+              },
+            ].map((f) => (
+              <div key={f.num} className={`relative rounded-2xl border ${f.accentBorder} ${f.accentBg} p-4 flex flex-col gap-2`}>
+                <div className="flex items-center justify-between mb-1">
+                  <span className={`${f.iconColor}`}>{f.icon}</span>
+                  <span className="text-[10px] font-black text-white/30 tracking-widest">{f.num}</span>
+                </div>
+                <div>
+                  <p className="text-white font-extrabold text-sm leading-tight">{f.label}</p>
+                  <p className={`text-[11px] font-semibold mt-0.5 ${f.iconColor}`}>{f.sub}</p>
+                </div>
+                <p className="text-[#8AACCA] text-xs leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
 
           {/* 2x2 stat grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 mt-10">
-            <StatCircle pct="89%" label={<>Ha notato la pelle <strong>visibilmente pi&#xf9; liscia</strong> e tonica</>} />
-            <StatCircle pct="93%" label={<>Ha riferito cosce <strong>pi&#xf9; compatte e modellate</strong></>} />
-            <StatCircle pct="94%" label={<>Ha confermato che il trattamento &#xe8; <strong>completamente indolore</strong></>} />
-            <StatCircle pct="96%" label={<>Ha riportato un aspetto <strong>pi&#xf9; giovane e sano</strong> della pelle</>} />
+          <div className="grid grid-cols-2 gap-3">
+            <StatCircle pct="89%" label={<>Ha notato la pelle <strong>visibilmente più liscia</strong> e tonica</>} />
+            <StatCircle pct="93%" label={<>Ha riferito cosce <strong>più compatte e modellate</strong></>} />
+            <StatCircle pct="94%" label={<>Ha confermato che il trattamento è <strong>completamente indolore</strong></>} />
+            <StatCircle pct="96%" label={<>Ha riportato un aspetto <strong>più giovane e sano</strong> della pelle</>} />
           </div>
         </div>
       </section>
