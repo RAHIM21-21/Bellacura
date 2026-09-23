@@ -381,12 +381,12 @@ export default function V2Page() {
           </h2>
           <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 -mx-4 px-4" style={{scrollbarWidth:'none'}}>
             {[
+              '/video/ad6-v2.mp4',
+              '/video/ad5.mp4',
               '/video/ad1.mp4',
               '/video/ad2.mp4',
               '/video/ad3.mp4',
               '/video/ad4.mp4',
-              '/video/ad5.mp4',
-              '/video/ad6-v2.mp4',
               '/video/ad7.mp4',
             ].map((src, i) => (
               <div key={i} className="flex-none snap-start rounded-2xl overflow-hidden bg-gray-900 shadow-sm" style={{width:'42vw', maxWidth:'200px', aspectRatio:'9/16'}}>
