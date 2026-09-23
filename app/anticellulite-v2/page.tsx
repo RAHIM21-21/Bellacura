@@ -199,11 +199,11 @@ export default function V2Page() {
               {/* 30-day guarantee */}
               <div className="border border-gray-200 rounded-xl px-4 py-3 flex items-start gap-3">
                 <div className="shrink-0 w-11 h-11 rounded-full bg-[#1D3557] flex flex-col items-center justify-center text-white leading-none">
-                  <span className="text-[8px] font-bold uppercase">90</span>
+                  <span className="text-[8px] font-bold uppercase">30</span>
                   <span className="text-[7px] font-bold uppercase">giorni</span>
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-gray-800">Provalo senza rischi per 90 giorni.</p>
+                  <p className="text-sm font-bold text-gray-800">Provalo senza rischi per 30 giorni.</p>
                   <p className="text-xs text-gray-500">Non sei soddisfatta? Rimborso completo senza domande.</p>
                 </div>
               </div>
