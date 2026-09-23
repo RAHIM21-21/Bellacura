@@ -124,21 +124,6 @@ export default function V2Page() {
       <section className="bg-white py-5 md:py-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
-          {/* Mobile headline */}
-          <div className="md:hidden mb-4 space-y-1.5">
-            <div className="flex items-center gap-2">
-              <Stars n={5} size={4} />
-              <span className="font-bold text-gray-900 text-sm">4.8/5</span>
-              <span className="text-gray-500 text-xs">Basato su 2.800+ Clienti</span>
-            </div>
-            <h1 className="text-[26px] font-extrabold text-gray-900 leading-tight">
-              <strong>Pelle pi&#xf9; Liscia e Tonica in 10 Minuti</strong> con BellaCura
-            </h1>
-            <p className="text-base font-semibold text-[#E63946]">
-              Senza creme inutili, centri estetici costosi e risultati che non arrivano mai!
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-[1fr_420px] gap-4 md:gap-10 items-start">
 
             {/* LEFT: Gallery */}
@@ -149,17 +134,17 @@ export default function V2Page() {
             {/* RIGHT: Copy + Offer */}
             <div className="md:sticky md:top-24 space-y-4">
 
-              {/* Desktop headline */}
-              <div className="hidden md:block space-y-2">
+              {/* Headline */}
+              <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <Stars n={5} size={5} />
-                  <span className="font-bold text-gray-900">4.8/5</span>
-                  <span className="text-gray-500 text-sm">Basato su 2.800+ Clienti</span>
+                  <Stars n={5} size={4} />
+                  <span className="font-bold text-gray-900 text-sm">4.8/5</span>
+                  <span className="text-gray-500 text-xs md:text-sm">Basato su 2.800+ Clienti</span>
                 </div>
-                <h1 className="text-3xl font-extrabold text-gray-900 leading-tight">
+                <h1 className="text-[26px] md:text-3xl font-extrabold text-gray-900 leading-tight">
                   <strong>Pelle pi&#xf9; Liscia e Tonica in 10 Minuti</strong> con BellaCura
                 </h1>
-                <p className="text-lg font-semibold text-[#E63946]">
+                <p className="text-base md:text-lg font-semibold text-[#E63946]">
                   Senza creme inutili, centri estetici costosi e risultati che non arrivano mai!
                 </p>
               </div>
