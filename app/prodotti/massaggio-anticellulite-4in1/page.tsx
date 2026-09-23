@@ -37,7 +37,7 @@ const faqs = [
  { question: 'In quanto tempo si vedono i risultati?', answer: 'La maggior parte delle clienti nota miglioramenti già dopo 7-10 giorni di utilizzo regolare (10 minuti al giorno). Risultati significativi dopo 4-6 settimane.' },
  { question: 'Quanto dura la batteria?', answer: 'Con una singola carica di circa 2 ore tramite USB-C, il massaggiatore offre fino a 90 minuti di utilizzo continuativo. Puoi ricaricarlo ogni sera e averlo sempre pronto per la tua routine.' },
  { question: 'Come funziona il pagamento alla consegna?', answer: 'Scegli "Pagamento alla consegna" al checkout. Il corriere consegna il prodotto a casa tua in 24-48 ore e paghi direttamente a lui in contanti al momento della ricezione.' },
- { question: 'Posso restituire il prodotto se non sono soddisfatta?', answer: 'Assolutamente sì. Hai 90 giorni dalla ricezione per restituire il prodotto per qualsiasi motivo. Il reso è completamente gratuito e rimborsiamo il 100% dell\'importo pagato.' },
+ { question: 'Posso restituire il prodotto se non sono soddisfatta?', answer: 'Assolutamente sì. Hai 30 giorni dalla ricezione per restituire il prodotto per qualsiasi motivo. Il reso è completamente gratuito e rimborsiamo il 100% dell\'importo pagato.' },
  { question: 'Vale la pena rispetto a un salone estetico?', answer: 'Un singolo trattamento anticellulite in salone costa in media €60–€100. Con BellaCura paghi €59,99 una sola volta e hai i trattamenti illimitati a casa tua, quando vuoi, per sempre. Molte nostre clienti risparmiano centinaia di euro ogni anno.' },
  { question: 'È sicuro per la pelle sensibile?', answer: 'Sì. La luce rossa, la luce blu e il calore a infrarossi sono tecnologie dolci usate anche in ambito medico-estetico. Inizia con la vibrazione più bassa e aumenta gradualmente. In caso di patologie cutanee, consulta il tuo medico prima dell\'uso.' },
 ]
@@ -337,7 +337,7 @@ export default function ProductPage() {
  <ComparisonVS />
 
 
- {/* FINAL CTA — 90-day guarantee */}
+ {/* FINAL CTA — 30-day guarantee */}
  <section style={{background: 'linear-gradient(160deg, #0f2744 0%, #1D3557 60%, #1a4a6e 100%)'}} className="py-14 md:py-24">
    <div className="max-w-2xl mx-auto px-5 sm:px-8 text-center">
 
@@ -354,12 +354,12 @@ export default function ProductPage() {
      <span style={{color: 'rgba(255,255,255,0.5)', fontSize: 11, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', display: 'block', marginBottom: 12}}>Zero rischi</span>
 
      <h2 style={{color: '#fff', fontSize: 'clamp(26px, 6vw, 40px)', fontWeight: 800, lineHeight: 1.2, marginBottom: 16}}>
-       90 giorni per decidere.<br/>
+       30 giorni per decidere.<br/>
        <span style={{color: '#7FD4B0'}}>O rimborso totale.</span>
      </h2>
 
      <p style={{color: 'rgba(255,255,255,0.65)', fontSize: 'clamp(15px, 3.5vw, 18px)', lineHeight: 1.6, marginBottom: 28, maxWidth: 480, marginLeft: 'auto', marginRight: 'auto'}}>
-       Ordina oggi. Se non vedi risultati entro 90 giorni ti rimborsiamo il <strong style={{color: '#fff'}}>100% dell&apos;importo</strong> — reso gratuito, nessuna domanda.
+       Ordina oggi. Se non vedi risultati entro 30 giorni ti rimborsiamo il <strong style={{color: '#fff'}}>100% dell&apos;importo</strong> — reso gratuito, nessuna domanda.
      </p>
 
      {/* Price block */}
@@ -394,7 +394,7 @@ export default function ProductPage() {
      <div style={{display: 'flex', flexWrap: 'wrap', gap: '10px 20px', justifyContent: 'center', color: 'rgba(255,255,255,0.5)', fontSize: 13}}>
        <span>🔒 Pagamento 100% sicuro</span>
        <span>📦 Spedizione gratuita</span>
-       <span>↩️ Reso gratuito entro 90 giorni</span>
+       <span>↩️ Reso gratuito entro 30 giorni</span>
        <span>⚡ Consegna in 24–48 ore</span>
      </div>
 
