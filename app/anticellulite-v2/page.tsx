@@ -354,7 +354,7 @@ export default function V2Page() {
           {/* Headline */}
           <h2 className="text-center text-xl font-extrabold text-gray-900 leading-tight mb-6">
             Una dermatologa specializzata in cellulite strutturale<br/>
-            <span className="text-[#1D3557]">ha esaminato BellaCura. Ecco il suo verdetto.</span>
+            <span className="text-[#1D3557]">ha esaminato BellaCura. Ecco cosa ha detto:</span>
           </h2>
 
           {/* Doctor card */}
