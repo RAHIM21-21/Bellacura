@@ -89,7 +89,7 @@ export default function ProductBundlePicker() {
           href={`/checkout-scelta/?bundle=${selected}`}
           className="flex items-center justify-center gap-2 w-full bg-red-600 hover:bg-red-700 active:bg-[#0f1c2e] text-white font-bold text-base py-4 rounded-2xl transition-all shadow-lg shadow-[#A8DADC]"
         >
-          Paga alla Consegna →
+          Ordina Ora →
         </a>
       </div>
 
