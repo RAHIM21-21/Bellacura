@@ -5,6 +5,11 @@ import ProductBundlePicker from '@/components/product/ProductBundlePicker'
 import StickyOrderButton from '@/components/product/StickyOrderButton'
 import TrustpilotSection from '@/components/ui/TrustpilotSection'
 import VideoCarousel from '@/components/product/VideoCarousel'
+import Link from 'next/link'
+import CountdownTimer from '@/components/home/CountdownTimer'
+
+const STOCK_NUMS = [5, 6, 7, 8, 9]
+const dailyStock = STOCK_NUMS[Math.floor(Date.now() / 86400000) % STOCK_NUMS.length]
 
 export const metadata: Metadata = {
   title: 'BellaCura — Pelle più liscia e tonica dal primo utilizzo',
@@ -114,10 +119,13 @@ export default function V2Page() {
   return (
     <>
       {/* 1. ANNOUNCEMENT BAR */}
-      <div className="py-2.5 px-4 bg-[#1D3557] text-center">
-        <p className="text-white text-xs font-bold uppercase tracking-widest">
-          <strong>OFFERTA STAGIONALE:</strong> Fino al 63% di Sconto &amp; Spedizione Gratuita
-        </p>
+      <div className="py-3 px-4 bg-[#1D3557]">
+        <div className="flex flex-col items-center justify-center gap-1.5 text-center">
+          <span className="text-white/90 text-xs font-bold uppercase tracking-widest">
+            {`⚡ Offerta limitata — Solo ${dailyStock} pezzi rimasti a questo prezzo`}
+          </span>
+          <Link href="/checkout-scelta/" className="cursor-pointer"><CountdownTimer /></Link>
+        </div>
       </div>
 
       {/* 2. ABOVE FOLD */}
