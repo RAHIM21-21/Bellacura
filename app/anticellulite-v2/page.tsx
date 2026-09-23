@@ -382,7 +382,7 @@ export default function V2Page() {
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8">
             Non sei sola. <strong>Storie di Donne Come Te.</strong>
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 -mx-4 px-4" style={{scrollbarWidth:'none'}}>
             {[
               '/video/ad1.mp4',
               '/video/ad2.mp4',
@@ -392,14 +392,14 @@ export default function V2Page() {
               '/video/ad6-v2.mp4',
               '/video/ad7.mp4',
             ].map((src, i) => (
-              <div key={i} className="relative rounded-2xl overflow-hidden bg-gray-900 shadow-sm" style={{aspectRatio:'9/16'}}>
+              <div key={i} className="flex-none snap-start rounded-2xl overflow-hidden bg-gray-900 shadow-sm" style={{width:'42vw', maxWidth:'200px', aspectRatio:'9/16'}}>
                 <video
                   src={src}
                   autoPlay
                   muted
                   loop
                   playsInline
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
             ))}
