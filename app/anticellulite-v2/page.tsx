@@ -497,8 +497,12 @@ export default function V2Page() {
               <thead>
                 <tr>
                   <th className="text-left py-3 px-3 text-xs font-semibold text-gray-400 uppercase tracking-wide w-[34%]"></th>
-                  <th className="py-3 px-2 text-center text-xs font-semibold text-gray-400 uppercase tracking-wide w-[22%]">Creme</th>
-                  <th className="py-3 px-2 text-center text-xs font-semibold text-gray-400 uppercase tracking-wide w-[22%]">Centro<br/>Estetico</th>
+                  <th className="py-3 px-2 text-center w-[22%]">
+                    <span className="inline-block text-xs font-extrabold text-gray-800 uppercase tracking-wide border border-gray-300 rounded-lg px-2 py-1">Creme</span>
+                  </th>
+                  <th className="py-3 px-2 text-center w-[22%]">
+                    <span className="inline-block text-xs font-extrabold text-gray-800 uppercase tracking-wide border border-gray-300 rounded-lg px-2 py-1 leading-tight">Centro<br/>Estetico</span>
+                  </th>
                   <th className="py-3 px-2 text-center w-[22%]">
                     <span className="inline-block bg-[#1D3557] text-white text-xs font-bold uppercase tracking-wide px-2 py-1 rounded-lg">BellaCura®</span>
                   </th>
@@ -507,19 +511,26 @@ export default function V2Page() {
               <tbody>
                 {[
                   { label: 'Prezzo', creme: '20–50€/mese', centro: '150€+/sessione', bc: 'Una tantum' },
-                  { label: 'Tecnologia professionale', creme: '❌', centro: '✅', bc: '✅' },
-                  { label: 'Penetrazione in profondità', creme: '❌', centro: '✅', bc: '✅' },
-                  { label: 'Comodità a casa', creme: '✅', centro: '❌', bc: '✅' },
-                  { label: 'Risultati duraturi', creme: '❌', centro: '✅', bc: '✅' },
+                  { label: 'Tecnologia professionale', creme: 'NO', centro: 'YES', bc: 'YES' },
+                  { label: 'Penetrazione in profondità', creme: 'NO', centro: 'YES', bc: 'YES' },
+                  { label: 'Comodità a casa', creme: 'YES', centro: 'NO', bc: 'YES' },
+                  { label: 'Risultati duraturi', creme: 'NO', centro: 'YES', bc: 'YES' },
                   { label: 'Tempo necessario', creme: '—', centro: '1h+ spostamento', bc: '10 min/giorno' },
-                ].map((row, i) => (
-                  <tr key={row.label} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F4F8FC]'}>
-                    <td className="py-3 px-3 text-xs font-semibold text-gray-700">{row.label}</td>
-                    <td className="py-3 px-2 text-center text-xs text-gray-500">{row.creme}</td>
-                    <td className="py-3 px-2 text-center text-xs text-gray-500">{row.centro}</td>
-                    <td className="py-3 px-2 text-center text-xs font-bold text-[#1D3557] bg-[#EAF2FB]">{row.bc}</td>
-                  </tr>
-                ))}
+                ].map((row, i) => {
+                  const renderCell = (val: string, navy?: boolean) => {
+                    if (val === 'YES') return <span className="flex justify-center items-center"><svg className="w-5 h-5" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-6" stroke="#16A34A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+                    if (val === 'NO') return <span className="flex justify-center items-center"><svg className="w-5 h-5" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#FEE2E2"/><path d="M7 7l6 6M13 7l-6 6" stroke="#DC2626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+                    return <span className={navy ? "text-xs font-bold text-[#1D3557]" : "text-xs text-gray-500"}>{val}</span>
+                  }
+                  return (
+                    <tr key={row.label} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F4F8FC]'}>
+                      <td className="py-3 px-3 text-xs font-semibold text-gray-700">{row.label}</td>
+                      <td className="py-3 px-2 text-center">{renderCell(row.creme)}</td>
+                      <td className="py-3 px-2 text-center">{renderCell(row.centro)}</td>
+                      <td className="py-3 px-2 text-center bg-[#EAF2FB]">{renderCell(row.bc, true)}</td>
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
           </div>
@@ -589,315 +600,96 @@ export default function V2Page() {
         </div>
       </section>
 
-      {/* 7b. WHATSAPP REVIEWS */}
-      <section className="py-10 md:py-16 px-4" style={{background: 'linear-gradient(180deg, #EEF6FB 0%, #ffffff 100%)'}}>
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8 md:mb-12">
-            <span className="inline-flex items-center gap-1.5 bg-white border border-[#A8DADC] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4 shadow-sm">
-              <svg className="w-3.5 h-3.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-              </svg>
-              Risultati verificati
-            </span>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">Le ultime recensioni</h2>
-            <div className="flex items-center justify-center gap-2 mt-3">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+      {/* FAQ — Domande Frequenti */}
+      <section className="bg-[#F8F8F8] py-12 px-4">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2 text-center">Hai dubbi?</p>
+          <h2 className="text-2xl font-extrabold text-gray-900 leading-tight mb-2 text-center">
+            Domande <span className="text-[#1D3557]">Frequenti</span>
+          </h2>
+          <p className="text-sm text-gray-500 mb-8 text-center">Tutto quello che devi sapere prima di iniziare.</p>
+
+          <div className="space-y-3">
+            {[
+              {
+                q: "Funziona davvero o è solo marketing?",
+                a: "BellaCura utilizza tre tecnologie clinicamente validate, usate ogni giorno nei centri estetici professionali: vacuum therapy (pressione negativa), fototerapia LED a 660nm e calore terapeutico a 40°C. Queste non sono invenzioni pubblicitarie — sono protocolli medici documentati. La differenza è che BellaCura li porta in un dispositivo che puoi usare a casa. I risultati che vedi nelle nostre recensioni sono reali, fotografati dalle nostre clienti e pubblicati con il loro consenso.",
+              },
+              {
+                q: "Quanto tempo ci vuole per vedere i risultati?",
+                a: "La maggior parte delle clienti nota una pelle più morbida e luminosa già dopo la prima sessione. Nelle prime 1–2 settimane di uso quotidiano, la buccia d’arancia inizia a cedere visibilmente e la ritenzione idrica si riduce. Dopo 3–4 settimane i risultati sono chiari e fotografabili. Come con qualsiasi trattamento estetico, la costanza fa la differenza: 10 minuti al giorno sono sufficienti.",
+              },
+              {
+                q: "È doloroso o fastidioso da usare?",
+                a: "No. Il dispositivo ha 3 livelli di intensità che puoi regolare in base alla tua sensibilità e alla zona trattata. La maggior parte delle clienti descrive la sensazione come un massaggio intenso e rilassante, simile a quello che si riceve in un centro benessere. Il calore terapeutico è piacevole — mai bruciante. Si consiglia di iniziare all’intensità minima e aumentare gradualmente.",
+              },
+              {
+                q: "Ho la cellulite molto grave. Può aiutarmi comunque?",
+                a: "Sì. BellaCura agisce direttamente sul tessuto connettivo e sul grasso sottocutaneo, indipendentemente dallo stadio della cellulite. Per la cellulite di grado 3 o 4 (visibile anche a riposo, con noduli profondi), i risultati richiedono semplicemente più settimane di trattamento costante. Molte delle nostre clienti più soddisfatte avevano provato di tutto senza successo prima di BellaCura.",
+              },
+              {
+                q: "Ho già provato decine di creme e prodotti. Perché questo sarebbe diverso?",
+                a: "La cellulite è un problema strutturale del tessuto connettivo profondo, non della superficie cutanea. Le creme più costose penetrano al massimo il 5–10% dello strato cutaneo e non raggiungono mai il derma profondo dove si formano le aderenze fibrose. BellaCura lavora meccanicamente su quei tessuti: la pressione negativa rompe fisicamente le aderenze, il calore aumenta la permeabilità, la luce rossa stimola il collagene. È un approccio completamente diverso.",
+              },
+              {
+                q: "E se non funziona per me? C’è una garanzia?",
+                a: "Sì, offriamo una garanzia di rimborso. Puoi provare BellaCura per 30 giorni e, se non sei soddisfatta dei risultati, ti rimborsiamo senza fare domande. Vogliamo che tu sia sicura del tuo acquisto, non che tu si senta in trappola. Contatta il nostro supporto e gestiamo tutto rapidamente.",
+              },
+              {
+                q: "Devo comprare anche oli, creme o accessori aggiuntivi?",
+                a: "No, BellaCura funziona da solo. Tuttavia, applicare un olio secco o un siero anticellulite prima della sessione può amplificarne l’efficacia: il calore e la ventosa aprono i tessuti e portano gli ingredienti attivi dove le creme da sole non arriverebbero mai. Il kit base include tutto il necessario per iniziare subito.",
+              },
+              {
+                q: "Posso usarlo su tutto il corpo o solo sulle gambe?",
+                a: "BellaCura può essere usato su cosce, glutei, fianchi, addome, braccia e polpacci. La testa massaggiante si adatta alle diverse zone corporee e i livelli di intensità ti permettono di personalizzare il trattamento per ogni area. Si sconsiglia l’uso su viso, collo e su zone con ferite, varici o infiammazioni attive.",
+              },
+              {
+                q: "Ogni quanto devo usarlo? Per quanto tempo?",
+                a: "Per le prime 4–8 settimane, l’ideale è usarlo ogni giorno per 10–15 minuti sulle zone interessate. Dopo aver raggiunto i risultati desiderati, basta una o due sessioni a settimana per mantenere la pelle tonica e compatta. Non c’è un limite di tempo: più usi BellaCura, più la pelle migliora.",
+              },
+              {
+                q: "I risultati durano nel tempo o scompaiono appena smetto di usarlo?",
+                a: "I benefici strutturali del trattamento — la riduzione delle aderenze fibrose e la stimolazione del collagene — si accumulano nel tempo e non scompaiono dall’oggi al domani. Tuttavia, come qualsiasi trattamento estetico, la cellulite può lentamente riformarsi se si smette completamente e lo stile di vita non è ottimale. Con 1–2 sessioni settimanali di mantenimento, i risultati sono duraturi.",
+              },
+              {
+                q: "Posso usarlo se sono in gravidanza o allattamento?",
+                a: "No. Sconsigliamo l’uso durante la gravidanza e il periodo di allattamento. Questo vale per tutti i dispositivi di massaggio elettronico che usano calore, pressione e stimolazione luminosa. Aspetta il periodo post-allattamento e consulta il tuo medico prima di iniziare qualsiasi trattamento estetico.",
+              },
+              {
+                q: "Ho la pelle sensibile. Posso comunque usarlo?",
+                a: "Sì, ma con cautela. Inizia sempre all’intensità più bassa e aumenta gradualmente nell’arco di qualche settimana. Il livello 1 è delicatissimo e adatto anche alle pelli più reattive. Evita zone con rossori attivi, irritazioni o dermatiti in corso. Se hai dubbi specifici sulla tua condizione cutanea, consulta il tuo dermatologo.",
+              },
+              {
+                q: "Come si carica? Quante sessioni dura la batteria?",
+                a: "BellaCura si ricarica tramite cavo USB-C (incluso nella confezione). Una carica completa richiede circa 2 ore e garantisce circa 4–6 sessioni da 15 minuti. Il dispositivo è leggero, cordless e quindi completamente libero — nessun filo tra i piedi mentre ti tratti.",
+              },
+              {
+                q: "Il dispositivo è impermeabile? Posso usarlo sotto la doccia?",
+                a: "No. BellaCura non è impermeabile e non deve essere usato sotto l’acqua o in ambienti molto umidi. È progettato per essere usato sulla pelle asciutta o con un sottile strato di olio secco. Evita di immergerlo o bagnarlo direttamente.",
+              },
+              {
+                q: "Quanto vale BellaCura rispetto a un centro estetico?",
+                a: "Un ciclo standard di 10 sedute di vacuum therapy in centro estetico costa tipicamente 800–1.500€. BellaCura ha un costo una tantum e si paga da solo in meno di un mese rispetto alle sessioni in studio. Puoi usarlo ogni giorno, nelle tue ore, senza appuntamenti, code o spostamenti. È la stessa tecnologia, nella tua casa.",
+              },
+            ].map((faq, i) => (
+              <details key={i} className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                <summary className="flex items-start justify-between gap-3 px-5 py-4 cursor-pointer select-none list-none">
+                  <span className="font-bold text-gray-900 text-sm leading-snug pr-2">{faq.q}</span>
+                  <svg className="w-5 h-5 text-[#1D3557] shrink-0 mt-0.5 group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                   </svg>
-                ))}
-              </div>
-              <span className="font-bold text-gray-900 text-sm">4.8/5</span>
-              <span className="text-gray-400 text-sm">· 2.800+ donne soddisfatte</span>
-            </div>
-          </div>
-          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-6 md:overflow-visible md:pb-0">
-            {[
-              { src: '/images/review-wa-1.jpg', alt: 'Risultati cliente BellaCura 1' },
-              { src: '/images/review-wa-2.jpg', alt: 'Risultati cliente BellaCura 2' },
-              { src: '/images/review-wa-3.jpg', alt: 'Risultati cliente BellaCura 3' },
-              { src: '/images/review-wa-4.jpg', alt: 'Risultati cliente BellaCura — WhatsApp' },
-              { src: '/images/review-wa-6.jpg', alt: 'Risultati cliente BellaCura — WhatsApp' },
-              { src: '/images/review-wa-7.jpg', alt: 'Risultati cliente BellaCura — Prima e Dopo' },
-            ].map(({ src, alt }) => (
-              <div key={src} className="flex-none w-[72vw] md:w-auto snap-start group">
-                <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-transform duration-200 group-hover:scale-[1.02] group-hover:shadow-xl" style={{ aspectRatio: '9/16' }}>
-                  <Image fill src={src} alt={alt} sizes="(max-width: 768px) 72vw, 20vw" className="object-cover" />
+                </summary>
+                <div className="px-5 pb-5 pt-0">
+                  <p className="text-sm text-gray-600 leading-relaxed">{faq.a}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-6">📱 Screenshot originali ricevuti su WhatsApp e Instagram — pubblicati con il consenso delle clienti</p>
-        </div>
-      </section>
-      {/* 8. THE POWERFUL DUAL-ACTION SYSTEM */}
-      <section className="bg-[#F8F8F8] py-14 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-center text-2xl md:text-3xl font-extrabold text-gray-900 mb-10">
-            Il Potente <strong>Sistema a Doppia Azione</strong>
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="space-y-3">
-              <p className="text-sm font-black text-gray-900 uppercase tracking-widest">Azione 1: Ventosa a Pressione Negativa</p>
-              <div className="relative rounded-2xl overflow-hidden h-64 shadow-md bg-gray-200">
-                <Image src="/images/massager-features-v2.jpg" alt="Ventosa e calore BellaCura" fill className="object-cover" />
-              </div>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                La pressione negativa lavora in profondit&#xe0; per mobilizzare il tessuto connettivo e rompere le aderenze fibrose responsabili della cellulite. Il calore terapeutico a 40&#xb0;C potenzia l&#x27;azione drenante e prepara la pelle ai trattamenti successivi.
-              </p>
-            </div>
-            <div className="space-y-3">
-              <p className="text-sm font-black text-gray-900 uppercase tracking-widest">Azione 2: Luce Rossa e Blu Avanzata</p>
-              <div className="relative rounded-2xl overflow-hidden h-64 shadow-md bg-gray-200">
-                <Image src="/images/body-map-bellacura-v2.jpg" alt="Mappa zone BellaCura" fill className="object-cover" />
-              </div>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                La luce rossa 660nm stimola i fibroblasti per una produzione naturale di collagene. La luce blu 415nm ha un&#x27;azione antibatterica e purificante che uniforma il tono cutaneo. Insieme trasformano la pelle dall&#x27;interno.
-              </p>
-            </div>
-          </div>
-          <p className="text-center text-base font-bold text-gray-800 max-w-2xl mx-auto mb-6">
-            Questa combinazione potente &#xe8; il motivo per cui le donne vedono risultati visibili fin dal primo trattamento.
-          </p>
-          <CtaBtn label="AGGIUNGI AL CARRELLO &#x2192;" />
-          <InStock />
-        </div>
-      </section>
-
-      {/* 9. ACHIEVE YOUR GOALS */}
-      <section className="bg-white py-14 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2 text-center">
-            Ottieni la <strong>Pelle che Desideri</strong>
-          </h2>
-          <p className="text-center text-gray-500 text-sm mb-10 max-w-lg mx-auto">
-            Che tu voglia una texture pi&#xf9; liscia, cosce pi&#xf9; compatte o una pelle pi&#xf9; luminosa &#x2014; BellaCura porta risultati visibili dove pi&#xf9; ne hai bisogno.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                before: '/images/prima-cellulite.jpg',
-                after: '/images/dopo-bellacura.jpg',
-                title: 'Pelle Liscia e Luminosa',
-                time: 'PRIME 24 ORE',
-                checks: ['Sensazione immediata di pelle pi&#xf9; tonica', 'Circolazione riattivata', 'Calore piacevole e rilassante'],
-                quote: '"Dopo la prima sessione la mia pelle era gi&#xe0; diversa. Pi&#xf9; piena, pi&#xf9; viva."',
-                name: 'Roberta G.', age: 41,
-              },
-              {
-                before: '/images/lifestyle-green-knee.jpg',
-                after: '/images/g4-martina-branded.jpg',
-                title: 'Texture Visibilmente Migliorata',
-                time: '1-2 SETTIMANE DI USO',
-                checks: ['Texture cutanea migliorata', 'Riduzione del gonfiore', 'Pelle pi&#xf9; morbida al tatto'],
-                quote: '"Dopo 10 giorni i miei jeans entravano di nuovo senza sforzo."',
-                name: 'Marta L.', age: 37,
-              },
-              {
-                before: '/images/gallery-1-uso.jpg',
-                after: '/images/g5-francesca-branded.jpg',
-                title: 'Compatta &amp; Perfetta',
-                time: '2-4 SETTIMANE DI USO',
-                checks: ['Riduzione visibile della cellulite', 'Pelle pi&#xf9; compatta su cosce e fianchi', 'Risultati fotografabili prima/dopo'],
-                quote: '"Quattro settimane. &#xc8; tutto quello che ci &#xe8; voluto per essere di nuovo a mio agio."',
-                name: 'Serena T.', age: 29,
-              },
-            ].map((card, i) => (
-              <div key={i} className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                <div className="grid grid-rows-2 h-64">
-                  <div className="relative overflow-hidden">
-                    <Image src={card.before} alt="Prima" fill className="object-cover" />
-                    <span className="absolute top-2 left-2 bg-white/90 text-gray-700 text-[10px] font-black uppercase px-2 py-0.5 rounded">Prima</span>
-                  </div>
-                  <div className="relative overflow-hidden">
-                    <Image src={card.after} alt="Dopo" fill className="object-cover" />
-                    <span className="absolute bottom-2 left-2 bg-[#1D3557] text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">Dopo</span>
-                  </div>
-                </div>
-                <div className="p-4 space-y-3">
-                  <div>
-                    <h3 className="font-black text-gray-900 text-base" dangerouslySetInnerHTML={{ __html: card.title }} />
-                    <p className="text-[#E63946] text-[11px] font-black uppercase tracking-wider mt-0.5">{card.time}</p>
-                  </div>
-                  <ul className="space-y-1.5">
-                    {card.checks.map((c, j) => (
-                      <li key={j} className="flex items-start gap-2 text-sm text-gray-700">
-                        <svg className="w-4 h-4 fill-green-500 shrink-0 mt-0.5" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
-                        <span dangerouslySetInnerHTML={{ __html: c }} />
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="border-t border-gray-100 pt-3 space-y-1">
-                    <Stars n={5} size={3} />
-                    <p className="text-xs text-gray-600 italic" dangerouslySetInnerHTML={{ __html: card.quote }} />
-                    <div className="flex items-center justify-between">
-                      <p className="text-xs font-bold text-gray-500">{card.name} | {card.age}</p>
-                      <VerifiedBadge />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 10. BELLACURA ADVANTAGE */}
-      <section className="bg-[#F8F8F8] py-14 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2 text-center">
-            Il Vantaggio <strong>BellaCura</strong>
-          </h2>
-          <p className="text-center text-gray-500 text-sm mb-10">
-            Ecco come BellaCura si distingue da qualsiasi altro dispositivo anticellulite sul mercato:
-          </p>
-          <div className="grid md:grid-cols-2 gap-8 items-start mb-8">
-            <div className="relative rounded-3xl overflow-hidden h-80 md:h-[500px] shadow-xl">
-              <Image src="/images/product-green-hero.jpg" alt="BellaCura massaggiatore anticellulite" fill className="object-cover" />
-            </div>
-            <div className="space-y-2">
-              {[
-                { title: 'Design Ergonomico di Precisione', desc: 'Impugnatura studiata per raggiungere facilmente tutte le zone del corpo, anche da sola. La forma si adatta perfettamente alle curve naturali.' },
-                { title: 'Copertura Superiore in Meno Tempo', desc: 'La testa massaggiante ampia copre pi&#xf9; superficie con ogni passata, riducendo i tempi del trattamento a soli 10 minuti al giorno.' },
-                { title: 'Tecnologia a Pressione Perfetta', desc: '3 livelli di intensit&#xe0; regolabili: delicato sull&#x27;addome, pi&#xf9; intenso su cosce e glutei. Sempre sotto il tuo controllo.' },
-                { title: 'Igloo Placcate in Oro 24K', desc: 'La luce rossa penetra pi&#xf9; in profondit&#xe0; grazie ai punti emittenti a 660nm, stimolando il collagene esattamente dove serve.' },
-                { title: 'Trattamento Personalizzabile', desc: 'Combina ventosa, calore, luce rossa e luce blu nelle proporzioni che preferisci. Ogni zona del corpo &#xe8; diversa &#x2014; BellaCura si adatta a te.' },
-              ].map((f, i) => (
-                <details key={i} open={i === 0} className="group border border-gray-200 rounded-xl overflow-hidden bg-white">
-                  <summary className="flex items-center justify-between px-4 py-3 cursor-pointer text-sm font-bold text-gray-800 select-none list-none">
-                    {f.title}
-                    <svg className="w-4 h-4 text-gray-400 shrink-0 ml-2 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </summary>
-                  <div className="px-4 pb-3 pt-1 text-sm text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: f.desc }} />
-                </details>
-              ))}
-            </div>
-          </div>
-          <CtaBtn label="AGGIUNGI AL CARRELLO &#x2192;" />
-          <InStock />
-        </div>
-      </section>
-
-      {/* 11. TECNOLOGIA 4-IN-1 (3 tiles, matching Glamory Advanced Serum Technology) */}
-      <section className="bg-white py-14 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2 text-center">
-            <strong>Tecnologia Avanzata</strong> del Dispositivo
-          </h2>
-          <p className="text-center text-gray-500 text-sm mb-10 max-w-lg mx-auto">
-            BellaCura &#xe8; progettato per massimizzare ogni sessione. Ecco perch&#xe9; funziona cos&#xec; bene:
-          </p>
-          <div className="grid md:grid-cols-3 gap-5">
-            {[
-              {
-                icon: <svg className="w-6 h-6 fill-[#1D3557]" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>,
-                title: 'Dosaggio Perfetto',
-                desc: 'Ogni impostazione eroga esattamente la pressione e la luce necessarie per quella zona e quella fase del trattamento.',
-              },
-              {
-                icon: <svg className="w-6 h-6 fill-[#1D3557]" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>,
-                title: 'Assorbimento Massimo',
-                desc: 'Il calore e la ventosa aprono i tessuti per moltiplicare l&#x27;efficacia degli oli e creme applicati durante la sessione.',
-              },
-              {
-                icon: <svg className="w-6 h-6 fill-[#1D3557]" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c6 0 6-3 12-3-1.98-2.6-2.91-5.97-3-9z"/></svg>,
-                title: 'Zero Sprechi',
-                desc: 'Il dispositivo lavora in profondit&#xe0; dove le creme non arrivano mai. Ogni minuto di sessione genera un impatto reale e misurabile.',
-              },
-            ].map((t, i) => (
-              <div key={i} className="border border-gray-200 rounded-2xl p-5 space-y-3 bg-white shadow-sm">
-                <div className="w-10 h-10 rounded-xl bg-[#1D3557]/10 flex items-center justify-center">
-                  {t.icon}
-                </div>
-                <p className="font-black text-gray-900 text-base">{t.title}</p>
-                <p className="text-sm text-gray-500 leading-relaxed" dangerouslySetInnerHTML={{ __html: t.desc }} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 12. HOW IT WORKS */}
-      <section className="bg-white py-14 px-4 border-t border-gray-100">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-center text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">
-            Come Funziona <strong>BellaCura</strong>
-          </h2>
-          <p className="text-center text-gray-500 text-sm mb-10 max-w-2xl mx-auto">
-            Quando attivi il dispositivo, le 4 tecnologie agiscono in sinergia direttamente sul tessuto. Il siero che applichi viene portato in profondit&#xe0; &#x2014; esattamente dove la cellulite ha origine, non solo in superficie.
-          </p>
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div className="relative rounded-3xl overflow-hidden h-80 md:h-[500px] shadow-xl">
-              <Image src="/images/render-spa-hero.jpg" alt="BellaCura in uso" fill className="object-cover" />
-            </div>
-            <div className="space-y-5">
-              <h3 className="font-extrabold text-gray-900 text-lg">
-                BellaCura ottiene ci&#xf2; che le creme non possono:
-              </h3>
-              <div className="space-y-3">
-                <div>
-                  <p className="text-sm font-bold text-gray-800 mb-1">&#x2022; Creme e trattamenti topici:</p>
-                  <p className="text-sm text-gray-600 leading-relaxed">Solo il 5&#x2013;10% degli ingredienti attivi penetra realmente nella pelle. Il resto rimane in superficie, senza raggiungere mai il tessuto connettivo dove si forma la cellulite.</p>
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-gray-800 mb-1">&#x2022; BellaCura:</p>
-                  <p className="text-sm text-gray-600 leading-relaxed">Fino al 300% in pi&#xf9; di azione attiva direttamente nel derma. La ventosa rompe le aderenze, il calore apre i tessuti, le luci stimolano la produzione di collagene dal profondo.</p>
-                </div>
-              </div>
-              {/* Inline review */}
-              <div className="bg-gray-50 rounded-xl p-4 border border-gray-100 space-y-2">
-                <div className="flex items-center gap-2">
-                  <Stars n={5} size={3} />
-                  <span className="text-xs font-bold text-gray-800">Lara L. | 45</span>
-                  <VerifiedBadge />
-                </div>
-                <p className="text-sm text-gray-600 italic">
-                  &ldquo;Dopo un solo utilizzo, la mia pelle appariva visibilmente pi&#xf9; liscia e tonica. Nulla ha mai funzionato cos&#xec; velocemente.&rdquo;
-                </p>
-              </div>
-              <CtaBtn label="AGGIUNGI AL CARRELLO &#x2192;" />
-              <InStock />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 13. TECNOLOGIE SCIENTIFICAMENTE VALIDATE (6 tiles, like Glamory ingredients) */}
-      <section className="bg-[#F8F8F8] py-14 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2 text-center">
-            <strong>Tecnologie Scientificamente Validate</strong> che Danno Risultati
-          </h2>
-          <p className="text-center text-gray-500 text-sm mb-10 max-w-lg mx-auto">
-            BellaCura integra tecnologie certificate e testate per trasformare la pelle agendo in profondit&#xe0;:
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[
-              { img: '/images/massager-features.jpg', name: 'Ventosa a Pressione Negativa', desc: 'Rompe fisicamente le aderenze fibrose che formano la buccia d&#x27;arancia, mobilizzando il grasso sottocutaneo in modo meccanico e profondo.' },
-              { img: '/images/body-map-bellacura.jpg', name: 'Calore Terapeutico 40&#xb0;C', desc: 'Aumenta la permeabilit&#xe0; cutanea e la microcircolazione locale, rendendo la pelle pi&#xf9; ricettiva e potenziando tutti gli altri trattamenti.' },
-              { img: '/images/benefits-led.jpg', name: 'Luce Rossa 660nm', desc: 'Fotobiomodulazione clinicamente provata: stimola i fibroblasti e la produzione naturale di collagene per una pelle pi&#xf9; compatta ed elastica.' },
-              { img: '/images/lifestyle-green-knee.jpg', name: 'Luce Blu 415nm', desc: 'Azione antibatterica e anti-infiammatoria che uniforma il tono cutaneo, riduce rossori e prepara la pelle per i trattamenti successivi.' },
-              { img: '/images/routine-3passi-v2.jpg', name: 'Protocollo in 3 Passi', desc: 'Una routine semplice: applica l&#x27;olio, attiva BellaCura, lascia agire. 10 minuti al giorno per risultati progressivi e misurabili.' },
-              { img: '/images/product-green-box.jpg', name: 'Kit Completo Incluso', desc: 'Dispositivo + cavo USB-C + guida illustrata + scheda protocolli per zona corporea. Tutto ci&#xf2; di cui hai bisogno per iniziare subito.' },
-            ].map((t, i) => (
-              <div key={i} className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                <div className="p-4 space-y-1">
-                  <p className="font-black text-gray-900 text-sm" dangerouslySetInnerHTML={{ __html: t.name }} />
-                  <p className="text-xs text-gray-500 leading-relaxed" dangerouslySetInnerHTML={{ __html: t.desc }} />
-                </div>
-                <div className="relative h-44 w-full bg-gray-100">
-                  <Image src={t.img} alt={t.name} fill className="object-cover" />
-                </div>
-              </div>
+              </details>
             ))}
           </div>
         </div>
       </section>
 
       {/* STICKY MOBILE CTA */}
+
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 shadow-2xl md:hidden">
         <StickyOrderButton />
       </div>
