@@ -48,8 +48,6 @@ export default function RootLayout({
     <html lang="it" className={`${montserrat.variable} ${pinyonScript.variable}`}>
       <head>
         {/* Resource hints — connect early to third-party origins */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://client.crisp.chat" />
         <link rel="preconnect" href="https://www.clarity.ms" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
