@@ -12,11 +12,11 @@ type MediaItem =
 
 const media: MediaItem[] = [
   { type: 'image', src: '/images/gallery-1-device.jpg',         alt: 'BellaCura — dispositivo massaggiatore anticellulite' },
-  { type: 'image', src: '/images/gallery-2-ba-legs.jpg',        alt: 'Prima e dopo BellaCura — gambe' },
-  { type: 'image', src: '/images/gallery-3-ba-glutei.jpg',      alt: 'Prima e dopo BellaCura — glutei e cosce' },
-  { type: 'image', src: '/images/gallery-4-dopo-utilizzo.jpg',  alt: 'Dopo solo un utilizzo — risultati clinicamente dimostrati' },
-  { type: 'image', src: '/images/gallery-5-tecnologia.jpg',     alt: 'Tecnologia clinicamente efficace — infrarossi, EMS, luce rossa' },
-  { type: 'image', src: '/images/gallery-6-trustpilot.jpg',     alt: 'Recensioni Trustpilot — 4,8 su 5' },
+  { type: 'image', src: '/images/gallery-2-ba-legs.png',        alt: 'Prima e dopo BellaCura — gambe' },
+  { type: 'image', src: '/images/gallery-3-ba-glutei.png',      alt: 'Prima e dopo BellaCura — glutei e cosce' },
+  { type: 'image', src: '/images/gallery-4-dopo-utilizzo.png',  alt: 'Dopo solo un utilizzo — risultati clinicamente dimostrati' },
+  { type: 'image', src: '/images/gallery-5-tecnologia.png',     alt: 'Tecnologia clinicamente efficace — infrarossi, EMS, luce rossa' },
+  { type: 'image', src: '/images/gallery-6-trustpilot.png',     alt: 'Recensioni Trustpilot — 4,8 su 5' },
   { type: 'video', src: '/video/promo-v2.mp4',                  alt: 'BellaCura in azione' },
 ]
 
@@ -53,7 +53,7 @@ export default function ProductImageGallery({ badge }: { badge?: { line1: string
               loop
               playsInline
               muted
-              preload="none"
+              preload="auto"
             />
             {/* Mute/unmute button */}
             <button
