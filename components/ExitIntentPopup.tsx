@@ -87,7 +87,6 @@ export default function ExitIntentPopup() {
         setStatus('success')
         // Fire browser pixel Lead event (deduplicated with CAPI via eventId)
         if (typeof window !== 'undefined' && (window as unknown as { fbq?: Function }).fbq) {
-          (window as unknown as { fbq: Function }).fbq('track', 'Lead', {}, { eventID: eventId })
         }
       } else {
         setStatus('error')
