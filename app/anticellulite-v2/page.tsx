@@ -441,7 +441,7 @@ export default function V2Page() {
                 num: '01',
                 accentBg: 'bg-red-500/15',
                 accentBorder: 'border-red-400/30',
-                iconColor: 'text-red-400',
+                iconColor: 'text-red-500',
                 icon: (
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}>
                     <circle cx="12" cy="12" r="4" fill="currentColor" fillOpacity={0.25} stroke="none"/>
@@ -457,7 +457,7 @@ export default function V2Page() {
                 num: '02',
                 accentBg: 'bg-blue-400/15',
                 accentBorder: 'border-blue-400/30',
-                iconColor: 'text-blue-300',
+                iconColor: 'text-blue-500',
                 icon: (
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 3C8 3 4 7 4 12s4 9 8 9 8-4 8-9c0-3-1.5-5.5-4-7"/>
@@ -473,7 +473,7 @@ export default function V2Page() {
                 num: '03',
                 accentBg: 'bg-orange-400/15',
                 accentBorder: 'border-orange-400/30',
-                iconColor: 'text-orange-300',
+                iconColor: 'text-orange-500',
                 icon: (
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 2c0 6-5 8-5 13a5 5 0 0010 0c0-5-5-7-5-13z"/>
@@ -488,7 +488,7 @@ export default function V2Page() {
                 num: '04',
                 accentBg: 'bg-purple-400/15',
                 accentBorder: 'border-purple-400/30',
-                iconColor: 'text-purple-300',
+                iconColor: 'text-purple-500',
                 icon: (
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 12a8 8 0 1116 0A8 8 0 014 12z"/>
@@ -501,16 +501,16 @@ export default function V2Page() {
                 desc: 'Tonifica il tessuto muscolare, riduce gonfiore e ritenzione idrica visibilmente.',
               },
             ].map((f) => (
-              <div key={f.num} className={`relative rounded-2xl border ${f.accentBorder} ${f.accentBg} p-4 flex flex-col gap-2`}>
+              <div key={f.num} className="relative rounded-2xl border border-gray-200 bg-gray-50 p-4 flex flex-col gap-2">
                 <div className="flex items-center justify-between mb-1">
                   <span className={`${f.iconColor}`}>{f.icon}</span>
-                  <span className="text-[10px] font-black text-white/30 tracking-widest">{f.num}</span>
+                  <span className="text-[10px] font-black text-gray-300 tracking-widest">{f.num}</span>
                 </div>
                 <div>
-                  <p className="text-white font-extrabold text-sm leading-tight">{f.label}</p>
+                  <p className="text-gray-900 font-extrabold text-sm leading-tight">{f.label}</p>
                   <p className={`text-[11px] font-semibold mt-0.5 ${f.iconColor}`}>{f.sub}</p>
                 </div>
-                <p className="text-[#8AACCA] text-xs leading-relaxed">{f.desc}</p>
+                <p className="text-gray-500 text-xs leading-relaxed">{f.desc}</p>
               </div>
             ))}
           </div>
