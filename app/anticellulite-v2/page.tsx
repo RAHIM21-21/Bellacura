@@ -333,6 +333,55 @@ export default function V2Page() {
         <p className="text-center text-xs text-gray-400 mt-2">← scorri per vedere tutte le trasformazioni →</p>
       </section>
 
+
+      {/* PERCHÉ LE CREME NON BASTANO */}
+      <section className="bg-[#0F2236] py-12 px-4">
+        <div className="max-w-xl mx-auto">
+
+          {/* Eyebrow */}
+          <div className="flex justify-center mb-5">
+            <span className="inline-flex items-center gap-2 bg-white/10 text-[#7EB3D4] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
+              <svg className="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20A10 10 0 0012 2z"/></svg>
+              Il vero problema
+            </span>
+          </div>
+
+          {/* Headline */}
+          <h2 className="text-2xl md:text-3xl font-extrabold text-white text-center mb-2 leading-tight">
+            Perché le creme non bastano
+          </h2>
+          <p className="text-[#7EB3D4] text-center text-sm mb-8 leading-relaxed">
+            Non è colpa tua se non hanno funzionato mai.
+          </p>
+
+          {/* Infographic */}
+          <div className="rounded-2xl overflow-hidden shadow-2xl shadow-black/40 mb-8">
+            <Image
+              src="/images/perche-creme-no.png"
+              alt="La cellulite si forma 3 mm sotto la pelle — dove le creme non arrivano mai"
+              width={640}
+              height={800}
+              className="w-full h-auto"
+              sizes="(max-width: 640px) 100vw, 640px"
+            />
+          </div>
+
+          {/* Body copy */}
+          <div className="space-y-4 text-[#DCEAF2] text-sm leading-relaxed">
+            <p>
+              La cellulite nasce nei <strong className="text-white">setti fibrosi</strong> — strutture di tessuto connettivo che trattengono le cellule adipose nel derma profondo, qualche millimetro sotto la superficie. È lì che si formano i noduli, i rigonfiamenti, la buccia d&apos;arancia.
+            </p>
+            <p>
+              Una crema, anche la più costosa, non arriva mai a quella profondità. Il 95% degli ingredienti attivi rimane nel primo millimetro di epidermide. Il problema resta intatto.
+            </p>
+            <p>
+              BellaCura lavora esattamente dove le creme si fermano. La <strong className="text-white">pressione negativa</strong> rompe fisicamente le aderenze fibrose. Il <strong className="text-white">calore terapeutico</strong> riattiva la microcircolazione profonda. La <strong className="text-white">luce rossa 660nm</strong> stimola la produzione di collagene strutturale. Tre meccanismi. Un dispositivo. La stessa tecnologia dei centri estetici — nella tua casa.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
       {/* 5A. AUTHORITY — DERMATOLOGICALLY PROVEN */}
       <section className="bg-white py-10 px-4">
         <div className="max-w-xl mx-auto">
