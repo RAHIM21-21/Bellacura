@@ -423,6 +423,21 @@ export default function V2Page() {
         </div>
       </section>
 
+      {/* 6. STARS HEADER + VIDEO TESTIMONIALS */}
+      <section className="bg-white py-10 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <Stars n={5} size={5} />
+            <span className="font-bold text-gray-900">4.8/5</span>
+            <span className="text-gray-500 text-sm">Basato su 2.800+ Clienti</span>
+          </div>
+          <h2 className="text-xl md:text-3xl font-extrabold text-gray-900 mb-5">
+            Non sei sola. <strong>Storie di Donne Come Te.</strong>
+          </h2>
+          <VideoCarousel />
+        </div>
+      </section>
+
       {/* 5B. HOW IT WORKS */}
       <section className="bg-white py-8 px-4">
         <div className="max-w-xl mx-auto">
@@ -515,21 +530,6 @@ export default function V2Page() {
             ))}
           </div>
 
-        </div>
-      </section>
-
-      {/* 6. STARS HEADER + VIDEO TESTIMONIALS */}
-      <section className="bg-white py-10 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <Stars n={5} size={5} />
-            <span className="font-bold text-gray-900">4.8/5</span>
-            <span className="text-gray-500 text-sm">Basato su 2.800+ Clienti</span>
-          </div>
-          <h2 className="text-xl md:text-3xl font-extrabold text-gray-900 mb-5">
-            Non sei sola. <strong>Storie di Donne Come Te.</strong>
-          </h2>
-          <VideoCarousel />
         </div>
       </section>
 
