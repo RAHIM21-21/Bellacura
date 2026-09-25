@@ -848,11 +848,11 @@ export default function V2Page() {
               href="/checkout-scelta/?bundle=single"
               className="block w-full text-center text-white font-extrabold rounded-2xl transition-transform active:scale-95"
               style={{
-                background: 'linear-gradient(135deg, #1D3557 0%, #2A5298 100%)',
+                background: '#E63946',
                 fontSize: 'clamp(15px, 4vw, 17px)',
                 padding: '17px 24px',
                 letterSpacing: 0.2,
-                boxShadow: '0 6px 24px rgba(29,53,87,0.35)',
+                boxShadow: '0 6px 24px rgba(230,57,70,0.4)',
                 marginBottom: 12,
               }}
             >
