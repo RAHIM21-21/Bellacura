@@ -391,8 +391,13 @@ export default function V2Page() {
           <h2 className="text-2xl md:text-3xl font-extrabold text-white text-center mb-2 leading-tight">
             Perché le creme non bastano
           </h2>
-          <p className="text-[#7EB3D4] text-center text-sm mb-8 leading-relaxed">
-            Non è colpa tua se non hanno funzionato mai.
+          <p className="text-[#7EB3D4] text-center text-sm mb-5 leading-relaxed">
+            Se non hanno funzionato, non è colpa tua.
+          </p>
+
+          {/* Body before infographic */}
+          <p className="text-[#DCEAF2] text-sm leading-relaxed mb-6">
+            La cellulite si forma qualche millimetro sotto la pelle, dove i setti fibrosi tengono intrappolato il tessuto adiposo e tirano la superficie verso il basso. Una crema lavora in superficie: idrata, ammorbidisce, ma non arriva lì.
           </p>
 
           {/* Infographic */}
@@ -407,18 +412,10 @@ export default function V2Page() {
             />
           </div>
 
-          {/* Body copy */}
-          <div className="space-y-3 text-[#DCEAF2] text-sm leading-relaxed">
-            <p>
-              La cellulite nasce nei <strong className="text-white">setti fibrosi</strong> — strutture di tessuto connettivo che trattengono le cellule adipose nel derma profondo, qualche millimetro sotto la superficie. È lì che si formano i noduli, i rigonfiamenti, la buccia d&apos;arancia.
-            </p>
-            <p>
-              Una crema, anche la più costosa, non arriva mai a quella profondità. Il 95% degli ingredienti attivi rimane nel primo millimetro di epidermide. Il problema resta intatto.
-            </p>
-            <p>
-              BellaCura lavora esattamente dove le creme si fermano. La <strong className="text-white">pressione negativa</strong> rompe fisicamente le aderenze fibrose. Il <strong className="text-white">calore terapeutico</strong> riattiva la microcircolazione profonda. La <strong className="text-white">luce rossa 660nm</strong> stimola la produzione di collagene strutturale. Tre meccanismi. Un dispositivo. La stessa tecnologia dei centri estetici — nella tua casa.
-            </p>
-          </div>
+          {/* Body after infographic */}
+          <p className="text-[#DCEAF2] text-sm leading-relaxed">
+            BellaCura lavora proprio in quello strato, con aspirazione, calore e luce. Sono le tecnologie dei centri estetici, a casa tua, in 10&#x2013;15 minuti al giorno.
+          </p>
 
         </div>
       </section>
@@ -443,11 +440,11 @@ export default function V2Page() {
         <div className="max-w-xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2 text-center">Come funziona</p>
           <h2 className="text-2xl font-extrabold text-[#1D3557] leading-tight mb-3 text-center">
-            La Tecnologia Professionale<br/>
-            <span className="text-[#457B9D]">Ora a Casa Tua</span>
+            Quattro tecnologie,<br/>
+            <span className="text-[#457B9D]">una seduta da 10 minuti</span>
           </h2>
           <p className="text-[#457B9D] text-sm mb-5 text-center leading-relaxed">
-            Per anni riservata ai centri estetici da 150€+ a seduta. BellaCura porta la stessa scienza direttamente a casa tua.
+            Ogni tecnologia agisce su un aspetto diverso della cellulite. È la combinazione a fare la differenza.
           </p>
 
           <div className="grid grid-cols-2 gap-3 mb-6">
@@ -466,7 +463,7 @@ export default function V2Page() {
                 ),
                 label: 'Luce Rossa & Blu',
                 sub: 'Fotobiomodulazione LED',
-                desc: 'Stimola il collagene in profondità e uniforma il tono cutaneo per una pelle più compatta.',
+                desc: 'La luce rossa a 660 nm raggiunge gli strati più profondi della pelle e sostiene la produzione di collagene. La luce blu lavora in superficie e aiuta a uniformare il tono. Nel tempo, la pelle appare più compatta e omogenea.',
               },
               {
                 num: '02',
@@ -482,7 +479,7 @@ export default function V2Page() {
                 ),
                 label: 'Coppettazione',
                 sub: 'Pressione negativa',
-                desc: 'Rompe i noduli adiposi e riattiva la microcircolazione linfatica in profondità.',
+                desc: 'Una leggera aspirazione solleva la pelle e mobilizza il tessuto sottostante, dove si trovano i setti fibrosi. È il principio dei trattamenti anticellulite in cabina: ammorbidire le aderenze e rimettere in movimento i liquidi.',
               },
               {
                 num: '03',
@@ -497,7 +494,7 @@ export default function V2Page() {
                 ),
                 label: 'Calore 42°C',
                 sub: 'Termoterapia',
-                desc: "Scioglie il grasso localizzato e potenzia l’assorbimento degli attivi fino al 300%.",
+                desc: 'Il calore dilata i vasi e riattiva la circolazione nella zona trattata. Lo senti già dopo pochi minuti: la pelle si scalda, si rilassa e diventa più ricettiva al massaggio.',
               },
               {
                 num: '04',
@@ -513,7 +510,7 @@ export default function V2Page() {
                 ),
                 label: 'Massaggio 360°',
                 sub: 'Drenaggio attivo',
-                desc: 'Tonifica il tessuto muscolare, riduce gonfiore e ritenzione idrica visibilmente.',
+                desc: 'Il movimento del dispositivo accompagna i liquidi verso il sistema linfatico. È la parte che si nota per prima: dopo la seduta, le gambe risultano più leggere e meno gonfie.',
               },
             ].map((f) => (
               <div key={f.num} className="relative rounded-2xl border border-gray-200 bg-gray-50 p-4 flex flex-col gap-2">
