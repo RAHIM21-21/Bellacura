@@ -334,6 +334,47 @@ export default function V2Page() {
       </section>
 
 
+      {/* 5A. AUTHORITY — DERMATOLOGICALLY PROVEN */}
+      <section className="bg-white py-10 px-4">
+        <div className="max-w-xl mx-auto">
+          {/* Badge */}
+          <div className="flex justify-center mb-5">
+            <span className="inline-flex items-center gap-1.5 bg-[#EAF2FB] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
+              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
+              Dermatologicamente Provato
+            </span>
+          </div>
+
+          {/* Headline */}
+          <h2 className="text-center text-xl font-extrabold text-gray-900 leading-tight mb-6">
+            Una dermatologa specializzata in cellulite strutturale<br/>
+            <span className="text-[#1D3557]">ha esaminato BellaCura. Ecco cosa ha detto:</span>
+          </h2>
+
+          {/* Doctor card */}
+          <div className="bg-[#F8FBFF] border border-[#D6E4F0] rounded-2xl p-5 shadow-sm">
+            {/* Doctor identity */}
+            <div className="flex items-center gap-3 mb-4">
+              <div className="shrink-0 w-16 h-16 rounded-full overflow-hidden border-2 border-[#1D3557] shadow-sm">
+                <Image src="/images/dr-ferraro.png" alt="Dott.ssa Elena Marchetti" width={64} height={64} className="object-cover w-full h-full" />
+              </div>
+              <div>
+                <p className="font-extrabold text-gray-900 text-sm leading-tight">Dott.ssa Elena Marchetti</p>
+                <p className="text-xs text-[#1D3557] font-semibold leading-tight mt-0.5">Dermatologa</p>
+                <p className="text-xs text-gray-500 leading-tight">Specializzata in anatomia del tessuto adiposo</p>
+              </div>
+            </div>
+            {/* Quote */}
+            <div className="relative">
+              <svg className="w-7 h-7 text-[#D6E4F0] absolute -top-1 -left-1" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+              <p className="text-sm text-gray-700 leading-relaxed italic pl-6">
+                La combinazione di pressione negativa, calore terapeutico e luce rossa è la stessa tecnologia che utilizziamo in studio. Agisce in profondità sul tessuto connettivo, migliora la microcircolazione e riduce visibilmente la cellulite già dopo le prime sedute. Avere questo in un dispositivo domiciliare è un salto di qualità reale per le pazienti.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PERCHÉ LE CREME NON BASTANO */}
       <section className="bg-[#0F2236] py-12 px-4">
         <div className="max-w-xl mx-auto">
@@ -382,56 +423,15 @@ export default function V2Page() {
         </div>
       </section>
 
-      {/* 5A. AUTHORITY — DERMATOLOGICALLY PROVEN */}
-      <section className="bg-white py-10 px-4">
-        <div className="max-w-xl mx-auto">
-          {/* Badge */}
-          <div className="flex justify-center mb-5">
-            <span className="inline-flex items-center gap-1.5 bg-[#EAF2FB] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
-              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
-              Dermatologicamente Provato
-            </span>
-          </div>
-
-          {/* Headline */}
-          <h2 className="text-center text-xl font-extrabold text-gray-900 leading-tight mb-6">
-            Una dermatologa specializzata in cellulite strutturale<br/>
-            <span className="text-[#1D3557]">ha esaminato BellaCura. Ecco cosa ha detto:</span>
-          </h2>
-
-          {/* Doctor card */}
-          <div className="bg-[#F8FBFF] border border-[#D6E4F0] rounded-2xl p-5 shadow-sm">
-            {/* Doctor identity */}
-            <div className="flex items-center gap-3 mb-4">
-              <div className="shrink-0 w-16 h-16 rounded-full overflow-hidden border-2 border-[#1D3557] shadow-sm">
-                <Image src="/images/dr-ferraro.png" alt="Dott.ssa Elena Marchetti" width={64} height={64} className="object-cover w-full h-full" />
-              </div>
-              <div>
-                <p className="font-extrabold text-gray-900 text-sm leading-tight">Dott.ssa Elena Marchetti</p>
-                <p className="text-xs text-[#1D3557] font-semibold leading-tight mt-0.5">Dermatologa</p>
-                <p className="text-xs text-gray-500 leading-tight">Specializzata in anatomia del tessuto adiposo</p>
-              </div>
-            </div>
-            {/* Quote */}
-            <div className="relative">
-              <svg className="w-7 h-7 text-[#D6E4F0] absolute -top-1 -left-1" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-              <p className="text-sm text-gray-700 leading-relaxed italic pl-6">
-                La combinazione di pressione negativa, calore terapeutico e luce rossa è la stessa tecnologia che utilizziamo in studio. Agisce in profondità sul tessuto connettivo, migliora la microcircolazione e riduce visibilmente la cellulite già dopo le prime sedute. Avere questo in un dispositivo domiciliare è un salto di qualità reale per le pazienti.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* 5B. HOW IT WORKS */}
-      <section className="bg-[#0F2236] py-12 px-4">
+      <section className="bg-white py-12 px-4">
         <div className="max-w-xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-widest text-[#7EB3D4] mb-2 text-center">Come funziona</p>
-          <h2 className="text-2xl font-extrabold text-white leading-tight mb-3 text-center">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2 text-center">Come funziona</p>
+          <h2 className="text-2xl font-extrabold text-[#1D3557] leading-tight mb-3 text-center">
             La Tecnologia Professionale<br/>
-            <span className="text-[#7EB3D4]">Ora a Casa Tua</span>
+            <span className="text-[#457B9D]">Ora a Casa Tua</span>
           </h2>
-          <p className="text-[#8AACCA] text-sm mb-8 text-center leading-relaxed">
+          <p className="text-[#457B9D] text-sm mb-8 text-center leading-relaxed">
             Per anni riservata ai centri estetici da 150€+ a seduta. BellaCura porta la stessa scienza direttamente a casa tua.
           </p>
 
