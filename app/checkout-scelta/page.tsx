@@ -16,7 +16,7 @@ function CheckoutSceltaInner() {
   const isDouble = searchParams.get('bundle') === 'double'
   const SHOPIFY_URL = isDouble ? SHOPIFY_URL_DOUBLE : SHOPIFY_URL_SINGLE
   const productLabel = isDouble ? 'Massaggiatore Anticellulite × 2' : 'Massaggiatore Anticellulite × 1'
-  const productPrice = isDouble ? '€99,90' : '€59,90'
+  const productPrice = isDouble ? '€99,90' : '€59,99'
   const originalPrice = isDouble ? '€238,00' : '€119,00'
 
 
@@ -58,7 +58,7 @@ function CheckoutSceltaInner() {
 
       {/* Top trust bar */}
       <div className="text-center py-2 text-xs font-semibold" style={{ background: '#1D3557', color: '#DCEAF2' }}>
-        Spedizione Express 24–48h Gratis · Paga solo alla consegna · Reso 90 giorni
+        Spedizione Express 24–48h Gratis · Paga solo alla consegna · Reso 30 giorni
       </div>
 
       {/* Header */}
@@ -93,7 +93,7 @@ function CheckoutSceltaInner() {
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={11} className="text-amber-400 fill-amber-400" />
                 ))}
-                <span className="text-xs text-gray-400 ml-1">4.9 (2.800+ recensioni)</span>
+                <span className="text-xs text-gray-400 ml-1">4.8 (2.800+ recensioni)</span>
               </div>
               <p className="text-xs text-gray-400 mt-1">Spedizione in 24–48h · Reso gratuito</p>
             </div>
@@ -103,11 +103,7 @@ function CheckoutSceltaInner() {
               <span className="text-xs font-bold text-white bg-[#457B9D] px-2 py-0.5 rounded-full">{isDouble ? "–58%" : "–50%"}</span>
             </div>
           </div>
-          {/* Urgency bar */}
-          <div className="bg-amber-50 border-t border-amber-100 px-4 py-2 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse shrink-0" />
-            <p className="text-xs font-semibold text-amber-700">{`Solo ${[5,6,7,8,9][Math.floor(Date.now() / 86400000) % 5]} pezzi rimasti a questo prezzo`} — offerta scade oggi</p>
-          </div>
+
         </div>
 
         {/* STEP: CHOOSE */}
@@ -229,7 +225,7 @@ function CheckoutSceltaInner() {
               </button>
 
               <p className="text-center text-xs text-gray-400">
-                🔒 I tuoi dati sono protetti · usati solo per la spedizione
+                🔒 I tuoi dati sono protetti · Privacy
               </p>
             </form>
           </>
