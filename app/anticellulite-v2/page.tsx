@@ -518,13 +518,12 @@ export default function V2Page() {
           {/* 2x2 stat grid */}
           <div className="grid grid-cols-2 gap-3">
             {[
-              { pct: '89%', desc: 'Ha notato la pelle visibilmente più liscia e tonica' },
-              { pct: '93%', desc: 'Ha riferito cosce più compatte e modellate' },
-              { pct: '94%', desc: 'Ha confermato che il trattamento è completamente indolore' },
-              { pct: '96%', desc: 'Ha riportato un aspetto più giovane e sano della pelle' },
-            ].map((s) => (
-              <div key={s.pct} className="bg-white/5 border border-white/10 rounded-2xl px-4 py-5 flex flex-col gap-1.5 text-center">
-                <span className="text-3xl font-black text-[#7EB3D4] leading-none">{s.pct}</span>
+              { desc: 'Ha notato la pelle visibilmente più liscia e tonica' },
+              { desc: 'Ha riferito cosce più compatte e modellate' },
+              { desc: 'Ha confermato che il trattamento è completamente indolore' },
+              { desc: 'Ha riportato un aspetto più giovane e sano della pelle' },
+            ].map((s, i) => (
+              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl px-4 py-5 flex flex-col gap-1.5 text-center">
                 <p className="text-xs text-[#8AACCA] leading-relaxed">{s.desc}</p>
               </div>
             ))}
