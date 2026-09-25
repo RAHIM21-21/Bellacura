@@ -19,32 +19,32 @@ export const metadata: Metadata = {
 
 const FAQS = [
   {
-    q: 'Come funziona BellaCura?',
-    a: 'BellaCura combina 4 tecnologie: pressione negativa (ventosa), calore terapeutico, luce rossa 660nm e luce blu 415nm. Insieme mobilizzano il tessuto connettivo, stimolano la microcircolazione e riducono la comparsa della cellulite in modo progressivo e misurabile.',
+    q: 'Ho già provato creme e trattamenti. Cosa cambia con BellaCura?',
+    a: 'Cambia la profondità. Le creme lavorano in superficie, e anche Altroconsumo ha misurato risultati minimi, ma la cellulite si forma qualche millimetro più sotto. BellaCura lavora proprio lì, con aspirazione, calore, luce rossa e luce blu: le tecnologie dei centri estetici, tutte insieme e ogni giorno, a casa tua.',
   },
   {
-    q: 'Con quale frequenza posso usarlo?',
-    a: 'Consigliamo sessioni di 10–15 minuti al giorno o a giorni alterni. Dopo le prime 4 settimane puoi passare a 2–3 sessioni settimanali per mantenimento.',
+    q: 'Cosa succede se non fa per me?',
+    a: 'Non rischi nulla. Paghi solo alla consegna e hai 30 giorni per provarlo: già nelle prime settimane senti la pelle più morbida e le gambe più leggere. Se non sei soddisfatta, ritiriamo il prodotto gratuitamente e ti rimborsiamo tutto, senza domande.',
   },
   {
-    q: 'È sicuro da usare?',
-    a: 'Sì, BellaCura è certificato IPX7 (impermeabile), testato dermatologicamente e adatto a tutti i tipi di pelle. Consigliamo di evitare l\u2019uso su pelle irritata o in caso di varici evidenti.',
+    q: 'È delicato sulla pelle?',
+    a: 'Sì. BellaCura ha 12 livelli di intensità e si muove sempre sulla pelle, quindi l’aspirazione non si concentra mai su un punto, come invece fanno le ventose tradizionali. Parti dal livello più basso: la sensazione è quella di un massaggio caldo. Un leggero rossore subito dopo è normale e passa in poco tempo.',
   },
   {
-    q: 'Su quali zone del corpo posso usarlo?',
-    a: 'Cosce, fianchi, addome, braccia, glutei — qualsiasi zona che desideri trattare. La guida inclusa nel kit mostra le tecniche consigliate per ogni area.',
+    q: 'Quando inizierò a vedere i risultati?',
+    a: 'Già dalla prima seduta senti la pelle più morbida e le gambe più leggere. I primi cambiamenti visibili sulla buccia d’arancia arrivano di solito tra la terza e l’ottava settimana di uso quotidiano, e dopo 8–12 settimane la differenza si vede. Bastano 10 minuti la sera, anche davanti alla TV.',
   },
   {
-    q: 'Cosa include il kit?',
-    a: 'Il dispositivo BellaCura, cavo USB-C, guida d\u2019uso illustrata e scheda dei protocolli per zona corporea.',
+    q: 'I risultati durano nel tempo?',
+    a: 'Sì, se mantieni lo stimolo, e a casa è semplice. Dopo le prime 8–12 settimane bastano 2–3 sedute a settimana. È proprio il limite dei trattamenti in cabina: finito il pacchetto, finisce lo stimolo. Con BellaCura non devi rinnovare niente.',
   },
   {
-    q: 'Garanzia 30 giorni soddisfatta o rimborsata',
-    a: 'Se entro 30 giorni non sei soddisfatta dei risultati, ti rimborsiamo l\u2019intero importo. Nessuna domanda, nessuna burocrazia. Contatta il nostro supporto e provvediamo al rimborso entro 3–5 giorni lavorativi.',
+    q: 'Ci sono costi nascosti o ricambi da comprare?',
+    a: 'No. Nessun filtro da sostituire, nessuna crema obbligatoria, nessun abbonamento. Paghi una volta sola, e basta.',
   },
   {
-    q: 'Spedizione e resi',
-    a: 'Spedizione gratuita in tutta Italia con consegna in 24–48 ore. Pagamento alla consegna disponibile. I resi sono gratuiti entro 30 giorni.',
+    q: 'Come funziona il pagamento alla consegna?',
+    a: 'Ordini in 60 secondi senza pagare nulla online. Ricevi il pacco in 24–48 ore e paghi direttamente al corriere, solo quando è nelle tue mani. Oltre 2.800 donne in Italia hanno già ordinato così, e per qualsiasi domanda ci trovi su WhatsApp: ti risponde una persona, non un robot.',
   },
 ]
 
