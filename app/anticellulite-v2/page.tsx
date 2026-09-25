@@ -408,7 +408,9 @@ export default function V2Page() {
               width={640}
               height={800}
               className="w-full h-auto"
-              sizes="(max-width: 640px) 100vw, 640px"
+              sizes="(max-width: 640px) calc(100vw - 32px), 576px"
+              quality={65}
+              loading="lazy"
             />
           </div>
 
