@@ -238,7 +238,7 @@ export default function V2Page() {
 
       {/* 3. SOCIAL PROOF HEADER */}
       <section className="bg-white py-6 text-center px-4 border-t border-gray-100">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+        <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900">
           800+ Trasformazioni!
         </h2>
       </section>
@@ -338,7 +338,7 @@ export default function V2Page() {
       <section className="bg-white py-8 px-4">
         <div className="max-w-xl mx-auto">
           {/* Badge */}
-          <div className="flex justify-center mb-4">
+          <div className="flex justify-center mb-3">
             <span className="inline-flex items-center gap-1.5 bg-[#EAF2FB] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
               <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
               Dermatologicamente Provato
@@ -380,7 +380,7 @@ export default function V2Page() {
         <div className="max-w-xl mx-auto">
 
           {/* Eyebrow */}
-          <div className="flex justify-center mb-5">
+          <div className="flex justify-center mb-3">
             <span className="inline-flex items-center gap-2 bg-white/10 text-[#7EB3D4] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
               <svg className="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20A10 10 0 0012 2z"/></svg>
               Il vero problema
@@ -431,7 +431,7 @@ export default function V2Page() {
             La Tecnologia Professionale<br/>
             <span className="text-[#457B9D]">Ora a Casa Tua</span>
           </h2>
-          <p className="text-[#457B9D] text-sm mb-8 text-center leading-relaxed">
+          <p className="text-[#457B9D] text-sm mb-5 text-center leading-relaxed">
             Per anni riservata ai centri estetici da 150€+ a seduta. BellaCura porta la stessa scienza direttamente a casa tua.
           </p>
 
@@ -526,7 +526,7 @@ export default function V2Page() {
             <span className="font-bold text-gray-900">4.8/5</span>
             <span className="text-gray-500 text-sm">Basato su 2.800+ Clienti</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8">
+          <h2 className="text-xl md:text-3xl font-extrabold text-gray-900 mb-5">
             Non sei sola. <strong>Storie di Donne Come Te.</strong>
           </h2>
           <VideoCarousel />
@@ -548,13 +548,13 @@ export default function V2Page() {
       </section>
 
       {/* PER CHI FUNZIONA */}
-      <section className="bg-white py-10 px-4">
+      <section className="bg-white py-8 px-4">
         <div className="max-w-xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2 text-center">È fatto per te?</p>
           <h2 className="text-2xl font-extrabold text-gray-900 leading-tight mb-2 text-center">
             BellaCura funziona per te <span className="text-[#1D3557]">se hai...</span>
           </h2>
-          <p className="text-sm text-gray-500 mb-7 text-center">Oltre 2.800 donne hanno già trasformato la propria pelle. Ecco per chi è stato pensato:</p>
+          <p className="text-sm text-gray-500 mb-5 text-center">Oltre 2.800 donne hanno già trasformato la propria pelle. Ecco per chi è stato pensato:</p>
           <ul className="space-y-3">
             {[
               "Cellulite visibile su cosce, glutei o addome",
@@ -589,13 +589,13 @@ export default function V2Page() {
         </div>
       </section>
       {/* CONFRONTO — BellaCura vs Creme vs Centro Estetico */}
-      <section className="bg-[#F8F8F8] py-10 px-4">
+      <section className="bg-[#F8F8F8] py-8 px-4">
         <div className="max-w-2xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2 text-center">Perché BellaCura?</p>
           <h2 className="text-2xl font-extrabold text-gray-900 leading-tight mb-2 text-center">
             Non tutte le soluzioni <span className="text-[#1D3557]">sono uguali</span>
           </h2>
-          <p className="text-sm text-gray-500 mb-7 text-center">Confronta tu stessa. I risultati parlano chiaro.</p>
+          <p className="text-sm text-gray-500 mb-5 text-center">Confronta tu stessa. I risultati parlano chiaro.</p>
 
           <div className="overflow-x-auto -mx-2">
             <table className="w-full min-w-[340px] text-sm border-collapse">
@@ -643,13 +643,13 @@ export default function V2Page() {
       </section>
 
       {/* RISULTATI NEL TEMPO */}
-      <section className="bg-white py-10 px-4">
+      <section className="bg-white py-8 px-4">
         <div className="max-w-xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2 text-center">Roadmap ai risultati</p>
           <h2 className="text-2xl font-extrabold text-gray-900 leading-tight mb-2 text-center">
             Quando inizierai <span className="text-[#1D3557]">a vedere la differenza?</span>
           </h2>
-          <p className="text-sm text-gray-500 mb-8 text-center">I risultati variano da persona a persona, ma ecco cosa si aspettano in media le nostre clienti.</p>
+          <p className="text-sm text-gray-500 mb-5 text-center">I risultati variano da persona a persona, ma ecco cosa si aspettano in media le nostre clienti.</p>
 
           <div className="relative pl-8">
             {/* Vertical line */}
@@ -685,7 +685,7 @@ export default function V2Page() {
                 desc: 'Una o due sessioni a settimana sono sufficienti per mantenere i risultati nel tempo. La tua pelle rimane compatta, tonica e giovane senza sforzo.',
               },
             ].map((step, i) => (
-              <div key={step.time} className="relative mb-8 last:mb-0">
+              <div key={step.time} className="relative mb-6 last:mb-0">
                 {/* Dot */}
                 <div className="absolute -left-5 top-1 w-4 h-4 rounded-full bg-[#1D3557] border-2 border-white shadow" />
                 <span className={`inline-block text-xs font-bold px-2.5 py-0.5 rounded-full mb-1.5 ${step.badgeColor}`}>{step.badge}</span>
@@ -719,13 +719,13 @@ export default function V2Page() {
       </section>
 
       {/* FAQ — Domande Frequenti */}
-      <section className="bg-[#F8F8F8] py-12 px-4">
+      <section className="bg-[#F8F8F8] py-8 px-4">
         <div className="max-w-2xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2 text-center">Hai dubbi?</p>
           <h2 className="text-2xl font-extrabold text-gray-900 leading-tight mb-2 text-center">
             Domande <span className="text-[#1D3557]">Frequenti</span>
           </h2>
-          <p className="text-sm text-gray-500 mb-8 text-center">Tutto quello che devi sapere prima di iniziare.</p>
+          <p className="text-sm text-gray-500 mb-5 text-center">Tutto quello che devi sapere prima di iniziare.</p>
 
           <div className="space-y-3">
             {[
@@ -829,15 +829,15 @@ export default function V2Page() {
             <span className="text-[#457B9D]">Inizia oggi, a casa tua.</span>
           </h2>
 
-          <p className="text-[#457B9D] text-sm text-center leading-relaxed mb-8 max-w-xs mx-auto">
+          <p className="text-[#457B9D] text-sm text-center leading-relaxed mb-6 max-w-xs mx-auto">
             Lo stesso trattamento dei centri estetici professionali, ogni giorno, senza appuntamenti.
           </p>
 
           {/* Price + CTA card */}
-          <div className="bg-white rounded-3xl shadow-md shadow-[#C5DCF0] p-6 mb-5">
+          <div className="bg-white rounded-3xl shadow-md shadow-[#C5DCF0] p-5 mb-4">
 
             {/* Price */}
-            <div className="flex items-center justify-center gap-3 mb-5">
+            <div className="flex items-center justify-center gap-3 mb-4">
               <span className="text-gray-400 line-through text-base">€119,00</span>
               <span className="text-[#1D3557] font-black" style={{fontSize: 'clamp(34px, 8vw, 44px)'}}>€59,99</span>
               <span className="bg-[#E63946] text-white font-extrabold text-xs px-2.5 py-1 rounded-full">−50%</span>
@@ -863,7 +863,7 @@ export default function V2Page() {
           </div>
 
           {/* 30-day guarantee */}
-          <div className="flex items-start gap-3 bg-white border border-[#DCEAF2] rounded-2xl p-4 mb-5">
+          <div className="flex items-start gap-3 bg-white border border-[#DCEAF2] rounded-2xl p-4 mb-4">
             <div className="shrink-0 w-10 h-10 rounded-full bg-[#1D3557] flex items-center justify-center">
               <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
