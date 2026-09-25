@@ -6,6 +6,7 @@ import { SITE_NAME, SITE_DESCRIPTION, SITE_URL, buildMetadata, organizationSchem
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import CrispChat from '@/components/CrispChat'
+import WhatsAppWidget from '@/components/WhatsAppWidget'
 import MicrosoftClarity from '@/components/MicrosoftClarity'
 import MetaPixel from '@/components/MetaPixel'
 import AddToCartTracker from '@/components/AddToCartTracker'
@@ -48,7 +49,6 @@ export default function RootLayout({
     <html lang="it" className={`${montserrat.variable} ${pinyonScript.variable}`}>
       <head>
         {/* Resource hints — connect early to third-party origins */}
-        <link rel="preconnect" href="https://client.crisp.chat" />
         <link rel="preconnect" href="https://www.clarity.ms" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
@@ -69,6 +69,7 @@ export default function RootLayout({
         <SocialProofToast />
         <ExitIntentPopup />
         <CrispChat />
+        <WhatsAppWidget />
         <MicrosoftClarity />
         <AddToCartTracker />
         <MetaPixel />
