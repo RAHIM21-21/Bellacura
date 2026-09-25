@@ -64,7 +64,7 @@ function CheckoutSceltaInner() {
       {/* Header */}
       <header className="bg-white border-b border-gray-100 py-3 px-4">
         <div className="max-w-2xl mx-auto flex items-center justify-between">
-          <Link href="/prodotti/massaggio-anticellulite-4in1/" className="flex items-center gap-1 text-sm text-gray-400 hover:text-[#457B9D]">
+          <Link href="/anticellulite-v2" className="flex items-center gap-1 text-sm text-gray-400 hover:text-[#457B9D]">
             <ChevronLeft size={15} /> Indietro
           </Link>
           <span className="font-extrabold text-[#1D3557] text-xl">BellaCura®</span>
@@ -227,6 +227,19 @@ function CheckoutSceltaInner() {
               <p className="text-center text-xs text-gray-400">
                 🔒 I tuoi dati sono protetti · Privacy
               </p>
+
+              {/* 30-day guarantee */}
+              <div className="flex items-center gap-3 bg-[#EAF2FB] border border-[#DCEAF2] rounded-2xl p-4">
+                <div className="shrink-0 w-10 h-10 bg-[#1D3557] rounded-full flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-[#1D3557] font-extrabold text-sm leading-tight">Provalo senza rischi per 30 giorni.</p>
+                  <p className="text-[#457B9D] text-xs mt-0.5 leading-snug">Non sei soddisfatta? Rimborso completo senza domande.</p>
+                </div>
+              </div>
             </form>
           </>
         )}
