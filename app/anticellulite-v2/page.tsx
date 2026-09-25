@@ -810,76 +810,74 @@ export default function V2Page() {
       {/* ═══════════════════════════════════════════════
           FINAL CLOSING CTA
           ═══════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden py-16 px-4" style={{background: 'linear-gradient(160deg, #0a1c33 0%, #1D3557 55%, #16406b 100%)'}}>
+      <section className="bg-[#EAF2FB] py-14 px-4">
+        <div className="max-w-lg mx-auto">
 
-        {/* Subtle radial glow */}
-        <div className="absolute inset-0 pointer-events-none" style={{background: 'radial-gradient(ellipse 70% 50% at 50% 80%, rgba(126,179,212,0.12) 0%, transparent 70%)'}} />
-
-        <div className="relative max-w-lg mx-auto text-center">
-
-          {/* Stars + social proof */}
-          <div className="flex items-center justify-center gap-1.5 mb-5">
+          {/* Stars */}
+          <div className="flex items-center justify-center gap-1 mb-6">
             {[...Array(5)].map((_, i) => (
-              <svg key={i} className="w-4 h-4 fill-[#F4C542]" viewBox="0 0 20 20">
+              <svg key={i} className="w-5 h-5 fill-[#F4A623]" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
               </svg>
             ))}
-            <span className="text-white/60 text-xs ml-1">4.8 · 2.800+ clienti soddisfatte</span>
+            <span className="text-[#457B9D] text-sm font-semibold ml-1.5">4.8/5 · 2.800+ clienti</span>
           </div>
 
           {/* Headline */}
-          <h2 className="text-white font-extrabold leading-tight mb-4" style={{fontSize: 'clamp(26px, 7vw, 38px)'}}>
-            La cellulite non sparisce da sola.<br/>
-            <span style={{color: '#7FD4B0'}}>BellaCura sì.</span>
+          <h2 className="text-[#1D3557] font-extrabold text-center leading-tight mb-3" style={{fontSize: 'clamp(24px, 6.5vw, 36px)'}}>
+            Pelle più liscia e tonica.<br/>
+            <span className="text-[#457B9D]">Inizia oggi, a casa tua.</span>
           </h2>
 
-          <p className="text-white/60 text-sm leading-relaxed mb-8 max-w-sm mx-auto">
-            Trattamento professionale ogni giorno, a casa tua. Senza appuntamenti, senza centri estetici, senza spese mensili.
+          <p className="text-[#457B9D] text-sm text-center leading-relaxed mb-8 max-w-xs mx-auto">
+            Lo stesso trattamento dei centri estetici professionali, ogni giorno, senza appuntamenti.
           </p>
 
-          {/* Price block */}
-          <div className="flex items-center justify-center gap-3 mb-6 flex-wrap">
-            <span className="text-white/30 line-through text-lg">€119,00</span>
-            <span className="text-white font-black" style={{fontSize: 'clamp(36px, 9vw, 48px)'}}>€59,99</span>
-            <span className="bg-[#E63946] text-white font-extrabold text-xs px-3 py-1.5 rounded-full">−50%</span>
+          {/* Price + CTA card */}
+          <div className="bg-white rounded-3xl shadow-md shadow-[#C5DCF0] p-6 mb-5">
+
+            {/* Price */}
+            <div className="flex items-center justify-center gap-3 mb-5">
+              <span className="text-gray-400 line-through text-base">€119,00</span>
+              <span className="text-[#1D3557] font-black" style={{fontSize: 'clamp(34px, 8vw, 44px)'}}>€59,99</span>
+              <span className="bg-[#E63946] text-white font-extrabold text-xs px-2.5 py-1 rounded-full">−50%</span>
+            </div>
+
+            {/* CTA */}
+            <a
+              href="/checkout-scelta/?bundle=single"
+              className="block w-full text-center text-white font-extrabold rounded-2xl transition-transform active:scale-95"
+              style={{
+                background: 'linear-gradient(135deg, #1D3557 0%, #2A5298 100%)',
+                fontSize: 'clamp(15px, 4vw, 17px)',
+                padding: '17px 24px',
+                letterSpacing: 0.2,
+                boxShadow: '0 6px 24px rgba(29,53,87,0.35)',
+                marginBottom: 12,
+              }}
+            >
+              Ordina ora — Spedizione gratuita 🚚
+            </a>
+
+            <p className="text-center text-xs text-gray-400">Pagamento alla consegna · Nessun anticipo</p>
           </div>
 
-          {/* CTA button */}
-          <a
-            href="/checkout-scelta/?bundle=single"
-            className="block w-full text-center font-extrabold rounded-2xl shadow-xl transition-transform active:scale-95"
-            style={{
-              background: '#fff',
-              color: '#1D3557',
-              fontSize: 'clamp(15px, 4vw, 18px)',
-              padding: '18px 24px',
-              letterSpacing: 0.2,
-              boxShadow: '0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.08)',
-              marginBottom: 12,
-            }}
-          >
-            Ordina ora — Spedizione gratuita 🚚
-          </a>
-
-          {/* Pagamento contrassegno micro-line */}
-          <p className="text-white/40 text-xs mb-8">Pagamento alla consegna · Nessun rischio</p>
-
-          {/* Shield guarantee */}
-          <div className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-2xl p-4 mb-8 text-left">
-            <div className="shrink-0 mt-0.5 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-              <svg className="w-5 h-5 text-[#7FD4B0]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          {/* 30-day guarantee */}
+          <div className="flex items-start gap-3 bg-white border border-[#DCEAF2] rounded-2xl p-4 mb-5">
+            <div className="shrink-0 w-10 h-10 rounded-full bg-[#1D3557] flex items-center justify-center">
+              <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
               </svg>
             </div>
             <div>
-              <p className="text-white font-extrabold text-sm">Provalo senza rischi per 30 giorni.</p>
-              <p className="text-white/55 text-xs mt-0.5 leading-snug">Non sei soddisfatta? Ti rimborsiamo il 100% — reso gratuito, zero domande.</p>
+              <p className="text-[#1D3557] font-extrabold text-sm">Provalo senza rischi per 30 giorni.</p>
+              <p className="text-[#457B9D] text-xs mt-0.5 leading-snug">Non sei soddisfatta? Rimborso completo senza domande.</p>
             </div>
           </div>
 
           {/* Trust badges */}
-          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-white/45 text-xs">
-            <span>🔒 Pagamento 100% sicuro</span>
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[#457B9D] text-xs">
+            <span>🔒 Pagamento sicuro</span>
             <span>📦 Spedizione gratuita</span>
             <span>⚡ Consegna in 24–48h</span>
             <span>↩️ Reso gratuito 30 giorni</span>
