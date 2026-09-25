@@ -515,19 +515,6 @@ export default function V2Page() {
             ))}
           </div>
 
-          {/* 2x2 stat grid */}
-          <div className="grid grid-cols-2 gap-3">
-            {[
-              { desc: 'Ha notato la pelle visibilmente più liscia e tonica' },
-              { desc: 'Ha riferito cosce più compatte e modellate' },
-              { desc: 'Ha confermato che il trattamento è completamente indolore' },
-              { desc: 'Ha riportato un aspetto più giovane e sano della pelle' },
-            ].map((s, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl px-4 py-5 flex flex-col gap-1.5 text-center">
-                <p className="text-xs text-[#8AACCA] leading-relaxed">{s.desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
