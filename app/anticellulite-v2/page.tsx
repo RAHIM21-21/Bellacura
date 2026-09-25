@@ -237,14 +237,14 @@ export default function V2Page() {
       </section>
 
       {/* 3. SOCIAL PROOF HEADER */}
-      <section className="bg-white py-12 text-center px-4 border-t border-gray-100">
+      <section className="bg-white py-6 text-center px-4 border-t border-gray-100">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
           800+ Trasformazioni!
         </h2>
       </section>
 
       {/* 4. BEFORE/AFTER SCROLL CAROUSEL (3:4 full-size) */}
-      <section className="bg-white pb-14">
+      <section className="bg-white pb-8">
         <div
           className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4"
           style={{ scrollbarWidth: 'none', paddingLeft: 16, paddingRight: 16 }}
@@ -335,10 +335,10 @@ export default function V2Page() {
 
 
       {/* 5A. AUTHORITY — DERMATOLOGICALLY PROVEN */}
-      <section className="bg-white py-10 px-4">
+      <section className="bg-white py-8 px-4">
         <div className="max-w-xl mx-auto">
           {/* Badge */}
-          <div className="flex justify-center mb-5">
+          <div className="flex justify-center mb-4">
             <span className="inline-flex items-center gap-1.5 bg-[#EAF2FB] text-[#1D3557] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
               <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
               Dermatologicamente Provato
@@ -346,7 +346,7 @@ export default function V2Page() {
           </div>
 
           {/* Headline */}
-          <h2 className="text-center text-xl font-extrabold text-gray-900 leading-tight mb-6">
+          <h2 className="text-center text-xl font-extrabold text-gray-900 leading-tight mb-4">
             Una dermatologa specializzata in cellulite strutturale<br/>
             <span className="text-[#1D3557]">ha esaminato BellaCura. Ecco cosa ha detto:</span>
           </h2>
@@ -376,7 +376,7 @@ export default function V2Page() {
       </section>
 
       {/* PERCHÉ LE CREME NON BASTANO */}
-      <section className="bg-[#0F2236] py-12 px-4">
+      <section className="bg-[#0F2236] py-10 px-4">
         <div className="max-w-xl mx-auto">
 
           {/* Eyebrow */}
@@ -396,7 +396,7 @@ export default function V2Page() {
           </p>
 
           {/* Infographic */}
-          <div className="rounded-2xl overflow-hidden shadow-2xl shadow-black/40 mb-8">
+          <div className="rounded-2xl overflow-hidden shadow-2xl shadow-black/40 mb-6">
             <Image
               src="/images/perche-creme-no.png"
               alt="La cellulite si forma 3 mm sotto la pelle — dove le creme non arrivano mai"
@@ -408,7 +408,7 @@ export default function V2Page() {
           </div>
 
           {/* Body copy */}
-          <div className="space-y-4 text-[#DCEAF2] text-sm leading-relaxed">
+          <div className="space-y-3 text-[#DCEAF2] text-sm leading-relaxed">
             <p>
               La cellulite nasce nei <strong className="text-white">setti fibrosi</strong> — strutture di tessuto connettivo che trattengono le cellule adipose nel derma profondo, qualche millimetro sotto la superficie. È lì che si formano i noduli, i rigonfiamenti, la buccia d&apos;arancia.
             </p>
@@ -424,7 +424,7 @@ export default function V2Page() {
       </section>
 
       {/* 5B. HOW IT WORKS */}
-      <section className="bg-white py-12 px-4">
+      <section className="bg-white py-8 px-4">
         <div className="max-w-xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest text-[#1D3557] mb-2 text-center">Come funziona</p>
           <h2 className="text-2xl font-extrabold text-[#1D3557] leading-tight mb-3 text-center">
@@ -435,7 +435,7 @@ export default function V2Page() {
             Per anni riservata ai centri estetici da 150€+ a seduta. BellaCura porta la stessa scienza direttamente a casa tua.
           </p>
 
-          <div className="grid grid-cols-2 gap-3 mb-10">
+          <div className="grid grid-cols-2 gap-3 mb-6">
             {[
               {
                 num: '01',
@@ -519,7 +519,7 @@ export default function V2Page() {
       </section>
 
       {/* 6. STARS HEADER + VIDEO TESTIMONIALS */}
-      <section className="bg-white py-14 px-4">
+      <section className="bg-white py-10 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-3">
             <Stars n={5} size={5} />
@@ -810,11 +810,11 @@ export default function V2Page() {
       {/* ═══════════════════════════════════════════════
           FINAL CLOSING CTA
           ═══════════════════════════════════════════════ */}
-      <section className="bg-[#EAF2FB] py-14 px-4">
+      <section className="bg-[#EAF2FB] py-10 px-4">
         <div className="max-w-lg mx-auto">
 
           {/* Stars */}
-          <div className="flex items-center justify-center gap-1 mb-6">
+          <div className="flex items-center justify-center gap-1 mb-4">
             {[...Array(5)].map((_, i) => (
               <svg key={i} className="w-5 h-5 fill-[#F4A623]" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
