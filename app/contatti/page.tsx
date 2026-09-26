@@ -49,7 +49,7 @@ export default function ContattiPage() {
  { icon: '', t: 'Traccia il tuo ordine', href: '/traccia-ordine/' },
  { icon: '', t: 'Richiedi un reso', href: '/garanzia/' },
  { icon: '', t: 'Domande frequenti', href: '/faq/' },
- { icon: '', t: 'Vedi i nostri prodotti', href: '/prodotti/massaggio-anticellulite-4in1/' },
+ { icon: '', t: 'Vedi i nostri prodotti', href: '/anticellulite-v2' },
  ].map((l) => (
  <Link key={l.t} href={l.href} className="flex items-center gap-2 p-3 bg-white rounded-xl border border-gray-100 hover:border-[#A8DADC] transition-colors">
  <span>{l.icon}</span> {l.t} →
