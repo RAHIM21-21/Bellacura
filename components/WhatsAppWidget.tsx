@@ -1,8 +1,11 @@
 'use client'
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function WhatsAppWidget() {
+  const pathname = usePathname()
   const [labelVisible, setLabelVisible] = useState(false)
+  if (pathname?.startsWith('/checkout')) return null
   const href = 'https://wa.me/393314430286?text=ho%20una%20domanda%20su%20bellacura%20...'
 
   useEffect(() => {
