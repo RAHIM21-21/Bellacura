@@ -65,7 +65,7 @@ export default function FaqPage() {
  <p className="text-gray-600 mb-6">Il nostro team risponde entro poche ore, dal lunedì al sabato.</p>
  <div className="flex flex-col sm:flex-row gap-4 justify-center">
  <Link href="/contatti/" className="btn-primary"> Scrivici</Link>
- <Link href="/prodotti/massaggio-anticellulite-4in1/" className="btn-secondary">Scopri i Prodotti</Link>
+ <Link href="/anticellulite-v2" className="btn-secondary">Scopri i Prodotti</Link>
  </div>
  </div>
  </section>
