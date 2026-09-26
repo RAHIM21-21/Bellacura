@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import PurchasePixel from './PurchasePixel'
+import { trackPurchase } from '@/lib/meta-client'
 import TrackingEmailForm from './TrackingEmailForm'
 
 export default function GrazieClient({ orderRef }: { orderRef?: string }) {
@@ -14,13 +14,14 @@ export default function GrazieClient({ orderRef }: { orderRef?: string }) {
       setNome(sessionStorage.getItem('bc_nome'))
       setIndirizzo(sessionStorage.getItem('bc_indirizzo'))
     } catch {}
+    // Fire purchase tracking (deduplicates via sessionStorage eventID)
+    try { trackPurchase(orderRef) } catch {}
   }, [])
 
   const firstName = nome ? nome.split(' ')[0] : null
 
   return (
     <div className="min-h-screen bg-[#F0F6FB] flex flex-col items-center justify-start py-10 px-4">
-      <PurchasePixel />
 
       <div className="w-full max-w-md">
 
