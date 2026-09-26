@@ -178,16 +178,16 @@ export default function CookieBanner() {
           <div className="flex flex-col gap-2 md:shrink-0">
             <div className="flex gap-2">
               <button
-                onClick={acceptAll}
-                className="flex-1 md:flex-none bg-[#1D3557] text-white text-sm font-bold px-5 py-2.5 rounded-lg hover:bg-[#16294a] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#1D3557] whitespace-nowrap"
-              >
-                Accetta tutti
-              </button>
-              <button
                 onClick={refuseAll}
                 className="flex-1 md:flex-none bg-[#1D3557] text-white text-sm font-bold px-5 py-2.5 rounded-lg hover:bg-[#16294a] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#1D3557] whitespace-nowrap"
               >
                 Rifiuta
+              </button>
+              <button
+                onClick={acceptAll}
+                className="flex-1 md:flex-none bg-[#1D3557] text-white text-sm font-bold px-5 py-2.5 rounded-lg hover:bg-[#16294a] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#1D3557] whitespace-nowrap"
+              >
+                Accetta tutti
               </button>
             </div>
             <div className="text-center md:text-left">
