@@ -52,7 +52,7 @@ export default function BlogLeggingsPage() {
 
  <div className="p-6 bg-[#DCEAF2] rounded-2xl border border-[#D6EAF0] my-8">
  <p className="font-semibold text-gray-900 mb-2"> Consiglio BellaCura</p>
- <p className="text-gray-700 text-sm">Per risultati fino a 3× più rapidi, combina i leggings con il <Link href="/prodotti/massaggio-anticellulite-4in1/" className="text-[#457B9D] underline">massaggiatore anticellulite BellaCura</Link>. Il massaggio serale + i leggings durante il giorno creano un effetto sinergico che molte clienti descrivono come "trasformativo".</p>
+ <p className="text-gray-700 text-sm">Per risultati fino a 3× più rapidi, combina i leggings con il <Link href="/anticellulite-v2" className="text-[#457B9D] underline">massaggiatore anticellulite BellaCura</Link>. Il massaggio serale + i leggings durante il giorno creano un effetto sinergico che molte clienti descrivono come "trasformativo".</p>
  </div>
 
  <h2 className="font-sans text-2xl text-gray-900 mt-8">Come scegliere la taglia giusta</h2>
