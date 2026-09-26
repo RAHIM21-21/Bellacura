@@ -188,7 +188,7 @@ export default function ArticoloCellulite() {
  Il BellaCura Massaggiatore Anticellulite di BellaCura combina tutti e 7 i metodi in un unico dispositivo.
  </p>
  <Link
- href="/prodotti/massaggio-anticellulite-4in1/"
+ href="/anticellulite-v2"
  className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#1D3557] font-bold rounded-full hover:bg-[#DCEAF2] transition-colors"
  >
  Scopri il Massaggiatore – €59,90
