@@ -44,7 +44,7 @@ const nextConfig = {
   async redirects() {
     return [
       { source: '/index', destination: '/', permanent: true },
-      { source: '/', destination: '/prodotti/massaggio-anticellulite-4in1', permanent: false },
+      { source: '/', destination: '/anticellulite-v2', permanent: false },
     ]
   },
 }
