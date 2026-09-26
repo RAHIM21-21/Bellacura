@@ -118,6 +118,14 @@ function InStock() {
 export default function V2Page() {
   return (
     <>
+      {/* LCP image preload — browser fetches gallery hero before JS hydrates */}
+      <link
+        rel="preload"
+        as="image"
+        href="/_next/image?url=%2Fimages%2Fgallery-1-device.jpg&w=828&q=75"
+        // @ts-ignore — fetchpriority is valid on <link> but not yet in React typedefs
+        fetchpriority="high"
+      />
       {/* 1. ANNOUNCEMENT BAR */}
       <div className="py-3 px-4 bg-[#1D3557]">
         <div className="flex flex-col items-center justify-center gap-1.5 text-center">
