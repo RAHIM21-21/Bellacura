@@ -6,6 +6,7 @@ const nextConfig = {
   // Better tree-shaking for icon libraries
   experimental: {
     optimizePackageImports: ['lucide-react'],
+    optimizeCss: true,
   },
 
   images: {
