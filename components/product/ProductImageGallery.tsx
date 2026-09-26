@@ -53,7 +53,7 @@ export default function ProductImageGallery({ badge }: { badge?: { line1: string
               loop
               playsInline
               muted
-              preload="auto"
+              preload="none"
             />
             {/* Mute/unmute button */}
             <button
