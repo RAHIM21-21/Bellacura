@@ -33,6 +33,7 @@ const pinyonScript = Pinyon_Script({
 // Lazy-load non-critical interactive overlays — JS deferred to after hydration
 const SocialProofToast = dynamic(() => import('@/components/home/SocialProofToast'), { ssr: false })
 const ExitIntentPopup  = dynamic(() => import('@/components/ExitIntentPopup'), { ssr: false })
+const CookieBanner    = dynamic(() => import('@/components/CookieBanner'), { ssr: false })
 
 export const metadata: Metadata = buildMetadata({
   title: 'BellaCura – Benessere e Cura del Corpo per la Donna',
@@ -75,6 +76,7 @@ export default function RootLayout({
         <WhatsAppWidget />
         <MicrosoftClarity />
         <AddToCartTracker />
+        <CookieBanner />
       </body>
     </html>
   )
