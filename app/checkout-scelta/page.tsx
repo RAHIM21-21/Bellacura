@@ -35,6 +35,12 @@ function CheckoutSceltaInner() {
     e.preventDefault()
     setLoading(true)
     try {
+      // Store PII in sessionStorage — keeps it out of URLs, server logs, and analytics tools
+      try {
+        sessionStorage.setItem('bc_nome', form.nome || '')
+        sessionStorage.setItem('bc_indirizzo', form.indirizzo || '')
+      } catch {}
+
       const res = await fetch('/api/notify-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -46,7 +52,7 @@ function CheckoutSceltaInner() {
       })
       const json = await res.json().catch(() => ({}))
       setLoading(false)
-      window.location.href = `/grazie/?ref=${json.order_ref || ''}&nome=${encodeURIComponent(form.nome || '')}&ind=${encodeURIComponent(form.indirizzo || '')}&eid=${encodeURIComponent(json.event_id || '')}`
+      window.location.href = `/grazie/?ref=${encodeURIComponent(json.order_ref || '')}`
     } catch (_) {
       setLoading(false)
       setStep('success')
