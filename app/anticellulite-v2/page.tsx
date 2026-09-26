@@ -835,7 +835,6 @@ export default function V2Page() {
             {[
               { icon: '⚡', label: 'Dispositivo BellaCura', sub: '12 livelli · 4 tecnologie combinate' },
               { icon: '🔌', label: 'Cavo di ricarica USB-C', sub: 'Carica completa in ~2 ore' },
-              { icon: '💆', label: 'Testine massaggianti di ricambio', sub: 'Per uso prolungato su tutte le zone' },
               { icon: '📖', label: 'Guida illustrata ai protocolli', sub: 'Tecniche consigliate per ogni area del corpo' },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-4 bg-[#F8FBFF] border border-[#EAF2FB] rounded-2xl px-4 py-3.5">
