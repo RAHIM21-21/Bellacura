@@ -29,7 +29,18 @@ export function rememberFbclid() {
   if (id) try { sessionStorage.setItem('bc_fbc', `fb.1.${Date.now()}.${id}`); } catch {}
 }
 
+/* Invia al server SOLO se il consenso marketing è stato dato */
+function hasMarketingConsent(): boolean {
+  try {
+    const raw = localStorage.getItem('bc_consent');
+    if (!raw) return false;
+    const c = JSON.parse(raw);
+    return c?.marketing === true;
+  } catch { return false; }
+}
+
 function sendServer(payload: Record<string, unknown>) {
+  if (!hasMarketingConsent()) return;   // ← rifiuto blocca anche il server
   try {
     fetch('/api/meta-capi', {
       method: 'POST', keepalive: true, headers: { 'Content-Type': 'application/json' },
@@ -55,7 +66,7 @@ export function trackInitiateCheckout(value: number, qty: number) {
 }
 
 /* Checkout: al click su "Conferma ordine", PRIMA di inviare l'ordine.
-   Restituisce l'eventID: passarlo al backend insieme all'ordine (serve per la variante consigliata sotto). */
+   Restituisce l'eventID: passarlo al backend insieme all'ordine. */
 export function onCheckoutSubmit(f: { name: string; phone: string; address: string; value: number; qty: number }): string {
   const user = buildUserData(f);
   const id = eventId('pur');
@@ -71,8 +82,8 @@ function readOrder(): StoredOrder | null {
 /* Pagina di grazie: una volta al caricamento */
 export function trackPurchase(orderId?: string) {
   const o = readOrder();
-  if (!o || sessionStorage.getItem('bc_purchase_sent') === o.eventID) return; // niente doppioni al refresh
-  fbq('init', PIXEL_ID, { external_id: orderId || o.eventID, ...o.user });  // advanced matching
+  if (!o || sessionStorage.getItem('bc_purchase_sent') === o.eventID) return;
+  fbq('init', PIXEL_ID, { external_id: orderId || o.eventID, ...o.user });
   const cd = { value: o.value, currency: 'EUR', content_ids: [PRODUCT_ID], content_type: 'product', num_items: o.qty };
   fbq('track', 'Purchase', cd, { eventID: o.eventID });
   sendServer({ event_name: 'Purchase', event_id: o.eventID, order_id: orderId, user: o.user, custom_data: cd });
