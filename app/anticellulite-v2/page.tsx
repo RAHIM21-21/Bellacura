@@ -7,6 +7,7 @@ import TrustpilotSection from '@/components/ui/TrustpilotSection'
 import VideoCarousel from '@/components/product/VideoCarousel'
 import Link from 'next/link'
 import CountdownTimer from '@/components/home/CountdownTimer'
+import PdpTrackers from '@/components/tracking/PdpTrackers'
 
 const STOCK_NUMS = [5, 6, 7, 8, 9]
 const dailyStock = STOCK_NUMS[Math.floor(Date.now() / 86400000) % STOCK_NUMS.length]
@@ -118,6 +119,7 @@ function InStock() {
 export default function V2Page() {
   return (
     <>
+      <PdpTrackers value={59.99} />
       {/* LCP image preload — browser fetches gallery hero before JS hydrates */}
       <link
         rel="preload"
