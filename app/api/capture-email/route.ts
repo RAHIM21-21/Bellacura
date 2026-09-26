@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
     await sendCAPIEvent({
       event_name: 'Lead',
       event_id: eventId,
-      event_source_url: 'https://www.bellacura-shop.it/prodotti/massaggio-anticellulite-4in1',
+      event_source_url: 'https://www.bellacura-shop.it/anticellulite-v2',
       user_data: {
         em: [hashedEmail],
         ...(ip && { client_ip_address: ip }),
