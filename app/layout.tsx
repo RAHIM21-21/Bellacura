@@ -34,7 +34,7 @@ const SocialProofToast = dynamic(() => import('@/components/home/SocialProofToas
 const ExitIntentPopup  = dynamic(() => import('@/components/ExitIntentPopup'), { ssr: false })
 
 export const metadata: Metadata = buildMetadata({
-  title: 'BellaCura – Benessere e Cura del Corpo per la Donna',
+  title: 'BellaCura \u2013 Benessere e Cura del Corpo per la Donna',
   description: SITE_DESCRIPTION,
   path: '/',
 })
@@ -49,7 +49,8 @@ export default function RootLayout({
       <head>
         {/* Resource hints — connect early to third-party origins */}
         <link rel="preconnect" href="https://www.clarity.ms" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://client.crisp.chat" crossOrigin="anonymous" />
+        {/* Crisp: no crossOrigin — initial script is not a CORS request */}
+        <link rel="preconnect" href="https://client.crisp.chat" />
         <link rel="dns-prefetch" href="https://client.crisp.chat" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
