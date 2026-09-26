@@ -65,9 +65,9 @@ export default function GrazieClient({ orderRef }: { orderRef?: string }) {
           <ol className="space-y-3">
             {[
               { icon: '\u2705', text: "Conferma d\u2019ordine ricevuta" },
-              { icon: '\U0001f4e6', text: 'Pacco preparato e spedito entro 24h' },
-              { icon: '\U0001f69a', text: 'Consegna in 2\u20134 giorni lavorativi' },
-              { icon: '\U0001f4b5', text: 'Paghi in contanti alla consegna' },
+              { icon: '📦', text: 'Pacco preparato e spedito entro 24h' },
+              { icon: '🚚', text: 'Consegna in 2\u20134 giorni lavorativi' },
+              { icon: '💵', text: 'Paghi in contanti alla consegna' },
             ].map((item, i) => (
               <li key={i} className="flex items-center gap-3">
                 <span className="text-lg w-7 flex-shrink-0 text-center">{item.icon}</span>
