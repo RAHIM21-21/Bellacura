@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Package } from 'lucide-react'
+import { onTrackingEmail } from '@/lib/meta-client'
 
 export default function TrackingEmailForm({
   orderRef,
@@ -21,6 +22,9 @@ export default function TrackingEmailForm({
     setStatus('loading')
 
     try {
+      // Fire EmailTracking pixel event
+      try { onTrackingEmail(email.trim().toLowerCase(), orderRef) } catch {}
+
       await fetch('/api/capture-tracking-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
