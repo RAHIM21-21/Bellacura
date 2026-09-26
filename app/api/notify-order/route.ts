@@ -12,14 +12,15 @@ export async function POST(req: NextRequest) {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY)
     const body = await req.json()
-    const { nome, telefono, indirizzo, productLabel, productPrice } = body
+    const { nome, telefono, indirizzo, productLabel, productPrice, event_id } = body
 
     if (!nome || !telefono || !indirizzo) {
       return NextResponse.json({ success: false, error: 'Dati mancanti' }, { status: 400 })
     }
 
     const orderRef = generateOrderRef()
-    const eventId = `purchase_${orderRef}`
+    // Use eventID from checkout page for deduplication; fall back to generated one
+    const eventId = event_id || `purchase_${orderRef}`
     const priceNum = parseFloat(String(productPrice).replace(/[^0-9.]/g, '')) || 59.90
 
     // Fire CAPI Purchase server-side
