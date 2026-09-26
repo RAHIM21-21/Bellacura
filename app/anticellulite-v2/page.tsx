@@ -152,8 +152,8 @@ export default function V2Page() {
                 <h1 className="text-[26px] md:text-3xl font-extrabold text-gray-900 leading-tight">
                   <strong>Pelle pi&#xf9; Liscia e Tonica in 10 Minuti</strong> con BellaCura
                 </h1>
-                <p className="text-base md:text-lg font-semibold text-[#E63946]">
-                  Senza creme inutili, centri estetici costosi e risultati che non arrivano mai!
+                <p className="text-base md:text-lg font-semibold text-[#1D3557]">
+                  Il trattamento dei centri estetici, a casa tua
                 </p>
               </div>
 
