@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CheckCircle2, ChevronLeft, Shield, Truck, RotateCcw, Star } from 'lucide-react'
+import { onCheckoutSubmit } from '@/lib/meta-client'
 
 const SHOPIFY_URL_SINGLE = 'https://7q632q-cd.myshopify.com/cart/48232541651102:1?checkout'
 const SHOPIFY_URL_DOUBLE = 'https://7q632q-cd.myshopify.com/cart/48238649606302:1?checkout'
@@ -41,6 +42,15 @@ function CheckoutSceltaInner() {
         sessionStorage.setItem('bc_indirizzo', form.indirizzo || '')
       } catch {}
 
+      // Fire pixel checkout event + store order data for purchase deduplication
+      const eventID = onCheckoutSubmit({
+        name: form.nome,
+        phone: form.telefono,
+        address: form.indirizzo,
+        value: isDouble ? 99.90 : 59.99,
+        qty: isDouble ? 2 : 1,
+      })
+
       const res = await fetch('/api/notify-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -48,6 +58,7 @@ function CheckoutSceltaInner() {
           ...form,
           productLabel,
           productPrice,
+          event_id: eventID,
         }),
       })
       const json = await res.json().catch(() => ({}))
