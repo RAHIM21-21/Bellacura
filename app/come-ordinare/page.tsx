@@ -25,7 +25,7 @@ export default function ComeOrdinarePage() {
  {/* Steps */}
  <div className="space-y-6 mb-16">
  {[
- { n: '1', icon: '', t: 'Scegli il prodotto', d: 'Visita la pagina del prodotto che vuoi. Scegli la quantità, il colore e la taglia se applicabile.', cta: { label: 'Massaggiatore Anticellulite', href: '/prodotti/massaggio-anticellulite-4in1/' } },
+ { n: '1', icon: '', t: 'Scegli il prodotto', d: 'Visita la pagina del prodotto che vuoi. Scegli la quantità, il colore e la taglia se applicabile.', cta: { label: 'Massaggiatore Anticellulite', href: '/anticellulite-v2' } },
  { n: '2', icon: '', t: 'Compila il modulo d\'ordine', d: 'Inserisci nome, cognome, indirizzo di consegna e numero di telefono. Non serve creare un account. Scegli il metodo di pagamento: contrassegno (alla consegna) oppure carta/PayPal online.' },
  { n: '3', icon: '', t: 'Ricevi a casa e paga', d: 'Il corriere arriva a casa tua in 24-48 ore. Se hai scelto il contrassegno, paghi direttamente al corriere in contanti al momento della consegna. Se hai pagato online, non devi fare niente.' },
  ].map((step) => (
@@ -66,7 +66,7 @@ export default function ComeOrdinarePage() {
  </div>
 
  <div className="grid sm:grid-cols-2 gap-4">
- <Link href="/prodotti/massaggio-anticellulite-4in1/" className="btn-primary text-center justify-center">Ordina Massaggiatore</Link>
+ <Link href="/anticellulite-v2" className="btn-primary text-center justify-center">Ordina Massaggiatore</Link>
  <Link href="/prodotti/leggings-anticellulite-3d/" className="btn-secondary text-center justify-center">Ordina Leggings 3D</Link>
  </div>
  </div>
