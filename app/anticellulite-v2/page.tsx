@@ -729,65 +729,69 @@ export default function V2Page() {
           <div className="space-y-3">
             {[
               {
-                q: "Funziona davvero o è solo marketing?",
-                a: "BellaCura utilizza tre tecnologie clinicamente validate, usate ogni giorno nei centri estetici professionali: vacuum therapy (pressione negativa), fototerapia LED a 660nm e calore terapeutico a 42°C. Queste non sono invenzioni pubblicitarie — sono protocolli medici documentati. La differenza è che BellaCura li porta in un dispositivo che puoi usare a casa. I risultati che vedi nelle nostre recensioni sono reali, fotografati dalle nostre clienti e pubblicati con il loro consenso.",
+                q: "Come fa BellaCura a funzionare davvero?",
+                a: "BellaCura usa quattro tecnologie che i centri estetici impiegano da anni: aspirazione, calore a 42°C, luce rossa a 660 nm e luce blu. La differenza è che le unisce in un solo dispositivo da usare ogni giorno, a casa. I risultati che vedi nelle recensioni sono foto reali delle nostre clienti, pubblicate con il loro consenso.",
+              },
+              {
+                q: "Cosa lo rende diverso da creme e trattamenti?",
+                a: "La profondità a cui lavora. La cellulite si forma qualche millimetro sotto la pelle, dove i setti fibrosi tengono intrappolato il tessuto adiposo. Le creme lavorano sugli strati più esterni e lì non arrivano: anche Altroconsumo ha misurato risultati minimi. BellaCura lavora proprio in quello strato: l’aspirazione mobilizza il tessuto, il calore riattiva la circolazione, la luce rossa sostiene il collagene e la luce blu uniforma il tono della pelle. E a differenza dei trattamenti in cabina, puoi usarlo ogni giorno, senza pacchetti da rinnovare.",
+              },
+              {
+                q: "Come funziona il pagamento alla consegna?",
+                a: "Ordini senza pagare nulla online. Ricevi il pacco in 24–48 ore e paghi direttamente al corriere, solo quando è nelle tue mani. Nessun anticipo, nessun dato della carta.",
+              },
+              {
+                q: "Cosa succede se non sono soddisfatta?",
+                a: "Hai 30 giorni per provare BellaCura. Se non sei soddisfatta, contatti il nostro supporto, ritiriamo il prodotto gratuitamente e ti rimborsiamo l’intero importo, senza fare domande. Vogliamo che tu sia sicura del tuo acquisto, non che tu ti senta in trappola.",
               },
               {
                 q: "Quanto tempo ci vuole per vedere i risultati?",
-                a: "La maggior parte delle clienti nota una pelle più morbida e luminosa già dopo la prima sessione. Nelle prime 1–2 settimane di uso quotidiano, la buccia d’arancia inizia a cedere visibilmente e la ritenzione idrica si riduce. Dopo 3–4 settimane i risultati sono chiari e fotografabili. Come con qualsiasi trattamento estetico, la costanza fa la differenza: 10 minuti al giorno sono sufficienti.",
+                a: "Già dalla prima seduta senti la pelle più morbida e le gambe più leggere. I primi cambiamenti visibili sulla buccia d’arancia arrivano di solito tra la terza e l’ottava settimana di uso quotidiano, e dopo 8–12 settimane la differenza si vede. La costanza fa la differenza: bastano 10 minuti al giorno.",
               },
               {
-                q: "È doloroso o fastidioso da usare?",
-                a: "No. Il dispositivo ha 12 livelli di intensità che puoi regolare in base alla tua sensibilità e alla zona trattata. La maggior parte delle clienti descrive la sensazione come un massaggio intenso e rilassante, simile a quello che si riceve in un centro benessere. Il calore terapeutico è piacevole — mai bruciante. Si consiglia di iniziare all’intensità minima e aumentare gradualmente.",
+                q: "Com’è la sensazione durante l’uso?",
+                a: "Come un massaggio caldo e intenso, simile a quello di un centro benessere. BellaCura ha 12 livelli di intensità che puoi regolare in base alla tua sensibilità e alla zona trattata, e il calore è piacevole, mai bruciante. Ti consigliamo di iniziare dal livello più basso e aumentare gradualmente. Un leggero rossore subito dopo la seduta è normale e passa in poco tempo.",
               },
               {
-                q: "Ho la cellulite molto grave. Può aiutarmi comunque?",
-                a: "Sì. BellaCura agisce direttamente sul tessuto connettivo e sul grasso sottocutaneo, indipendentemente dallo stadio della cellulite. Per la cellulite di grado 3 o 4 (visibile anche a riposo, con noduli profondi), i risultati richiedono semplicemente più settimane di trattamento costante. Molte delle nostre clienti più soddisfatte avevano provato di tutto senza successo prima di BellaCura.",
+                q: "Funziona anche sulla cellulite più evidente?",
+                a: "Sì. BellaCura lavora sul tessuto sotto la pelle, qualunque sia lo stadio della cellulite. Quando la cellulite è più marcata, visibile anche a riposo, servono semplicemente più settimane di uso costante: conta sul percorso completo di 8–12 settimane. Molte delle nostre clienti più soddisfatte avevano già provato di tutto prima di BellaCura.",
               },
               {
-                q: "Ho già provato decine di creme e prodotti. Perché questo sarebbe diverso?",
-                a: "La cellulite è un problema strutturale del tessuto connettivo profondo, non della superficie cutanea. Le creme più costose penetrano al massimo il 5–10% dello strato cutaneo e non raggiungono mai il derma profondo dove si formano le aderenze fibrose. BellaCura lavora meccanicamente su quei tessuti: la pressione negativa rompe fisicamente le aderenze, il calore aumenta la permeabilità, la luce rossa stimola il collagene. È un approccio completamente diverso.",
-              },
-              {
-                q: "E se non funziona per me? C’è una garanzia?",
-                a: "Sì, offriamo una garanzia di rimborso. Puoi provare BellaCura per 30 giorni e, se non sei soddisfatta dei risultati, ti rimborsiamo senza fare domande. Vogliamo che tu sia sicura del tuo acquisto, non che tu si senta in trappola. Contatta il nostro supporto e gestiamo tutto rapidamente.",
-              },
-              {
-                q: "Devo comprare anche oli, creme o accessori aggiuntivi?",
-                a: "No, BellaCura funziona da solo. Tuttavia, applicare un olio secco o un siero anticellulite prima della sessione può amplificarne l’efficacia: il calore e la ventosa aprono i tessuti e portano gli ingredienti attivi dove le creme da sole non arriverebbero mai. Il kit base include tutto il necessario per iniziare subito.",
-              },
-              {
-                q: "Posso usarlo su tutto il corpo o solo sulle gambe?",
-                a: "BellaCura può essere usato su cosce, glutei, fianchi, addome, braccia e polpacci. La testa massaggiante si adatta alle diverse zone corporee e i livelli di intensità ti permettono di personalizzare il trattamento per ogni area. Si sconsiglia l’uso su viso, collo e su zone con ferite, varici o infiammazioni attive.",
-              },
-              {
-                q: "Ogni quanto devo usarlo? Per quanto tempo?",
-                a: "Per le prime 4–8 settimane, l’ideale è usarlo ogni giorno per 10–15 minuti sulle zone interessate. Dopo aver raggiunto i risultati desiderati, basta una o due sessioni a settimana per mantenere la pelle tonica e compatta. Non c’è un limite di tempo: più usi BellaCura, più la pelle migliora.",
-              },
-              {
-                q: "I risultati durano nel tempo o scompaiono appena smetto di usarlo?",
-                a: "I benefici strutturali del trattamento — la riduzione delle aderenze fibrose e la stimolazione del collagene — si accumulano nel tempo e non scompaiono dall’oggi al domani. Tuttavia, come qualsiasi trattamento estetico, la cellulite può lentamente riformarsi se si smette completamente e lo stile di vita non è ottimale. Con 1–2 sessioni settimanali di mantenimento, i risultati sono duraturi.",
-              },
-              {
-                q: "Posso usarlo se sono in gravidanza o allattamento?",
-                a: "No. Sconsigliamo l’uso durante la gravidanza e il periodo di allattamento. Questo vale per tutti i dispositivi di massaggio elettronico che usano calore, pressione e stimolazione luminosa. Aspetta il periodo post-allattamento e consulta il tuo medico prima di iniziare qualsiasi trattamento estetico.",
-              },
-              {
-                q: "Ho la pelle sensibile. Posso comunque usarlo?",
-                a: "Sì, ma con cautela. Inizia sempre all’intensità più bassa e aumenta gradualmente nell’arco di qualche settimana. Il livello 1 è delicatissimo e adatto anche alle pelli più reattive. Evita zone con rossori attivi, irritazioni o dermatiti in corso. Se hai dubbi specifici sulla tua condizione cutanea, consulta il tuo dermatologo.",
-              },
-              {
-                q: "Come si carica? Quante sessioni dura la batteria?",
-                a: "BellaCura si ricarica tramite cavo USB-C (incluso nella confezione). Una carica completa richiede circa 2 ore e garantisce circa 4–6 sessioni da 15 minuti. Il dispositivo è leggero, cordless e quindi completamente libero — nessun filo tra i piedi mentre ti tratti.",
-              },
-              {
-                q: "Il dispositivo è impermeabile? Posso usarlo sotto la doccia?",
-                a: "No. BellaCura non è impermeabile e non deve essere usato sotto l’acqua o in ambienti molto umidi. È progettato per essere usato sulla pelle asciutta o con un sottile strato di olio secco. Evita di immergerlo o bagnarlo direttamente.",
+                q: "Come si mantengono i risultati nel tempo?",
+                a: "Con un po’ di costanza, che a casa è semplice. Dopo le prime 8–12 settimane bastano 2–3 sedute a settimana per mantenere la pelle più liscia e compatta. Come per qualsiasi trattamento estetico, se si smette del tutto la cellulite può lentamente ripresentarsi: per questo avere il dispositivo sempre a portata di mano fa la differenza.",
               },
               {
                 q: "Quanto vale BellaCura rispetto a un centro estetico?",
-                a: "Un ciclo standard di 10 sedute di vacuum therapy in centro estetico costa tipicamente 800–1.500€. BellaCura ha un costo una tantum e si paga da solo in meno di un mese rispetto alle sessioni in studio. Puoi usarlo ogni giorno, nelle tue ore, senza appuntamenti, code o spostamenti. È la stessa tecnologia, nella tua casa.",
+                a: "Un ciclo di 10 sedute di vacuum therapy in centro estetico costa in genere 800–1.500 €. BellaCura costa meno di una sola seduta e lo usi ogni giorno, nelle tue ore, senza appuntamenti né spostamenti.",
               },
+              {
+                q: "Serve altro oltre al dispositivo?",
+                a: "No. BellaCura funziona da solo: nessun filtro da sostituire, nessuna crema obbligatoria, nessun ricambio. Se vuoi, un velo di olio secco rende lo scorrimento più piacevole, ma non è necessario. Nella confezione trovi tutto il necessario per iniziare subito.",
+              },
+              {
+                q: "Ogni quanto devo usarlo? Per quanto tempo?",
+                a: "Per le prime 8–12 settimane, l’ideale è usarlo ogni giorno per 10–15 minuti sulle zone interessate. Poi bastano 2–3 sedute a settimana per mantenere i risultati.",
+              },
+              {
+                q: "Su quali zone posso usarlo?",
+                a: "Su cosce, glutei, fianchi, addome, braccia e polpacci. La testina si adatta alle diverse zone e i livelli di intensità ti permettono di personalizzare il trattamento. Non usarlo su viso, collo o su zone con ferite, varici o infiammazioni in corso.",
+              },
+              {
+                q: "Ho la pelle sensibile. Posso usarlo?",
+                a: "Sì, con qualche attenzione. Inizia sempre dal livello 1, il più delicato, adatto anche alle pelli più reattive, e aumenta gradualmente nell’arco di qualche settimana. Evita le zone con rossori, irritazioni o dermatiti in corso. Se hai dubbi sulla tua pelle, chiedi al tuo dermatologo.",
+              },
+              {
+                q: "Posso usarlo in gravidanza o durante l’allattamento?",
+                a: "No, ne sconsigliamo l’uso durante la gravidanza e l’allattamento, come per tutti i dispositivi che usano calore, aspirazione e luce. Aspetta la fine dell’allattamento e consulta il tuo medico prima di iniziare.",
+              },
+              {
+                q: "Come si ricarica? Quanto dura la batteria?",
+                a: "Si ricarica con un cavo USB-C, incluso nella confezione. Una ricarica completa richiede circa 2 ore e dura circa 4–6 sedute da 15 minuti. È senza fili, leggero e comodo da usare ovunque.",
+              },
+              {
+                q: "È impermeabile? Posso usarlo sotto la doccia?",
+                a: "No. BellaCura non è impermeabile: non va usato sotto l’acqua o in ambienti molto umidi. Usalo sulla pelle asciutta, oppure con un velo di olio secco.",
+              }
             ].map((faq, i) => (
               <details key={i} className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
                 <summary className="flex items-start justify-between gap-3 px-5 py-4 cursor-pointer select-none list-none">
