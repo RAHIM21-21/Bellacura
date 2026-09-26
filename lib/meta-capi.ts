@@ -1,5 +1,5 @@
-const PIXEL_ID = '969043089557792'
-const CAPI_URL = `https://graph.facebook.com/v20.0/${PIXEL_ID}/events`
+const PIXEL_ID = process.env.META_PIXEL_ID || ''
+const CAPI_URL = `https://graph.facebook.com/v21.0/${PIXEL_ID}/events`
 
 interface CAPIEvent {
   event_name: string
@@ -20,9 +20,9 @@ interface CAPIEvent {
 }
 
 export async function sendCAPIEvent(event: CAPIEvent) {
-  const token = process.env.META_ACCESS_TOKEN
+  const token = process.env.META_CAPI_TOKEN
   if (!token) {
-    console.warn('META_ACCESS_TOKEN not set — skipping CAPI')
+    console.warn('META_CAPI_TOKEN not set — skipping CAPI')
     return
   }
 
