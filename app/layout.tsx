@@ -9,6 +9,7 @@ import CrispChat from '@/components/CrispChat'
 import WhatsAppWidget from '@/components/WhatsAppWidget'
 import MicrosoftClarity from '@/components/MicrosoftClarity'
 import AddToCartTracker from '@/components/AddToCartTracker'
+import MetaPixel from '@/components/MetaPixel'
 
 // Montserrat — primary typeface for all UI, headings and body
 const montserrat = Montserrat({
@@ -34,7 +35,7 @@ const SocialProofToast = dynamic(() => import('@/components/home/SocialProofToas
 const ExitIntentPopup  = dynamic(() => import('@/components/ExitIntentPopup'), { ssr: false })
 
 export const metadata: Metadata = buildMetadata({
-  title: 'BellaCura \u2013 Benessere e Cura del Corpo per la Donna',
+  title: 'BellaCura – Benessere e Cura del Corpo per la Donna',
   description: SITE_DESCRIPTION,
   path: '/',
 })
@@ -49,8 +50,7 @@ export default function RootLayout({
       <head>
         {/* Resource hints — connect early to third-party origins */}
         <link rel="preconnect" href="https://www.clarity.ms" crossOrigin="anonymous" />
-        {/* Crisp: no crossOrigin — initial script is not a CORS request */}
-        <link rel="preconnect" href="https://client.crisp.chat" />
+        <link rel="preconnect" href="https://client.crisp.chat" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://client.crisp.chat" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
@@ -63,6 +63,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-cream">
+        <MetaPixel />
         <Header />
         <main id="main-content" className="flex-1">
           {children}
