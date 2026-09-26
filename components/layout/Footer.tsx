@@ -98,6 +98,14 @@ export default function Footer() {
  {footerLinks.legale.map((l) => (
  <li key={l.href}><Link href={l.href} className="text-gray-400 hover:text-[#457B9D] text-sm transition-colors">{l.label}</Link></li>
  ))}
+ <li className="mt-1">
+  <button
+   onClick={() => { (window as { bcOpenCookieBanner?: () => void }).bcOpenCookieBanner?.() }}
+   className="text-gray-400 hover:text-[#457B9D] text-sm transition-colors text-left"
+  >
+   Preferenze cookie
+  </button>
+ </li>
  </ul>
  </div>
  </div>
