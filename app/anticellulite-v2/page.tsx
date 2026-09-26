@@ -807,6 +807,51 @@ export default function V2Page() {
 
 
       {/* ═══════════════════════════════════════════════
+          COSA INCLUDE IL KIT
+          ═══════════════════════════════════════════════ */}
+      <section className="bg-white py-10 px-4">
+        <div className="max-w-lg mx-auto">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#457B9D] mb-2 text-center">Tutto incluso</p>
+          <h2 className="text-2xl font-extrabold text-[#1D3557] text-center leading-tight mb-6">
+            Cosa c’è nella confezione
+          </h2>
+
+          {/* Product image */}
+          <div className="rounded-2xl overflow-hidden mb-7 border border-[#EAF2FB]">
+            <Image
+              src="/images/kit-contenuto.jpg"
+              alt="Contenuto del kit BellaCura: dispositivo, cavo USB-C, testine e guida"
+              width={1000}
+              height={1000}
+              className="w-full h-auto"
+              sizes="(max-width: 640px) calc(100vw - 32px), 576px"
+              quality={75}
+              loading="lazy"
+            />
+          </div>
+
+          {/* Item list */}
+          <div className="space-y-3">
+            {[
+              { icon: '⚡', label: 'Dispositivo BellaCura', sub: '12 livelli · 4 tecnologie combinate' },
+              { icon: '🔌', label: 'Cavo di ricarica USB-C', sub: 'Carica completa in ~2 ore' },
+              { icon: '💆', label: 'Testine massaggianti di ricambio', sub: 'Per uso prolungato su tutte le zone' },
+              { icon: '📖', label: 'Guida illustrata ai protocolli', sub: 'Tecniche consigliate per ogni area del corpo' },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-4 bg-[#F8FBFF] border border-[#EAF2FB] rounded-2xl px-4 py-3.5">
+                <span className="text-2xl shrink-0">{item.icon}</span>
+                <div>
+                  <p className="text-[#1D3557] font-bold text-sm">{item.label}</p>
+                  <p className="text-[#457B9D] text-xs mt-0.5">{item.sub}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* ═══════════════════════════════════════════════
           FINAL CLOSING CTA
           ═══════════════════════════════════════════════ */}
       <section className="bg-[#EAF2FB] py-10 px-4">
