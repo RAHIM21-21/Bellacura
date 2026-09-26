@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 
 const navLinks = [
- { href: '/prodotti/massaggio-anticellulite-4in1/', label: 'Massaggiatore' },
+ { href: '/anticellulite-v2', label: 'Massaggiatore' },
   { href: '/blog/', label: 'Blog' },
 ]
 
