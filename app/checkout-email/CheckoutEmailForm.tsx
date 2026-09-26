@@ -52,7 +52,7 @@ export default function CheckoutEmailForm() {
       {/* Header */}
       <header className="bg-white border-b border-gray-100 py-3 px-4">
         <div className="max-w-2xl mx-auto flex items-center justify-between">
-          <Link href="/prodotti/massaggio-anticellulite-4in1/" className="flex items-center gap-1 text-sm text-gray-400 hover:text-[#457B9D]">
+          <Link href="/anticellulite-v2" className="flex items-center gap-1 text-sm text-gray-400 hover:text-[#457B9D]">
             <ChevronLeft size={15} /> Indietro
           </Link>
           <span className="font-extrabold text-[#1D3557] text-xl">BellaCura®</span>
